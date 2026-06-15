@@ -1,6 +1,21 @@
 {
   "rewrites": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "elementsstud.io" }],
+      "destination": "/home/index.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.elementsstud.io" }],
+      "destination": "/home/index.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "(?<sub>[^.]+)\\.elementsstud\\.io" }],
+      "destination": "/sites/:sub/index.html"
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "elementsstud.io" }],
       "destination": "/home/:path*"
