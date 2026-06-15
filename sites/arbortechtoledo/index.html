@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbor Tech of Toledo | Tree Removal, Trimming & Storm Work</title>
+<meta name="description" content="Arbor Tech of Toledo takes down big trees safely and leaves your yard clean. Tree removal, trimming, stump grinding and storm cleanup across the Toledo area. 4.9 stars, 147 reviews. Call for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1F3D2B; --green-d:#152a1d; --green-l:#2c5740;
+  --amber:#E0A33E; --amber-d:#c8862a;
+  --cream:#F4F1E9; --ink:#16211b; --muted:#cfd8d0;
+  --maxw:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Anton",Impact,sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:92px 0}
+
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:110;transition:background .3s ease,box-shadow .3s ease,padding .3s ease;padding:18px 0}
+.nav.scrolled{background:var(--green);box-shadow:0 6px 24px rgba(0,0,0,.22);padding:11px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;color:#fff}
+.brand .logo{width:34px;height:34px;flex:0 0 34px}
+.brand b{font-family:"Anton",sans-serif;font-size:22px;letter-spacing:1px;text-transform:uppercase}
+.nav-cta{display:inline-flex;align-items:center;gap:9px;background:var(--amber);color:var(--green-d);font-weight:700;padding:12px 20px;border-radius:8px;font-size:16px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
+.nav-cta:hover{transform:translateY(-2px) scale(1.03);background:#f0b24f}
+.nav-cta svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/7812847/pexels-photo-7812847.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#2c5740,#152a1d);background-size:cover;background-position:center;animation:ken 22s ease-out infinite alternate}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(13,26,18,.45) 0%,rgba(13,26,18,.35) 40%,rgba(13,26,18,.82) 100%)}
+.hero-content{position:relative;z-index:2;max-width:760px;padding:0 22px 92px;margin:0 auto;width:100%;max-width:var(--maxw)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(224,163,62,.16);border:1px solid rgba(224,163,62,.5);color:#f3d39a;padding:7px 14px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.5px;margin-bottom:22px}
+.badge svg{width:16px;height:16px}
+.hero h1{color:#fff;font-size:clamp(44px,7.4vw,84px);text-shadow:0 3px 30px rgba(0,0,0,.4)}
+.hero p.sub{color:var(--muted);font-size:clamp(18px,2.2vw,22px);margin:20px 0 32px;max-width:560px}
+.btn{display:inline-flex;align-items:center;gap:11px;background:var(--amber);color:var(--green-d);font-weight:700;font-size:19px;padding:17px 30px;border-radius:10px;box-shadow:0 12px 30px rgba(224,163,62,.35);transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 40px rgba(224,163,62,.45)}
+.btn svg{width:22px;height:22px}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);box-shadow:none}
+.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+/* storm strip */
+.strip{background:var(--amber);color:var(--green-d)}
+.strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px;text-align:center}
+.strip svg{width:26px;height:26px}
+.strip b{font-family:"Anton",sans-serif;font-size:clamp(20px,3vw,28px);text-transform:uppercase;letter-spacing:.5px}
+.strip a{font-weight:700;text-decoration:underline}
+.strip{padding:26px 0}
+
+/* generic heading */
+.eyebrow{color:var(--amber-d);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:14px;margin-bottom:12px}
+.sec-title{font-size:clamp(32px,5vw,52px);color:var(--green);max-width:760px}
+.lead{font-size:19px;color:#3c4a40;max-width:620px;margin-top:18px}
+
+/* why / stats */
+.why{background:var(--green);color:#fff}
+.why .eyebrow{color:var(--amber)}
+.why .sec-title{color:#fff}
+.why .lead{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px}
+.stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:32px 24px;text-align:center}
+.stat .num{font-family:"Anton",sans-serif;font-size:clamp(40px,6vw,62px);color:var(--amber);line-height:1}
+.stat .lbl{margin-top:10px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px}
+.card{background:#fff;border:1px solid #e7e3d6;border-radius:16px;padding:34px 28px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.card:hover{transform:translateY(-7px);box-shadow:0 20px 45px rgba(31,61,43,.16)}
+.ic{width:54px;height:54px;border-radius:12px;background:rgba(224,163,62,.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.ic svg{width:28px;height:28px;color:var(--green-l)}
+.card h3{font-size:24px;color:var(--green);margin-bottom:10px}
+.card p{color:#4a574d}
+
+/* gallery */
+.gallery{background:#fff;position:relative;overflow:hidden}
+.motif{position:absolute;inset:0;pointer-events:none;opacity:.06;z-index:0}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:50px;position:relative;z-index:1}
+.gal{height:300px;border-radius:14px;background-size:cover;background-position:center;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.g1{background-image:url('https://images.pexels.com/photos/6153123/pexels-photo-6153123.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2c5740,#152a1d)}
+.g2{background-image:url('https://images.pexels.com/photos/7812842/pexels-photo-7812842.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#3a6b4f,#1f3d2b)}
+.g3{background-image:url('https://images.pexels.com/photos/30387775/pexels-photo-30387775.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#244a34,#0f2417)}
+
+/* service area */
+.area{background:var(--cream)}
+.area-list{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.chip{background:#fff;border:1px solid #e2ddcd;border-radius:999px;padding:11px 20px;font-weight:600;color:var(--green);display:inline-flex;align-items:center;gap:8px}
+.chip svg{width:16px;height:16px;color:var(--amber-d)}
+
+/* contact */
+.contact{background:var(--green-d);color:#fff;text-align:center}
+.contact h2{font-size:clamp(34px,5.5vw,58px);color:#fff}
+.contact p{color:var(--muted);font-size:20px;margin:18px auto 34px;max-width:560px}
+.phone-big{font-family:"Anton",sans-serif;font-size:clamp(32px,6vw,56px);color:var(--amber);letter-spacing:1px;display:inline-flex;align-items:center;gap:14px}
+.phone-big svg{width:42px;height:42px}
+.contact .addr{margin-top:30px;color:var(--muted)}
+
+/* footer */
+footer{background:#0f2417;color:#9fb0a4;padding:34px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;left:0;bottom:0;width:100%;z-index:115;background:var(--amber);color:var(--green-d);font-weight:700;font-size:18px;display:none;align-items:center;justify-content:center;gap:10px;padding:15px;box-shadow:0 -4px 18px rgba(0,0,0,.2)}
+.sticky-call svg{width:21px;height:21px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  section{padding:64px 0}
+  .stats,.grid,.gal-grid{grid-template-columns:1fr}
+  .nav-cta{display:none}
+  .sticky-call{display:flex}
+  .hero{min-height:92svh}
+  .hero-content{padding-bottom:80px}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="logo" viewBox="0 0 24 24" fill="none" stroke="#E0A33E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M9 9a3 3 0 0 1 6 0"/><path d="M12 15a6 6 0 0 0 6-6 6 6 0 0 0-12 0 6 6 0 0 0 6 6Z"/></svg>
+      <b>Arbor Tech</b>
+    </a>
+    <a class="nav-cta" href="tel:+14193074627">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      (419) 307-4627
+    </a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.6 9.27l-4.8 4.68 1.13 6.6L12 17.43 6.07 20.55l1.13-6.6L2.4 9.27l6.7-1.01L12 2z"/></svg>
+      4.9 stars across 147 reviews
+    </span>
+    <h1>Big Trees Down Safe,<br>Your Yard Left Clean</h1>
+    <p class="sub">Arbor Tech of Toledo handles removals, trimming and storm cleanup the right way. Insured crew, careful work, no mess left behind.</p>
+    <div class="hero-actions">
+      <a class="btn" href="tel:+14193074627">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call for a Free Estimate
+      </a>
+      <a class="btn ghost" href="#services">See What We Do</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    <b>Storm damage? We handle emergency tree work.</b>
+    <a href="tel:+14193074627">Call (419) 307-4627</a>
+  </div>
+</div>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Why Arbor Tech</div>
+      <h2 class="sec-title">The most reviewed tree crew in the Toledo area</h2>
+      <p class="lead">Homeowners call us back because the work is clean and the crew shows up. Big equipment, real experience, and a yard left the way you want it when we leave.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="4.9" data-dec="1">0</div><div class="lbl">Average rating</div></div>
+      <div class="stat reveal"><div class="num" data-count="147" data-suffix="">0</div><div class="lbl">Google reviews</div></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Cleanup included</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Services</div>
+      <h2 class="sec-title">Full service tree care for home and property</h2>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M5 9a7 7 0 0 1 14 0 7 7 0 0 1-14 0Z"/><path d="M9 11l3 3 3-3"/></svg></div>
+        <h3>Tree Removal</h3>
+        <p>Safe takedowns of large, dead or hazardous trees, including tight spots near homes and power lines.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6"/><path d="M3 21l9-9"/><path d="M14 8l-3 3"/><path d="M17 5l-3 3"/></svg></div>
+        <h3>Trimming &amp; Pruning</h3>
+        <p>Shaping and crown work that keeps trees healthy, balanced and clear of your roof and lines.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Stump Grinding</h3>
+        <p>We grind the stump below grade so you get your yard back, with the chips hauled or left as mulch.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Storm &amp; Emergency</h3>
+        <p>Fallen limbs and split trunks cleared fast after a storm, so your property is safe again.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M6 21V9l6-5 6 5v12"/><path d="M10 21v-6h4v6"/></svg></div>
+        <h3>Lot Clearing</h3>
+        <p>Clearing overgrown lots and brush for builds, fences and additions, hauled away clean.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M7 13c2 1 8 1 10 0"/></svg></div>
+        <h3>Cabling &amp; Bracing</h3>
+        <p>Support systems that strengthen weak or leaning limbs so a valued tree can stay standing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <svg class="motif" viewBox="0 0 1200 400" preserveAspectRatio="none"><g fill="none" stroke="#1F3D2B" stroke-width="2"><path d="M0 320 Q300 220 600 300 T1200 280"/><path d="M0 350 Q300 260 600 330 T1200 320"/><path d="M0 290 Q300 190 600 270 T1200 250"/></g></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Recent Work</div>
+      <h2 class="sec-title">Toledo trees, handled start to finish</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gal g1 reveal" role="img" aria-label="Arborist removing a large tree with a bucket truck"></div>
+      <div class="gal g2 reveal" role="img" aria-label="Crew trimming and pruning tree branches"></div>
+      <div class="gal g3 reveal" role="img" aria-label="Cleared yard after tree removal and stump grinding"></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Service Area</div>
+      <h2 class="sec-title">Serving Toledo and the surrounding suburbs</h2>
+      <p class="lead">Based in Holland and working across the metro. If you are nearby and not listed, give us a call and ask.</p>
+    </div>
+    <div class="area-list reveal">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Toledo</span>
+      <span class="chip">Holland</span>
+      <span class="chip">Maumee</span>
+      <span class="chip">Sylvania</span>
+      <span class="chip">Perrysburg</span>
+      <span class="chip">Whitehouse</span>
+      <span class="chip">Waterville</span>
+      <span class="chip">Swanton</span>
+      <span class="chip">Springfield Twp</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <h2>Get a free estimate today</h2>
+    <p>Tell us about the tree. We will give you a straight answer and a fair price, with cleanup always included.</p>
+    <a class="phone-big" href="tel:+14193074627">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      (419) 307-4627
+    </a>
+    <div class="addr">Arbor Tech of Toledo, LLC &middot; 8959 Airport Hwy, Holland, OH 43528</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr"></span> Arbor Tech of Toledo, LLC. All rights reserved.</span>
+    <span>8959 Airport Hwy, Holland, OH 43528 &middot; (419) 307-4627</span>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14193074627">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+  Call (419) 307-4627
+</a>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// nav shadow + progress bar
+var nav=document.getElementById('nav'),prog=document.getElementById('progress');
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  nav.classList.toggle('scrolled',st>40);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  prog.style.transform='scaleX('+(h>0?st/h:0)+')';
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+// reveal
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');}, (e.target.dataset.d||0)); io.unobserve(e.target);} });
+},{threshold:.16});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.dataset.d=(i%4)*75;io.observe(el);});
+// count up
+var cio=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var el=e.target,target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||'0'),suf=el.dataset.suffix||'',t0=null;
+    function step(ts){ if
