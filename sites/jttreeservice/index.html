@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JT Tree Service and Removal LLC | Tree Removal in Toledo, OH</title>
+<meta name="description" content="JT Tree Service and Removal LLC handles tree removal, trimming, and storm cleanup in Toledo, Ohio. Call (419) 261-4643 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bark:#2B2118; --bark-deep:#1A130E; --bark-soft:#3A2C20;
+  --orange:#E4722B; --orange-soft:#F09052;
+  --cream:#F6F1EA; --muted:#C9BCAE;
+  --maxw:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bark-deep);color:var(--cream);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;width:100%}
+
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease,padding .3s ease;padding:18px 0}
+.nav.scrolled{background:rgba(26,19,14,.94);box-shadow:0 8px 30px rgba(0,0,0,.4);padding:11px 0;backdrop-filter:blur(9px)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Bebas Neue',sans-serif;font-size:25px;letter-spacing:.05em;color:#fff}
+.brand svg{width:29px;height:29px;color:var(--orange);flex:none}
+.nav-links{display:none;gap:30px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{display:none;background:var(--orange);color:#1A130E;text-decoration:none;font-weight:700;padding:11px 21px;border-radius:7px;font-size:15px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;min-height:44px;align-items:center}
+.nav-cta:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 26px rgba(228,114,43,.4)}
+@media(min-width:930px){.nav-links{display:flex}.nav-cta{display:inline-flex}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/35089307/pexels-photo-35089307.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#3A2C20 0%,#1A130E 60%,#2B2118 100%);background-size:cover;background-position:center;animation:ken 24s ease-out infinite alternate;will-change:transform}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.13)}}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(26,19,14,.52) 0%,rgba(26,19,14,.40) 38%,rgba(26,19,14,.88) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 22px 92px;margin:0 auto;width:100%;max-width:var(--maxw)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(228,114,43,.16);border:1px solid rgba(228,114,43,.5);color:var(--orange-soft);padding:7px 15px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.04em;margin-bottom:22px}
+.badge svg{width:16px;height:16px}
+.hero h1{color:#fff;font-size:clamp(46px,7.6vw,88px);text-shadow:0 3px 34px rgba(0,0,0,.45);max-width:15ch}
+.hero p{color:#EADFD3;font-size:clamp(17px,2.1vw,21px);margin-top:20px;max-width:56ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:9px;padding:16px 30px;min-height:52px;font-size:17px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .2s}
+.btn svg{width:19px;height:19px}
+.btn-primary{background:var(--orange);color:#1A130E;box-shadow:0 10px 30px rgba(228,114,43,.34)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 40px rgba(228,114,43,.48)}
+.btn-ghost{background:rgba(246,241,234,.09);color:#fff;border:1px solid rgba(246,241,234,.28);backdrop-filter:blur(5px)}
+.btn-ghost:hover{transform:translateY(-3px) scale(1.03);background:rgba(246,241,234,.16)}
+
+/* sections */
+section{padding:100px 0;position:relative}
+.eyebrow{color:var(--orange);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+h2{font-size:clamp(36px,5.2vw,62px);color:#fff;margin-bottom:18px}
+.lede{color:var(--muted);font-size:18px;max-width:62ch}
+
+/* signature motif: topographic contour lines */
+.topo{position:absolute;inset:0;z-index:0;opacity:.07;pointer-events:none;overflow:hidden}
+.topo svg{width:100%;height:100%;color:var(--orange)}
+.topo-host{position:relative}
+.topo-host .wrap{position:relative;z-index:1}
+
+/* proof / stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px;margin-top:46px}
+.stat{background:linear-gradient(160deg,rgba(58,44,32,.85),rgba(26,19,14,.85));border:1px solid rgba(228,114,43,.2);border-radius:15px;padding:30px 26px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .3s}
+.stat:hover{transform:translateY(-6px);border-color:rgba(228,114,43,.55)}
+.stat .num{font-family:'Bebas Neue',sans-serif;font-size:57px;color:var(--orange);line-height:1}
+.stat .lbl{color:var(--muted);font-size:15px;margin-top:6px;font-weight:500}
+.stars{display:flex;gap:3px;margin-top:9px}
+.stars svg{width:17px;height:17px;color:var(--orange)}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:24px;margin-top:52px}
+.card{background:linear-gradient(165deg,rgba(58,44,32,.7),rgba(26,19,14,.7));border:1px solid rgba(246,241,234,.09);border-radius:16px;padding:34px 30px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-8px);border-color:rgba(228,114,43,.5);box-shadow:0 22px 46px rgba(0,0,0,.34)}
+.card .ico{width:52px;height:52px;border-radius:12px;background:rgba(228,114,43,.14);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.card .ico svg{width:26px;height:26px;color:var(--orange)}
+.card h3{font-size:27px;color:#fff;margin-bottom:10px}
+.card p{color:var(--muted);font-size:16px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:52px}
+.gal-item{position:relative;height:290px;border-radius:15px;overflow:hidden;border:1px solid rgba(246,241,234,.1)}
+.gal-item .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.gal-item:hover .ph{transform:scale(1.08)}
+.gal-item .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px;background:linear-gradient(180deg,transparent,rgba(26,19,14,.9));color:#fff;font-weight:600;font-size:16px}
+.g1 .ph{background-image:url('https://images.pexels.com/photos/6218318/pexels-photo-6218318.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#3A2C20,#1A130E)}
+.g2 .ph{background-image:url('https://images.pexels.com/photos/2310483/pexels-photo-2310483.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2B2118,#1A130E)}
+.g3 .ph{background-image:url('https://images.pexels.com/photos/5145046/pexels-photo-5145046.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#3A2C20,#2B2118)}
+
+/* area */
+.areas{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.chip{background:rgba(228,114,43,.1);border:1px solid rgba(228,114,43,.3);color:var(--orange-soft);padding:11px 19px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .25s}
+.chip:hover{transform:translateY(-3px);background:rgba(228,114,43,.2)}
+
+/* contact */
+.contact{background:linear-gradient(150deg,var(--bark) 0%,var(--bark-deep) 100%);border-top:1px solid rgba(228,114,43,.22)}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:44px;margin-top:44px}
+@media(min-width:880px){.contact-grid{grid-template-columns:1.1fr .9fr}}
+.info-row{display:flex;gap:15px;align-items:flex-start;margin-bottom:24px}
+.info-row svg{width:22px;height:22px;color:var(--orange);flex:none;margin-top:3px}
+.info-row .k{font-weight:700;color:#fff;font-size:16px}
+.info-row .v{color:var(--muted);font-size:16px}
+.info-row a{color:var(--muted);text-decoration:none;transition:color .2s}
+.info-row a:hover{color:var(--orange-soft)}
+.callbox{background:linear-gradient(160deg,rgba(228,114,43,.16),rgba(228,114,43,.05));border:1px solid rgba(228,114,43,.36);border-radius:18px;padding:38px 32px;text-align:center}
+.callbox h3{font-size:33px;color:#fff;margin-bottom:12px}
+.callbox p{color:var(--muted);margin-bottom:26px;font-size:16px}
+.callbox .tel{font-family:'Bebas Neue',sans-serif;font-size:41px;color:var(--orange);text-decoration:none;display:block;margin-bottom:22px;letter-spacing:.02em}
+
+footer{background:var(--bark-deep);padding:40px 0;border-top:1px solid rgba(246,241,234,.09);text-align:center;color:var(--muted);font-size:14px}
+footer .fbrand{font-family:'Bebas Neue',sans-serif;font-size:23px;color:#fff;letter-spacing:.05em;margin-bottom:9px}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--orange);color:#1A130E;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;font-weight:700;text-decoration:none;font-size:17px;min-height:56px;box-shadow:0 -6px 24px rgba(0,0,0,.34)}
+.sticky-call svg{width:20px;height:20px}
+@media(min-width:930px){.sticky-call{display:none}}
+@media(max-width:929px){body{padding-bottom:56px}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+  .gal-item .ph{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7"/><path d="M9 15H5.5a2.5 2.5 0 0 1 0-5H6a3 3 0 0 1 .5-5.5A4 4 0 0 1 14 3a4 4 0 0 1 4.5 2.5A3 3 0 0 1 19 10h.5a2.5 2.5 0 0 1 0 5H15"/></svg>
+      JT Tree Service
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why JT</a>
+      <a href="#work">Our Work</a>
+      <a href="#area">Service Area</a>
+    </div>
+    <a class="nav-cta" href="tel:+14192614643">Free Estimate</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Serving Toledo since day one
+    </span>
+    <h1>Toledo Tree Removal, Done Right The First Time</h1>
+    <p>Big removals, storm damage, and the trimming you have been putting off. We bring the crew, the gear, and we clean up before we leave.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+14192614643">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+        Call For A Free Estimate
+      </a>
+      <a class="btn btn-ghost" href="#services">See What We Do</a>
+    </div>
+  </div>
+</header>
+
+<section id="why" class="topo-host">
+  <div class="topo" aria-hidden="true">
+    <svg viewBox="0 0 1200 600" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M0 90 Q 300 20 600 90 T 1200 90"/><path d="M0 160 Q 300 90 600 160 T 1200 160"/>
+      <path d="M0 230 Q 300 160 600 230 T 1200 230"/><path d="M0 300 Q 300 230 600 300 T 1200 300"/>
+      <path d="M0 370 Q 300 300 600 370 T 1200 370"/><path d="M0 440 Q 300 370 600 440 T 1200 440"/>
+      <path d="M0 510 Q 300 440 600 510 T 1200 510"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Why JT</div>
+      <h2>A Local Crew, Not A Call Center</h2>
+      <p class="lede">JT Tree Service and Removal LLC works out of Myers Street in south Toledo. You talk to the people who show up and do the work. We give you a straight price before we start, and we do not leave a mess behind.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="num" data-count="3.9" data-dec="1">0</div>
+        <div class="lbl">Google rating</div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+      </div>
+      <div class="stat reveal">
+        <div class="num" data-count="39">0</div>
+        <div class="lbl">Toledo reviews on Google</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">24/7</div>
+        <div class="lbl">Storm damage calls</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">Free</div>
+        <div class="lbl">Estimates, no pressure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:linear-gradient(180deg,#1A130E,#231a13)">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">What we do</div>
+      <h2>Tree Work, Start To Finish</h2>
+      <p class="lede">If it involves a tree on your property, we handle it. Residential and commercial, across the Toledo area.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7"/><path d="M9 15H5.5a2.5 2.5 0 0 1 0-5H6a3 3 0 0 1 .5-5.5A4 4 0 0 1 14 3a4 4 0 0 1 4.5 2.5A3 3 0 0 1 19 10h.5a2.5 2.5 0 0 1 0 5H15"/></svg></div>
+        <h3>Tree Removal</h3>
+        <p>Full takedowns, including tight-access trees near houses, garages, and power lines. Rigged down in sections when there is no room to drop it.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5 20 10l-2 2-5.5-5.5z"/><path d="m3 21 8-8"/><path d="M12.5 6.5 6 13l5 5 6.5-6.5"/></svg></div>
+        <h3>Trimming And Pruning</h3>
+        <p>Shaping, deadwood removal, and clearing limbs off roofs and driveways. Cuts made where they help the tree, not just where they are easy.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Storm Damage</h3>
+        <p>Wind and ice take limbs down at the worst times. Call us when a tree comes down on your property and we will get it cleared.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Stump Grinding</h3>
+        <p>Grinding the stump below grade so you can plant grass, lay sod, or put the space back to use.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <h3>Lot And Brush Clearing</h3>
+        <p>Overgrown fence lines, brush piles, and small lots cleared out so you can actually use the ground.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 2 1.5 3L13 6l-2.5 2.5L11 12 8 10.5 5 12l.5-3.5L3 6l3.5-1z"/><path d="M14 14h7v7h-7z"/></svg></div>
+        <h3>Cleanup And Haul Away</h3>
+        <p>Chips, logs, and brush go with us. The yard gets raked before the trucks pull out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Our work</div>
+      <h2>On The Job Around Toledo</h2>
+      <p class="lede">Removals, climbs, and cleanups from around the area.</p>
+    </div>
+    <div class="gal">
+      <div class="gal-item g1 reveal"><div class="ph" role="img" aria-label="Tree crew member climbing a tall tree with ropes and safety gear"></div><div class="cap">Climbing and rigging</div></div>
+      <div class="gal-item g2 reveal"><div class="ph" role="img" aria-label="Chainsaw cutting through a felled tree trunk on the ground"></div><div class="cap">Sectional takedowns</div></div>
+      <div class="gal-item g3 reveal"><div class="ph" role="img" aria-label="Cut logs and cleared brush stacked neatly after tree removal"></div><div class="cap">Cleared and cleaned up</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="area" class="topo-host" style="background:linear-gradient(180deg,#231a13,#1A130E)">
+  <div class="topo" aria-hidden="true">
+    <svg viewBox="0 0 1200 600" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M0 120 Q 300 50 600 120 T 1200 120"/><path d="M0 200 Q 300 130 600 200 T 1200 200"/>
+      <path d="M0 280 Q 300 210 600 280 T 1200 280"/><path d="M0 360 Q 300 290 600 360 T 1200 360"/>
+      <path d="M0 440 Q 300 370 600 440 T 1200 440"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Service area</div>
+      <h2>Where We Work</h2>
+      <p class="lede">Based on Myers Street in Toledo and working across the metro. If you are close to this list, call and ask.</p>
+    </div>
+    <div class="areas reveal">
+      <span class="chip">Toledo</span><span class="chip">Maumee</span><span class="chip">Oregon</span>
+      <span class="chip">Sylvania</span><span class="chip">Perrysburg</span><span class="chip">Rossford</span>
+      <span class="chip">Holland</span><span class="chip">Waterville</span><span class="chip">Northwood</span>
+      <span class="chip">Ottawa Hills</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Get A Free Estimate</h2>
+      <p class="lede">Tell us what the tree is doing and we will tell you what it takes to fix it.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+          <div><div class="k">Phone</div><div class="v"><a href="tel:+14192614643">(419) 261-4643</a></div></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><div class="k">Address</div><div class="v">553 Myers St, Toledo, OH 43609</div></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><div class="k">Hours</div><div class="v">Monday to Saturday, daytime. Storm calls around the clock.</div></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div><div class="k">Rated</div><div class="v">3.9 stars across 39 Google reviews</div></div>
+        </div>
+      </div>
+      <div class="callbox reveal">
+        <h3>Ready When You Are</h3>
+        <p>Call and describe the tree. We will give you a real number, not a runaround.</p>
+        <a class="tel" href="tel:+14192614643">(419) 261-4643</a>
+        <a class="btn btn-primary" href="tel:+14192614643" style="width:100%">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">JT Tree Service and Removal LLC</div>
+    <div>553 Myers St, Toledo, OH 43609 &middot; <a href="tel:+14192614643" style="color:var(--orange-soft);text-decoration:none">(419) 261-4643</a></div>
+    <div style="margin-top:12px;opacity:.75">Tree removal, trimming, storm cleanup, and stump grinding across the Toledo area.</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14192614643">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+  Call (419) 261-4643
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('progress');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    if(y>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)||reduce){
+    items.forEach(function(el){el.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          var sibs=Array.prototype.slice.call(e.target.parentNode.children).indexOf(e.target);
+          e.target.style.transitionDelay=Math.min(sibs,6)*75+'ms';
+          e.target.classList.add('in');io.unobserve(e.target);
+        }
+      });
+    },{threshold:.14,rootMargin:'0px 0px -60px 0px'});
+    items.forEach(function(el){io.observe(el)});
+  }
+
+  var nums=document.querySelectorAll('[data-count]');
+  function run(el){
+    var target=parseFloat(el.getAttribute('data-count')),dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    if(reduce){el.textContent=target.toFixed(dec);return;}
+    var t0=null,dur=1500;
+    function step(ts){
+      if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=(target*eased).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver'in window){
+    var io2=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){run(e.target);io2.unobserve(e.target);}});
+    },{threshold:.5});
+    nums.forEach(function(el){io2.observe(el)});
+  }else{nums.forEach(run)}
+})();
+</script>
+</body>
+</html>

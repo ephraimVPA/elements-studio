@@ -1,0 +1,12 @@
+# Normalize line endings so editing on Windows vs the agent sandbox doesn't make
+# git see an entire file as changed. Text files are stored and checked out as LF.
+* text=auto eol=lf
+
+# Treat image/binary assets as binary (never line-ending normalized).
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.webp  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
