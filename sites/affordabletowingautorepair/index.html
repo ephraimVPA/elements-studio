@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Affordable Towing &amp; Auto Repair | Toledo Tow &amp; Mechanic</title>
+<meta name="description" content="Affordable Towing & Auto Repair in Toledo, OH. Fast towing and honest repairs, rated 4.9 stars by 543 drivers. Call (419) 764-2918.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0C3B33; --forest2:#0A2E28; --cream:#F4EFE6; --sand:#E7DEC9;
+  --orange:#DB6B34; --orange2:#c25c29; --ink:#12201C; --muted:#9db3ab;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--forest);color:var(--cream);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.disp{font-family:'Anton',Impact,sans-serif;font-weight:400;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.eyebrow{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.24em;font-size:13px;color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:16px 26px;border-radius:12px;font-size:17px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .25s}
+.btn-p{background:var(--orange);color:#fff}
+.btn-p:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 30px rgba(219,107,52,.4)}
+.btn-o{border:2px solid rgba(244,239,230,.35);color:var(--cream)}
+.btn-o:hover{transform:translateY(-3px);border-color:var(--orange)}
+
+/* progress bar */
+#bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(12,59,51,.86);backdrop-filter:blur(9px);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Anton',sans-serif;font-size:21px;letter-spacing:.04em;text-transform:uppercase}
+.brand .dot{width:34px;height:34px;border-radius:9px;background:var(--orange);display:grid;place-items:center}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-weight:700;padding:10px 17px;border-radius:10px;font-size:15px;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.nav-cta:hover{transform:translateY(-2px)}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600}
+.nav-links a:hover{color:var(--orange)}
+@media(max-width:820px){.nav-links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/8931961/pexels-photo-8931961.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#0C3B33,#0A2E28);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.08)}to{transform:scale(1.18) translateY(-10px)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,46,40,.9) 12%,rgba(10,46,40,.55) 60%,rgba(10,46,40,.72));z-index:1}
+.hero .wrap{position:relative;z-index:2;padding:60px 0}
+.hero h1{font-size:clamp(40px,7.4vw,82px);max-width:16ch;margin:14px 0 0}
+.hero .lede{margin-top:20px;max-width:50ch;font-size:19px;color:#e4ddce}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;align-items:center}
+.stars{color:var(--orange);letter-spacing:3px;font-size:20px}
+.tnum{font-family:'Anton',sans-serif;font-size:30px;line-height:1;color:#fff}
+.tlbl{font-size:13px;color:#bcccc6;text-transform:uppercase;letter-spacing:.09em}
+
+section{padding:88px 0}
+.sec-head{max-width:640px;margin-bottom:46px}
+.sec-head h2{font-size:clamp(30px,4.6vw,50px);margin-top:12px}
+.sec-head p{margin-top:14px;color:#c7d3ce}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--forest2);border:1px solid rgba(244,239,230,.08);border-radius:16px;padding:28px;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s}
+.card:hover{transform:translateY(-6px);border-color:rgba(219,107,52,.5)}
+.card .ic{width:50px;height:50px;border-radius:12px;background:rgba(219,107,52,.14);display:grid;place-items:center;margin-bottom:16px}
+.card .ic svg{stroke:var(--orange)}
+.card h3{font-size:21px;letter-spacing:.02em}
+.card p{margin-top:9px;color:#b3c2bc;font-size:15.5px}
+
+/* why -- road dash motif */
+.why{position:relative;background:var(--forest2);overflow:hidden}
+.why::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(118deg,transparent 0 40px,rgba(219,107,52,.09) 40px 54px);z-index:0}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+.why ul{list-style:none;margin-top:10px}
+.why li{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed rgba(244,239,230,.14)}
+.why li .chk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--orange);display:grid;place-items:center;margin-top:2px}
+.why li b{font-size:17px;display:block}
+.why li span{color:#b3c2bc;font-size:15px}
+.statbox{background:var(--forest);border-radius:18px;padding:34px;border:1px solid rgba(244,239,230,.1)}
+.statbox .big{font-family:'Anton',sans-serif;font-size:64px;color:var(--orange);line-height:1}
+.statbox .cap{color:#c7d3ce;margin-top:6px}
+.statbox hr{border:0;border-top:1px dashed rgba(244,239,230,.14);margin:22px 0}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.gal{grid-template-columns:1fr}}
+.ph{position:relative;height:300px;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 16px 40px rgba(0,0,0,.4);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.ph:hover{transform:translateY(-6px) scale(1.01)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(10,46,40,.8))}
+.ph .cap{position:absolute;left:16px;bottom:15px;z-index:2;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:16px}
+.ph1{background-image:url('https://images.pexels.com/photos/4489776/pexels-photo-4489776.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#0A2E28,#0C3B33)}
+.ph2{background-image:url('https://images.pexels.com/photos/7807035/pexels-photo-7807035.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#0A2E28,#0C3B33)}
+.ph3{background-image:url('https://images.pexels.com/photos/8478206/pexels-photo-8478206.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#0A2E28,#0C3B33)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.info .row{display:flex;gap:13px;align-items:flex-start;margin-top:18px;color:#e4ddce;font-size:16px}
+.info .row svg{stroke:var(--orange);flex:0 0 auto;margin-top:3px}
+.hours .h{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed rgba(244,239,230,.14);font-size:15.5px}
+.hours .h b{color:#fff;font-weight:600}
+.bigcall{background:var(--orange);border-radius:18px;padding:34px;text-align:center;color:#fff}
+.bigcall .num{font-family:'Anton',sans-serif;font-size:clamp(30px,5vw,44px);margin:6px 0 14px}
+
+footer{background:var(--forest2);padding:40px 0;text-align:center;color:#9db3ab;font-size:14.5px}
+
+/* sticky mobile call */
+.sticky-call{display:none}
+@media(max-width:820px){
+  .sticky-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--orange);color:#fff;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:700;font-size:17px;box-shadow:0 -6px 20px rgba(0,0,0,.3)}
+  section{padding:64px 0}
+}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <div class="brand"><span class="dot"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>Affordable Towing</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#work">Our Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:+14197642918"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 764-2918</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Flatbed tow truck loading a car on a Toledo city street at dusk"></div>
+  <div class="wrap">
+    <span class="eyebrow">Toledo, Ohio &bull; 24-Hour Towing</span>
+    <h1>Broke down? We tow it and we fix it.</h1>
+    <p class="lede">One call gets your car off the road and into good hands. Fast towing across Toledo, then honest repair work at a fair price.</p>
+    <div class="hero-cta">
+      <a class="btn btn-p" href="tel:+14197642918"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 764-2918</a>
+      <a class="btn btn-o" href="#services">See what we do</a>
+    </div>
+    <div class="trust">
+      <div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tlbl">Google rated</div></div>
+      <div><div class="tnum" data-count="4.9" data-dec="1">4.9</div><div class="tlbl">Average rating</div></div>
+      <div><div class="tnum" data-count="543">543</div><div class="tlbl">Customer reviews</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Towing and repair under one roof</h2>
+      <p>From a dead battery on the shoulder to a full engine job in the bay, we handle it start to finish.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <h3>24-Hour Towing</h3>
+        <p>Stuck on the road any hour of the day? We roll a truck out fast and get your vehicle where it needs to go.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Full Auto Repair</h3>
+        <p>Brakes, engines, suspension and everything between. We diagnose the real problem and fix it right.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Roadside Help</h3>
+        <p>Flat tire, dead battery or a lockout? We come to you and get you moving again in minutes.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <h3>Honest Diagnostics</h3>
+        <p>We tell you what is actually wrong and what it costs before any wrench turns. No surprise bills.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Fast Turnaround</h3>
+        <p>We know you need your car back. We work efficiently and keep you posted the whole way through.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.91 8.84 8.56 2.23a1.93 1.93 0 0 0-1.81 0L3.1 4.13a2.12 2.12 0 0 0-.05 3.69l12.22 6.93a2 2 0 0 0 1.94 0L21 12.51a2.12 2.12 0 0 0-.09-3.67Z"/><path d="m3.09 8.84 12.35-6.61"/><path d="M12 12v9"/></svg></div>
+        <h3>Fair, Upfront Pricing</h3>
+        <p>Affordable is our name for a reason. Straight quotes, quality parts and no padding on the invoice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="reveal">
+        <span class="eyebrow">Why drivers call us</span>
+        <h2 style="font-size:clamp(28px,4.4vw,44px);margin-top:12px">543 Toledo drivers put us at 4.9 stars</h2>
+        <ul>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>We pick up fast</b>When you are stranded, minutes matter. Our trucks get to you quickly.</span></li>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>One shop, start to finish</b>Tow and repair from the same team, so nothing gets lost in a handoff.</span></li>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Straight answers</b>We explain the fix in plain language and quote it before we start.</span></li>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Local and reliable</b>Right on Monroe Street, ready when your day goes sideways.</span></li>
+        </ul>
+      </div>
+      <div class="statbox reveal">
+        <div class="big"><span data-count="4.9" data-dec="1">4.9</span></div>
+        <div class="cap">Average Google rating from real customers</div>
+        <hr>
+        <div class="big"><span data-count="543">543</span></div>
+        <div class="cap">Reviews and counting from Toledo drivers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">In the bay</span>
+      <h2>Real work, real trucks</h2>
+      <p>A look at the day to day: towing, teardown and the repairs that get you back on the road.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="Two mechanics working together on a vehicle repair in the garage"><span class="cap">In the shop</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="Mechanic holding a lug wrench ready to service a wheel"><span class="cap">Tools ready</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="Mechanic performing maintenance on a car engine"><span class="cap">Under the hood</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="why">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="info reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2 style="font-size:clamp(28px,4.4vw,44px);margin-top:12px">Stranded or overdue for a repair?</h2>
+        <p style="color:#c7d3ce;margin-top:12px">Call and we will get a truck moving or a bay ready. Serving Toledo and the surrounding area.</p>
+        <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>4841 Monroe St, Toledo, OH 43623</span></div>
+        <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>(419) 764-2918</span></div>
+        <div class="hours" style="margin-top:22px">
+          <div class="h"><span>Towing</span><b>24 hours, every day</b></div>
+          <div class="h"><span>Repair shop</span><b>Mon to Sat, 8am to 6pm</b></div>
+          <div class="h"><span>Sunday shop</span><b>Closed (towing open)</b></div>
+        </div>
+      </div>
+      <div class="bigcall reveal">
+        <div style="font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:14px">Call now</div>
+        <div class="num">(419) 764-2918</div>
+        <a class="btn" style="background:#fff;color:var(--orange2);width:100%;justify-content:center" href="tel:+14197642918">Tap to call</a>
+        <p style="margin-top:16px;font-size:14.5px;color:#ffe6d6">One number for towing and repair. We answer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="justify-content:center;margin-bottom:10px"><span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>Affordable Towing &amp; Auto Repair</div>
+    <p>4841 Monroe St, Toledo, OH 43623 &bull; (419) 764-2918</p>
+    <p style="margin-top:8px;opacity:.7">Site by Elements Studio</p>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14197642918"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 764-2918</a>
+
+<script>
+// progress bar
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  bar.style.transform='scaleX('+p+')';
+  document.getElementById('nav').classList.toggle('scrolled',h.scrollTop>10);
+});
+// reveal
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target);}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// count-up
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const end=parseFloat(el.dataset.count);const dec=parseInt(el.dataset.dec||'0');let s=null;const dur=1200;function step(t){if(!s)s=t;const p=Math.min((t-s)/dur,1);const v=(end*(0.2+0.8*p));el.textContent=dec?v.toFixed(dec):Math.floor(v).toString();if(p<1)requestAnimationFrame(step);else el.textContent=dec?end.toFixed(dec):end.toString();}requestAnimationFrame(step);cio.unobserve(el);})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>

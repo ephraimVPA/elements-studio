@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roth Automotive | Trusted Auto Repair in Holland, OH</title>
+<meta name="description" content="Roth Automotive in Holland, OH. Dependable diagnostics and repairs from a shop rated 4.8 stars by 148 drivers. Call (419) 867-7684.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F3EE; --paper2:#EFEAE1; --ink:#332038; --ink2:#4a3450;
+  --gold:#B0812A; --gold2:#976d1f; --muted:#6f6472; --line:#e2dace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.disp{font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.01em}
+.wrap{width:min(1160px,92vw);margin:0 auto}
+.eyebrow{font-family:'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:13px;font-weight:600;color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:600;padding:15px 25px;border-radius:12px;font-size:16.5px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .25s}
+.btn-p{background:var(--gold);color:#fff}
+.btn-p:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 30px rgba(176,129,42,.38)}
+.btn-o{border:2px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{transform:translateY(-3px);border-color:var(--gold)}
+
+#bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:120}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(246,243,238,.9);backdrop-filter:blur(9px);transition:box-shadow .3s;border-bottom:1px solid transparent}
+nav.scrolled{box-shadow:0 8px 26px rgba(51,32,56,.1);border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px;letter-spacing:-.01em}
+.brand .dot{width:34px;height:34px;border-radius:10px;background:var(--ink);display:grid;place-items:center}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font-weight:600;padding:10px 17px;border-radius:10px;font-size:15px;font-family:'Space Grotesk',sans-serif;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.nav-cta:hover{transform:translateY(-2px)}
+@media(max-width:820px){.nav-links{display:none}}
+
+.hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/6870324/pexels-photo-6870324.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#332038,#1f1424);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.08)}to{transform:scale(1.17) translateY(-8px)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(31,20,36,.9) 10%,rgba(31,20,36,.5) 58%,rgba(31,20,36,.7));z-index:1}
+.hero .wrap{position:relative;z-index:2;padding:60px 0;color:#fff}
+.hero .eyebrow{color:#e9c877}
+.hero h1{font-size:clamp(38px,7vw,76px);max-width:15ch;margin:14px 0 0;color:#fff}
+.hero .lede{margin-top:20px;max-width:50ch;font-size:19px;color:#eae2ee}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;align-items:center}
+.stars{color:#e9c877;letter-spacing:3px;font-size:20px}
+.tnum{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#fff}
+.tlbl{font-size:13px;color:#cbbccf;text-transform:uppercase;letter-spacing:.09em}
+
+section{padding:90px 0}
+.sec-head{max-width:640px;margin-bottom:46px}
+.sec-head h2{font-size:clamp(30px,4.6vw,48px);margin-top:12px}
+.sec-head p{margin-top:14px;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(51,32,56,.1)}
+.card .ic{width:50px;height:50px;border-radius:12px;background:rgba(176,129,42,.13);display:grid;place-items:center;margin-bottom:16px}
+.card .ic svg{stroke:var(--gold2)}
+.card h3{font-size:20px}
+.card p{margin-top:9px;color:var(--muted);font-size:15.5px}
+
+/* why -- concentric gear-ring motif */
+.why{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+.why::before{content:"";position:absolute;top:-120px;right:-120px;width:520px;height:520px;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 26px,rgba(233,200,119,.09) 26px 30px);z-index:0}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+.why .eyebrow{color:#e9c877}
+.why ul{list-style:none;margin-top:12px}
+.why li{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.why li .chk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--gold);display:grid;place-items:center;margin-top:2px}
+.why li b{font-size:17px;display:block;color:#fff}
+.why li span.t{color:#d6cbda;font-size:15px}
+.statbox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:34px}
+.statbox .big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:62px;color:#e9c877;line-height:1}
+.statbox .cap{color:#d6cbda;margin-top:6px}
+.statbox hr{border:0;border-top:1px solid rgba(255,255,255,.14);margin:22px 0}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.gal{grid-template-columns:1fr}}
+.ph{position:relative;height:300px;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 16px 40px rgba(51,32,56,.16);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.ph:hover{transform:translateY(-6px) scale(1.01)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(31,20,36,.78))}
+.ph .cap{position:absolute;left:16px;bottom:15px;z-index:2;font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.02em;font-size:16px;color:#fff}
+.ph1{background-image:url('https://images.pexels.com/photos/6870313/pexels-photo-6870313.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#1f1424,#332038)}
+.ph2{background-image:url('https://images.pexels.com/photos/6870331/pexels-photo-6870331.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#1f1424,#332038)}
+.ph3{background-image:url('https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#1f1424,#332038)}
+
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.info .row{display:flex;gap:13px;align-items:flex-start;margin-top:18px;color:var(--ink2);font-size:16px}
+.info .row svg{stroke:var(--gold2);flex:0 0 auto;margin-top:3px}
+.hours .h{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.hours .h b{color:var(--ink);font-weight:600}
+.bigcall{background:var(--ink);border-radius:18px;padding:34px;text-align:center;color:#fff}
+.bigcall .num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,5vw,42px);margin:6px 0 14px;color:#e9c877}
+
+footer{background:var(--paper2);padding:40px 0;text-align:center;color:var(--muted);font-size:14.5px;border-top:1px solid var(--line)}
+
+.sticky-call{display:none}
+@media(max-width:820px){
+  .sticky-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--gold);color:#fff;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:600;font-family:'Space Grotesk',sans-serif;font-size:17px;box-shadow:0 -6px 20px rgba(51,32,56,.22)}
+  section{padding:66px 0}
+}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <div class="brand"><span class="dot"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e9c877" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Roth Automotive</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Roth</a>
+      <a href="#work">The Shop</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:+14198677684"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 867-7684</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Auto mechanic inspecting a car inside a clean Roth Automotive service garage"></div>
+  <div class="wrap">
+    <span class="eyebrow">Holland, Ohio &bull; Full-Service Auto Repair</span>
+    <h1>The shop Holland trusts to get it right.</h1>
+    <p class="lede">Straight diagnostics, quality repairs and work that holds up. Bring us the problem and we will tell you what it really needs.</p>
+    <div class="hero-cta">
+      <a class="btn btn-p" href="tel:+14198677684"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 867-7684</a>
+      <a class="btn btn-o" href="#services">Our services</a>
+    </div>
+    <div class="trust">
+      <div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tlbl">Google rated</div></div>
+      <div><div class="tnum" data-count="4.8" data-dec="1">4.8</div><div class="tlbl">Average rating</div></div>
+      <div><div class="tnum" data-count="148">148</div><div class="tlbl">Customer reviews</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we handle</span>
+      <h2>Repairs done right the first time</h2>
+      <p>From routine maintenance to the problem three other shops could not pin down, we work it methodically.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>We read the codes and the car, then find the true cause instead of guessing at parts.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+        <h3>Brakes &amp; Rotors</h3>
+        <p>Squeal, shudder or a soft pedal? We restore stopping power with parts that last.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Engine Repair</h3>
+        <p>Rough idle, warning light or a knock. We diagnose the engine and fix what is failing.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3>Tires &amp; Alignment</h3>
+        <p>New tires, rotations and alignment so the car tracks straight and the tread lasts.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
+        <h3>Oil &amp; Maintenance</h3>
+        <p>Oil, filters, fluids and the small checks that keep a car out of the repair bay.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v6c0 5 8 9 8 9s8-4 8-9V7z"/></svg></div>
+        <h3>Honest Estimates</h3>
+        <p>You get the price and the reason before we touch a bolt. No pressure, no padding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="reveal">
+        <span class="eyebrow">Why Roth</span>
+        <h2 style="font-size:clamp(28px,4.4vw,44px);margin-top:12px">148 neighbors rate us 4.8 stars</h2>
+        <ul>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>We find the real problem</b><span class="t">Careful diagnostics mean you pay to fix the cause, not to swap parts and hope.</span></span></li>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Clear prices up front</b><span class="t">You approve the estimate before work starts, so the bill never surprises you.</span></span></li>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Work that holds up</b><span class="t">Quality parts and careful labor, so the repair lasts and you are not back next month.</span></span></li>
+          <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>A shop you can talk to</b><span class="t">Right on Holland Park Blvd, with people who explain things in plain terms.</span></span></li>
+        </ul>
+      </div>
+      <div class="statbox reveal">
+        <div class="big"><span data-count="4.8" data-dec="1">4.8</span></div>
+        <div class="cap">Average Google rating from Holland drivers</div>
+        <hr>
+        <div class="big"><span data-count="148">148</span></div>
+        <div class="cap">Reviews from customers who came back</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Inside the shop</span>
+      <h2>Where the work gets done</h2>
+      <p>A clean bay, the right tools and a team that treats your car like their own.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="Mechanic running engine diagnostics on a car in the workshop"><span class="cap">Diagnostics</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="Mechanic in coveralls replacing a tire on a red SUV"><span class="cap">Tires</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="Technicians working together in the automotive repair workshop"><span class="cap">The team</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--paper2)">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="info reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2 style="font-size:clamp(28px,4.4vw,44px);margin-top:12px">Ready when your car is not</h2>
+        <p style="color:var(--muted);margin-top:12px">Call to book a look or drop by the shop. Serving Holland and the greater Toledo area.</p>
+        <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>942 Holland Park Blvd, Holland, OH 43528</span></div>
+        <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>(419) 867-7684</span></div>
+        <div class="hours" style="margin-top:22px">
+          <div class="h"><span>Monday to Friday</span><b>8am to 6pm</b></div>
+          <div class="h"><span>Saturday</span><b>8am to 2pm</b></div>
+          <div class="h"><span>Sunday</span><b>Closed</b></div>
+        </div>
+      </div>
+      <div class="bigcall reveal">
+        <div style="font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:14px;color:#e9c877;font-family:'Space Grotesk',sans-serif">Call the shop</div>
+        <div class="num">(419) 867-7684</div>
+        <a class="btn" style="background:var(--gold);color:#fff;width:100%;justify-content:center" href="tel:+14198677684">Tap to call</a>
+        <p style="margin-top:16px;font-size:14.5px;color:#d6cbda">Tell us the symptom and we will book you in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="justify-content:center;margin-bottom:10px;color:var(--ink)"><span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e9c877" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></span>Roth Automotive</div>
+    <p>942 Holland Park Blvd, Holland, OH 43528 &bull; (419) 867-7684</p>
+    <p style="margin-top:8px;opacity:.7">Site by Elements Studio</p>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14198677684"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 867-7684</a>
+
+<script>
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  bar.style.transform='scaleX('+p+')';
+  document.getElementById('nav').classList.toggle('scrolled',h.scrollTop>10);
+});
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target);}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const end=parseFloat(el.dataset.count);const dec=parseInt(el.dataset.dec||'0');let s=null;const dur=1200;function step(t){if(!s)s=t;const p=Math.min((t-s)/dur,1);const v=(end*(0.2+0.8*p));el.textContent=dec?v.toFixed(dec):Math.floor(v).toString();if(p<1)requestAnimationFrame(step);else el.textContent=dec?end.toFixed(dec):end.toString();}requestAnimationFrame(step);cio.unobserve(el);})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
