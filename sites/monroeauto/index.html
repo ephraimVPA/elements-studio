@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monroe Auto | Neighborhood Car Repair in Toledo, OH</title>
+<meta name="description" content="Monroe Auto on Monroe Street in Toledo. Dependable repairs and maintenance from a shop your neighbors trust, rated 4.5 stars across 146 reviews. Call (419) 720-6448.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F1E7; --card:#FCF9F2; --ink:#211A16; --muted:#6C5F53;
+    --wine:#7C1E2A; --wine-d:#5C121C; --brass:#B08A4A; --line:#E4DBCB;
+    --radius:14px; --ease:cubic-bezier(.16,1,.3,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:'Big Shoulders Display',sans-serif;line-height:.98;letter-spacing:.005em;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+
+  #bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--wine);transform:scaleX(0);transform-origin:left;z-index:60}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s var(--ease),box-shadow .3s var(--ease)}
+  header.scrolled{background:rgba(246,241,231,.9);backdrop-filter:blur(9px);box-shadow:0 6px 26px rgba(33,26,22,.12);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Big Shoulders Display';font-weight:800;font-size:1.5rem;letter-spacing:.02em}
+  .brand .dot{width:34px;height:34px;border-radius:8px;background:var(--wine);display:grid;place-items:center}
+  .brand .dot svg{width:19px;height:19px;stroke:var(--paper)}
+  .navcta{display:inline-flex;align-items:center;gap:8px;background:var(--wine);color:#fff;font-weight:700;padding:11px 18px;border-radius:9px;font-size:.92rem;transition:transform .25s var(--spring),box-shadow .25s}
+  .navcta:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(124,30,42,.32)}
+  .navcta svg{width:16px;height:16px;stroke:#fff}
+  @media(max-width:640px){.navcta span{display:none}.navcta{padding:11px 13px}}
+
+  .hero{position:relative;min-height:98svh;display:flex;align-items:flex-end;padding:130px 0 64px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/4489776/pexels-photo-4489776.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#3a2318,#7C1E2A);background-size:cover;background-position:center;z-index:0;animation:ken 24s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(28,18,14,.92) 4%,rgba(28,18,14,.5) 45%,rgba(28,18,14,.35) 100%)}
+  .hero .wrap{position:relative;z-index:2;color:#F6F1E7}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#F1E4CB;border:1px solid rgba(246,241,231,.3);padding:8px 15px;border-radius:4px;margin-bottom:20px}
+  .eyebrow .pip{width:7px;height:7px;border-radius:50%;background:var(--brass)}
+  .hero h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:800;max-width:14ch;color:#fff}
+  .hero h1 em{font-style:normal;color:var(--brass)}
+  .hero p.lead{margin-top:18px;font-size:1.16rem;color:#EFE7D8;max-width:46ch}
+  .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;border-radius:9px;padding:15px 26px;font-size:1rem;transition:transform .25s var(--spring),box-shadow .25s var(--ease)}
+  .btn svg{width:19px;height:19px}
+  .btn-primary{background:var(--wine);color:#fff;box-shadow:0 12px 28px rgba(124,30,42,.4)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(124,30,42,.5)}
+  .btn-primary svg{stroke:#fff}
+  .btn-ghost{border:1px solid rgba(246,241,231,.45);color:#F6F1E7;background:rgba(246,241,231,.06)}
+  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--brass)}
+  .btn-ghost svg{stroke:var(--brass)}
+
+  .trust{background:var(--ink);color:var(--paper)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:30px 0}
+  .stat{text-align:center;position:relative}
+  .stat:not(:last-child)::after{content:"";position:absolute;right:-11px;top:14%;height:72%;width:1px;background:rgba(246,241,231,.16)}
+  .stat .n{font-family:'Big Shoulders Display';font-weight:800;font-size:2.4rem;color:#fff}
+  .stat .n .br{color:var(--brass)}
+  .stat .l{font-size:.76rem;color:#C9BCA9;text-transform:uppercase;letter-spacing:.12em;margin-top:2px}
+  @media(max-width:640px){.trust .wrap{grid-template-columns:repeat(2,1fr);gap:26px}.stat:nth-child(2)::after{display:none}}
+
+  section.pad{padding:92px 0}
+  .shead{max-width:62ch;margin-bottom:42px}
+  .shead .kick{color:var(--wine);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+  .shead h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800}
+  .shead p{color:var(--muted);margin-top:12px;font-size:1.08rem;font-family:'Public Sans'}
+
+  .svc-wrap{position:relative;overflow:hidden}
+  .motif{position:absolute;top:-120px;right:-120px;width:520px;height:520px;z-index:0;pointer-events:none;opacity:.06;
+    background:radial-gradient(circle,transparent 30%,var(--wine) 31%,var(--wine) 32%,transparent 33%) ,
+    radial-gradient(circle,transparent 45%,var(--wine) 46%,var(--wine) 47%,transparent 48%),
+    radial-gradient(circle,transparent 60%,var(--wine) 61%,var(--wine) 62%,transparent 63%),
+    radial-gradient(circle,transparent 75%,var(--wine) 76%,var(--wine) 77%,transparent 78%);
+    background-repeat:no-repeat}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:1}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:transform .3s var(--spring),box-shadow .3s,border-color .3s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 40px rgba(33,26,22,.12);border-color:var(--brass)}
+  .ic{width:48px;height:48px;border-radius:11px;background:rgba(124,30,42,.08);display:grid;place-items:center;margin-bottom:16px}
+  .ic svg{width:24px;height:24px;stroke:var(--wine);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:1.5rem;font-weight:700;margin-bottom:6px;letter-spacing:.01em}
+  .card p{color:var(--muted);font-size:.96rem;font-family:'Public Sans'}
+
+  .why{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
+  @media(max-width:860px){.why{grid-template-columns:1fr;gap:32px}}
+  .why-photo{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background-size:cover;background-position:center;min-height:340px;box-shadow:0 24px 50px rgba(33,26,22,.15)}
+  .why ul{list-style:none;margin-top:8px}
+  .why li{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
+  .why li:last-child{border-bottom:none}
+  .why li .chk{flex:0 0 auto;width:26px;height:26px;border-radius:7px;background:var(--wine);display:grid;place-items:center;margin-top:3px}
+  .why li .chk svg{width:15px;height:15px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .why li b{font-family:'Big Shoulders Display';font-weight:700;font-size:1.24rem;display:block;letter-spacing:.01em}
+  .why li span.d{color:var(--muted);font-size:.95rem;font-family:'Public Sans'}
+
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:760px){.gal{grid-template-columns:1fr}}
+  .ph{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background-size:cover;background-position:center;border:1px solid var(--line);transition:transform .4s var(--ease)}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(28,18,14,.62));opacity:0;transition:opacity .3s}
+  .ph:hover{transform:scale(1.02)}
+  .ph:hover::after{opacity:1}
+  .ph .cap{position:absolute;left:14px;bottom:12px;z-index:2;color:#fff;font-family:'Big Shoulders Display';font-weight:700;font-size:1.15rem;letter-spacing:.02em;opacity:0;transform:translateY(8px);transition:.3s var(--ease)}
+  .ph:hover .cap{opacity:1;transform:none}
+
+  .contact{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:38px;box-shadow:0 24px 50px rgba(33,26,22,.1)}
+  @media(max-width:760px){.contact{grid-template-columns:1fr;padding:28px}}
+  .cinfo h2{font-size:2.6rem;font-weight:800;margin-bottom:14px}
+  .cline{display:flex;gap:13px;align-items:flex-start;padding:11px 0}
+  .cline svg{width:20px;height:20px;stroke:var(--wine);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto;margin-top:3px}
+  .cline b{font-family:'Big Shoulders Display';font-weight:700;font-size:1.2rem}
+  .cline span{color:var(--muted);font-size:.95rem;display:block}
+  .hours{background:var(--ink);color:var(--paper);border-radius:14px;padding:26px}
+  .hours h3{font-size:1.5rem;margin-bottom:12px;color:#fff}
+  .hrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed rgba(246,241,231,.16);font-size:.95rem}
+  .hrow:last-child{border-bottom:none}
+  .hrow span:first-child{color:#C9BCA9}
+  .hrow.closed span:last-child{color:#9d8f7e}
+  .bigcall{display:flex;align-items:center;justify-content:center;gap:11px;margin-top:18px;background:var(--brass);color:#211A16;font-family:'Big Shoulders Display';font-weight:800;font-size:1.4rem;letter-spacing:.02em;padding:15px;border-radius:11px;transition:transform .25s var(--spring)}
+  .bigcall:hover{transform:translateY(-3px)}
+  .bigcall svg{width:21px;height:21px;stroke:#211A16;fill:none;stroke-width:2}
+
+  footer{background:var(--ink);color:#C9BCA9;padding:32px 0 120px;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  .sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;padding:11px 16px;background:rgba(246,241,231,.96);backdrop-filter:blur(9px);border-top:1px solid var(--line)}
+  .sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--wine);color:#fff;font-family:'Big Shoulders Display';font-weight:800;font-size:1.25rem;padding:14px;border-radius:10px}
+  .sticky-call svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:2}
+  @media(max-width:760px){.sticky-call{display:block}footer{padding-bottom:92px}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="nav">
+  <div class="wrap">
+    <nav>
+      <div class="brand"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Monroe Auto</div>
+      <a class="navcta" href="tel:+14197206448"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>(419) 720-6448</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Two Monroe Auto mechanics working together on a vehicle inside the neighborhood repair shop"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="pip"></span>Car Repair &middot; Monroe Street, Toledo</span>
+    <h1>Your neighborhood shop on <em>Monroe Street</em>.</h1>
+    <p class="lead">Monroe Auto has kept Toledo cars running with honest work and fair prices. Bring us the trouble and we will fix it right, then get you back on the road.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+14197206448"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call the shop</a>
+      <a class="btn btn-ghost" href="#services"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>See our services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="stat"><div class="n"><span class="cnt" data-to="4.5" data-dec="1">0</span><span class="br">&#9733;</span></div><div class="l">Google rating</div></div>
+    <div class="stat"><div class="n"><span class="cnt" data-to="146">0</span></div><div class="l">Customer reviews</div></div>
+    <div class="stat"><div class="n">Monroe</div><div class="l">Street, Toledo</div></div>
+    <div class="stat"><div class="n">Walk<span class="br">-</span>in</div><div class="l">Welcome</div></div>
+  </div>
+</div>
+
+<section class="pad svc-wrap" id="services">
+  <div class="motif"></div>
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="kick">Services</div>
+      <h2>Everything your car needs, under one roof.</h2>
+      <p>Routine maintenance or a repair that has you stuck, Monroe Auto handles it with the care of a shop that wants you back.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>General Repair</h3><p>Engines, transmissions, and the stubborn problems other shops send you home with.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div><h3>Brakes</h3><p>Pads, rotors, and lines checked and replaced so you stop with confidence.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 4h4v6M14 20h4v-6M6 4v16M4 8h4M4 16h4"/></svg></div><h3>Oil &amp; Maintenance</h3><p>Oil, filters, and fluids on schedule to keep small issues from turning big.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Diagnostics</h3><p>Check-engine light on? We find the real cause before we quote the repair.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2M11 11v2"/></svg></div><h3>Batteries &amp; Electrical</h3><p>Starting, charging, and wiring gremlins traced down and put right.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M5 17H3V9l3-4h7l4 4h2v8h-2M9 17h6"/></svg></div><h3>Tires &amp; Alignment</h3><p>Rotations, mounting, and alignment so your tires wear even and last longer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="background:var(--card)">
+  <div class="wrap why">
+    <div class="why-photo reveal" role="img" aria-label="A Monroe Auto mechanic carefully checking a car engine to confirm the repair" style="background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+    <div class="reveal">
+      <div class="shead" style="margin-bottom:20px">
+        <div class="kick">Why Monroe Auto</div>
+        <h2>The shop people keep coming back to.</h2>
+      </div>
+      <ul>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Honest recommendations</b><span class="d">We fix what needs fixing and tell you what can wait. No upsell.</span></div></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Fair pricing</b><span class="d">A clear estimate before the work starts, so there are no surprises at the counter.</span></div></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>A record you can check</b><span class="d">4.5 stars across 146 reviews from Toledo drivers who came back.</span></div></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Right on Monroe Street</b><span class="d">Easy to reach, easy to deal with, and glad to see you.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="kick">In the shop</div>
+      <h2>Real work on real cars.</h2>
+    </div>
+    <div class="gal">
+      <div class="ph reveal" role="img" aria-label="A technician performing engine maintenance on a car at Monroe Auto" style="background-image:url('https://images.pexels.com/photos/8478261/pexels-photo-8478261.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Engine service</span></div>
+      <div class="ph reveal" role="img" aria-label="A mechanic inspecting the undercarriage of a lifted vehicle" style="background-image:url('https://images.pexels.com/photos/4116173/pexels-photo-4116173.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Underbody checks</span></div>
+      <div class="ph reveal" role="img" aria-label="Two mechanics working side by side on a customer vehicle in the repair bay" style="background-image:url('https://images.pexels.com/photos/4489776/pexels-photo-4489776.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Team repairs</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="contact" style="background:var(--card)">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="cinfo">
+        <h2>Stop in or call ahead.</h2>
+        <div class="cline"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><b>(419) 720-6448</b><span>Call for a quote or to set up a drop-off</span></div></div>
+        <div class="cline"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>4154 Monroe St</b><span>Toledo, OH 43606</span></div></div>
+        <div class="cline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Walk-ins welcome</b><span>Drop the car and we will call with what it needs</span></div></div>
+        <a class="bigcall" href="tel:+14197206448"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 720-6448</a>
+      </div>
+      <div class="hours">
+        <h3>Shop hours</h3>
+        <div class="hrow"><span>Monday</span><span>8:00a &ndash; 5:30p</span></div>
+        <div class="hrow"><span>Tuesday</span><span>8:00a &ndash; 5:30p</span></div>
+        <div class="hrow"><span>Wednesday</span><span>8:00a &ndash; 5:30p</span></div>
+        <div class="hrow"><span>Thursday</span><span>8:00a &ndash; 5:30p</span></div>
+        <div class="hrow"><span>Friday</span><span>8:00a &ndash; 5:30p</span></div>
+        <div class="hrow"><span>Saturday</span><span>By appointment</span></div>
+        <div class="hrow closed"><span>Sunday</span><span>Closed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="yr"></span> Monroe Auto &middot; 4154 Monroe St, Toledo, OH 43606</div>
+    <div>Site by Elements Studio</div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+14197206448"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 720-6448</a></div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var nav=document.getElementById('nav');
+  var bar=document.getElementById('bar');
+  function onScroll(){
+    var st=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',st>20);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?st/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},(i%6)*80);io.unobserve(e.target);}});
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  function countUp(el){
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),t0=null,dur=1400;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);
+      el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=to.toFixed(dec);}
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+  document.querySelectorAll('.cnt').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>

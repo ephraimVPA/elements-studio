@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margen Automotive LLC | Auto Repair in Toledo, OH</title>
+<meta name="description" content="Margen Automotive LLC on Upton Ave in Toledo. Straight answers, careful engine and repair work, rated 4.6 stars by 153 local drivers. Call (419) 720-2000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E1116; --panel:#161B22; --panel2:#1C232D; --line:#26313E;
+    --ink:#EAEEF4; --muted:#98A6B7; --accent:#2D6CFF; --accent-soft:#5C8CFF;
+    --radius:16px; --ease:cubic-bezier(.16,1,.3,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:Sora,sans-serif;line-height:1.08;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  .accent{color:var(--accent-soft)}
+
+  /* progress bar */
+  #bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:60}
+
+  /* nav */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+  header.scrolled{background:rgba(14,17,22,.86);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.4);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:11px;font-family:Sora;font-weight:800;font-size:1.06rem}
+  .brand .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#173a8f);display:grid;place-items:center;box-shadow:0 4px 14px rgba(45,108,255,.4)}
+  .brand .dot svg{width:17px;height:17px;stroke:#fff}
+  .navcta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;padding:11px 18px;border-radius:11px;font-size:.94rem;transition:transform .25s var(--spring),box-shadow .25s}
+  .navcta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(45,108,255,.4)}
+  .navcta svg{width:16px;height:16px;stroke:#fff}
+  @media(max-width:640px){.navcta span{display:none}.navcta{padding:11px 13px}}
+
+  /* hero */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/8985664/pexels-photo-8985664.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#0E1116,#1a2740);background-size:cover;background-position:center;z-index:0;animation:ken 22s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1)}to{transform:scale(1.1)}}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(10,13,18,.9) 0%,rgba(10,13,18,.7) 45%,rgba(12,20,38,.5) 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-soft);border:1px solid var(--line);background:rgba(28,35,45,.55);padding:8px 15px;border-radius:100px;margin-bottom:22px}
+  .eyebrow .pip{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);font-weight:800;max-width:15ch}
+  .hero p.lead{margin-top:20px;font-size:1.18rem;color:#D2DBE6;max-width:44ch}
+  .cta-row{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;border-radius:12px;padding:15px 26px;font-size:1.02rem;transition:transform .25s var(--spring),box-shadow .25s var(--ease)}
+  .btn svg{width:19px;height:19px}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(45,108,255,.42)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(45,108,255,.55)}
+  .btn-primary svg{stroke:#fff}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(22,27,34,.4)}
+  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--accent-soft)}
+  .btn-ghost svg{stroke:var(--accent-soft)}
+  .hero-meta{margin-top:40px;display:flex;gap:30px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
+  .hero-meta b{color:var(--ink);font-family:Sora;font-weight:700}
+
+  /* trust strip */
+  .trust{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 0}
+  .stat{text-align:center}
+  .stat .n{font-family:Sora;font-weight:800;font-size:2rem;color:var(--ink)}
+  .stat .n .accent{color:var(--accent-soft)}
+  .stat .l{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;margin-top:4px}
+  @media(max-width:640px){.trust .wrap{grid-template-columns:repeat(2,1fr);gap:22px}}
+
+  /* sections */
+  section.pad{padding:96px 0}
+  .shead{max-width:60ch;margin-bottom:46px}
+  .shead .kick{color:var(--accent-soft);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:12px}
+  .shead h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700}
+  .shead p{color:var(--muted);margin-top:14px;font-size:1.08rem}
+
+  /* services grid + blueprint motif */
+  .svc-wrap{position:relative}
+  .motif{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
+    background-image:linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px);
+    background-size:46px 46px;-webkit-mask-image:radial-gradient(circle at 78% 20%,#000,transparent 62%);mask-image:radial-gradient(circle at 78% 20%,#000,transparent 62%);opacity:.09}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:transform .3s var(--spring),border-color .3s,box-shadow .3s}
+  .card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+  .ic{width:48px;height:48px;border-radius:12px;background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;margin-bottom:18px}
+  .ic svg{width:24px;height:24px;stroke:var(--accent-soft);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:1.16rem;font-weight:600;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.96rem}
+
+  /* why */
+  .why{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media(max-width:860px){.why{grid-template-columns:1fr;gap:34px}}
+  .why ul{list-style:none;margin-top:10px}
+  .why li{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .why li:last-child{border-bottom:none}
+  .why li .chk{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:rgba(45,108,255,.14);display:grid;place-items:center;margin-top:2px}
+  .why li .chk svg{width:15px;height:15px;stroke:var(--accent-soft);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .why li b{font-family:Sora;font-weight:600;display:block;margin-bottom:2px}
+  .why li span.d{color:var(--muted);font-size:.95rem}
+  .why-photo{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background-size:cover;background-position:center;min-height:340px}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:760px){.gal{grid-template-columns:1fr}}
+  .ph{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background-size:cover;background-position:center;border:1px solid var(--line);transition:transform .4s var(--ease)}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,13,18,.55));opacity:0;transition:opacity .3s}
+  .ph:hover{transform:scale(1.02)}
+  .ph:hover::after{opacity:1}
+  .ph .cap{position:absolute;left:14px;bottom:12px;z-index:2;font-size:.86rem;font-weight:600;opacity:0;transform:translateY(8px);transition:.3s var(--ease)}
+  .ph:hover .cap{opacity:1;transform:none}
+
+  /* contact */
+  .contact{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media(max-width:760px){.contact{grid-template-columns:1fr;padding:30px}}
+  .cinfo h2{font-size:2rem;font-weight:700;margin-bottom:18px}
+  .cline{display:flex;gap:13px;align-items:flex-start;padding:12px 0}
+  .cline svg{width:20px;height:20px;stroke:var(--accent-soft);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto;margin-top:3px}
+  .cline b{font-family:Sora;font-weight:600}
+  .cline span{color:var(--muted);font-size:.96rem}
+  .hours{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .hours h3{font-size:1.05rem;margin-bottom:14px;font-family:Sora;font-weight:600}
+  .hrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.94rem}
+  .hrow:last-child{border-bottom:none}
+  .hrow span:first-child{color:var(--muted)}
+  .hrow.closed span:last-child{color:#8895a6}
+  .bigcall{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;background:var(--accent);color:#fff;font-family:Sora;font-weight:700;font-size:1.15rem;padding:17px;border-radius:14px;transition:transform .25s var(--spring)}
+  .bigcall:hover{transform:translateY(-3px)}
+  .bigcall svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 120px;color:var(--muted);font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  /* sticky mobile call */
+  .sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;padding:11px 16px;background:rgba(14,17,22,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;font-family:Sora;font-weight:700;padding:14px;border-radius:12px}
+  .sticky-call svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:2}
+  @media(max-width:760px){.sticky-call{display:block}footer{padding-bottom:90px}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="nav">
+  <div class="wrap">
+    <nav>
+      <div class="brand"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Margen Automotive</div>
+      <a class="navcta" href="tel:+14197202000"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>(419) 720-2000</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A Margen Automotive technician leaning into an open engine bay under garage lights, working on a car motor"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow reveal"><span class="pip"></span>Auto Repair &middot; Upton Ave, Toledo</span>
+    <h1 class="reveal">Honest engine work, done right the first time.</h1>
+    <p class="lead reveal">Margen Automotive keeps Toledo drivers on the road with clear diagnostics, fair pricing, and repairs that hold up. Tell us what the car is doing and we will tell you straight what it needs.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="tel:+14197202000"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call the shop</a>
+      <a class="btn btn-ghost" href="#services"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>What we fix</a>
+    </div>
+    <div class="hero-meta reveal">
+      <div><b>4.6&#9733;</b> rated by local drivers</div>
+      <div><b>153</b> Google reviews</div>
+      <div><b>Toledo, OH</b> 43613</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n"><span class="cnt" data-to="4.6" data-dec="1">0</span><span class="accent">&#9733;</span></div><div class="l">Average rating</div></div>
+    <div class="stat reveal"><div class="n"><span class="cnt" data-to="153">0</span></div><div class="l">Google reviews</div></div>
+    <div class="stat reveal"><div class="n"><span class="cnt" data-to="100">0</span>%</div><div class="l">Written estimates</div></div>
+    <div class="stat reveal"><div class="n">Upton</div><div class="l">Ave, Toledo</div></div>
+  </div>
+</div>
+
+<section class="pad svc-wrap" id="services">
+  <div class="motif"></div>
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="kick">What we do</div>
+      <h2>Full-service repair for the car you already own.</h2>
+      <p>From a check-engine light to a tired transmission, Margen handles the work that keeps daily drivers dependable.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Engine diagnostics</h3><p>We read the codes, then confirm the real cause before you pay for parts you do not need.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div><h3>Brakes &amp; suspension</h3><p>Pads, rotors, struts, and steering work so the car stops flat and rides straight.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 4h4v6M14 20h4v-6M6 4v16M4 8h4M4 16h4"/></svg></div><h3>Oil &amp; fluid service</h3><p>Oil changes, coolant, and transmission fluid on a schedule that fits how you drive.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2M11 11v2"/></svg></div><h3>Batteries &amp; electrical</h3><p>Starting, charging, and wiring problems tracked down and fixed, not just reset.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M5 17H3V9l3-4h7l4 4h2v8h-2M9 17h6"/></svg></div><h3>Tune-ups &amp; maintenance</h3><p>Belts, filters, plugs, and the small stuff that stops a big repair before it starts.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div><h3>Pre-purchase checks</h3><p>Thinking about a used car? Bring it in and we will tell you what it is really worth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="background:var(--panel)">
+  <div class="wrap why">
+    <div class="reveal">
+      <div class="shead" style="margin-bottom:24px">
+        <div class="kick">Why Margen</div>
+        <h2>A shop that explains the repair before it makes it.</h2>
+      </div>
+      <ul>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Straight diagnosis</b><span class="d">You hear what is wrong and what it will cost before any wrench turns.</span></div></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Fair, written estimates</b><span class="d">No surprise line items. The number we quote is the number you pay.</span></div></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Work that lasts</b><span class="d">Quality parts and careful labor, backed by a 4.6-star record across 153 reviews.</span></div></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Toledo neighbors</b><span class="d">Right on Upton Ave, ready when your day cannot wait on the car.</span></div></li>
+      </ul>
+    </div>
+    <div class="why-photo reveal" role="img" aria-label="A mechanic guiding a lifted car engine into place inside the bright Margen Automotive repair bay" style="background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="kick">In the bay</div>
+      <h2>The kind of work your car gets here.</h2>
+    </div>
+    <div class="gal">
+      <div class="ph reveal" role="img" aria-label="Close-up of a technician's hands repairing components inside a car engine" style="background-image:url('https://images.pexels.com/photos/4116221/pexels-photo-4116221.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Engine repair</span></div>
+      <div class="ph reveal" role="img" aria-label="Detailed view of hands working on the internal parts of a car motor" style="background-image:url('https://images.pexels.com/photos/8478201/pexels-photo-8478201.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Precise work</span></div>
+      <div class="ph reveal" role="img" aria-label="A car engine lifted for service in a well-lit Toledo auto repair shop" style="background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Full service</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="contact" style="background:var(--panel)">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="cinfo">
+        <h2>Bring it by, or call first.</h2>
+        <div class="cline"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><b>(419) 720-2000</b><span>Call for an estimate or to book a drop-off</span></div></div>
+        <div class="cline"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>3810 Upton Ave</b><span>Toledo, OH 43613</span></div></div>
+        <div class="cline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>By appointment or walk-in</b><span>Drop the car and we will call with the diagnosis</span></div></div>
+        <a class="bigcall" href="tel:+14197202000"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 720-2000</a>
+      </div>
+      <div class="hours">
+        <h3>Shop hours</h3>
+        <div class="hrow"><span>Monday</span><span>8:00a &ndash; 6:00p</span></div>
+        <div class="hrow"><span>Tuesday</span><span>8:00a &ndash; 6:00p</span></div>
+        <div class="hrow"><span>Wednesday</span><span>8:00a &ndash; 6:00p</span></div>
+        <div class="hrow"><span>Thursday</span><span>8:00a &ndash; 6:00p</span></div>
+        <div class="hrow"><span>Friday</span><span>8:00a &ndash; 6:00p</span></div>
+        <div class="hrow"><span>Saturday</span><span>By appointment</span></div>
+        <div class="hrow closed"><span>Sunday</span><span>Closed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="yr"></span> Margen Automotive LLC &middot; 3810 Upton Ave, Toledo, OH 43613</div>
+    <div>Site by Elements Studio</div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+14197202000"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 720-2000</a></div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var nav=document.getElementById('nav');
+  var bar=document.getElementById('bar');
+  function onScroll(){
+    var st=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',st>20);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?st/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},(i%6)*80);io.unobserve(e.target);}});
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  function countUp(el){
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),t0=null,dur=1400;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);
+      el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=to.toFixed(dec);}
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+  document.querySelectorAll('.cnt').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
