@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BearClaws Tire, Auto &amp; Light Truck Service | Northwood, OH</title>
+<meta name="description" content="Tires, brakes, alignments and light truck service in Northwood, Ohio. Rated 4.7 stars by 129 local drivers. Call BearClaws for a straight quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181A; --panel:#191F1D; --green:#1E4A38; --green2:#16342A;
+  --amber:#E8A33D; --paper:#EDEAE3; --muted:#A9B0AB; --line:#2A322F;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:"Barlow",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:"Anton",Impact,sans-serif;font-weight:400;letter-spacing:.5px;line-height:.98;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.amber{color:var(--amber)}
+
+/* progress bar */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;z-index:60}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s;padding:14px 0}
+header.scrolled{background:rgba(20,24,26,.92);backdrop-filter:blur(8px);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Anton";font-size:22px;letter-spacing:1px}
+.brand .mark{color:var(--amber)}
+.nav .call{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#1a1207;font-weight:700;padding:11px 18px;border-radius:6px;font-size:15px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.nav .call:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(232,163,61,.35)}
+.nav .call svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/8660855/pexels-photo-8660855.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#16342A,#14181A);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 22s ease-in-out infinite alternate;will-change:transform}
+@keyframes ken{to{transform:scale(1)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,26,.35) 0%,rgba(20,24,26,.55) 45%,rgba(20,24,26,.92) 100%)}
+.hero .wrap{position:relative;padding:150px 0 64px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:var(--amber);margin-bottom:18px}
+.eyebrow .dot{width:8px;height:8px;background:var(--amber);border-radius:50%}
+.hero h1{font-size:clamp(40px,7.4vw,90px);max-width:16ch;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.hero p.sub{margin-top:20px;max-width:56ch;font-size:19px;color:#DDE2DE}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:8px;font-weight:700;font-size:17px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.btn svg{width:20px;height:20px}
+.btn-primary{background:var(--amber);color:#1a1207}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(232,163,61,.4)}
+.btn-ghost{border:1.5px solid rgba(237,234,227,.4);color:var(--paper)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--amber);color:var(--amber)}
+
+/* trust strip */
+.trust{background:var(--green2);border-top:3px solid var(--amber)}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;padding:26px 0}
+.stat{display:flex;flex-direction:column}
+.stat .n{font-family:"Anton";font-size:40px;color:var(--amber);line-height:1}
+.stat .l{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* sections */
+section.pad{padding:88px 0}
+.sec-head{max-width:60ch}
+.sec-head .tag{color:var(--amber);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.sec-head h2{font-size:clamp(30px,4.8vw,52px);margin-top:12px}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:18px}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:44px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--amber);box-shadow:0 16px 34px rgba(0,0,0,.4)}
+.card .ic{width:46px;height:46px;border-radius:10px;background:rgba(232,163,61,.14);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card .ic svg{width:24px;height:24px;color:var(--amber)}
+.card h3{font-size:21px;letter-spacing:.5px}
+.card p{color:var(--muted);margin-top:8px;font-size:15.5px}
+
+/* why + motif */
+.why{position:relative;background:linear-gradient(160deg,var(--green2),var(--ink));overflow:hidden}
+.claw{position:absolute;inset:0;pointer-events:none;opacity:.10}
+.why .wrap{position:relative}
+.why .cols{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-top:40px}
+.why ul{list-style:none;margin-top:10px}
+.why li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.why li svg{width:24px;height:24px;color:var(--amber);flex:none;margin-top:2px}
+.why li b{display:block;font-size:18px}
+.why li span{color:var(--muted);font-size:15px}
+.reviewcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px;text-align:center}
+.reviewcard .rate{font-family:"Anton";font-size:74px;color:var(--amber);line-height:1}
+.stars{color:var(--amber);font-size:22px;letter-spacing:3px;margin:6px 0}
+.reviewcard .cnt{color:var(--muted);font-size:15px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.ph{position:relative;height:260px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;border:1px solid var(--line)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,24,26,.6))}
+.ph.g1{background-image:url('https://images.pexels.com/photos/6870316/pexels-photo-6870316.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(120deg,#1E4A38,#14181A)}
+.ph.g2{background-image:url('https://images.pexels.com/photos/8986137/pexels-photo-8986137.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(120deg,#1E4A38,#14181A)}
+.ph.g3{background-image:url('https://images.pexels.com/photos/17429096/pexels-photo-17429096.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(120deg,#1E4A38,#14181A)}
+
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:40px}
+.infobox{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px}
+.infobox .row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.infobox .row:last-child{border-bottom:none}
+.infobox svg{width:22px;height:22px;color:var(--amber);flex:none}
+.infobox .k{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.infobox .v{font-size:17px;margin-top:2px}
+.hours div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line)}
+.hours div:last-child{border-bottom:none}
+.hours .d{color:var(--muted)}
+
+/* final cta */
+.final{background:var(--amber);color:#1a1207;text-align:center}
+.final .wrap{padding:76px 0}
+.final h2{font-size:clamp(32px,5vw,58px)}
+.final p{font-size:19px;margin-top:14px;max-width:52ch;margin-inline:auto;font-weight:500}
+.final .btn-dark{margin-top:28px;background:var(--ink);color:var(--paper)}
+.final .btn-dark:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.3)}
+
+footer{background:var(--ink);border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+
+/* sticky mobile call */
+.sticky-call{display:none}
+@media(max-width:720px){
+  .why .cols,.loc{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr;}
+  .ph{height:220px}
+  .nav .call span{display:none}
+  .sticky-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:55;align-items:center;justify-content:center;gap:10px;background:var(--amber);color:#1a1207;font-weight:700;padding:15px;font-size:17px;box-shadow:0 -6px 20px rgba(0,0,0,.3)}
+  .sticky-call svg{width:20px;height:20px}
+  body{padding-bottom:56px}
+}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">&#9650;</span> BEARCLAWS <span class="amber">TIRE</span></div>
+    <a class="call" href="tel:+14196960001">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>(419) 696-0001</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A mobile tire service truck stocked with tires and equipment outside the BearClaws shop in Northwood, Ohio"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> Northwood, Ohio</span>
+    <h1>Tires and light truck work done right the first time.</h1>
+    <p class="sub">Cars, trucks and work vans. New tires, brakes, alignments and honest repair from a shop your neighbors already trust.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+14196960001">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a quote
+      </a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="stat"><span class="n" data-count="4.7" data-dec="1">4.7</span><span class="l">Google rating</span></div>
+    <div class="stat"><span class="n" data-count="129">129</span><span class="l">Local reviews</span></div>
+    <div class="stat"><span class="n">Cars &amp; Trucks</span><span class="l">Light truck ready</span></div>
+    <div class="stat"><span class="n">Same day</span><span class="l">On most tire jobs</span></div>
+  </div>
+</div>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">What we do</span>
+      <h2>One shop for tires, brakes and the whole vehicle.</h2>
+      <p>Bring in the daily driver or the work truck. We handle the everyday jobs and the ones other shops send away.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/></svg></div><h3>New &amp; Used Tires</h3><p>Mount, balance and rotate for cars, SUVs and light trucks. Fair pricing on tires that fit how you drive.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div><h3>Brakes</h3><p>Pads, rotors and lines checked and replaced so you stop short when it counts.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18M6 6l12 12M18 6L6 18"/></svg></div><h3>Alignments</h3><p>Straight steering and even tire wear. We square it up and show you the numbers.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16M6 17V9l3-3h6l3 3v8"/><circle cx="8" cy="17" r="2"/><circle cx="16" cy="17" r="2"/></svg></div><h3>Light Truck Service</h3><p>Work vans and pickups welcome. Suspension, tires and repair that keep the job moving.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-4 4-6-6zM10 8l-6 6v4h4l6-6"/></svg></div><h3>Repairs &amp; Diagnostics</h3><p>Check engine light, noises and leaks. We find the real cause before we touch a wrench.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 2l3 3M12 2l-3 3"/><rect x="4" y="8" width="16" height="12" rx="2"/></svg></div><h3>Oil &amp; Maintenance</h3><p>Oil changes, fluids and a real once-over so small things stay small.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad why">
+  <svg class="claw" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true"><g stroke="#E8A33D" stroke-width="26" stroke-linecap="round" fill="none"><path d="M120 40 C 260 220, 300 380, 360 560"/><path d="M240 40 C 380 220, 420 380, 480 560"/><path d="M360 40 C 500 220, 540 380, 600 560"/></g></svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">Why BearClaws</span>
+      <h2>Neighbors keep coming back for a reason.</h2>
+    </div>
+    <div class="cols">
+      <ul class="reveal">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Straight quotes, no surprises</b><span>You hear the price and the reason before we start.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Cars and light trucks under one roof</b><span>Daily drivers and work vehicles get the same care.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Fast turnaround on tire work</b><span>Most tire jobs go out the same day you drop off.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Right here in Northwood</b><span>Easy to reach on Woodville Road and easy to talk to.</span></div></li>
+      </ul>
+      <div class="reviewcard reveal">
+        <div class="rate" data-count="4.7" data-dec="1">4.7</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="cnt">from <b data-count="129">129</b> Google reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">Inside the shop</span>
+      <h2>Real work on real vehicles.</h2>
+    </div>
+    <div class="gal">
+      <div class="ph g1 reveal" role="img" aria-label="A technician handling a tire during service in the BearClaws garage"></div>
+      <div class="ph g2 reveal" role="img" aria-label="Close-up of a vehicle undercarriage on the lift for inspection and repair"></div>
+      <div class="ph g3 reveal" role="img" aria-label="A mechanic working on the wheel of a light truck outdoors"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="background:var(--green2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">Find us</span>
+      <h2>Stop in or give us a call.</h2>
+    </div>
+    <div class="loc">
+      <div class="infobox reveal">
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="k">Address</div><div class="v">5601 Woodville Rd, Northwood, OH 43619</div></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><div class="k">Phone</div><div class="v"><a href="tel:+14196960001">(419) 696-0001</a></div></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><div class="k">Best for</div><div class="v">Tires, brakes, alignments, light truck repair</div></div></div>
+      </div>
+      <div class="infobox hours reveal">
+        <div class="k" style="margin-bottom:10px">Hours</div>
+        <div><span class="d">Monday</span><span>8:00 AM - 6:00 PM</span></div>
+        <div><span class="d">Tuesday</span><span>8:00 AM - 6:00 PM</span></div>
+        <div><span class="d">Wednesday</span><span>8:00 AM - 6:00 PM</span></div>
+        <div><span class="d">Thursday</span><span>8:00 AM - 6:00 PM</span></div>
+        <div><span class="d">Friday</span><span>8:00 AM - 6:00 PM</span></div>
+        <div><span class="d">Saturday</span><span>8:00 AM - 2:00 PM</span></div>
+        <div><span class="d">Sunday</span><span>Closed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Need tires or a repair? Let's talk.</h2>
+    <p>Call BearClaws and get a straight answer on price and timing before any work begins.</p>
+    <a class="btn btn-dark" href="tel:+14196960001">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 696-0001
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>BearClaws Tire, Auto &amp; Light Truck Service LLC &middot; 5601 Woodville Rd, Northwood, OH 43619</div>
+    <div>Website by Elements Studio</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14196960001">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call (419) 696-0001
+</a>
+
+<script>
+var hd=document.getElementById('hd');
+var bar=document.getElementById('bar');
+function onScroll(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  hd.classList.toggle('scrolled',y>40);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');}, (i%4)*70); io.unobserve(e.target);} });
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+function countUp(el){
+  var end=parseFloat(el.getAttribute('data-count'));
+  var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+  var t0=null,dur=1200;
+  function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var v=(end*(0.2+0.8*p)); el.textContent=v.toFixed(dec); if(p<1)requestAnimationFrame(step); else el.textContent=end.toFixed(dec); }
+  requestAnimationFrame(step);
+}
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
