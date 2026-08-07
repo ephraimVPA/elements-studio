@@ -52,13 +52,17 @@ module.exports = async (req, res) => {
       case 'customer.subscription.deleted': {
         const sub = event.data.object || {};
         const subMeta = (sub.metadata && sub.metadata.sub) || null;
-        try {
-          await callAppsScript('markCanceled', {
-            sub: subMeta,
-            subscriptionId: sub.id || null,
-            customerId: idOf(sub.customer),
-          });
-        } catch (_) { /* best-effort */ }
+        // Only ours: subscriptions created by our checkout carry metadata.sub.
+        // Foreign products on a shared Stripe account are ignored (never touch the Sheet).
+        if (subMeta) {
+          try {
+            await callAppsScript('markCanceled', {
+              sub: subMeta,
+              subscriptionId: sub.id || null,
+              customerId: idOf(sub.customer),
+            });
+          } catch (_) { /* best-effort */ }
+        }
         break;
       }
       default:
