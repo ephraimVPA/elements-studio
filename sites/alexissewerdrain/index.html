@@ -32,7 +32,7 @@ nav.scrolled{background:var(--dark);box-shadow:0 2px 20px rgba(0,0,0,.45)}
 @media(min-width:640px){.nav-phone{display:flex;align-items:center;gap:.5rem;background:var(--amber);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.04em;padding:.5rem 1.3rem;border-radius:4px;text-decoration:none;transition:background .2s,transform .3s cubic-bezier(.34,1.56,.64,1)}}
 .nav-phone:hover{background:var(--amber-l);transform:scale(1.05)}
 
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem 5rem;position:relative;overflow:hidden;background:var(--navy-d)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 max(1.5rem,(100% - 1060px)/2) 5rem;position:relative;overflow:hidden;background:var(--navy-d)}
 .hero-bg{position:absolute;inset:0;background:center/cover no-repeat;animation:kb 20s ease-in-out infinite alternate;will-change:transform;background-image:url('images/hero.jpg');background-size:cover;background-position:center}
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(170deg,rgba(13,24,36,.78) 0%,rgba(13,24,36,.5) 100%)}
 @keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
