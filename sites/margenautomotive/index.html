@@ -334,7 +334,7 @@
 
 <div id="es-claim" role="region" aria-label="Claim this website">
   <div class="in">
-    <div class="msg"><b id="es-msg">This demo site is reserved for you</b><span>Keep it live and start getting calls</span></div>
+    <div class="msg"><b id="es-msg">75% of customers judge a business by its website (Stanford research)</b><span>Yours is built and live. Claim it before it comes down.</span></div>
     <div class="cd" id="es-cd" aria-live="polite" aria-label="time remaining">
       <div><b data-cd="d">--</b><s>days</s></div><div><b data-cd="h">--</b><s>hrs</s></div>
       <div><b data-cd="m">--</b><s>min</s></div><div><b data-cd="s">--</b><s>sec</s></div>
@@ -442,10 +442,87 @@
       });
     }).catch(fail);
   }
-  ctaBtn.onclick=function(){
-    post('/api/track',{type:'cta_click'});
+  function openClaim(src){
+    post('/api/track',{type:'cta_click',meta:src||'banner'});
     modal.classList.add('on');
     if(opened)return; opened=true; renderPlans();
+  }
+  window.__esOpenClaim=openClaim;
+  ctaBtn.onclick=function(){openClaim('banner');};
+})();
+</script>
+<style>
+#es-chat-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:10px;background:var(--es-ink,#234C3A);color:#fff;border:0;border-radius:999px;padding:13px 18px;font:600 14px system-ui;cursor:pointer;box-shadow:0 8px 26px rgba(0,0,0,.3);transition:transform .2s}
+#es-chat-fab:hover{transform:translateY(-2px)}
+#es-chat-fab .dot{width:9px;height:9px;border-radius:50%;background:#7ADB8F;animation:esblink 1.6s infinite}
+@keyframes esblink{0%,100%{opacity:1}50%{opacity:.3}}
+#es-chat{position:fixed;right:20px;bottom:84px;z-index:9998;width:min(340px,92vw);background:#fff;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.35);display:none;overflow:hidden;font-family:system-ui,sans-serif}
+#es-chat.on{display:block}
+#es-chat .hd{background:var(--es-ink,#234C3A);color:#fff;padding:13px 16px}
+#es-chat .hd b{display:block;font-size:14.5px}
+#es-chat .hd i{font-style:normal;font-size:12px;opacity:.85;display:flex;align-items:center;gap:6px}
+#es-chat .hd i::before{content:"";width:7px;height:7px;border-radius:50%;background:#7ADB8F}
+#es-chat .body{padding:14px;max-height:320px;overflow:auto;background:#F7F5F0}
+#es-chat .m{max-width:85%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;margin-bottom:8px}
+#es-chat .me{background:var(--es-ink,#234C3A);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+#es-chat .bot{background:#fff;color:#333;border:1px solid #E5E0D5;border-bottom-left-radius:4px}
+#es-chat .lost{background:#FDECEC;border:1px solid #F2B8B5;color:#8C1D18;border-radius:10px;padding:11px 13px;font-size:13px;margin:4px 0 8px}
+#es-chat .lost b{display:block;font-size:13.5px;margin-bottom:3px}
+#es-chat .chip{display:block;width:100%;text-align:left;background:#fff;border:1px solid #D8D2C4;border-radius:999px;padding:10px 14px;margin:6px 0;font:500 13.5px system-ui;color:#234C3A;cursor:pointer}
+#es-chat .chip:hover{border-color:var(--es-ink,#234C3A);background:#F2F7F4}
+#es-chat .act{display:block;width:100%;text-align:center;background:#B3261E;color:#fff;border:0;border-radius:8px;padding:11px;font:600 14px system-ui;cursor:pointer;margin-top:2px}
+#es-chat .typing{display:inline-flex;gap:4px;padding:10px 12px;background:#fff;border:1px solid #E5E0D5;border-radius:12px;margin-bottom:8px}
+#es-chat .typing s{width:6px;height:6px;border-radius:50%;background:#B9B2A2;text-decoration:none;animation:esblink 1s infinite}
+#es-chat .typing s:nth-child(2){animation-delay:.2s}#es-chat .typing s:nth-child(3){animation-delay:.4s}
+@media(max-width:640px){#es-chat-fab{bottom:76px}#es-chat{bottom:138px}}
+</style>
+<button id="es-chat-fab" aria-label="Open chat"><span class="dot"></span>Questions? Chat with us</button>
+<div id="es-chat" role="dialog" aria-label="Chat">
+  <div class="hd"><b id="es-chat-biz">Chat</b><i>Typically replies in minutes</i></div>
+  <div class="body" id="es-chat-body"></div>
+</div>
+<script>
+(function(){
+  var C=window.ELEMENTS_CLAIM||{};
+  var API=(C.api||"").replace(/\/$/,"");
+  function track(t,m){try{fetch(API+'/api/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sub:C.sub,business:C.business,type:t,meta:m||''})});}catch(e){}}
+  var fab=document.getElementById('es-chat-fab'),panel=document.getElementById('es-chat'),body=document.getElementById('es-chat-body');
+  document.getElementById('es-chat-biz').textContent=(C.business||'Chat with us');
+  var QUICK=["I would like to book a service","Can I get a quote?","Are you available this week?"];
+  function el(cls,txt){var d=document.createElement('div');d.className=cls;d.textContent=txt;return d;}
+  function chips(){
+    var w=document.createElement('div');
+    QUICK.forEach(function(q,i){
+      var b=document.createElement('button');b.className='chip';b.textContent=q;
+      b.onclick=function(){w.remove();say(q,i);};w.appendChild(b);
+    });
+    body.appendChild(w);body.scrollTop=body.scrollHeight;
+  }
+  function say(q,i){
+    track('chat_msg',String(i));
+    body.appendChild(el('m me',q));
+    var t=document.createElement('div');t.className='typing';t.innerHTML='<s></s><s></s><s></s>';
+    body.appendChild(t);body.scrollTop=body.scrollHeight;
+    setTimeout(function(){
+      t.remove();
+      body.appendChild(el('m bot',"Sorry - live chat is not active on this demo site, so nobody received this message."));
+      var lost=document.createElement('div');lost.className='lost';
+      lost.innerHTML='<b>1 missed lead</b>On an active site this inquiry goes straight to '+(C.business||'you')+'. Customers who get no answer book with whoever answers first.';
+      body.appendChild(lost);
+      var act=document.createElement('button');act.className='act';act.textContent='Activate this site';
+      act.onclick=function(){track('chat_activate');if(window.__esOpenClaim)window.__esOpenClaim('chat');};
+      body.appendChild(act);
+      body.scrollTop=body.scrollHeight;
+      setTimeout(chips,900);
+    },1400);
+  }
+  fab.onclick=function(){
+    var on=panel.classList.toggle('on');
+    if(on&&!body.childNodes.length){
+      track('chat_open');
+      body.appendChild(el('m bot','Hi! How can we help today?'));
+      chips();
+    }
   };
 })();
 </script>
