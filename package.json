@@ -1,0 +1,9 @@
+{
+  "name": "elements-studio-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Elements Studio claim-to-subscribe serverless API (Vercel Node functions).",
+  "dependencies": {
+    "stripe": "^17.0.0"
+  }
+}
