@@ -518,81 +518,226 @@ footer a:hover{color:#3ee07e}
   ctaBtn.onclick=function(){openClaim('banner');};
 })();
 </script>
+<!-- es-chat start -->
 <style>
-#es-chat-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:10px;background:var(--es-ink,#234C3A);color:#fff;border:0;border-radius:999px;padding:13px 18px;font:600 14px system-ui;cursor:pointer;box-shadow:0 8px 26px rgba(0,0,0,.3);transition:transform .2s}
+#es-chat-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:9px;background:var(--es-ink,#234C3A);color:#fff;border:0;border-radius:999px;padding:13px 18px;font:600 14px/1 system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 26px rgba(0,0,0,.28);transition:transform .2s}
 #es-chat-fab:hover{transform:translateY(-2px)}
-#es-chat-fab .dot{width:9px;height:9px;border-radius:50%;background:#7ADB8F;animation:esblink 1.6s infinite}
-@keyframes esblink{0%,100%{opacity:1}50%{opacity:.3}}
-#es-chat{position:fixed;right:20px;bottom:84px;z-index:9998;width:min(340px,92vw);background:#fff;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.35);display:none;overflow:hidden;font-family:system-ui,sans-serif}
-#es-chat.on{display:block}
-#es-chat .hd{background:var(--es-ink,#234C3A);color:#fff;padding:13px 16px}
-#es-chat .hd b{display:block;font-size:14.5px}
-#es-chat .hd i{font-style:normal;font-size:12px;opacity:.85;display:flex;align-items:center;gap:6px}
-#es-chat .hd i::before{content:"";width:7px;height:7px;border-radius:50%;background:#7ADB8F}
-#es-chat .body{padding:14px;max-height:320px;overflow:auto;background:#F7F5F0}
-#es-chat .m{max-width:85%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;margin-bottom:8px}
+#es-chat-fab:active{transform:scale(.97)}
+#es-chat-fab .dot{width:8px;height:8px;border-radius:50%;background:#7ADB8F;animation:esc-pulse 1.8s infinite}
+#es-chat-fab .bdg{position:absolute;top:-6px;right:-4px;min-width:20px;height:20px;border-radius:10px;background:#C62821;color:#fff;font:700 11.5px/20px system-ui,sans-serif;text-align:center;padding:0 5px;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+#es-chat-fab .bdg[hidden]{display:none}
+#es-chat-tsr{position:fixed;right:20px;bottom:80px;z-index:9998;max-width:260px}
+#es-chat-tsr[hidden]{display:none}
+#es-chat-tsr .tm{display:block;background:#fff;color:#2A2A25;border:1px solid #E7E2D6;border-radius:14px 14px 4px 14px;padding:11px 14px;font:400 13.5px/1.5 system-ui,sans-serif;box-shadow:0 12px 32px rgba(0,0,0,.18);cursor:pointer;text-align:left;animation:esc-in .25s ease-out}
+#es-chat-tsr .tx{position:absolute;top:-9px;left:-9px;width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid #E7E2D6;color:#6F6A5C;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);padding:0}
+#es-chat{position:fixed;right:20px;bottom:84px;z-index:9999;width:min(360px,94vw);height:min(480px,70vh);display:flex;flex-direction:column;background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.32);overflow:hidden;font-family:system-ui,sans-serif;transform-origin:100% 100%;opacity:0;transform:scale(.9) translateY(8px);visibility:hidden;pointer-events:none;transition:opacity .18s ease-in,transform .18s ease-in,visibility 0s linear .18s}
+#es-chat.on{opacity:1;transform:none;visibility:visible;pointer-events:auto;transition:opacity .26s cubic-bezier(.34,1.56,.64,1),transform .26s cubic-bezier(.34,1.56,.64,1),visibility 0s}
+#es-chat .hd{display:flex;align-items:center;gap:10px;background:var(--es-ink,#234C3A);color:#fff;padding:11px 6px 11px 14px;flex:0 0 auto}
+#es-chat .av{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.25);font:700 14px/36px system-ui,sans-serif;text-align:center;flex:0 0 auto}
+#es-chat .who{flex:1;min-width:0}
+#es-chat .who b{display:block;font-size:14.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#es-chat .who i{font-style:normal;display:flex;align-items:center;gap:5px;font-size:11.5px;color:#D9E4DD}
+#es-chat .who i::before{content:"";width:7px;height:7px;border-radius:50%;background:#7ADB8F}
+#es-chat .hx{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:#fff;cursor:pointer;border-radius:10px;flex:0 0 auto;padding:0}
+#es-chat .hx:hover{background:rgba(255,255,255,.12)}
+#es-chat .bd{flex:1;overflow-y:auto;background:#F6F4EF;padding:14px 14px 6px}
+#es-chat .m{max-width:82%;padding:9px 13px;border-radius:14px;font-size:13.5px;line-height:1.5;margin:0 0 6px;white-space:pre-wrap;word-wrap:break-word;animation:esc-in .18s ease-out both}
+#es-chat .bot{background:#fff;color:#2A2A25;border:1px solid #E7E2D6;border-bottom-left-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
 #es-chat .me{background:var(--es-ink,#234C3A);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
-#es-chat .bot{background:#fff;color:#333;border:1px solid #E5E0D5;border-bottom-left-radius:4px}
-#es-chat .lost{background:#FDECEC;border:1px solid #F2B8B5;color:#8C1D18;border-radius:10px;padding:11px 13px;font-size:13px;margin:4px 0 8px}
-#es-chat .lost b{display:block;font-size:13.5px;margin-bottom:3px}
-#es-chat .chip{display:block;width:100%;text-align:left;background:#fff;border:1px solid #D8D2C4;border-radius:999px;padding:10px 14px;margin:6px 0;font:500 13.5px system-ui;color:#234C3A;cursor:pointer}
-#es-chat .chip:hover{border-color:var(--es-ink,#234C3A);background:#F2F7F4}
-#es-chat .act{display:block;width:100%;text-align:center;background:#B3261E;color:#fff;border:0;border-radius:8px;padding:11px;font:600 14px system-ui;cursor:pointer;margin-top:2px}
-#es-chat .typing{display:inline-flex;gap:4px;padding:10px 12px;background:#fff;border:1px solid #E5E0D5;border-radius:12px;margin-bottom:8px}
-#es-chat .typing s{width:6px;height:6px;border-radius:50%;background:#B9B2A2;text-decoration:none;animation:esblink 1s infinite}
-#es-chat .typing s:nth-child(2){animation-delay:.2s}#es-chat .typing s:nth-child(3){animation-delay:.4s}
-@media(max-width:640px){#es-chat-fab{bottom:76px}#es-chat{bottom:138px}}
+#es-chat .ts{font-size:11px;color:#6F6A5C;margin:0 2px 10px;animation:esc-in .18s ease-out both}
+#es-chat .ts.r{text-align:right}
+#es-chat .tp{display:inline-flex;gap:4px;align-items:center;background:#fff;border:1px solid #E7E2D6;border-radius:14px 14px 14px 4px;padding:13px 14px;margin:0 0 8px;animation:esc-in .18s ease-out both}
+#es-chat .tp s{width:6px;height:6px;border-radius:50%;background:#A8A190;text-decoration:none;animation:esc-b 1.1s infinite}
+#es-chat .tp s:nth-child(2){animation-delay:.15s}
+#es-chat .tp s:nth-child(3){animation-delay:.3s}
+#es-chat .chips{margin:2px 0 10px}
+#es-chat .chip{display:block;background:#fff;border:1px solid #C9D6CE;color:var(--es-ink,#234C3A);border-radius:999px;padding:9px 14px;margin:0 0 6px;font:500 13px system-ui,sans-serif;cursor:pointer;animation:esc-in .18s ease-out both;transition:background .15s,border-color .15s}
+#es-chat .chip:hover{background:#EAF3EE;border-color:var(--es-ink,#234C3A)}
+#es-chat .lead{background:#FCEEED;border:1px solid #F0B9B4;border-left:4px solid #B3261E;border-radius:10px;padding:11px 13px;margin:2px 0 8px;font:400 12.5px/1.5 system-ui,sans-serif;color:#7A1712;animation:esc-slide .22s ease-out both;transform-origin:100% 50%}
+#es-chat .lead b{display:block;font-size:13.5px;margin-bottom:2px}
+#es-chat .act{display:block;width:100%;background:#B3261E;color:#fff;border:0;border-radius:9px;padding:12px;font:600 13.5px system-ui,sans-serif;cursor:pointer;margin:0 0 10px;animation:esc-in .18s ease-out both;transition:background .15s}
+#es-chat .act:hover{background:#9A1F19}
+#es-chat .ft{flex:0 0 auto;display:flex;align-items:flex-end;gap:8px;background:#fff;border-top:1px solid #E7E2D6;padding:10px}
+#es-chat .ft textarea{flex:1;resize:none;border:1px solid #DDD7C9;border-radius:12px;padding:11px 12px;font:400 14px/1.4 system-ui,sans-serif;color:#2A2A25;min-height:44px;max-height:100px;outline:none}
+#es-chat .ft textarea:focus{border-color:var(--es-ink,#234C3A);box-shadow:0 0 0 2px rgba(35,76,58,.25)}
+#es-chat .snd{width:44px;height:44px;border-radius:50%;background:var(--es-ink,#234C3A);color:#fff;border:0;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto;padding:0;transition:opacity .15s,transform .15s}
+#es-chat .snd:disabled{opacity:.4;cursor:default}
+#es-chat .snd:not(:disabled):active{transform:scale(.92)}
+@keyframes esc-pulse{0%,100%{box-shadow:0 0 0 0 rgba(122,219,143,.55)}50%{box-shadow:0 0 0 5px rgba(122,219,143,0)}}
+@keyframes esc-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes esc-slide{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:none}}
+@keyframes esc-b{0%,60%,100%{transform:translateY(0);opacity:.55}30%{transform:translateY(-4px);opacity:1}}
+@keyframes esc-fade{0%,100%{opacity:1}50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){
+#es-chat{transform:none;transition:opacity .15s ease,visibility 0s linear .15s}
+#es-chat.on{transition:opacity .15s ease,visibility 0s}
+#es-chat .m,#es-chat .ts,#es-chat .chip,#es-chat .lead,#es-chat .act,#es-chat .tp,#es-chat-tsr .tm{animation:none}
+#es-chat .tp s{animation:esc-fade 1.1s infinite}
+#es-chat-fab,#es-chat-fab:hover,#es-chat-fab:active,#es-chat .snd:not(:disabled):active{transform:none}
+#es-chat-fab .dot{animation:esc-fade 1.8s infinite}
+}
+@media(max-width:640px){#es-chat-fab{bottom:76px}#es-chat-tsr{bottom:136px}#es-chat{bottom:134px}}
 </style>
-<button id="es-chat-fab" aria-label="Open chat"><span class="dot"></span>Questions? Chat with us</button>
+<button id="es-chat-fab" type="button" aria-label="Open chat" aria-expanded="false"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat with us<span class="dot" aria-hidden="true"></span><span class="bdg" id="es-chat-bdg" hidden>1</span></button>
+<div id="es-chat-tsr" hidden>
+  <button type="button" class="tx" id="es-chat-tsr-x" aria-label="Dismiss message"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <button type="button" class="tm" id="es-chat-tsr-m">Hi! Need a hand with anything?</button>
+</div>
 <div id="es-chat" role="dialog" aria-label="Chat">
-  <div class="hd"><b id="es-chat-biz">Chat</b><i>Typically replies in minutes</i></div>
-  <div class="body" id="es-chat-body"></div>
+  <div class="hd">
+    <span class="av" id="es-chat-av" aria-hidden="true">C</span>
+    <div class="who"><b id="es-chat-biz">Chat</b><i>Online now</i></div>
+    <button type="button" class="hx" id="es-chat-x" aria-label="Close chat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="bd" id="es-chat-bd" aria-live="polite"></div>
+  <div class="ft">
+    <textarea id="es-chat-in" rows="1" placeholder="Type a message" aria-label="Type a message"></textarea>
+    <button type="button" class="snd" id="es-chat-send" aria-label="Send message" disabled><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></button>
+  </div>
 </div>
 <script>
 (function(){
   var C=window.ELEMENTS_CLAIM||{};
   var API=(C.api||"").replace(/\/$/,"");
+  var BIZ=C.business||'our team';
   function track(t,m){try{fetch(API+'/api/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sub:C.sub,business:C.business,type:t,meta:m||''})});}catch(e){}}
-  var fab=document.getElementById('es-chat-fab'),panel=document.getElementById('es-chat'),body=document.getElementById('es-chat-body');
-  document.getElementById('es-chat-biz').textContent=(C.business||'Chat with us');
+  function $(id){return document.getElementById(id);}
+  var fab=$('es-chat-fab'),panel=$('es-chat'),body=$('es-chat-bd'),input=$('es-chat-in'),send=$('es-chat-send'),badge=$('es-chat-bdg'),teaser=$('es-chat-tsr');
+  if(C.ink){fab.style.setProperty('--es-ink',C.ink);panel.style.setProperty('--es-ink',C.ink);}
+  panel.setAttribute('aria-label','Chat with '+BIZ);
+  $('es-chat-biz').textContent=C.business||'Chat with us';
+  var words=(C.business||'C').split(/\s+/),ini='';
+  for(var w=0;w<words.length&&ini.length<2;w++){if(words[w])ini+=words[w].charAt(0);}
+  $('es-chat-av').textContent=ini.toUpperCase();
+
+  // WebAudio tones: nothing plays before the first user gesture.
+  var AC=window.AudioContext||window.webkitAudioContext,ctx=null,gestured=false;
+  function armed(){gestured=true;}
+  document.addEventListener('mousedown',armed);document.addEventListener('touchstart',armed);document.addEventListener('keydown',armed);
+  function tone(f1,f2,dur,vol){
+    try{
+      if(!gestured||!AC)return;
+      if(!ctx)ctx=new AC();
+      if(ctx.state==='suspended')ctx.resume();
+      var t=ctx.currentTime,o=ctx.createOscillator(),g=ctx.createGain();
+      o.type='sine';o.frequency.setValueAtTime(f1,t);
+      if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+dur);
+      g.gain.setValueAtTime(.0001,t);
+      g.gain.exponentialRampToValueAtTime(vol,t+.012);
+      g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+      o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+dur+.03);
+    }catch(e){}
+  }
+  function sndReceive(){tone(660,880,.09,.08);}
+  function sndSent(){tone(520,0,.045,.04);}
+  function sndPop(){tone(700,940,.09,.06);}
+
+  function scrollEnd(){body.scrollTop=body.scrollHeight;}
+  function el(tag,cls,txt){var d=document.createElement(tag);if(cls)d.className=cls;if(txt)d.textContent=txt;return d;}
+  function addMsg(cls,txt){var m=el('div','m '+cls,txt);body.appendChild(m);scrollEnd();return m;}
+  function stamp(right){body.appendChild(el('div','ts'+(right?' r':''),'Just now'));scrollEnd();}
+  var typingEl=null;
+  function typingOn(){typingOff();typingEl=el('div','tp');typingEl.setAttribute('aria-hidden','true');typingEl.innerHTML='<s></s><s></s><s></s>';body.appendChild(typingEl);scrollEnd();}
+  function typingOff(){if(typingEl&&typingEl.parentNode)typingEl.parentNode.removeChild(typingEl);typingEl=null;}
+
   var QUICK=["I would like to book a service","Can I get a quote?","Are you available this week?"];
-  function el(cls,txt){var d=document.createElement('div');d.className=cls;d.textContent=txt;return d;}
-  function chips(){
-    var w=document.createElement('div');
-    QUICK.forEach(function(q,i){
-      var b=document.createElement('button');b.className='chip';b.textContent=q;
-      b.onclick=function(){w.remove();say(q,i);};w.appendChild(b);
-    });
-    body.appendChild(w);body.scrollTop=body.scrollHeight;
+  var chipsEl=null;
+  function showChips(){
+    if(chipsEl)return;
+    chipsEl=el('div','chips');
+    for(var i=0;i<QUICK.length;i++){(function(q,n){
+      var b=el('button','chip',q);b.type='button';b.style.animationDelay=(n*60)+'ms';
+      b.onclick=function(){handleSend(q,String(n));};
+      chipsEl.appendChild(b);
+    })(QUICK[i],i);}
+    body.appendChild(chipsEl);scrollEnd();
   }
-  function say(q,i){
-    track('chat_msg',String(i));
-    body.appendChild(el('m me',q));
-    var t=document.createElement('div');t.className='typing';t.innerHTML='<s></s><s></s><s></s>';
-    body.appendChild(t);body.scrollTop=body.scrollHeight;
-    setTimeout(function(){
-      t.remove();
-      body.appendChild(el('m bot',"Sorry - live chat is not active on this demo site, so nobody received this message."));
-      var lost=document.createElement('div');lost.className='lost';
-      lost.innerHTML='<b>1 missed lead</b>On an active site this inquiry goes straight to '+(C.business||'you')+'. Customers who get no answer book with whoever answers first.';
-      body.appendChild(lost);
-      var act=document.createElement('button');act.className='act';act.textContent='Activate this site';
-      act.onclick=function(){track('chat_activate');if(window.__esOpenClaim)window.__esOpenClaim('chat');};
-      body.appendChild(act);
-      body.scrollTop=body.scrollHeight;
-      setTimeout(chips,900);
-    },1400);
-  }
-  fab.onclick=function(){
-    var on=panel.classList.toggle('on');
-    if(on&&!body.childNodes.length){
-      track('chat_open');
-      body.appendChild(el('m bot','Hi! How can we help today?'));
-      chips();
+  function hideChips(){if(chipsEl&&chipsEl.parentNode)chipsEl.parentNode.removeChild(chipsEl);chipsEl=null;}
+
+  var missed=0,queued=0,busy=false,leadCard=null,actBtn=null;
+  function leadLabel(){return missed===1?'1 missed lead':missed+' missed leads';}
+  function showLead(){
+    if(!leadCard){
+      leadCard=el('div','lead');
+      leadCard.appendChild(el('b','',leadLabel()));
+      leadCard.appendChild(document.createTextNode('Customers who message and get silence book with whoever answers first. On an active site this lands in your inbox in seconds.'));
+      actBtn=el('button','act','Activate this site');actBtn.type='button';
+      actBtn.onclick=function(){track('chat_activate');if(window.__esOpenClaim)window.__esOpenClaim('chat');};
+    }else{
+      leadCard.firstChild.textContent=leadLabel();
+      leadCard.style.animation='none';void leadCard.offsetWidth;leadCard.style.animation='';
     }
-  };
+    body.appendChild(leadCard);body.appendChild(actBtn);scrollEnd();
+  }
+  function handleSend(text,meta){
+    track('chat_msg',meta);
+    hideChips();
+    addMsg('me',text);stamp(true);sndSent();
+    if(busy){queued++;return;}
+    busy=true;
+    var wait1=900+Math.random()*500;
+    var wait2=2200+Math.min(text.length*18,800)+Math.random()*800;
+    setTimeout(function(){
+      typingOn();
+      setTimeout(function(){
+        typingOff();
+        addMsg('bot','Sorry - live chat is not active on this demo yet, so this message did not reach '+BIZ+'.');
+        stamp(false);sndReceive();
+        setTimeout(function(){
+          missed+=1+queued;queued=0;
+          showLead();
+          setTimeout(function(){busy=false;showChips();},1200);
+        },700);
+      },wait2);
+    },wait1);
+  }
+
+  function grow(){input.style.height='auto';input.style.height=Math.min(input.scrollHeight,100)+'px';}
+  function refresh(){send.disabled=!input.value.replace(/^\s+|\s+$/g,'');}
+  function sendFree(){
+    var v=input.value.replace(/^\s+|\s+$/g,'');
+    if(!v)return;
+    input.value='';grow();refresh();
+    handleSend(v,v.slice(0,80));
+  }
+  input.addEventListener('input',function(){grow();refresh();});
+  input.addEventListener('keydown',function(e){if((e.key==='Enter'||e.keyCode===13)&&!e.shiftKey){e.preventDefault();sendFree();}});
+  send.addEventListener('click',sendFree);
+
+  var open=false,openedOnce=false;
+  function hideTeaser(){teaser.hidden=true;}
+  function openChat(){
+    if(open)return;
+    open=true;panel.classList.add('on');fab.setAttribute('aria-expanded','true');
+    hideTeaser();badge.hidden=true;
+    if(!openedOnce){
+      openedOnce=true;track('chat_open');
+      setTimeout(typingOn,400);
+      setTimeout(function(){
+        typingOff();
+        addMsg('bot','Hi! Thanks for stopping by '+BIZ+'. How can we help today?');
+        stamp(false);sndReceive();showChips();
+      },1400);
+    }
+    setTimeout(function(){try{input.focus();}catch(e){}},280);
+  }
+  function closeChat(){
+    if(!open)return;
+    open=false;panel.classList.remove('on');fab.setAttribute('aria-expanded','false');
+  }
+  fab.addEventListener('click',function(){if(open){closeChat();}else{openChat();}});
+  $('es-chat-x').addEventListener('click',closeChat);
+  document.addEventListener('keydown',function(e){if(open&&(e.key==='Escape'||e.key==='Esc'||e.keyCode===27)){closeChat();try{fab.focus();}catch(err){}}});
+
+  $('es-chat-tsr-m').addEventListener('click',openChat);
+  $('es-chat-tsr-x').addEventListener('click',hideTeaser);
+  setTimeout(function(){
+    if(open||openedOnce)return;
+    badge.hidden=false;teaser.hidden=false;sndPop();
+  },7000);
 })();
 </script>
+<!-- es-chat end -->
 <!-- ===== end Elements Studio claim banner ===== -->
 </body>
 </html>
