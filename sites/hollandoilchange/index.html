@@ -334,6 +334,9 @@ document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);}
 #es-modal .hd button{background:none;border:0;font-size:22px;cursor:pointer;color:#666}
 #es-modal .sub{margin:0 0 12px;color:#555;font:400 13px system-ui}
 #es-checkout{min-height:120px}
+.es-plan{display:flex;justify-content:space-between;align-items:center;width:100%;background:#f7f4ee;border:1px solid #e6dfd3;border-radius:10px;padding:14px 16px;margin:8px 0;font:600 15px system-ui;color:#234C3A;cursor:pointer;text-align:left}
+.es-plan:hover{border-color:#B0673A;background:#fbf8f2}
+.es-plan .p{display:block;font:400 12px system-ui;color:#8a8578;margin-top:2px}
 @media(max-width:640px){#es-claim .msg span{display:none}#es-claim .in{gap:10px}}
 </style>
 
@@ -352,7 +355,7 @@ document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);}
 <div id="es-modal" role="dialog" aria-modal="true" aria-label="Claim checkout">
   <div class="card">
     <div class="hd"><h3>Claim your website</h3><button id="es-mx" aria-label="Close">&times;</button></div>
-    <p class="sub" id="es-msub">Secure checkout, powered by Stripe. Cancel anytime.</p>
+    <p class="sub" id="es-msub">Choose how you want to keep your site. Secure checkout by Stripe.</p>
     <div id="es-checkout"></div>
   </div>
 </div>
@@ -399,22 +402,45 @@ document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);}
   // 2) dismiss
   document.getElementById('es-x').onclick=function(){root.style.display='none';post('/api/track',{type:'banner_dismiss'});};
 
-  // 3) CTA -> embedded Stripe modal
-  var modal=document.getElementById('es-modal'),mounted=false;
+  // 3) CTA -> plan picker -> embedded Stripe modal
+  var modal=document.getElementById('es-modal'),opened=false;
+  var box=document.getElementById('es-checkout');
   function closeModal(){modal.classList.remove('on');}
   document.getElementById('es-mx').onclick=closeModal;
   modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+  function money(a){return '$'+(a/100).toLocaleString('en-US',{minimumFractionDigits:(a%100?2:0),maximumFractionDigits:2});}
+  function planLabel(p){return p.type==='recurring'?money(p.unitAmount)+' / '+(p.interval||'mo'):money(p.unitAmount)+' one-time';}
+  function planSub(p){return p.type==='recurring'?'Billed monthly, cancel anytime':'One payment, yours to keep';}
+  function fail(){box.textContent='Checkout is being set up. Please call us to claim your site.';}
+  function mountCheckout(price){
+    box.textContent='Loading secure checkout...';
+    post('/api/checkout',{price:price}).then(function(r){return r.json();}).then(function(d){
+      if(!d.clientSecret||!d.publishableKey){fail();return;}
+      box.textContent='';
+      var s=document.createElement('script');s.src='https://js.stripe.com/v3/';s.onload=function(){
+        Stripe(d.publishableKey).initEmbeddedCheckout({clientSecret:d.clientSecret}).then(function(ck){ck.mount('#es-checkout');});
+      };document.head.appendChild(s);
+    }).catch(fail);
+  }
+  function renderPlans(){
+    box.textContent='Loading plans...';
+    post('/api/plans').then(function(r){return r.json();}).then(function(d){
+      var plans=(d&&d.plans)||[];
+      if(!plans.length){fail();return;}
+      if(plans.length===1){mountCheckout(plans[0].id);return;}
+      box.innerHTML='';
+      plans.forEach(function(p){
+        var b=document.createElement('button');b.className='es-plan';
+        b.innerHTML='<span>'+planLabel(p)+'<span class="p">'+planSub(p)+'</span></span><span>&rarr;</span>';
+        b.onclick=function(){post('/api/track',{type:'plan_select',meta:p.id});mountCheckout(p.id);};
+        box.appendChild(b);
+      });
+    }).catch(fail);
+  }
   ctaBtn.onclick=function(){
     post('/api/track',{type:'cta_click'});
     modal.classList.add('on');
-    if(mounted)return; mounted=true;
-    post('/api/checkout').then(function(r){return r.json();}).then(function(d){
-      if(!d.clientSecret||!d.publishableKey){document.getElementById('es-checkout').textContent='Checkout is being set up. Please call us to claim.';mounted=false;return;}
-      var s=document.createElement('script');s.src='https://js.stripe.com/v3/';s.onload=function(){
-        var stripe=Stripe(d.publishableKey);
-        stripe.initEmbeddedCheckout({clientSecret:d.clientSecret}).then(function(ck){ck.mount('#es-checkout');});
-      };document.head.appendChild(s);
-    }).catch(function(){document.getElementById('es-checkout').textContent='Something went wrong. Please call us to claim your site.';mounted=false;});
+    if(opened)return; opened=true; renderPlans();
   };
 })();
 </script>
