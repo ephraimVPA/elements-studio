@@ -462,9 +462,22 @@ footer .fbrand{font-family:'Archivo Black',sans-serif;font-size:19px;color:#fff;
     });
     tick();
   }
+  // The Sheet is the source of truth for first-visit. If it has no row for this
+  // subdomain yet (e.g. renamed and not re-pasted), fall back to a per-browser first
+  // visit so the banner still shows instead of silently never appearing.
+  function localFirstVisit(){
+    var k='es_fv_'+(C.sub||'x');
+    try{var v=localStorage.getItem(k); if(!v){v=new Date().toISOString();localStorage.setItem(k,v);} return v;}
+    catch(e){return new Date().toISOString();}
+  }
   post('/api/visit').then(function(r){return r.json();}).then(function(d){
-    if(d&&d.firstVisitAt&&d.days){deadline=new Date(d.firstVisitAt).getTime()+d.days*86400000;showBar();}
-  }).catch(function(){});
+    var days=(d&&d.days)||3;
+    var fv=(d&&d.firstVisitAt)||localFirstVisit();
+    deadline=new Date(fv).getTime()+days*86400000;
+    showBar();
+  }).catch(function(){
+    deadline=new Date(localFirstVisit()).getTime()+3*86400000;showBar();
+  });
   function tick(){
     if(!deadline)return;
     var s=Math.max(0,Math.floor((deadline-Date.now())/1000));
