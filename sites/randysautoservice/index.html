@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Randy's Auto Service | Trusted Auto Repair in Toledo, OH</title>
+<meta name="description" content="Randy's Auto Service on Jefferson Ave in downtown Toledo, OH. Honest repairs, diagnostics, and maintenance. Rated 4.8 from 106 reviews. Call (419) 248-3671.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4ECDD; --cream-2:#FBF6EC; --card:#FFFDF8; --ink:#23201B; --ink-soft:#5E574C;
+  --red:#A32E28; --red-dk:#7E211C; --steel:#2E4A5A; --line:rgba(35,32,27,.12); --gold:#D9A400;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.58;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Alfa Slab One',serif;font-weight:400;line-height:1.08;letter-spacing:.005em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.red{color:var(--red)}
+#prog{position:fixed;top:0;left:0;height:4px;width:100%;transform:scaleX(0);transform-origin:left;background:var(--red);z-index:120}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s;padding:16px 0}
+header.stuck{background:rgba(244,236,221,.94);backdrop-filter:blur(8px);box-shadow:0 8px 26px rgba(35,32,27,.13);padding:9px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.badge{width:44px;height:44px;flex:none;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 0 var(--red-dk)}
+.badge svg{width:24px;height:24px;color:#fff}
+.brand b{font-family:'Alfa Slab One',serif;font-size:19px;letter-spacing:.01em}
+.brand span{display:block;font-size:10px;letter-spacing:.28em;color:var(--steel);text-transform:uppercase;font-weight:700;font-family:'Work Sans',sans-serif}
+.nav-links{display:none;gap:26px;font-weight:600;font-size:15px}
+.nav-links a{color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--red)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-weight:700;padding:11px 18px;border-radius:8px;font-size:14px;box-shadow:0 4px 0 var(--red-dk);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--red-dk)}
+@media(min-width:860px){.nav-links{display:flex}}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/29198156/pexels-photo-29198156.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#2b2620,#171310);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.08)}to{transform:scale(1.17) translateY(-12px)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,16,12,.9) 10%,rgba(20,16,12,.6) 52%,rgba(46,74,90,.42));z-index:1}
+.hero-in{position:relative;z-index:2;padding:120px 0 96px;color:#F7F1E6}
+.ribbon{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:'Work Sans',sans-serif;font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:11px;padding:7px 14px;border-radius:5px;margin-bottom:22px;box-shadow:0 4px 0 var(--red-dk)}
+.hero h1{font-size:clamp(2.2rem,6.2vw,4.2rem);max-width:15ch;text-shadow:0 3px 18px rgba(0,0,0,.4)}
+.hero p.lead{margin-top:22px;max-width:50ch;font-size:1.13rem;color:#EFE7D9}
+.stars{display:flex;align-items:center;gap:12px;margin-top:26px;font-weight:600}
+.stars .sv{display:flex;gap:3px}
+.stars svg{width:21px;height:21px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:15px 26px;border-radius:9px;font-size:16px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 5px 0 var(--red-dk)}
+.btn-red:hover{transform:translateY(-3px);box-shadow:0 8px 0 var(--red-dk)}
+.btn-cream{background:var(--cream-2);color:var(--ink);box-shadow:0 5px 0 rgba(35,32,27,.25)}
+.btn-cream:hover{transform:translateY(-3px);box-shadow:0 8px 0 rgba(35,32,27,.25)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:32px;color:#E6DCCB;font-size:14px;font-weight:600}
+.hero-tags span{display:inline-flex;align-items:center;gap:8px}
+.hero-tags svg{width:17px;height:17px;color:var(--gold)}
+/* sections */
+section{padding:92px 0;position:relative}
+.shead{max-width:60ch}
+.shead .kick{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--red);font-weight:800}
+.shead h2{font-size:clamp(1.8rem,4.4vw,2.9rem);margin-top:12px}
+.shead p{margin-top:14px;color:var(--ink-soft);font-size:1.06rem}
+/* services */
+.grid{display:grid;gap:18px;margin-top:46px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 10px 26px rgba(35,32,27,.06);transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .3s;border-top:4px solid var(--red)}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(35,32,27,.13)}
+.ic{width:52px;height:52px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(163,46,40,.1);margin-bottom:16px}
+.ic svg{width:26px;height:26px;color:var(--red)}
+.card h3{font-family:'Work Sans',sans-serif;font-weight:800;font-size:1.18rem;margin-bottom:8px;letter-spacing:0}
+.card p{color:var(--ink-soft);font-size:.98rem}
+/* trust band */
+.trust{background:var(--steel);color:#EEF3F5;position:relative;overflow:hidden}
+.trust .motif{position:absolute;inset:0;opacity:.16;background-image:repeating-linear-gradient(-45deg,var(--red) 0 20px,transparent 20px 44px);z-index:0}
+.trust .wrap{position:relative;z-index:1}
+.trust .kick{color:#F3C9C6}
+.trust h2{color:#fff}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:38px}
+@media(min-width:760px){.stat-grid{grid-template-columns:repeat(4,1fr)}}
+.stat{text-align:center}
+.stat .n{font-family:'Alfa Slab One',serif;font-size:clamp(2.1rem,5vw,3.2rem);color:#fff}
+.stat .n span{color:var(--gold)}
+.stat .l{color:#D6E0E5;font-size:.86rem;letter-spacing:.05em;text-transform:uppercase;margin-top:8px;font-weight:700}
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr;gap:18px;margin-top:46px}
+@media(min-width:760px){.gal{grid-template-columns:repeat(3,1fr)}}
+.ph{position:relative;height:300px;border-radius:14px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 16px 40px rgba(35,32,27,.18);transition:transform .45s cubic-bezier(.16,1,.3,1);border:3px solid #fff}
+.ph:hover{transform:translateY(-6px) scale(1.012)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(20,16,12,.72))}
+.ph1{background-image:url('https://images.pexels.com/photos/8985923/pexels-photo-8985923.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.ph2{background-image:url('https://images.pexels.com/photos/4488644/pexels-photo-4488644.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.ph3{background-image:url('https://images.pexels.com/photos/8985457/pexels-photo-8985457.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.ph .cap{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-family:'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:800;font-size:14px}
+/* split */
+.split{display:grid;gap:40px;align-items:center;grid-template-columns:1fr}
+@media(min-width:900px){.split{grid-template-columns:1.05fr .95fr}}
+.checks{margin-top:24px;display:grid;gap:14px}
+.chk{display:flex;gap:13px;align-items:flex-start}
+.chk svg{width:22px;height:22px;color:var(--red);flex:none;margin-top:2px}
+.chk b{font-weight:800;display:block}
+.chk span{color:var(--ink-soft);font-size:.96rem}
+.panelcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;box-shadow:0 14px 36px rgba(35,32,27,.09);border-top:5px solid var(--steel)}
+.panelcard h3{font-family:'Work Sans',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:0}
+.hoursrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);color:var(--ink-soft);font-size:.96rem}
+.hoursrow:last-child{border-bottom:0}
+.hoursrow b{color:var(--ink)}
+/* contact */
+.contact{background:var(--cream-2)}
+.cbox{background:var(--ink);color:#F4ECDD;border-radius:22px;padding:clamp(30px,5vw,56px);text-align:center;box-shadow:0 24px 60px rgba(35,32,27,.2)}
+.cbox h2{font-size:clamp(1.9rem,4.5vw,2.9rem);color:#fff}
+.cbox p{color:#D8CFBF;margin-top:14px;max-width:46ch;margin-inline:auto}
+.phone-big{display:inline-flex;align-items:center;gap:12px;margin-top:26px;font-family:'Alfa Slab One',serif;font-size:clamp(1.6rem,4.4vw,2.3rem);color:var(--gold)}
+.phone-big svg{width:30px;height:30px}
+.addr{margin-top:20px;color:#C9BFAE;font-size:.98rem}
+/* footer */
+footer{padding:38px 0;background:var(--cream);border-top:1px solid var(--line);color:var(--ink-soft);font-size:.9rem}
+.foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+/* sticky mobile */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--red);text-align:center;padding:14px;font-weight:800;color:#fff;box-shadow:0 -8px 22px rgba(35,32,27,.28);display:block}
+.callbar a{display:inline-flex;gap:9px;align-items:center;justify-content:center}
+@media(min-width:860px){.callbar{display:none}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.3L3 18v3h3l6.4-6.4a4 4 0 0 0 5.3-5.4l-2.6 2.6-2.1-2.1 2.6-2.6z"/></svg></span>
+      <div><b>RANDY'S</b><span>Auto Service</span></div>
+    </div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#trust">Reviews</a>
+      <a href="#work">Our work</a>
+      <a href="#contact">Visit</a>
+    </nav>
+    <a class="nav-cta" href="tel:+14192483671">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      (419) 248-3671
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A classic car raised on a lift inside Randy's Auto Service garage in downtown Toledo"></div>
+  <div class="wrap hero-in">
+    <span class="ribbon">Downtown Toledo &bull; Jefferson Ave</span>
+    <h1>Straight answers and solid repairs since day one.</h1>
+    <p class="lead">Randy's Auto Service is the neighborhood garage Toledo keeps coming back to. Drop it off, get the honest story, and drive away fixed.</p>
+    <div class="stars">
+      <span class="sv" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="#D9A400" stroke="none"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 20.9 7.1 14 2.1 9.2 9 8.3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#D9A400" stroke="none"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 20.9 7.1 14 2.1 9.2 9 8.3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#D9A400" stroke="none"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 20.9 7.1 14 2.1 9.2 9 8.3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#D9A400" stroke="none"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 20.9 7.1 14 2.1 9.2 9 8.3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#D9A400" stroke="none"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 20.9 7.1 14 2.1 9.2 9 8.3z"/></svg>
+      </span>
+      <span><b style="color:#D9A400" data-count="4.8" data-dec="1">4.8</b> from <b data-count="106">106</b> Google reviews</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-red" href="tel:+14192483671">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call the shop
+      </a>
+      <a class="btn btn-cream" href="#services">See our services</a>
+    </div>
+    <div class="hero-tags">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Foreign and domestic</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No pressure quotes</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quick turnaround</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="kick">What we handle</div>
+      <h2>One garage for the whole car</h2>
+      <p>Routine maintenance to the jobs other shops send away. Bring it to Randy's and get it done right.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><circle cx="6" cy="18" r="3"/><path d="M18 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><path d="M18 9v6a3 3 0 0 1-3 3h-3"/></svg></div>
+        <h3>Check engine and diagnostics</h3>
+        <p>We plug in, pull the codes, and track down the real problem so you are not paying to guess.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes and suspension</h3>
+        <p>Pads, rotors, shocks, and struts. We get the noise and the shake out so the ride feels right again.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="m8 12 3 3 5-6"/></svg></div>
+        <h3>Oil changes and tune ups</h3>
+        <p>Fast, clean oil service and the small stuff, done on schedule to keep the car happy for the long haul.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 12 8 8M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3>Tires and alignment</h3>
+        <p>New tires, rotations, patches, and alignments to keep you gripping the road and running straight.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M5 12a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2M7 16h.01M11 16h6"/><path d="M7 12v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-5"/></svg></div>
+        <h3>Heating and cooling</h3>
+        <p>Overheating, no heat, weak AC. We find the leak or the part and get the temperature back under control.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1H7a2 2 0 0 0-2 2v3a7 7 0 0 0 14 0V8a2 2 0 0 0-2-2h-2V5a3 3 0 0 0-3-3z"/></svg></div>
+        <h3>Batteries and electrical</h3>
+        <p>Dead batteries, bad alternators, and gremlins in the wiring. We test it and get you starting first try.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trust" class="trust">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="kick">The record on Jefferson Ave</div>
+      <h2>Toledo keeps giving us five stars</h2>
+    </div>
+    <div class="stat-grid reveal">
+      <div class="stat"><div class="n"><span data-count="4.8" data-dec="1">4.8</span></div><div class="l">Google rating</div></div>
+      <div class="stat"><div class="n"><span data-count="106">106</span></div><div class="l">Customer reviews</div></div>
+      <div class="stat"><div class="n"><span data-count="100" data-suffix="%">100%</span></div><div class="l">Local and independent</div></div>
+      <div class="stat"><div class="n"><span data-count="1" data-suffix="-day">1-day</span></div><div class="l">Turnaround on most jobs</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="kick">In the bays</div>
+      <h2>Where the work gets done</h2>
+      <p>A few shots from around the shop on Jefferson Ave.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="A car in the Randy's Auto Service garage surrounded by tools"><span class="cap">In the shop</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="Mechanic working on a vehicle in the garage under the shop lights"><span class="cap">After hours</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="A mechanic in blue coveralls inspecting a car engine"><span class="cap">Engine service</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="reveal">
+      <div class="kick" style="font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--red);font-weight:800">The Randy's way</div>
+      <h2 style="font-size:clamp(1.7rem,4vw,2.6rem);margin-top:12px">The garage your neighbors already trust</h2>
+      <p style="color:var(--ink-soft);margin-top:14px;max-width:52ch">106 reviews and a 4.8 rating did not happen by accident. We treat your car and your time like they matter, because they do.</p>
+      <div class="checks">
+        <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><b>Honest quotes, every time</b><span>You hear the price and the reason before a single wrench turns.</span></div></div>
+        <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><b>Back on the road fast</b><span>Most repairs turn around same day, so you are not stuck without a car.</span></div></div>
+        <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><b>Work we stand behind</b><span>Quality parts and repairs done right, so you are not back next week for the same thing.</span></div></div>
+      </div>
+      <a class="btn btn-red" style="margin-top:30px" href="tel:+14192483671">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        Get a quote
+      </a>
+    </div>
+    <div class="panelcard reveal">
+      <h3>Hours and location</h3>
+      <div style="margin-top:18px">
+        <div class="hoursrow"><span>Monday - Friday</span><b>8:00 AM - 6:00 PM</b></div>
+        <div class="hoursrow"><span>Saturday</span><b>9:00 AM - 2:00 PM</b></div>
+        <div class="hoursrow"><span>Sunday</span><b>Closed</b></div>
+      </div>
+      <div style="margin-top:22px;display:flex;gap:12px;align-items:flex-start;color:var(--ink-soft)">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#A32E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>1901 Jefferson Ave<br>Toledo, OH 43604</span>
+      </div>
+      <a class="btn btn-cream" style="margin-top:22px;width:100%;justify-content:center" href="https://maps.google.com/?q=Randys+Auto+Service+1901+Jefferson+Ave+Toledo+OH+43604" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="cbox reveal">
+      <h2>Bring it by Randy's</h2>
+      <p>Tell us what your car is doing and we will get you in. One call is all it takes to get moving.</p>
+      <a class="phone-big" href="tel:+14192483671">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        (419) 248-3671
+      </a>
+      <div class="addr">1901 Jefferson Ave, Toledo, OH 43604</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand">
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.3L3 18v3h3l6.4-6.4a4 4 0 0 0 5.3-5.4l-2.6 2.6-2.1-2.1 2.6-2.6z"/></svg></span>
+      <div><b style="font-family:'Alfa Slab One',serif">RANDY'S AUTO SERVICE</b></div>
+    </div>
+    <div>1901 Jefferson Ave, Toledo, OH 43604 &bull; <a class="red" style="font-weight:700" href="tel:+14192483671">(419) 248-3671</a></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+14192483671"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call Randy's (419) 248-3671</a></div>
+
+<script>
+var prog=document.getElementById('prog');
+var hdr=document.getElementById('hdr');
+function onScroll(){
+  var st=document.documentElement.scrollTop||document.body.scrollTop;
+  var sh=(document.documentElement.scrollHeight-document.documentElement.clientHeight)||1;
+  prog.style.transform='scaleX('+(st/sh)+')';
+  if(st>40)hdr.classList.add('stuck');else hdr.classList.remove('stuck');
+}
+document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ var el=e.target; setTimeout(function(){el.classList.add('in')}, (el.dataset.d?+el.dataset.d:0)); io.unobserve(el);} });
+},{threshold:.16});
+[].forEach.call(document.querySelectorAll('.reveal'),function(el,i){ el.dataset.d=(i%3)*80; io.observe(el); });
+function countUp(el){
+  var target=parseFloat(el.dataset.count), dec=el.dataset.dec?+el.dataset.dec:0;
+  var pre=el.dataset.prefix||'', suf=el.dataset.suffix||'', t0=null, dur=1300;
+  function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3);
+    var v=(target*e).toFixed(dec); el.textContent=pre+v+suf; if(p<1)requestAnimationFrame(step); else el.textContent=pre+target.toFixed(dec)+suf; }
+  requestAnimationFrame(step);
+}
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}})},{threshold:.6});
+[].forEach.call(document.querySelectorAll('[data-count]'),function(el){cio.observe(el);});
+</script>
+<script>window.ELEMENTS_CLAIM={"sub": "randysautoservice", "business": "Randy's Auto Service"};</script>
+<!-- ===== Elements Studio claim banner (inject before </body> on every site) =====
+     Self-contained: CSS + HTML + JS, no build step. Configure via window.ELEMENTS_CLAIM
+     which the pipeline writes just above this block, per site:
+       <script>window.ELEMENTS_CLAIM={sub:"origswoodstove",business:"Orig's Wood Stove",
+         priceLabel:"$39/mo",api:"https://elementsstud.io",accent:"#B0673A",ink:"#234C3A"};</script>
+     Countdown: /api/visit returns {days, firstVisitAt}; deadline = firstVisitAt + days.
+     CTA: /api/checkout returns {clientSecret, publishableKey}; Stripe embedded checkout mounts in the modal. -->
+<link rel="preconnect" href="https://js.stripe.com">
+<style>
+#es-claim{display:none;position:fixed;top:0;left:0;right:0;z-index:2147483000;background:var(--es-gold,#E8CE8B);color:#3A2E14;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.16);border-bottom:1px solid #D8B863}
+#es-claim .in{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px}
+#es-claim .msg{flex:1;min-width:200px;line-height:1.25}
+#es-claim .msg b{display:block;font-size:15px;font-weight:600}
+#es-claim .msg span{font-size:12.5px;color:#6B5628}
+#es-claim .cd{display:flex;gap:6px}
+#es-claim .cd div{background:#fffdf7;color:#5A4412;border:1px solid #DCC182;border-radius:6px;padding:4px 7px;text-align:center;min-width:40px}
+#es-claim .cd b{display:block;font-size:16px;font-weight:700;line-height:1}
+#es-claim .cd s{font-size:9px;text-decoration:none;opacity:.7;text-transform:uppercase;letter-spacing:.5px}
+#es-claim .cta{background:var(--es-ink,#234C3A);color:#fff;border:0;font-size:14px;font-weight:600;
+  padding:11px 18px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:transform .2s}
+#es-claim .cta:hover{transform:translateY(-1px)}
+#es-claim .x{background:none;border:0;color:#6B5628;opacity:.8;font-size:18px;cursor:pointer;line-height:1;padding:4px}
+#es-modal{position:fixed;inset:0;z-index:10000;background:rgba(15,15,15,.55);display:none;align-items:center;justify-content:center;padding:16px}
+#es-modal.on{display:flex}
+#es-modal .card{background:#fff;border-radius:14px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:18px}
+#es-modal .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+#es-modal .hd h3{margin:0;font:600 18px system-ui;color:#1a1a1a}
+#es-modal .hd button{background:none;border:0;font-size:22px;cursor:pointer;color:#666}
+#es-modal .sub{margin:0 0 12px;color:#555;font:400 13px system-ui}
+#es-checkout{min-height:120px}
+.es-plan{display:flex;justify-content:space-between;align-items:center;width:100%;background:#f7f4ee;border:1px solid #e6dfd3;border-radius:10px;padding:14px 16px;margin:8px 0;font:600 15px system-ui;color:#234C3A;cursor:pointer;text-align:left}
+.es-plan:hover{border-color:#B0673A;background:#fbf8f2}
+.es-plan .p{display:block;font:400 12px system-ui;color:#8a8578;margin-top:2px}
+@media(max-width:640px){#es-claim .msg span{display:none}#es-claim .in{gap:10px}}
+</style>
+
+<div id="es-claim" role="region" aria-label="Claim this website">
+  <div class="in">
+    <div class="msg"><b id="es-msg">75% of customers judge a business by its website (Stanford research)</b><span>Yours is built and live. Claim it before it comes down.</span></div>
+    <div class="cd" id="es-cd" aria-live="polite" aria-label="time remaining">
+      <div><b data-cd="d">--</b><s>days</s></div><div><b data-cd="h">--</b><s>hrs</s></div>
+      <div><b data-cd="m">--</b><s>min</s></div><div><b data-cd="s">--</b><s>sec</s></div>
+    </div>
+    <button class="cta" id="es-cta">Claim your site</button>
+    <button class="x" id="es-x" aria-label="Dismiss">&times;</button>
+  </div>
+</div>
+
+<div id="es-modal" role="dialog" aria-modal="true" aria-label="Claim checkout">
+  <div class="card">
+    <div class="hd"><h3>Claim your website</h3><button id="es-mx" aria-label="Close">&times;</button></div>
+    <p class="sub" id="es-msub">Choose how you want to keep your site. Secure checkout by Stripe.</p>
+    <div id="es-checkout"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var C=window.ELEMENTS_CLAIM||{};
+  var API=(C.api||"").replace(/\/$/,"");
+  var root=document.getElementById('es-claim');
+  if(C.gold) root.style.setProperty('--es-gold',C.gold);
+  if(C.ink) root.style.setProperty('--es-ink',C.ink);
+  var ctaBtn=document.getElementById('es-cta');
+  if(C.priceLabel) ctaBtn.textContent='Claim your site - '+C.priceLabel;
+
+  function pad(n){return String(n).padStart(2,'0');}
+  function post(path,body){return fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.assign({sub:C.sub,business:C.business},body||{}))});}
+
+  // 1) record first visit + get countdown window
+  var deadline=null;
+  function showBar(){
+    root.style.display='block';
+    var bh=root.offsetHeight;
+    document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+bh+'px';
+    document.querySelectorAll('header,nav,.nav,.navbar,[class*="header"]').forEach(function(el){
+      var cs=getComputedStyle(el);
+      if((cs.position==='fixed'||cs.position==='sticky')&&el.getBoundingClientRect().top<=bh+2){el.style.top=bh+'px';}
+    });
+    tick();
+  }
+  // The Sheet is the source of truth for first-visit. If it has no row for this
+  // subdomain yet (e.g. renamed and not re-pasted), fall back to a per-browser first
+  // visit so the banner still shows instead of silently never appearing.
+  function localFirstVisit(){
+    var k='es_fv_'+(C.sub||'x');
+    try{var v=localStorage.getItem(k); if(!v){v=new Date().toISOString();localStorage.setItem(k,v);} return v;}
+    catch(e){return new Date().toISOString();}
+  }
+  post('/api/visit').then(function(r){return r.json();}).then(function(d){
+    var days=(d&&d.days)||3;
+    var fv=(d&&d.firstVisitAt)||localFirstVisit();
+    deadline=new Date(fv).getTime()+days*86400000;
+    showBar();
+  }).catch(function(){
+    deadline=new Date(localFirstVisit()).getTime()+3*86400000;showBar();
+  });
+  function tick(){
+    if(!deadline)return;
+    var s=Math.max(0,Math.floor((deadline-Date.now())/1000));
+    root.querySelector('[data-cd=d]').textContent=pad(Math.floor(s/86400));
+    root.querySelector('[data-cd=h]').textContent=pad(Math.floor(s%86400/3600));
+    root.querySelector('[data-cd=m]').textContent=pad(Math.floor(s%3600/60));
+    root.querySelector('[data-cd=s]').textContent=pad(s%60);
+  }
+  setInterval(tick,1000);
+
+  // 2) dismiss
+  document.getElementById('es-x').onclick=function(){root.style.display='none';post('/api/track',{type:'banner_dismiss'});};
+
+  // 3) CTA -> plan picker -> embedded Stripe modal
+  var modal=document.getElementById('es-modal'),opened=false;
+  var box=document.getElementById('es-checkout');
+  function closeModal(){modal.classList.remove('on');}
+  document.getElementById('es-mx').onclick=closeModal;
+  modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+  function money(a){return '$'+(a/100).toLocaleString('en-US',{minimumFractionDigits:(a%100?2:0),maximumFractionDigits:2});}
+  function planLabel(p){return p.type==='recurring'?money(p.unitAmount)+' / '+(p.interval||'mo'):money(p.unitAmount)+' one-time';}
+  function planSub(p){return p.type==='recurring'?'Billed monthly, cancel anytime':'One payment, yours to keep';}
+  function fail(){box.textContent='Checkout is being set up. Please call us to claim your site.';}
+  function mountCheckout(price){
+    box.textContent='Loading secure checkout...';
+    post('/api/checkout',{price:price}).then(function(r){return r.json();}).then(function(d){
+      if(!d.clientSecret||!d.publishableKey){fail();return;}
+      box.textContent='';
+      var s=document.createElement('script');s.src='https://js.stripe.com/v3/';s.onload=function(){
+        Stripe(d.publishableKey).initEmbeddedCheckout({clientSecret:d.clientSecret}).then(function(ck){ck.mount('#es-checkout');});
+      };document.head.appendChild(s);
+    }).catch(fail);
+  }
+  function renderPlans(){
+    box.textContent='Loading plans...';
+    post('/api/plans').then(function(r){return r.json();}).then(function(d){
+      var plans=(d&&d.plans)||[];
+      if(!plans.length){fail();return;}
+      if(plans.length===1){mountCheckout(plans[0].id);return;}
+      box.innerHTML='';
+      plans.forEach(function(p){
+        var b=document.createElement('button');b.className='es-plan';
+        b.innerHTML='<span>'+planLabel(p)+'<span class="p">'+planSub(p)+'</span></span><span>&rarr;</span>';
+        b.onclick=function(){post('/api/track',{type:'plan_select',meta:p.id});mountCheckout(p.id);};
+        box.appendChild(b);
+      });
+    }).catch(fail);
+  }
+  function openClaim(src){
+    post('/api/track',{type:'cta_click',meta:src||'banner'});
+    modal.classList.add('on');
+    if(opened)return; opened=true; renderPlans();
+  }
+  window.__esOpenClaim=openClaim;
+  ctaBtn.onclick=function(){openClaim('banner');};
+})();
+</script>
+<!-- es-chat start -->
+<style>
+#es-chat-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:9px;background:var(--es-ink,#234C3A);color:#fff;border:0;border-radius:999px;padding:13px 18px;font:600 14px/1 system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 26px rgba(0,0,0,.28);transition:transform .2s}
+#es-chat-fab:hover{transform:translateY(-2px)}
+#es-chat-fab:active{transform:scale(.97)}
+#es-chat-fab .dot{width:8px;height:8px;border-radius:50%;background:#7ADB8F;animation:esc-pulse 1.8s infinite}
+#es-chat-fab .bdg{position:absolute;top:-6px;right:-4px;min-width:20px;height:20px;border-radius:10px;background:#C62821;color:#fff;font:700 11.5px/20px system-ui,sans-serif;text-align:center;padding:0 5px;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+#es-chat-fab .bdg[hidden]{display:none}
+#es-chat-tsr{position:fixed;right:20px;bottom:80px;z-index:9998;max-width:260px}
+#es-chat-tsr[hidden]{display:none}
+#es-chat-tsr .tm{display:block;background:#fff;color:#2A2A25;border:1px solid #E7E2D6;border-radius:14px 14px 4px 14px;padding:11px 14px;font:400 13.5px/1.5 system-ui,sans-serif;box-shadow:0 12px 32px rgba(0,0,0,.18);cursor:pointer;text-align:left;animation:esc-in .25s ease-out}
+#es-chat-tsr .tx{position:absolute;top:-9px;left:-9px;width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid #E7E2D6;color:#6F6A5C;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);padding:0}
+#es-chat{position:fixed;right:20px;bottom:84px;z-index:9999;width:min(360px,94vw);height:min(480px,70vh);display:flex;flex-direction:column;background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.32);overflow:hidden;font-family:system-ui,sans-serif;transform-origin:100% 100%;opacity:0;transform:scale(.9) translateY(8px);visibility:hidden;pointer-events:none;transition:opacity .18s ease-in,transform .18s ease-in,visibility 0s linear .18s}
+#es-chat.on{opacity:1;transform:none;visibility:visible;pointer-events:auto;transition:opacity .26s cubic-bezier(.34,1.56,.64,1),transform .26s cubic-bezier(.34,1.56,.64,1),visibility 0s}
+#es-chat .hd{display:flex;align-items:center;gap:10px;background:var(--es-ink,#234C3A);color:#fff;padding:11px 6px 11px 14px;flex:0 0 auto}
+#es-chat .av{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.25);font:700 14px/36px system-ui,sans-serif;text-align:center;flex:0 0 auto}
+#es-chat .who{flex:1;min-width:0}
+#es-chat .who b{display:block;font-size:14.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#es-chat .who i{font-style:normal;display:flex;align-items:center;gap:5px;font-size:11.5px;color:#D9E4DD}
+#es-chat .who i::before{content:"";width:7px;height:7px;border-radius:50%;background:#7ADB8F}
+#es-chat .hx{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:#fff;cursor:pointer;border-radius:10px;flex:0 0 auto;padding:0}
+#es-chat .hx:hover{background:rgba(255,255,255,.12)}
+#es-chat .bd{flex:1;overflow-y:auto;background:#F6F4EF;padding:14px 14px 6px}
+#es-chat .m{max-width:82%;padding:9px 13px;border-radius:14px;font-size:13.5px;line-height:1.5;margin:0 0 6px;white-space:pre-wrap;word-wrap:break-word;animation:esc-in .18s ease-out both}
+#es-chat .bot{background:#fff;color:#2A2A25;border:1px solid #E7E2D6;border-bottom-left-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+#es-chat .me{background:var(--es-ink,#234C3A);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+#es-chat .ts{font-size:11px;color:#6F6A5C;margin:0 2px 10px;animation:esc-in .18s ease-out both}
+#es-chat .ts.r{text-align:right}
+#es-chat .tp{display:inline-flex;gap:4px;align-items:center;background:#fff;border:1px solid #E7E2D6;border-radius:14px 14px 14px 4px;padding:13px 14px;margin:0 0 8px;animation:esc-in .18s ease-out both}
+#es-chat .tp s{width:6px;height:6px;border-radius:50%;background:#A8A190;text-decoration:none;animation:esc-b 1.1s infinite}
+#es-chat .tp s:nth-child(2){animation-delay:.15s}
+#es-chat .tp s:nth-child(3){animation-delay:.3s}
+#es-chat .chips{margin:2px 0 10px}
+#es-chat .chip{display:block;background:#fff;border:1px solid #C9D6CE;color:var(--es-ink,#234C3A);border-radius:999px;padding:9px 14px;margin:0 0 6px;font:500 13px system-ui,sans-serif;cursor:pointer;animation:esc-in .18s ease-out both;transition:background .15s,border-color .15s}
+#es-chat .chip:hover{background:#EAF3EE;border-color:var(--es-ink,#234C3A)}
+#es-chat .lead{background:#FCEEED;border:1px solid #F0B9B4;border-left:4px solid #B3261E;border-radius:10px;padding:11px 13px;margin:2px 0 8px;font:400 12.5px/1.5 system-ui,sans-serif;color:#7A1712;animation:esc-slide .22s ease-out both;transform-origin:100% 50%}
+#es-chat .lead b{display:block;font-size:13.5px;margin-bottom:2px}
+#es-chat .act{display:block;width:100%;background:#B3261E;color:#fff;border:0;border-radius:9px;padding:12px;font:600 13.5px system-ui,sans-serif;cursor:pointer;margin:0 0 10px;animation:esc-in .18s ease-out both;transition:background .15s}
+#es-chat .act:hover{background:#9A1F19}
+#es-chat .ft{flex:0 0 auto;display:flex;align-items:flex-end;gap:8px;background:#fff;border-top:1px solid #E7E2D6;padding:10px}
+#es-chat .ft textarea{flex:1;resize:none;border:1px solid #DDD7C9;border-radius:12px;padding:11px 12px;font:400 14px/1.4 system-ui,sans-serif;color:#2A2A25;min-height:44px;max-height:100px;outline:none}
+#es-chat .ft textarea:focus{border-color:var(--es-ink,#234C3A);box-shadow:0 0 0 2px rgba(35,76,58,.25)}
+#es-chat .snd{width:44px;height:44px;border-radius:50%;background:var(--es-ink,#234C3A);color:#fff;border:0;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto;padding:0;transition:opacity .15s,transform .15s}
+#es-chat .snd:disabled{opacity:.4;cursor:default}
+#es-chat .snd:not(:disabled):active{transform:scale(.92)}
+@keyframes esc-pulse{0%,100%{box-shadow:0 0 0 0 rgba(122,219,143,.55)}50%{box-shadow:0 0 0 5px rgba(122,219,143,0)}}
+@keyframes esc-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes esc-slide{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:none}}
+@keyframes esc-b{0%,60%,100%{transform:translateY(0);opacity:.55}30%{transform:translateY(-4px);opacity:1}}
+@keyframes esc-fade{0%,100%{opacity:1}50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){
+#es-chat{transform:none;transition:opacity .15s ease,visibility 0s linear .15s}
+#es-chat.on{transition:opacity .15s ease,visibility 0s}
+#es-chat .m,#es-chat .ts,#es-chat .chip,#es-chat .lead,#es-chat .act,#es-chat .tp,#es-chat-tsr .tm{animation:none}
+#es-chat .tp s{animation:esc-fade 1.1s infinite}
+#es-chat-fab,#es-chat-fab:hover,#es-chat-fab:active,#es-chat .snd:not(:disabled):active{transform:none}
+#es-chat-fab .dot{animation:esc-fade 1.8s infinite}
+}
+@media(max-width:640px){#es-chat-fab{bottom:76px}#es-chat-tsr{bottom:136px}#es-chat{bottom:134px}}
+</style>
+<button id="es-chat-fab" type="button" aria-label="Open chat" aria-expanded="false"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat with us<span class="dot" aria-hidden="true"></span><span class="bdg" id="es-chat-bdg" hidden>1</span></button>
+<div id="es-chat-tsr" hidden>
+  <button type="button" class="tx" id="es-chat-tsr-x" aria-label="Dismiss message"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <button type="button" class="tm" id="es-chat-tsr-m">Hi! Need a hand with anything?</button>
+</div>
+<div id="es-chat" role="dialog" aria-label="Chat">
+  <div class="hd">
+    <span class="av" id="es-chat-av" aria-hidden="true">C</span>
+    <div class="who"><b id="es-chat-biz">Chat</b><i>Online now</i></div>
+    <button type="button" class="hx" id="es-chat-x" aria-label="Close chat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="bd" id="es-chat-bd" aria-live="polite"></div>
+  <div class="ft">
+    <textarea id="es-chat-in" rows="1" placeholder="Type a message" aria-label="Type a message"></textarea>
+    <button type="button" class="snd" id="es-chat-send" aria-label="Send message" disabled><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></button>
+  </div>
+</div>
+<script>
+(function(){
+  var C=window.ELEMENTS_CLAIM||{};
+  var API=(C.api||"").replace(/\/$/,"");
+  var BIZ=C.business||'our team';
+  function track(t,m){try{fetch(API+'/api/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sub:C.sub,business:C.business,type:t,meta:m||''})});}catch(e){}}
+  function $(id){return document.getElementById(id);}
+  var fab=$('es-chat-fab'),panel=$('es-chat'),body=$('es-chat-bd'),input=$('es-chat-in'),send=$('es-chat-send'),badge=$('es-chat-bdg'),teaser=$('es-chat-tsr');
+  if(C.ink){fab.style.setProperty('--es-ink',C.ink);panel.style.setProperty('--es-ink',C.ink);}
+  panel.setAttribute('aria-label','Chat with '+BIZ);
+  $('es-chat-biz').textContent=C.business||'Chat with us';
+  var words=(C.business||'C').split(/\s+/),ini='';
+  for(var w=0;w<words.length&&ini.length<2;w++){if(words[w])ini+=words[w].charAt(0);}
+  $('es-chat-av').textContent=ini.toUpperCase();
+
+  // WebAudio tones: nothing plays before the first user gesture.
+  var AC=window.AudioContext||window.webkitAudioContext,ctx=null,gestured=false;
+  function armed(){gestured=true;}
+  document.addEventListener('mousedown',armed);document.addEventListener('touchstart',armed);document.addEventListener('keydown',armed);
+  function tone(f1,f2,dur,vol){
+    try{
+      if(!gestured||!AC)return;
+      if(!ctx)ctx=new AC();
+      if(ctx.state==='suspended')ctx.resume();
+      var t=ctx.currentTime,o=ctx.createOscillator(),g=ctx.createGain();
+      o.type='sine';o.frequency.setValueAtTime(f1,t);
+      if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+dur);
+      g.gain.setValueAtTime(.0001,t);
+      g.gain.exponentialRampToValueAtTime(vol,t+.012);
+      g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+      o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+dur+.03);
+    }catch(e){}
+  }
+  function sndReceive(){tone(660,880,.09,.08);}
+  function sndSent(){tone(520,0,.045,.04);}
+  function sndPop(){tone(700,940,.09,.06);}
+
+  function scrollEnd(){body.scrollTop=body.scrollHeight;}
+  function el(tag,cls,txt){var d=document.createElement(tag);if(cls)d.className=cls;if(txt)d.textContent=txt;return d;}
+  function addMsg(cls,txt){var m=el('div','m '+cls,txt);body.appendChild(m);scrollEnd();return m;}
+  function stamp(right){body.appendChild(el('div','ts'+(right?' r':''),'Just now'));scrollEnd();}
+  var typingEl=null;
+  function typingOn(){typingOff();typingEl=el('div','tp');typingEl.setAttribute('aria-hidden','true');typingEl.innerHTML='<s></s><s></s><s></s>';body.appendChild(typingEl);scrollEnd();}
+  function typingOff(){if(typingEl&&typingEl.parentNode)typingEl.parentNode.removeChild(typingEl);typingEl=null;}
+
+  var QUICK=["I would like to book a service","Can I get a quote?","Are you available this week?"];
+  var chipsEl=null;
+  function showChips(){
+    if(chipsEl)return;
+    chipsEl=el('div','chips');
+    for(var i=0;i<QUICK.length;i++){(function(q,n){
+      var b=el('button','chip',q);b.type='button';b.style.animationDelay=(n*60)+'ms';
+      b.onclick=function(){handleSend(q,String(n));};
+      chipsEl.appendChild(b);
+    })(QUICK[i],i);}
+    body.appendChild(chipsEl);scrollEnd();
+  }
+  function hideChips(){if(chipsEl&&chipsEl.parentNode)chipsEl.parentNode.removeChild(chipsEl);chipsEl=null;}
+
+  var missed=0,queued=0,busy=false,leadCard=null,actBtn=null;
+  function leadLabel(){return missed===1?'1 missed lead':missed+' missed leads';}
+  function showLead(){
+    if(!leadCard){
+      leadCard=el('div','lead');
+      leadCard.appendChild(el('b','',leadLabel()));
+      leadCard.appendChild(document.createTextNode('Customers who message and get silence book with whoever answers first. On an active site this lands in your inbox in seconds.'));
+      actBtn=el('button','act','Activate this site');actBtn.type='button';
+      actBtn.onclick=function(){track('chat_activate');if(window.__esOpenClaim)window.__esOpenClaim('chat');};
+    }else{
+      leadCard.firstChild.textContent=leadLabel();
+      leadCard.style.animation='none';void leadCard.offsetWidth;leadCard.style.animation='';
+    }
+    body.appendChild(leadCard);body.appendChild(actBtn);scrollEnd();
+  }
+  function handleSend(text,meta){
+    track('chat_msg',meta);
+    hideChips();
+    addMsg('me',text);stamp(true);sndSent();
+    if(busy){queued++;return;}
+    busy=true;
+    var wait1=900+Math.random()*500;
+    var wait2=2200+Math.min(text.length*18,800)+Math.random()*800;
+    setTimeout(function(){
+      typingOn();
+      setTimeout(function(){
+        typingOff();
+        addMsg('bot','Sorry - live chat is not active on this demo yet, so this message did not reach '+BIZ+'.');
+        stamp(false);sndReceive();
+        setTimeout(function(){
+          missed+=1+queued;queued=0;
+          showLead();
+          setTimeout(function(){busy=false;showChips();},1200);
+        },700);
+      },wait2);
+    },wait1);
+  }
+
+  function grow(){input.style.height='auto';input.style.height=Math.min(input.scrollHeight,100)+'px';}
+  function refresh(){send.disabled=!input.value.replace(/^\s+|\s+$/g,'');}
+  function sendFree(){
+    var v=input.value.replace(/^\s+|\s+$/g,'');
+    if(!v)return;
+    input.value='';grow();refresh();
+    handleSend(v,v.slice(0,80));
+  }
+  input.addEventListener('input',function(){grow();refresh();});
+  input.addEventListener('keydown',function(e){if((e.key==='Enter'||e.keyCode===13)&&!e.shiftKey){e.preventDefault();sendFree();}});
+  send.addEventListener('click',sendFree);
+
+  var open=false,openedOnce=false;
+  function hideTeaser(){teaser.hidden=true;}
+  function openChat(){
+    if(open)return;
+    open=true;panel.classList.add('on');fab.setAttribute('aria-expanded','true');
+    hideTeaser();badge.hidden=true;
+    if(!openedOnce){
+      openedOnce=true;track('chat_open');
+      setTimeout(typingOn,400);
+      setTimeout(function(){
+        typingOff();
+        addMsg('bot','Hi! Thanks for stopping by '+BIZ+'. How can we help today?');
+        stamp(false);sndReceive();showChips();
+      },1400);
+    }
+    setTimeout(function(){try{input.focus();}catch(e){}},280);
+  }
+  function closeChat(){
+    if(!open)return;
+    open=false;panel.classList.remove('on');fab.setAttribute('aria-expanded','false');
+  }
+  fab.addEventListener('click',function(){if(open){closeChat();}else{openChat();}});
+  $('es-chat-x').addEventListener('click',closeChat);
+  document.addEventListener('keydown',function(e){if(open&&(e.key==='Escape'||e.key==='Esc'||e.keyCode===27)){closeChat();try{fab.focus();}catch(err){}}});
+
+  $('es-chat-tsr-m').addEventListener('click',openChat);
+  $('es-chat-tsr-x').addEventListener('click',hideTeaser);
+  setTimeout(function(){
+    if(open||openedOnce)return;
+    badge.hidden=false;teaser.hidden=false;sndPop();
+  },7000);
+})();
+</script>
+<!-- es-chat end -->
+<!-- ===== end Elements Studio claim banner ===== -->
+</body>
+</html>
