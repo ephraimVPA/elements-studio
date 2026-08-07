@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
       "source": "/",
       "has": [{ "type": "host", "value": "elementsstud.io" }],
       "destination": "/home/index.html"

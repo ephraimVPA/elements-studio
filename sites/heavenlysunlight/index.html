@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heavenly Sunlight Window Cleaning | Sylvania &amp; Toledo Window Cleaners</title>
+<meta name="description" content="Heavenly Sunlight Window Cleaning LLC, Sylvania Ohio. Residential and commercial window cleaning, screens and tracks. 5.0 stars from 157 reviews. Call (216) 376-8167.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7FAFC; --paper-2:#EDF3F8; --ink:#12263A; --ink-soft:#3E5A72;
+  --sky:#2E9BD6; --sky-deep:#1B7BB0; --sun:#E9B33F;
+  --line:#D9E4ED;
+  --maxw:1150px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink-soft);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;line-height:1.08;color:var(--ink);letter-spacing:-.01em}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;width:100%}
+
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--sky);transform:scaleX(0);transform-origin:left;z-index:120}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:17px 0;transition:background .3s,box-shadow .3s,padding .3s}
+.nav.scrolled{background:rgba(247,250,252,.96);box-shadow:0 6px 26px rgba(18,38,58,.1);padding:10px 0;backdrop-filter:blur(9px)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:#fff;transition:color .3s}
+.nav.scrolled .brand{color:var(--ink)}
+.brand svg{width:26px;height:26px;color:var(--sun);flex:none}
+.nav-links{display:none;gap:27px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,.88);transition:color .2s}
+.nav.scrolled .nav-links a{color:var(--ink-soft)}
+.nav-links a:hover{color:var(--sky)}
+.nav-cta{display:none;background:var(--sky);color:#fff;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px;font-size:15px;min-height:44px;align-items:center;gap:8px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.nav-cta svg{width:16px;height:16px}
+.nav-cta:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 24px rgba(46,155,214,.4)}
+@media(min-width:960px){.nav-links{display:flex}.nav-cta{display:inline-flex}}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/31983866/pexels-photo-31983866.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#7FB8DA 0%,#2E9BD6 55%,#1B7BB0 100%);background-size:cover;background-position:center;animation:ken 26s ease-out infinite alternate;will-change:transform}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,30,46,.5) 0%,rgba(10,30,46,.34) 40%,rgba(10,30,46,.8) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 22px 92px;margin:0 auto;width:100%;max-width:var(--maxw)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,179,63,.2);border:1px solid rgba(233,179,63,.6);color:#F6DCA0;padding:7px 15px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:.05em;margin-bottom:22px}
+.badge svg{width:15px;height:15px}
+.hero h1{color:#fff;font-size:clamp(40px,6.4vw,76px);text-shadow:0 3px 34px rgba(0,0,0,.35);max-width:17ch}
+.hero p{color:#E4EEF5;font-size:clamp(17px,2vw,21px);margin-top:20px;max-width:56ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:999px;padding:16px 30px;min-height:52px;font-size:17px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .2s}
+.btn svg{width:19px;height:19px}
+.btn-primary{background:var(--sky);color:#fff;box-shadow:0 10px 30px rgba(46,155,214,.35)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 40px rgba(46,155,214,.5)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.42);backdrop-filter:blur(5px)}
+.btn-ghost:hover{transform:translateY(-3px) scale(1.03);background:rgba(255,255,255,.24)}
+
+section{padding:96px 0;position:relative}
+.eyebrow{color:var(--sky-deep);font-weight:700;font-size:13px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:14px}
+h2{font-size:clamp(32px,4.4vw,54px);margin-bottom:18px}
+.lede{color:var(--ink-soft);font-size:18px;max-width:62ch}
+
+/* signature motif: light rays through glass */
+.rays{position:absolute;inset:0;z-index:0;opacity:.09;pointer-events:none;overflow:hidden}
+.rays svg{width:100%;height:100%;color:var(--sun)}
+.ray-host{position:relative}
+.ray-host .wrap{position:relative;z-index:1}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(176px,1fr));gap:20px;margin-top:46px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 24px;box-shadow:0 2px 10px rgba(18,38,58,.04);transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
+.stat:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(18,38,58,.1);border-color:var(--sky)}
+.stat .num{font-family:'Fraunces',serif;font-weight:700;font-size:46px;color:var(--sky-deep);line-height:1}
+.stat .lbl{color:var(--ink-soft);font-size:15px;margin-top:8px;font-weight:500}
+.stars{display:flex;gap:3px;margin-top:9px}
+.stars svg{width:16px;height:16px;color:var(--sun)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(286px,1fr));gap:22px;margin-top:50px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 28px;box-shadow:0 2px 10px rgba(18,38,58,.04);transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 42px rgba(18,38,58,.11);border-color:var(--sky)}
+.card .ico{width:50px;height:50px;border-radius:14px;background:rgba(46,155,214,.12);display:flex;align-items:center;justify-content:center;margin-bottom:19px}
+.card .ico svg{width:25px;height:25px;color:var(--sky-deep)}
+.card h3{font-size:22px;margin-bottom:10px}
+.card p{color:var(--ink-soft);font-size:16px}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-top:50px}
+.gal-item{position:relative;height:282px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.gal-item .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.gal-item:hover .ph{transform:scale(1.08)}
+.gal-item .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:19px;background:linear-gradient(180deg,transparent,rgba(10,30,46,.88));color:#fff;font-weight:600;font-size:16px}
+.g1 .ph{background-image:url('https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#7FB8DA,#1B7BB0)}
+.g2 .ph{background-image:url('https://images.pexels.com/photos/18885426/pexels-photo-18885426.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2E9BD6,#12263A)}
+.g3 .ph{background-image:url('https://images.pexels.com/photos/31435403/pexels-photo-31435403.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#EDF3F8,#7FB8DA)}
+
+.areas{display:flex;flex-wrap:wrap;gap:11px;margin-top:36px}
+.chip{background:#fff;border:1px solid var(--line);color:var(--sky-deep);padding:10px 18px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .25s,background .25s}
+.chip:hover{transform:translateY(-3px);border-color:var(--sky);background:rgba(46,155,214,.08)}
+
+.contact{background:linear-gradient(160deg,var(--paper-2) 0%,var(--paper) 100%);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:42px;margin-top:42px}
+@media(min-width:880px){.contact-grid{grid-template-columns:1.1fr .9fr}}
+.info-row{display:flex;gap:15px;align-items:flex-start;margin-bottom:23px}
+.info-row svg{width:21px;height:21px;color:var(--sky-deep);flex:none;margin-top:3px}
+.info-row .k{font-weight:700;color:var(--ink);font-size:16px}
+.info-row .v{color:var(--ink-soft);font-size:16px}
+.info-row a{color:var(--ink-soft);text-decoration:none;transition:color .2s}
+.info-row a:hover{color:var(--sky-deep)}
+.callbox{background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px 30px;text-align:center;box-shadow:0 10px 34px rgba(18,38,58,.08)}
+.callbox h3{font-size:27px;margin-bottom:12px}
+.callbox p{color:var(--ink-soft);margin-bottom:24px;font-size:16px}
+.callbox .tel{font-family:'Fraunces',serif;font-weight:700;font-size:32px;color:var(--sky-deep);text-decoration:none;display:block;margin-bottom:22px}
+
+footer{background:var(--ink);padding:40px 0;text-align:center;color:#9FB6C9;font-size:14px}
+footer .fbrand{font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:#fff;margin-bottom:9px}
+footer a{color:#8FCBEB;text-decoration:none}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--sky);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;font-weight:700;text-decoration:none;font-size:17px;min-height:56px;box-shadow:0 -6px 24px rgba(18,38,58,.22)}
+.sticky-call svg{width:20px;height:20px}
+@media(min-width:960px){.sticky-call{display:none}}
+@media(max-width:959px){body{padding-bottom:56px}}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+  .gal-item .ph{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+      Heavenly Sunlight
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#work">Our Work</a>
+      <a href="#area">Service Area</a>
+    </div>
+    <a class="nav-cta" href="tel:+12163768167">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+      Free Quote
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Two window cleaners washing a large glass building facade"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      5.0 stars across 157 reviews
+    </span>
+    <h1>Let The Light Back In</h1>
+    <p>Streak free windows for homes and businesses across Sylvania and the Toledo area. Screens, sills and tracks included, because half-clean windows still look dirty.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+12163768167">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+        Call For A Free Quote
+      </a>
+      <a class="btn btn-ghost" href="#services">What We Clean</a>
+    </div>
+  </div>
+</header>
+
+<section id="why" class="ray-host">
+  <div class="rays" aria-hidden="true">
+    <svg viewBox="0 0 1200 600" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M-100 -50 L500 650"/><path d="M60 -50 L660 650"/><path d="M220 -50 L820 650"/>
+      <path d="M380 -50 L980 650"/><path d="M540 -50 L1140 650"/><path d="M700 -50 L1300 650"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Why Heavenly Sunlight</div>
+      <h2>157 Reviews. Not One Below Five Stars.</h2>
+      <p class="lede">A perfect 5.0 across 157 Google reviews is rare, and it is the kind of thing you only get by doing the small parts right. We are local to Sylvania, we show up when we say, and we treat your home like someone lives in it.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="num" data-count="5.0" data-dec="1">0</div>
+        <div class="lbl">Google rating</div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+      </div>
+      <div class="stat reveal">
+        <div class="num" data-count="157">0</div>
+        <div class="lbl">Google reviews</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">Inside</div>
+        <div class="lbl">And out, plus screens</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">Free</div>
+        <div class="lbl">Quotes, no pressure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">What we clean</div>
+      <h2>Homes, Storefronts And Everything Glass</h2>
+      <p class="lede">One visit, every pane. We work around your day and clean up after ourselves.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg></div>
+        <h3>Residential Windows</h3>
+        <p>Inside and outside, ground floor to upper storeys. Sills wiped and tracks vacuumed before we leave.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M9 9v11"/></svg></div>
+        <h3>Storefronts And Offices</h3>
+        <p>Regular routes for shops and offices that need glass that looks open for business. Weekly, monthly or one off.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18M3 13h18M3 18h18M8 3v18M13 3v18M18 3v18"/></svg></div>
+        <h3>Screens And Tracks</h3>
+        <p>Screens taken out, washed and refitted. The tracks get cleared too, which is where most of the grit hides.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2s5 6 5 10a5 5 0 0 1-10 0c0-4 5-10 5-10z"/></svg></div>
+        <h3>Hard Water Removal</h3>
+        <p>Sprinkler spotting and mineral staining that regular washing leaves behind. Treated so the glass is clear again.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M6 8v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/><path d="M9 8V5h6v3"/></svg></div>
+        <h3>Gutter Clearing</h3>
+        <p>While the ladders are up. Downspouts flushed and debris bagged rather than left on your lawn.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <h3>Post Construction</h3>
+        <p>Paint flecks, adhesive and dust film from a build or remodel, taken off without scratching the glass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Our work</div>
+      <h2>On The Glass</h2>
+      <p class="lede">Residential and commercial jobs around the Toledo area.</p>
+    </div>
+    <div class="gal">
+      <div class="gal-item g1 reveal"><div class="ph" role="img" aria-label="Window cleaner using a squeegee on a large pane of glass"></div><div class="cap">Squeegee finish, no streaks</div></div>
+      <div class="gal-item g2 reveal"><div class="ph" role="img" aria-label="Professional cleaning a large commercial glass window"></div><div class="cap">Storefront glass</div></div>
+      <div class="gal-item g3 reveal"><div class="ph" role="img" aria-label="Close-up of a hand cleaning a window with a squeegee outdoors"></div><div class="cap">Detail work on frames and sills</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="area" class="ray-host" style="background:var(--paper-2)">
+  <div class="rays" aria-hidden="true">
+    <svg viewBox="0 0 1200 600" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M-100 -50 L500 650"/><path d="M100 -50 L700 650"/><path d="M300 -50 L900 650"/>
+      <path d="M500 -50 L1100 650"/><path d="M700 -50 L1300 650"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Service area</div>
+      <h2>Where We Work</h2>
+      <p class="lede">Based on Monroe Street in Sylvania and covering the Toledo metro.</p>
+    </div>
+    <div class="areas reveal">
+      <span class="chip">Sylvania</span><span class="chip">Toledo</span><span class="chip">Ottawa Hills</span>
+      <span class="chip">Maumee</span><span class="chip">Perrysburg</span><span class="chip">Holland</span>
+      <span class="chip">Waterville</span><span class="chip">Temperance</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Get A Free Quote</h2>
+      <p class="lede">Tell us roughly how many windows and we will give you a number.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+          <div><div class="k">Phone</div><div class="v"><a href="tel:+12163768167">(216) 376-8167</a></div></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><div class="k">Based at</div><div class="v">6455 Monroe St, Sylvania, OH 43560</div></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><div class="k">Scheduling</div><div class="v">Call to book. We work around your hours where we can.</div></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div><div class="k">Rated</div><div class="v">5.0 stars across 157 Google reviews</div></div>
+        </div>
+      </div>
+      <div class="callbox reveal">
+        <h3>Book A Clean</h3>
+        <p>Homes, offices and storefronts. Free quotes, no obligation.</p>
+        <a class="tel" href="tel:+12163768167">(216) 376-8167</a>
+        <a class="btn btn-primary" href="tel:+12163768167" style="width:100%">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Heavenly Sunlight Window Cleaning LLC</div>
+    <div>6455 Monroe St, Sylvania, OH 43560 &middot; <a href="tel:+12163768167">(216) 376-8167</a></div>
+    <div style="margin-top:12px;opacity:.8">Residential and commercial window cleaning across Sylvania and the Toledo area.</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+12163768167">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+  Call (216) 376-8167
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('progress');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    if(y>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)||reduce){
+    items.forEach(function(el){el.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          var i=Array.prototype.slice.call(e.target.parentNode.children).indexOf(e.target);
+          e.target.style.transitionDelay=Math.min(i,6)*75+'ms';
+          e.target.classList.add('in');io.unobserve(e.target);
+        }
+      });
+    },{threshold:.14,rootMargin:'0px 0px -60px 0px'});
+    items.forEach(function(el){io.observe(el)});
+  }
+
+  var nums=document.querySelectorAll('[data-count]');
+  function run(el){
+    var target=parseFloat(el.getAttribute('data-count')),dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    if(reduce){el.textContent=target.toFixed(dec);return;}
+    var t0=null,dur=1500;
+    function step(ts){
+      if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);
+      el.textContent=(target*(1-Math.pow(1-p,3))).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver'in window){
+    var io2=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){run(e.target);io2.unobserve(e.target);}});
+    },{threshold:.5});
+    nums.forEach(function(el){io2.observe(el)});
+  }else{nums.forEach(run)}
+})();
+</script>
+<script>window.ELEMENTS_CLAIM={"sub": "heavenlysunlight", "business": "Heavenly Sunlight Window Cleaning"};</script>
+<!-- ===== Elements Studio claim banner (inject before </body> on every site) =====
+     Self-contained: CSS + HTML + JS, no build step. Configure via window.ELEMENTS_CLAIM
+     which the pipeline writes just above this block, per site:
+       <script>window.ELEMENTS_CLAIM={sub:"origswoodstove",business:"Orig's Wood Stove",
+         priceLabel:"$39/mo",api:"https://elementsstud.io",accent:"#B0673A",ink:"#234C3A"};</script>
+     Countdown: /api/visit returns {days, firstVisitAt}; deadline = firstVisitAt + days.
+     CTA: /api/checkout returns {clientSecret, publishableKey}; Stripe embedded checkout mounts in the modal. -->
+<link rel="preconnect" href="https://js.stripe.com">
+<style>
+#es-claim{display:none;position:fixed;top:0;left:0;right:0;z-index:2147483000;background:var(--es-accent,#B0673A);color:#fff;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+#es-claim .in{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px}
+#es-claim .msg{flex:1;min-width:200px;line-height:1.25}
+#es-claim .msg b{display:block;font-size:15px;font-weight:600}
+#es-claim .msg span{font-size:12.5px;opacity:.9}
+#es-claim .cd{display:flex;gap:6px}
+#es-claim .cd div{background:rgba(255,255,255,.95);color:#3d1f0c;border-radius:6px;padding:4px 7px;text-align:center;min-width:40px}
+#es-claim .cd b{display:block;font-size:16px;font-weight:700;line-height:1}
+#es-claim .cd s{font-size:9px;text-decoration:none;opacity:.7;text-transform:uppercase;letter-spacing:.5px}
+#es-claim .cta{background:var(--es-ink,#234C3A);color:#fff;border:0;font-size:14px;font-weight:600;
+  padding:11px 18px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:transform .2s}
+#es-claim .cta:hover{transform:translateY(-1px)}
+#es-claim .x{background:none;border:0;color:#fff;opacity:.7;font-size:18px;cursor:pointer;line-height:1;padding:4px}
+#es-modal{position:fixed;inset:0;z-index:10000;background:rgba(15,15,15,.55);display:none;align-items:center;justify-content:center;padding:16px}
+#es-modal.on{display:flex}
+#es-modal .card{background:#fff;border-radius:14px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:18px}
+#es-modal .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+#es-modal .hd h3{margin:0;font:600 18px system-ui;color:#1a1a1a}
+#es-modal .hd button{background:none;border:0;font-size:22px;cursor:pointer;color:#666}
+#es-modal .sub{margin:0 0 12px;color:#555;font:400 13px system-ui}
+#es-checkout{min-height:120px}
+@media(max-width:640px){#es-claim .msg span{display:none}#es-claim .in{gap:10px}}
+</style>
+
+<div id="es-claim" role="region" aria-label="Claim this website">
+  <div class="in">
+    <div class="msg"><b id="es-msg">This demo site is reserved for you</b><span>Keep it live and start getting calls</span></div>
+    <div class="cd" id="es-cd" aria-live="polite" aria-label="time remaining">
+      <div><b data-cd="d">--</b><s>days</s></div><div><b data-cd="h">--</b><s>hrs</s></div>
+      <div><b data-cd="m">--</b><s>min</s></div><div><b data-cd="s">--</b><s>sec</s></div>
+    </div>
+    <button class="cta" id="es-cta">Claim your site</button>
+    <button class="x" id="es-x" aria-label="Dismiss">&times;</button>
+  </div>
+</div>
+
+<div id="es-modal" role="dialog" aria-modal="true" aria-label="Claim checkout">
+  <div class="card">
+    <div class="hd"><h3>Claim your website</h3><button id="es-mx" aria-label="Close">&times;</button></div>
+    <p class="sub" id="es-msub">Secure checkout, powered by Stripe. Cancel anytime.</p>
+    <div id="es-checkout"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var C=window.ELEMENTS_CLAIM||{};
+  var API=(C.api||"").replace(/\/$/,"");
+  var root=document.getElementById('es-claim');
+  if(C.accent) root.style.setProperty('--es-accent',C.accent);
+  if(C.ink) root.style.setProperty('--es-ink',C.ink);
+  var ctaBtn=document.getElementById('es-cta');
+  if(C.priceLabel) ctaBtn.textContent='Claim your site - '+C.priceLabel;
+
+  function pad(n){return String(n).padStart(2,'0');}
+  function post(path,body){return fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.assign({sub:C.sub,business:C.business},body||{}))});}
+
+  // 1) record first visit + get countdown window
+  var deadline=null;
+  function showBar(){
+    root.style.display='block';
+    var bh=root.offsetHeight;
+    document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+bh+'px';
+    document.querySelectorAll('header,nav,.nav,.navbar,[class*="header"]').forEach(function(el){
+      var cs=getComputedStyle(el);
+      if((cs.position==='fixed'||cs.position==='sticky')&&el.getBoundingClientRect().top<=bh+2){el.style.top=bh+'px';}
+    });
+    tick();
+  }
+  post('/api/visit').then(function(r){return r.json();}).then(function(d){
+    if(d&&d.firstVisitAt&&d.days){deadline=new Date(d.firstVisitAt).getTime()+d.days*86400000;showBar();}
+  }).catch(function(){});
+  function tick(){
+    if(!deadline)return;
+    var s=Math.max(0,Math.floor((deadline-Date.now())/1000));
+    root.querySelector('[data-cd=d]').textContent=pad(Math.floor(s/86400));
+    root.querySelector('[data-cd=h]').textContent=pad(Math.floor(s%86400/3600));
+    root.querySelector('[data-cd=m]').textContent=pad(Math.floor(s%3600/60));
+    root.querySelector('[data-cd=s]').textContent=pad(s%60);
+  }
+  setInterval(tick,1000);
+
+  // 2) dismiss
+  document.getElementById('es-x').onclick=function(){root.style.display='none';post('/api/track',{type:'banner_dismiss'});};
+
+  // 3) CTA -> embedded Stripe modal
+  var modal=document.getElementById('es-modal'),mounted=false;
+  function closeModal(){modal.classList.remove('on');}
+  document.getElementById('es-mx').onclick=closeModal;
+  modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+  ctaBtn.onclick=function(){
+    post('/api/track',{type:'cta_click'});
+    modal.classList.add('on');
+    if(mounted)return; mounted=true;
+    post('/api/checkout').then(function(r){return r.json();}).then(function(d){
+      if(!d.clientSecret||!d.publishableKey){document.getElementById('es-checkout').textContent='Checkout is being set up. Please call us to claim.';mounted=false;return;}
+      var s=document.createElement('script');s.src='https://js.stripe.com/v3/';s.onload=function(){
+        var stripe=Stripe(d.publishableKey);
+        stripe.initEmbeddedCheckout({clientSecret:d.clientSecret}).then(function(ck){ck.mount('#es-checkout');});
+      };document.head.appendChild(s);
+    }).catch(function(){document.getElementById('es-checkout').textContent='Something went wrong. Please call us to claim your site.';mounted=false;});
+  };
+})();
+</script>
+<!-- ===== end Elements Studio claim banner ===== -->
+</body>
+</html>

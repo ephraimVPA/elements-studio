@@ -279,5 +279,122 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const end=parseFloat(el.dataset.count);const dec=parseInt(el.dataset.dec||'0');let s=null;const dur=1200;function step(t){if(!s)s=t;const p=Math.min((t-s)/dur,1);const v=(end*(0.2+0.8*p));el.textContent=dec?v.toFixed(dec):Math.floor(v).toString();if(p<1)requestAnimationFrame(step);else el.textContent=dec?end.toFixed(dec):end.toString();}requestAnimationFrame(step);cio.unobserve(el);})},{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 </script>
+<script>window.ELEMENTS_CLAIM={"sub": "rothautomotive", "business": "Roth Automotive"};</script>
+<!-- ===== Elements Studio claim banner (inject before </body> on every site) =====
+     Self-contained: CSS + HTML + JS, no build step. Configure via window.ELEMENTS_CLAIM
+     which the pipeline writes just above this block, per site:
+       <script>window.ELEMENTS_CLAIM={sub:"origswoodstove",business:"Orig's Wood Stove",
+         priceLabel:"$39/mo",api:"https://elementsstud.io",accent:"#B0673A",ink:"#234C3A"};</script>
+     Countdown: /api/visit returns {days, firstVisitAt}; deadline = firstVisitAt + days.
+     CTA: /api/checkout returns {clientSecret, publishableKey}; Stripe embedded checkout mounts in the modal. -->
+<link rel="preconnect" href="https://js.stripe.com">
+<style>
+#es-claim{display:none;position:fixed;top:0;left:0;right:0;z-index:2147483000;background:var(--es-accent,#B0673A);color:#fff;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+#es-claim .in{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px}
+#es-claim .msg{flex:1;min-width:200px;line-height:1.25}
+#es-claim .msg b{display:block;font-size:15px;font-weight:600}
+#es-claim .msg span{font-size:12.5px;opacity:.9}
+#es-claim .cd{display:flex;gap:6px}
+#es-claim .cd div{background:rgba(255,255,255,.95);color:#3d1f0c;border-radius:6px;padding:4px 7px;text-align:center;min-width:40px}
+#es-claim .cd b{display:block;font-size:16px;font-weight:700;line-height:1}
+#es-claim .cd s{font-size:9px;text-decoration:none;opacity:.7;text-transform:uppercase;letter-spacing:.5px}
+#es-claim .cta{background:var(--es-ink,#234C3A);color:#fff;border:0;font-size:14px;font-weight:600;
+  padding:11px 18px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:transform .2s}
+#es-claim .cta:hover{transform:translateY(-1px)}
+#es-claim .x{background:none;border:0;color:#fff;opacity:.7;font-size:18px;cursor:pointer;line-height:1;padding:4px}
+#es-modal{position:fixed;inset:0;z-index:10000;background:rgba(15,15,15,.55);display:none;align-items:center;justify-content:center;padding:16px}
+#es-modal.on{display:flex}
+#es-modal .card{background:#fff;border-radius:14px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:18px}
+#es-modal .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+#es-modal .hd h3{margin:0;font:600 18px system-ui;color:#1a1a1a}
+#es-modal .hd button{background:none;border:0;font-size:22px;cursor:pointer;color:#666}
+#es-modal .sub{margin:0 0 12px;color:#555;font:400 13px system-ui}
+#es-checkout{min-height:120px}
+@media(max-width:640px){#es-claim .msg span{display:none}#es-claim .in{gap:10px}}
+</style>
+
+<div id="es-claim" role="region" aria-label="Claim this website">
+  <div class="in">
+    <div class="msg"><b id="es-msg">This demo site is reserved for you</b><span>Keep it live and start getting calls</span></div>
+    <div class="cd" id="es-cd" aria-live="polite" aria-label="time remaining">
+      <div><b data-cd="d">--</b><s>days</s></div><div><b data-cd="h">--</b><s>hrs</s></div>
+      <div><b data-cd="m">--</b><s>min</s></div><div><b data-cd="s">--</b><s>sec</s></div>
+    </div>
+    <button class="cta" id="es-cta">Claim your site</button>
+    <button class="x" id="es-x" aria-label="Dismiss">&times;</button>
+  </div>
+</div>
+
+<div id="es-modal" role="dialog" aria-modal="true" aria-label="Claim checkout">
+  <div class="card">
+    <div class="hd"><h3>Claim your website</h3><button id="es-mx" aria-label="Close">&times;</button></div>
+    <p class="sub" id="es-msub">Secure checkout, powered by Stripe. Cancel anytime.</p>
+    <div id="es-checkout"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var C=window.ELEMENTS_CLAIM||{};
+  var API=(C.api||"").replace(/\/$/,"");
+  var root=document.getElementById('es-claim');
+  if(C.accent) root.style.setProperty('--es-accent',C.accent);
+  if(C.ink) root.style.setProperty('--es-ink',C.ink);
+  var ctaBtn=document.getElementById('es-cta');
+  if(C.priceLabel) ctaBtn.textContent='Claim your site - '+C.priceLabel;
+
+  function pad(n){return String(n).padStart(2,'0');}
+  function post(path,body){return fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.assign({sub:C.sub,business:C.business},body||{}))});}
+
+  // 1) record first visit + get countdown window
+  var deadline=null;
+  function showBar(){
+    root.style.display='block';
+    var bh=root.offsetHeight;
+    document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+bh+'px';
+    document.querySelectorAll('header,nav,.nav,.navbar,[class*="header"]').forEach(function(el){
+      var cs=getComputedStyle(el);
+      if((cs.position==='fixed'||cs.position==='sticky')&&el.getBoundingClientRect().top<=bh+2){el.style.top=bh+'px';}
+    });
+    tick();
+  }
+  post('/api/visit').then(function(r){return r.json();}).then(function(d){
+    if(d&&d.firstVisitAt&&d.days){deadline=new Date(d.firstVisitAt).getTime()+d.days*86400000;showBar();}
+  }).catch(function(){});
+  function tick(){
+    if(!deadline)return;
+    var s=Math.max(0,Math.floor((deadline-Date.now())/1000));
+    root.querySelector('[data-cd=d]').textContent=pad(Math.floor(s/86400));
+    root.querySelector('[data-cd=h]').textContent=pad(Math.floor(s%86400/3600));
+    root.querySelector('[data-cd=m]').textContent=pad(Math.floor(s%3600/60));
+    root.querySelector('[data-cd=s]').textContent=pad(s%60);
+  }
+  setInterval(tick,1000);
+
+  // 2) dismiss
+  document.getElementById('es-x').onclick=function(){root.style.display='none';post('/api/track',{type:'banner_dismiss'});};
+
+  // 3) CTA -> embedded Stripe modal
+  var modal=document.getElementById('es-modal'),mounted=false;
+  function closeModal(){modal.classList.remove('on');}
+  document.getElementById('es-mx').onclick=closeModal;
+  modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+  ctaBtn.onclick=function(){
+    post('/api/track',{type:'cta_click'});
+    modal.classList.add('on');
+    if(mounted)return; mounted=true;
+    post('/api/checkout').then(function(r){return r.json();}).then(function(d){
+      if(!d.clientSecret||!d.publishableKey){document.getElementById('es-checkout').textContent='Checkout is being set up. Please call us to claim.';mounted=false;return;}
+      var s=document.createElement('script');s.src='https://js.stripe.com/v3/';s.onload=function(){
+        var stripe=Stripe(d.publishableKey);
+        stripe.initEmbeddedCheckout({clientSecret:d.clientSecret}).then(function(ck){ck.mount('#es-checkout');});
+      };document.head.appendChild(s);
+    }).catch(function(){document.getElementById('es-checkout').textContent='Something went wrong. Please call us to claim your site.';mounted=false;});
+  };
+})();
+</script>
+<!-- ===== end Elements Studio claim banner ===== -->
 </body>
 </html>

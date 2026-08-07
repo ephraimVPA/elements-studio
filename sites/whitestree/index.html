@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>White's Tree Service LLC | Tree Removal & Emergency Crew in Toledo, OH</title>
+<meta name="description" content="White's Tree Service in Toledo, OH. Tree removal, trimming, stump grinding, and storm emergency work. 73 reviews, 5.0 stars. Call (419) 346-9263 for a free on-site estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className += ' js';</script>
+<style>
+  :root{
+    --forest-deep:#0E1E15;
+    --forest:#15301F;
+    --forest-2:#1C3D28;
+    --forest-line:#2B5238;
+    --espresso:#3A2920;
+    --espresso-2:#503A2C;
+    --orange:#FF6A1A;
+    --orange-soft:#FF8A47;
+    --cream:#F5F2EB;
+    --sand:#CFC6B6;
+    --sand-dim:#A99F8E;
+    --ease-out:cubic-bezier(.16,1,.3,1);
+    --ease-spring:cubic-bezier(.34,1.56,.64,1);
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--forest-deep);
+    color:var(--cream);
+    font-size:17px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.08;letter-spacing:.01em;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .accent{color:var(--orange)}
+
+  /* Scroll progress */
+  .progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left;z-index:120;will-change:transform}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(14,30,21,.78);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);transition:box-shadow .3s ease,background .3s ease}
+  .nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.45);background:rgba(14,30,21,.94)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Oswald';font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.04em}
+  .brand .mark{width:34px;height:34px;flex:0 0 auto;color:var(--orange)}
+  .brand small{display:block;font-family:'Inter';font-weight:600;font-size:10.5px;letter-spacing:.18em;color:var(--sand-dim);text-transform:uppercase;line-height:1}
+  .nav .call{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:10px 18px;border-radius:999px;background:var(--orange);color:#231408;font-weight:700;font-size:15px;transition:transform .5s var(--ease-spring),box-shadow .3s ease}
+  .nav .call svg{width:18px;height:18px}
+  .nav .call:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 22px rgba(255,106,26,.4)}
+  .nav .call .num{white-space:nowrap}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:54px;padding:15px 30px;border-radius:14px;font-family:'Oswald';font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;border:0;transition:transform .5s var(--ease-spring),box-shadow .3s ease,background .25s ease}
+  .btn svg{width:22px;height:22px}
+  .btn-primary{background:var(--orange);color:#231408;box-shadow:0 12px 30px rgba(255,106,26,.34)}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 40px rgba(255,106,26,.46);background:var(--orange-soft)}
+  .btn-ghost{background:transparent;color:var(--cream);border:2px solid rgba(245,242,235,.28)}
+  .btn-ghost:hover{transform:translateY(-3px) scale(1.02);border-color:var(--orange);color:var(--orange)}
+
+  /* Hero */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--forest)}
+  .hero-bg{position:absolute;inset:0;background-image:url('images/hero.jpg'),linear-gradient(135deg,#13311F 0%,#0E1E15 60%,#2A1E16 100%);background-size:cover;background-position:center;will-change:transform}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,15,.5) 0%,rgba(10,22,15,.52) 40%,rgba(10,22,15,.74) 100%)}
+  .hero-content{position:relative;z-index:3;padding:88px 0 110px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:22px}
+  .eyebrow .bar{width:34px;height:2px;background:var(--orange);display:inline-block}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.5rem);max-width:15ch;text-shadow:0 2px 24px rgba(0,0,0,.4)}
+  .hero h1 .accent{display:inline}
+  .hero p.lead{margin:24px 0 8px;font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:46ch;color:var(--cream)}
+  .hero .proofline{margin-top:18px;font-weight:600;color:var(--sand);max-width:50ch}
+  .hero .proofline strong{color:var(--cream)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero-cta .big-num{font-family:'Oswald';font-weight:700;font-size:18px;letter-spacing:.04em}
+  .stars-inline{display:inline-flex;gap:3px;vertical-align:middle}
+  .stars-inline svg{width:18px;height:18px;color:var(--orange)}
+
+  /* Sections */
+  section{padding:96px 0;position:relative}
+  .sec-head{max-width:60ch;margin-bottom:54px}
+  .sec-head .eyebrow{margin-bottom:16px}
+  .sec-head h2{font-size:clamp(2rem,4.6vw,3.3rem)}
+  .sec-head p{margin-top:16px;color:var(--sand);font-size:1.08rem;max-width:54ch}
+
+  /* Services */
+  .services{background:var(--forest)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .card{background:linear-gradient(180deg,var(--forest-2),var(--forest));border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:30px 26px;transition:transform .5s var(--ease-spring),box-shadow .35s ease,border-color .35s ease}
+  .card:hover{transform:translateY(-7px);border-color:rgba(255,106,26,.5);box-shadow:0 22px 44px rgba(0,0,0,.4)}
+  .card .ic{width:58px;height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(255,106,26,.12);color:var(--orange);margin-bottom:20px}
+  .card .ic svg{width:30px;height:30px}
+  .card h3{font-size:1.5rem;margin-bottom:10px;letter-spacing:.02em}
+  .card p{color:var(--sand);font-size:1rem}
+
+  /* Proof */
+  .proof{background:linear-gradient(180deg,var(--forest-deep),var(--forest))}
+  .proof .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center;margin-top:14px}
+  .stat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:34px 16px}
+  .stat .big{font-family:'Oswald';font-weight:700;font-size:clamp(2.6rem,7vw,4.2rem);color:var(--orange);line-height:1}
+  .stat .stars{display:flex;justify-content:center;gap:4px;margin-top:10px}
+  .stat .stars svg{width:22px;height:22px;color:var(--orange)}
+  .stat label{display:block;margin-top:12px;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--sand)}
+  .proof .tagline{text-align:center;margin-top:40px;font-family:'Oswald';font-weight:600;font-size:clamp(1.3rem,3.4vw,2rem);text-transform:uppercase;letter-spacing:.02em}
+  .proof .tagline .accent{color:var(--orange)}
+
+  /* Gallery */
+  .gallery{background:var(--forest)}
+  .gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .gal{position:relative;border-radius:18px;overflow:hidden;min-height:300px;border:1px solid rgba(255,255,255,.08);background-size:cover;background-position:center;transition:transform .5s var(--ease-spring)}
+  .gal:hover{transform:translateY(-6px)}
+  .gal::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,22,15,.78))}
+  .gal span{position:absolute;left:18px;bottom:16px;z-index:2;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+  .g1{background-image:url('images/gallery-1.jpg'),linear-gradient(135deg,#1C3D28,#0E1E15)}
+  .g2{background-image:url('images/gallery-2.jpg'),linear-gradient(135deg,#2A1E16,#15301F)}
+  .g3{background-image:url('images/gallery-3.jpg'),linear-gradient(135deg,#15301F,#3A2920)}
+
+  /* Why us + motif */
+  .why{background:linear-gradient(180deg,var(--forest),var(--forest-deep));position:relative;overflow:hidden}
+  .why .topo{position:absolute;inset:0;width:100%;height:100%;color:var(--orange);opacity:.08;pointer-events:none}
+  .why .wrap{position:relative;z-index:2}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .why-item{display:flex;gap:18px;align-items:flex-start;padding:8px 4px}
+  .why-item .ic{flex:0 0 auto;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--espresso);color:var(--orange)}
+  .why-item .ic svg{width:28px;height:28px}
+  .why-item h3{font-size:1.35rem;margin-bottom:6px}
+  .why-item p{color:var(--sand);font-size:1rem}
+
+  /* Contact */
+  .contact{background:var(--forest)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+  .contact .pitch h2{font-size:clamp(2rem,4.6vw,3rem)}
+  .contact .pitch p{color:var(--sand);margin-top:16px}
+  .contact .callcard{margin-top:26px;background:var(--espresso);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px}
+  .contact .callcard small{font-family:'Oswald';letter-spacing:.16em;text-transform:uppercase;color:var(--sand);font-size:13px}
+  .contact .callcard a{display:flex;align-items:center;gap:12px;font-family:'Oswald';font-weight:700;font-size:clamp(1.8rem,4.6vw,2.4rem);color:var(--orange);margin-top:6px}
+  .contact .callcard a svg{width:30px;height:30px}
+  form{background:linear-gradient(180deg,var(--forest-2),var(--forest));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px}
+  .field{margin-bottom:18px}
+  label{display:block;font-family:'Oswald';font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);margin-bottom:8px}
+  input,textarea{width:100%;background:rgba(10,22,15,.6);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 15px;color:var(--cream);font-family:inherit;font-size:16px;transition:border-color .25s ease,box-shadow .25s ease}
+  input:focus,textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,106,26,.22)}
+  textarea{min-height:120px;resize:vertical}
+  form .btn{width:100%}
+  .form-note{margin-top:14px;font-size:14px;color:var(--sand-dim);text-align:center}
+  .form-ok{display:none;background:rgba(255,106,26,.12);border:1px solid var(--orange);color:var(--cream);border-radius:12px;padding:16px;margin-bottom:18px;font-weight:600}
+  .form-ok.show{display:block}
+
+  /* Footer */
+  footer{background:var(--forest-deep);border-top:1px solid rgba(255,255,255,.07);padding:46px 0 110px}
+  .foot-in{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  .foot-in .brand{font-size:17px}
+  footer p{color:var(--sand-dim);font-size:14px}
+  footer a.fcall{color:var(--orange);font-weight:600}
+
+  /* Sticky mobile call */
+  .sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;padding:10px 14px;background:rgba(14,30,21,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.08)}
+  .sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:12px;background:var(--orange);color:#231408;font-family:'Oswald';font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.03em}
+  .sticky-call a svg{width:22px;height:22px}
+
+  /* Reveal (gated on .js + motion preference; visible without JS) */
+  @media (prefers-reduced-motion: no-preference){
+    .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);transition-delay:var(--d,0s);will-change:opacity,transform}
+    .js .reveal.in{opacity:1;transform:none}
+    .js .hero-bg{animation:ken 22s ease-out forwards}
+  }
+  @keyframes ken{from{transform:scale(1)}to{transform:scale(1.1)}}
+
+  @media (max-width:860px){
+    .contact-grid{grid-template-columns:1fr;gap:30px}
+    .proof .stat-row{grid-template-columns:1fr}
+    .sticky-call{display:block}
+    footer{padding-bottom:84px}
+    .nav .call .num{display:none}
+    .nav .call{padding:10px 14px}
+    section{padding:74px 0}
+  }
+  @media (max-width:420px){
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="White's Tree Service home">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 5 11h4l-5 7h6v3h4v-3h6l-5-7h4z"/></svg>
+      <span>White's Tree Service<small>Toledo, Ohio</small></span>
+    </a>
+    <a class="call" href="tel:+14193469263" aria-label="Call White's Tree Service at (419) 346-9263">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(419) 346-9263</span>
+    </a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A large hardwood tree leaning over a Toledo home at dusk, ready for removal by the White's crew"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap hero-content">
+    <span class="eyebrow reveal"><span class="bar"></span>Tree Removal &amp; Storm Crew</span>
+    <h1 class="reveal" style="--d:.05s">We take down what keeps you <span class="accent">up at night</span></h1>
+    <p class="lead reveal" style="--d:.12s">Dead, leaning, or storm-damaged. If the tree can't wait, we show up, size it up, and clear it out. Free on-site estimate, no pressure.</p>
+    <p class="proofline reveal" style="--d:.18s">
+      <span class="stars-inline" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+      </span>
+      <strong>73 reviews, 5.0 stars</strong> on Google. White's is the crew Toledo calls when the tree cannot wait.
+    </p>
+    <div class="hero-cta reveal" style="--d:.24s">
+      <a class="btn btn-primary" href="tel:+14193469263">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a Free Estimate
+      </a>
+      <a class="btn btn-ghost" href="#services">See What We Do</a>
+    </div>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="bar"></span>What We Handle</span>
+      <h2>Four jobs, done right the first time</h2>
+      <p>From a single dead limb over the driveway to a whole tree on the roof after a storm. Tell us what's going on and we'll handle it.</p>
+    </div>
+    <div class="grid">
+      <article class="card reveal" style="--d:.04s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 12-8.5 8.5a2.121 2.121 0 1 1-3-3L11 9"/><path d="M15 13 9 7l4-4 6 6h3a8 8 0 0 1-8 6Z"/></svg></div>
+        <h3>Tree Removal</h3>
+        <p>Dead, dying, or too close to the house. We take the whole tree down safely and haul it off, yard left clean.</p>
+      </article>
+      <article class="card reveal" style="--d:.12s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></div>
+        <h3>Trimming &amp; Pruning</h3>
+        <p>Clear the limbs over your roof, lines, and walkways. Cleaner trees, fewer surprises in the next windstorm.</p>
+      </article>
+      <article class="card reveal" style="--d:.2s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M6 12c0-1.7.7-3.2 1.8-4.2"/><circle cx="12" cy="12" r="2"/><path d="M18 12c0 1.7-.7 3.2-1.8 4.2"/></svg></div>
+        <h3>Stump Grinding</h3>
+        <p>Grind the old stump below grade so you get your yard back. No tripping hazard, no eyesore left behind.</p>
+      </article>
+      <article class="card reveal" style="--d:.28s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="m13 12-3 5h4l-3 5"/></svg></div>
+        <h3>Storm Emergency</h3>
+        <p>Tree down on the house or blocking the drive? Call now. We move fast when a tree can't wait until morning.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow" style="justify-content:center"><span class="bar"></span>The Record</span>
+      <h2>73 neighbors. Five stars.</h2>
+      <p style="margin-left:auto;margin-right:auto">We do not write our own reviews. Toledo homeowners do, and the rating speaks for itself.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal" style="--d:.04s">
+        <div class="big"><span data-count="5.0" data-decimals="1">5.0</span></div>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        </div>
+        <label>Average Rating</label>
+      </div>
+      <div class="stat reveal" style="--d:.12s">
+        <div class="big"><span data-count="73">73</span></div>
+        <label>Verified Reviews</label>
+      </div>
+      <div class="stat reveal" style="--d:.2s">
+        <div class="big"><span data-count="5" data-dec="1">0</span></div>
+        <label>Average Google rating</label>
+      </div>
+    </div>
+    <p class="tagline reveal" style="--d:.26s">When the tree can't wait, <span class="accent">White's shows up.</span></p>
+  </div>
+</section>
+
+<section class="gallery" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="bar"></span>On The Job</span>
+      <h2>Recent work around Toledo</h2>
+      <p>Real trees, real yards, cleaned up and hauled off. This is the kind of work you can expect on your property.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal g1 reveal" style="--d:.04s" role="img" aria-label="White's crew member roped into a tall tree, cutting limbs section by section during a removal">
+        <span>Sectional Removal</span>
+      </div>
+      <div class="gal g2 reveal" style="--d:.12s" role="img" aria-label="A storm-snapped tree being cleared from a Toledo backyard after high winds">
+        <span>Storm Cleanup</span>
+      </div>
+      <div class="gal g3 reveal" style="--d:.2s" role="img" aria-label="A stump grinder reducing an old tree stump down below the grass line">
+        <span>Stump Grinding</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="topo" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <path d="M-40 120 C 200 60, 400 180, 620 120 S 1040 60, 1240 140"/>
+    <path d="M-40 200 C 220 150, 420 270, 640 210 S 1060 150, 1240 230"/>
+    <path d="M-40 290 C 240 240, 440 360, 660 300 S 1080 240, 1240 320"/>
+    <path d="M-40 380 C 220 330, 460 450, 680 390 S 1100 330, 1240 410"/>
+    <path d="M-40 470 C 240 420, 480 540, 700 480 S 1120 420, 1240 500"/>
+    <path d="M-40 560 C 260 510, 500 630, 720 570 S 1140 510, 1240 590"/>
+  </svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="bar"></span>Why White's</span>
+      <h2>The crew Toledo trusts on the property</h2>
+      <p>A tree job goes wrong fast in the wrong hands. We bring the license, the insurance, and a local crew that treats your yard like its own.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal" style="--d:.04s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><h3>Licensed</h3><p>We do the work to code, with the training to take down a tree the right way instead of the risky way.</p></div>
+      </div>
+      <div class="why-item reveal" style="--d:.12s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+        <div><h3>Fully Insured</h3><p>Heavy limbs near your home and lines mean real risk. Our coverage means that risk stays ours, not yours.</p></div>
+      </div>
+      <div class="why-item reveal" style="--d:.2s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h3>Local Toledo Crew</h3><p>We live and work here. When you call, you get the same crew your neighbors already trusted with their trees.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="pitch reveal">
+        <span class="eyebrow"><span class="bar"></span>Get Your Estimate</span>
+        <h2>Tell us about the tree</h2>
+        <p>The fastest way to get handled is a phone call. Prefer to type it out? Send the details and we'll get right back to you to set up a free on-site estimate.</p>
+        <div class="callcard">
+          <small>Call the crew now</small>
+          <a href="tel:+14193469263" aria-label="Call White's Tree Service at (419) 346-9263">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (419) 346-9263
+          </a>
+        </div>
+      </div>
+      <form class="reveal" style="--d:.1s" id="estimate-form" novalidate>
+        <div class="form-ok" id="form-ok">Thanks. Your details are in. For anything urgent, call (419) 346-9263 and we'll get moving.</div>
+        <div class="field">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="First and last" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(419) 000-0000" required>
+        </div>
+        <div class="field">
+          <label for="address">Property Address</label>
+          <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Street, Toledo, OH">
+        </div>
+        <div class="field">
+          <label for="details">What's going on with the tree?</label>
+          <textarea id="details" name="details" placeholder="Dead tree by the garage, leaning since the last storm..."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Request My Free Estimate</button>
+        <p class="form-note">No spam. We use your info only to set up your estimate.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 5 11h4l-5 7h6v3h4v-3h6l-5-7h4z"/></svg>
+      White's Tree Service LLC
+    </a>
+    <p>Toledo, Ohio &middot; Licensed &amp; Insured &middot; Call <a class="fcall" href="tel:+14193469263">(419) 346-9263</a></p>
+    <p>&copy; <span id="yr"></span> White's Tree Service LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+14193469263" aria-label="Call White's Tree Service at (419) 346-9263">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call for a Free Estimate
+  </a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var progress = document.getElementById('progress');
+  var nav = document.getElementById('nav');
+  function onScroll(){
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? st / h : 0;
+    progress.style.transform = 'scaleX(' + p + ')';
+    if(st > 12){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    if(reduce){ el.textContent = target.toFixed(dec); return; }
+    var dur = 1400, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var t = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = (target * eased).toFixed(dec);
+      if(t < 1){ requestAnimationFrame(step); } else { el.textContent = target.toFixed(dec); }
+    }
+    requestAnimationFrame(step);
+  }
+  var counts = document.querySelectorAll('[data-count]');
+  if(!('IntersectionObserver' in window)){
+    counts.forEach(animateCount);
+  } else {
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); }
+      });
+    }, {threshold:0.6});
+    counts.forEach(function(el){ cio.observe(el); });
+  }
+  var form = document.getElementById('estimate-form');
+  var ok = document.getElementById('form-ok');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var name = form.querySelector('#name');
+    var phone = form.querySelector('#phone');
+    if(!name.value.trim()){ name.focus(); return; }
+    if(!phone.value.trim()){ phone.focus(); return; }
+    ok.classList.add('show');
+    form.querySelectorAll('input, textarea').forEach(function(f){ f.value=''; });
+    ok.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+  });
+})();
+</script>
+<script>window.ELEMENTS_CLAIM={"sub": "whitestree", "business": "White's Tree Service LLC"};</script>
+<!-- ===== Elements Studio claim banner (inject before </body> on every site) =====
+     Self-contained: CSS + HTML + JS, no build step. Configure via window.ELEMENTS_CLAIM
+     which the pipeline writes just above this block, per site:
+       <script>window.ELEMENTS_CLAIM={sub:"origswoodstove",business:"Orig's Wood Stove",
+         priceLabel:"$39/mo",api:"https://elementsstud.io",accent:"#B0673A",ink:"#234C3A"};</script>
+     Countdown: /api/visit returns {days, firstVisitAt}; deadline = firstVisitAt + days.
+     CTA: /api/checkout returns {clientSecret, publishableKey}; Stripe embedded checkout mounts in the modal. -->
+<link rel="preconnect" href="https://js.stripe.com">
+<style>
+#es-claim{display:none;position:fixed;top:0;left:0;right:0;z-index:2147483000;background:var(--es-accent,#B0673A);color:#fff;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+#es-claim .in{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px}
+#es-claim .msg{flex:1;min-width:200px;line-height:1.25}
+#es-claim .msg b{display:block;font-size:15px;font-weight:600}
+#es-claim .msg span{font-size:12.5px;opacity:.9}
+#es-claim .cd{display:flex;gap:6px}
+#es-claim .cd div{background:rgba(255,255,255,.95);color:#3d1f0c;border-radius:6px;padding:4px 7px;text-align:center;min-width:40px}
+#es-claim .cd b{display:block;font-size:16px;font-weight:700;line-height:1}
+#es-claim .cd s{font-size:9px;text-decoration:none;opacity:.7;text-transform:uppercase;letter-spacing:.5px}
+#es-claim .cta{background:var(--es-ink,#234C3A);color:#fff;border:0;font-size:14px;font-weight:600;
+  padding:11px 18px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:transform .2s}
+#es-claim .cta:hover{transform:translateY(-1px)}
+#es-claim .x{background:none;border:0;color:#fff;opacity:.7;font-size:18px;cursor:pointer;line-height:1;padding:4px}
+#es-modal{position:fixed;inset:0;z-index:10000;background:rgba(15,15,15,.55);display:none;align-items:center;justify-content:center;padding:16px}
+#es-modal.on{display:flex}
+#es-modal .card{background:#fff;border-radius:14px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:18px}
+#es-modal .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+#es-modal .hd h3{margin:0;font:600 18px system-ui;color:#1a1a1a}
+#es-modal .hd button{background:none;border:0;font-size:22px;cursor:pointer;color:#666}
+#es-modal .sub{margin:0 0 12px;color:#555;font:400 13px system-ui}
+#es-checkout{min-height:120px}
+@media(max-width:640px){#es-claim .msg span{display:none}#es-claim .in{gap:10px}}
+</style>
+
+<div id="es-claim" role="region" aria-label="Claim this website">
+  <div class="in">
+    <div class="msg"><b id="es-msg">This demo site is reserved for you</b><span>Keep it live and start getting calls</span></div>
+    <div class="cd" id="es-cd" aria-live="polite" aria-label="time remaining">
+      <div><b data-cd="d">--</b><s>days</s></div><div><b data-cd="h">--</b><s>hrs</s></div>
+      <div><b data-cd="m">--</b><s>min</s></div><div><b data-cd="s">--</b><s>sec</s></div>
+    </div>
+    <button class="cta" id="es-cta">Claim your site</button>
+    <button class="x" id="es-x" aria-label="Dismiss">&times;</button>
+  </div>
+</div>
+
+<div id="es-modal" role="dialog" aria-modal="true" aria-label="Claim checkout">
+  <div class="card">
+    <div class="hd"><h3>Claim your website</h3><button id="es-mx" aria-label="Close">&times;</button></div>
+    <p class="sub" id="es-msub">Secure checkout, powered by Stripe. Cancel anytime.</p>
+    <div id="es-checkout"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var C=window.ELEMENTS_CLAIM||{};
+  var API=(C.api||"").replace(/\/$/,"");
+  var root=document.getElementById('es-claim');
+  if(C.accent) root.style.setProperty('--es-accent',C.accent);
+  if(C.ink) root.style.setProperty('--es-ink',C.ink);
+  var ctaBtn=document.getElementById('es-cta');
+  if(C.priceLabel) ctaBtn.textContent='Claim your site - '+C.priceLabel;
+
+  function pad(n){return String(n).padStart(2,'0');}
+  function post(path,body){return fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.assign({sub:C.sub,business:C.business},body||{}))});}
+
+  // 1) record first visit + get countdown window
+  var deadline=null;
+  function showBar(){
+    root.style.display='block';
+    var bh=root.offsetHeight;
+    document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+bh+'px';
+    document.querySelectorAll('header,nav,.nav,.navbar,[class*="header"]').forEach(function(el){
+      var cs=getComputedStyle(el);
+      if((cs.position==='fixed'||cs.position==='sticky')&&el.getBoundingClientRect().top<=bh+2){el.style.top=bh+'px';}
+    });
+    tick();
+  }
+  post('/api/visit').then(function(r){return r.json();}).then(function(d){
+    if(d&&d.firstVisitAt&&d.days){deadline=new Date(d.firstVisitAt).getTime()+d.days*86400000;showBar();}
+  }).catch(function(){});
+  function tick(){
+    if(!deadline)return;
+    var s=Math.max(0,Math.floor((deadline-Date.now())/1000));
+    root.querySelector('[data-cd=d]').textContent=pad(Math.floor(s/86400));
+    root.querySelector('[data-cd=h]').textContent=pad(Math.floor(s%86400/3600));
+    root.querySelector('[data-cd=m]').textContent=pad(Math.floor(s%3600/60));
+    root.querySelector('[data-cd=s]').textContent=pad(s%60);
+  }
+  setInterval(tick,1000);
+
+  // 2) dismiss
+  document.getElementById('es-x').onclick=function(){root.style.display='none';post('/api/track',{type:'banner_dismiss'});};
+
+  // 3) CTA -> embedded Stripe modal
+  var modal=document.getElementById('es-modal'),mounted=false;
+  function closeModal(){modal.classList.remove('on');}
+  document.getElementById('es-mx').onclick=closeModal;
+  modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+  ctaBtn.onclick=function(){
+    post('/api/track',{type:'cta_click'});
+    modal.classList.add('on');
+    if(mounted)return; mounted=true;
+    post('/api/checkout').then(function(r){return r.json();}).then(function(d){
+      if(!d.clientSecret||!d.publishableKey){document.getElementById('es-checkout').textContent='Checkout is being set up. Please call us to claim.';mounted=false;return;}
+      var s=document.createElement('script');s.src='https://js.stripe.com/v3/';s.onload=function(){
+        var stripe=Stripe(d.publishableKey);
+        stripe.initEmbeddedCheckout({clientSecret:d.clientSecret}).then(function(ck){ck.mount('#es-checkout');});
+      };document.head.appendChild(s);
+    }).catch(function(){document.getElementById('es-checkout').textContent='Something went wrong. Please call us to claim your site.';mounted=false;});
+  };
+})();
+</script>
+<!-- ===== end Elements Studio claim banner ===== -->
+</body>
+</html>
