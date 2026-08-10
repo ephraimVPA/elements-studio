@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bear's Auto Repair | Honest Auto Repair in Oregon, OH</title>
+<meta name="description" content="Bear's Auto Repair fixes cars and trucks in Oregon, Ohio with honest diagnostics, brakes, and engine work. Rated 4.7 stars across 97 reviews. Call (419) 691-4936.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1319; --panel:#161B22; --panel2:#1E2530; --slate:#2A3340;
+    --fog:#EDEEEA; --mist:#A9B2BF; --orange:#E8621F; --orange-dk:#C24C12; --steel:#3A4656;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',system-ui,sans-serif;color:var(--fog);background:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Kanit',sans-serif;font-weight:800;line-height:1.04;text-transform:uppercase;letter-spacing:.4px}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92%);margin:0 auto}
+  section{padding:92px 0}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left;z-index:60}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(15,19,25,.86);backdrop-filter:blur(9px);transition:box-shadow .3s;border-bottom:1px solid rgba(255,255,255,.05)}
+  header.scrolled{box-shadow:0 8px 26px rgba(0,0,0,.45)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mark{width:42px;height:42px;border-radius:11px;background:var(--orange);display:grid;place-items:center;flex:none;box-shadow:0 6px 18px rgba(232,98,31,.4)}
+  .mark svg{stroke:#0F1319}
+  .brand b{font-family:'Kanit',sans-serif;font-size:22px;letter-spacing:.6px}
+  .brand span{display:block;font-size:11px;letter-spacing:2.5px;color:var(--mist);text-transform:uppercase;margin-top:-3px;font-weight:600}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#0F1319;padding:11px 18px;border-radius:10px;font-weight:700;font-size:15px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .2s}
+  .nav-cta:hover{transform:translateY(-2px);background:#ff7a34}
+  .nav-links{display:none;gap:26px;font-weight:600;color:var(--mist)}
+  .nav-links a:hover{color:var(--fog)}
+  @media(min-width:900px){.nav-links{display:flex}}
+
+  .hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#0F1319,#2A3340);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 25s ease-in-out infinite alternate;z-index:0}
+  @keyframes ken{from{transform:scale(1.07) translateY(0)}to{transform:scale(1.15) translateY(-16px)}}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,12,16,.86),rgba(9,12,16,.5));z-index:1}
+  .claw{position:absolute;right:-40px;top:0;bottom:0;width:340px;z-index:1;opacity:.5;pointer-events:none}
+  .hero .wrap{position:relative;z-index:2;padding:60px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#0F1319;padding:8px 15px;border-radius:6px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+  .hero h1{font-size:clamp(38px,6.6vw,78px);margin:22px 0 16px;max-width:16ch}
+  .hero p.lede{font-size:clamp(17px,2vw,21px);max-width:52ch;color:#D7DCE3}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:10px;font-weight:700;font-size:17px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;font-family:'Barlow',sans-serif}
+  .btn-primary{background:var(--orange);color:#0F1319;box-shadow:0 12px 32px rgba(232,98,31,.42)}
+  .btn-primary:hover{transform:translateY(-3px)}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.28)}
+  .btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.16)}
+  .hero-trust{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap;color:#D7DCE3;font-size:15px}
+  .hero-trust b{font-family:'Kanit',sans-serif;font-size:26px;color:#fff;display:block}
+  .stars{color:var(--orange);letter-spacing:2px}
+
+  .kicker{color:var(--orange);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:13px}
+  .sec-head h2{font-size:clamp(30px,4.2vw,52px);margin:10px 0 12px}
+  .sec-head p{color:var(--mist);max-width:60ch}
+
+  .services{background:var(--panel)}
+  .grid{display:grid;gap:20px;grid-template-columns:1fr;margin-top:44px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:960px){.grid{grid-template-columns:1fr 1fr 1fr}}
+  .card{background:var(--panel2);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:28px;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(232,98,31,.6)}
+  .ic{width:52px;height:52px;border-radius:12px;background:rgba(232,98,31,.14);display:grid;place-items:center;margin-bottom:16px;border:1px solid rgba(232,98,31,.35)}
+  .ic svg{stroke:var(--orange)}
+  .card h3{font-size:19px;margin-bottom:8px;color:#fff}
+  .card p{color:var(--mist);font-size:15.5px}
+
+  .proof{position:relative;background:var(--ink);overflow:hidden}
+  .motif{position:absolute;inset:0;z-index:0;opacity:.12;pointer-events:none}
+  .proof .wrap{position:relative;z-index:1}
+  .proof-grid{display:grid;gap:34px;grid-template-columns:1fr;align-items:center}
+  @media(min-width:820px){.proof-grid{grid-template-columns:1.1fr 1fr}}
+  .stat-row{display:flex;gap:38px;flex-wrap:wrap;margin-top:26px}
+  .stat b{font-family:'Kanit',sans-serif;font-size:54px;color:var(--orange);display:block;line-height:1}
+  .stat span{color:var(--mist);font-size:14px;letter-spacing:.5px}
+  .proof h2{font-size:clamp(28px,3.6vw,46px);color:#fff}
+  .proof p{color:var(--mist);margin-top:14px;max-width:46ch}
+  .ptrust{display:flex;align-items:center;gap:12px;margin-top:24px;font-size:15px;color:var(--mist)}
+  .ptrust .stars{font-size:22px}
+
+  .gallery{background:var(--panel)}
+  .gal-grid{display:grid;gap:16px;grid-template-columns:1fr;margin-top:40px}
+  @media(min-width:720px){.gal-grid{grid-template-columns:repeat(3,1fr)}}
+  .ph{position:relative;min-height:270px;border-radius:14px;background-size:cover;background-position:center;box-shadow:0 14px 34px rgba(0,0,0,.5);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(9,12,16,.6));}
+  .ph1{background-image:url('https://images.pexels.com/photos/8478201/pexels-photo-8478201.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2A3340,#0F1319)}
+  .ph2{background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2A3340,#0F1319)}
+  .ph3{background-image:url('https://images.pexels.com/photos/6870313/pexels-photo-6870313.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2A3340,#0F1319)}
+
+  .about .wrap{background:var(--panel2);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:48px}
+  .about .cols{display:grid;gap:40px;grid-template-columns:1fr}
+  @media(min-width:820px){.about .cols{grid-template-columns:1fr 1fr}}
+  .about h2{color:#fff}
+  .about ul{list-style:none;margin-top:20px;display:grid;gap:14px}
+  .about li{display:flex;gap:12px;align-items:flex-start;color:var(--mist)}
+  .about li svg{stroke:var(--orange);flex:none;margin-top:2px}
+  .infobox{background:var(--ink);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:24px}
+  .infobox h3{font-size:18px;margin-bottom:12px;color:#fff}
+  .infobox .row{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px}
+  .infobox .row:last-child{border-bottom:0}
+  .infobox svg{stroke:var(--orange);flex:none}
+
+  .final{position:relative;background:var(--orange);color:#0F1319;text-align:center;overflow:hidden}
+  .final h2{font-size:clamp(30px,4.6vw,54px)}
+  .final p{margin:14px auto 26px;max-width:48ch;color:#3a1c08;font-weight:500}
+  .final .btn-primary{background:#0F1319;color:#fff;box-shadow:0 12px 34px rgba(0,0,0,.3)}
+  footer{background:var(--ink);color:var(--mist);padding:34px 0;font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
+  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--orange);color:#0F1319;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;font-weight:800;box-shadow:0 -6px 20px rgba(0,0,0,.4)}
+  @media(min-width:900px){.callbar{display:none}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg{animation:none}}
+  body{padding-bottom:58px}
+  @media(min-width:900px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+      <b>Bear's Auto Repair<span>Oregon, Ohio</span></b>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#work">Our Work</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="nav-cta" href="tel:+14196914936"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F1319" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 691-4936</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A Bear's Auto Repair mechanic carefully checking a car engine to confirm the repair in the Oregon, Ohio shop"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="claw" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 340 800" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#E8621F" stroke-width="16" stroke-linecap="round">
+      <path d="M60 120 C120 300 150 520 120 700"/>
+      <path d="M150 90 C210 280 240 520 210 720"/>
+      <path d="M240 130 C300 300 320 520 300 690"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F1319" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Serving Oregon &amp; East Toledo</span>
+    <h1>Honest work on your car, done right the first time.</h1>
+    <p class="lede">No upsell, no runaround. Bring us the warning light, the shake at speed, or the brakes that just do not feel right. We will find it and fix it.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="tel:+14196914936"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F1319" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Bear's now</a>
+      <a class="btn btn-ghost" href="#services">See our services</a>
+    </div>
+    <div class="hero-trust">
+      <div><b><span class="count" data-to="4.7" data-dec="1">4.7</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></b>Google rating</div>
+      <div><b><span class="count" data-to="97">97</span></b>customer reviews</div>
+      <div><b>Cars &amp; trucks</b>most makes and models</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we handle</div>
+      <h2>One shop for the whole vehicle</h2>
+      <p>We diagnose the real problem, quote it before we start, and get you back on the road with work that lasts.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Check-engine lights, stalling, rough idle. We track down the cause, not just the code.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes &amp; Rotors</h3>
+        <p>Grinding, pulling, or a soft pedal? New pads, rotors, and fluid so you stop straight.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div>
+        <h3>Engine &amp; Transmission</h3>
+        <p>Misfires, leaks, and shifting trouble handled by techs who have seen it before.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.22-8.56"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Oil &amp; Maintenance</h3>
+        <p>Oil changes, filters, belts, and fluids that keep small problems small.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2 3 8.5 8 13l1.5-1.5"/><path d="m14.5 22 6.5-6.5-5-5L14.5 12"/><path d="m7 17 3-3M17 7l3-3"/></svg></div>
+        <h3>Suspension &amp; Steering</h3>
+        <p>Struts, shocks, tie rods, and alignments so the ride feels solid again.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13"/><path d="M4 19h16M9 8h6M9 12h6"/></svg></div>
+        <h3>Heating &amp; A/C</h3>
+        <p>Warm air in summer or a cold cabin in winter? We recharge and repair both.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="why">
+  <div class="motif" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#E8621F" stroke-width="10" stroke-linecap="round">
+      <path d="M-40 60 C120 140 220 300 180 460"/>
+      <path d="M60 40 C220 120 320 300 280 470"/>
+      <path d="M160 60 C320 140 420 300 380 460"/>
+      <path d="M520 -20 C680 80 760 260 720 430"/>
+      <path d="M620 0 C780 100 860 260 820 440"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="reveal">
+        <div class="kicker">Why drivers pick Bear's</div>
+        <h2>97 reviews and a 4.7 we earned one car at a time.</h2>
+        <p>Most of our business walks in on a neighbor's word. We show you the worn part, explain the fix in plain terms, and give you the price up front.</p>
+        <div class="ptrust"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated 4.7 across 97 Google reviews</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-row">
+          <div class="stat"><b><span class="count" data-to="4.7" data-dec="1">4.7</span></b><span>Google star rating</span></div>
+          <div class="stat"><b><span class="count" data-to="97">97</span></b><span>Verified reviews</span></div>
+          <div class="stat"><b><span class="count" data-to="1">1</span></b><span>Shop, start to finish</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Inside the shop</div>
+      <h2>Real work in the bay</h2>
+      <p>A look at the hands-on jobs that keep Oregon and East Toledo moving.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="ph ph1 reveal" role="img" aria-label="Detailed view of hands working on the internal parts of a car motor"></div>
+      <div class="ph ph2 reveal" role="img" aria-label="A car engine lifted for service in a well-lit auto repair shop"></div>
+      <div class="ph ph3 reveal" role="img" aria-label="A technician working on a vehicle in the Bear's Auto Repair service bay"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="visit">
+  <div class="wrap reveal">
+    <div class="cols">
+      <div>
+        <div class="kicker">Local and independent</div>
+        <h2 style="font-size:clamp(28px,3.6vw,42px);margin:10px 0 6px">Your shop on Woodville Road</h2>
+        <p style="color:var(--mist)">Bear's Auto Repair works on cars and trucks for Oregon and the east side from our shop on Woodville Road. Stop in, call, or ask about your vehicle. You get a straight read on what needs fixing now and what can wait.</p>
+        <ul>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Price quoted before any work starts</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cars, trucks, and most makes and models</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Repairs that hold up, backed by our word</li>
+        </ul>
+      </div>
+      <div class="infobox">
+        <h3>Visit or call</h3>
+        <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+14196914936">(419) 691-4936</a></div>
+        <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>2193 Woodville Rd, Oregon, OH 43616</div>
+        <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mon-Fri 8am to 6pm, Sat by appointment</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap reveal">
+    <h2>Something not right with your car?</h2>
+    <p>Call Bear's Auto Repair for an honest look and a fair quote. We tell you what your vehicle needs before we lift a wrench.</p>
+    <a class="btn btn-primary" href="tel:+14196914936"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 691-4936</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><b style="font-family:'Kanit',sans-serif;color:#fff;font-size:18px;letter-spacing:.6px">BEAR'S AUTO REPAIR</b><br>2193 Woodville Rd, Oregon, OH 43616</div>
+    <div>Rated 4.7 stars, 97 reviews on Google &nbsp;&bull;&nbsp; <a href="tel:+14196914936" style="color:#E8621F">(419) 691-4936</a></div>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+14196914936"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F1319" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 691-4936</a>
+
+<script>
+  var bar=document.getElementById('progress'),hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){
+    var h=document.documentElement,sc=h.scrollTop/(h.scrollHeight-h.clientHeight);
+    bar.style.transform='scaleX('+sc+')';
+    hdr.classList.toggle('scrolled',h.scrollTop>10);
+  },{passive:true});
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),t0=null;
+      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);var v=(to*(1-Math.pow(1-p,3)));el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=to.toFixed(dec);}
+      requestAnimationFrame(step);cio.unobserve(el);
+    });
+  },{threshold:.6});
+  document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
