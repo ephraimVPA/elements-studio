@@ -312,6 +312,7 @@ document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);}
 </script>
 <!-- ===== end Elements Studio claim banner ===== -->
 <!-- ===== end Elements Studio claim banner ===== -->
+<!-- ===== end Elements Studio claim banner ===== -->
 <script>window.ELEMENTS_CLAIM={"sub": "bearclawstire", "business": "BearClaws Tire, Auto & Light Truck Service"};</script>
 <!-- ===== Elements Studio claim banner (inject before </body> on every site) =====
      Self-contained: CSS + HTML + JS, no build step. Configure via window.ELEMENTS_CLAIM
@@ -352,7 +353,7 @@ document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);}
 #es-checkout{min-height:120px}
 .es-plan{display:flex;justify-content:space-between;align-items:center;width:100%;background:#f7f4ee;border:1px solid #e6dfd3;border-radius:10px;padding:14px 16px;margin:8px 0;font:600 15px system-ui;color:#234C3A;cursor:pointer;text-align:left}
 .es-plan:hover{border-color:#B0673A;background:#fbf8f2}
-.es-plan .p{display:block;font:400 12px system-ui;color:#8a8578;margin-top:2px}
+.es-plan .p{display:block;font:400 12.5px/1.45 system-ui;color:#6f6a5c;margin-top:3px;max-width:34ch}
 @media(max-width:640px){#es-claim .msg span{display:none}#es-claim .in{gap:10px}}
 </style>
 
@@ -455,9 +456,9 @@ document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);}
   // Package copy comes from Stripe (price nickname + metadata.description via /api/plans).
   // These fallbacks cover the known price points until that copy is set.
   var PKG={
-    'recurring:2500':{n:'Hosted',s:'Your site live and maintained at your elementsstud.io address. Cancel anytime.'},
-    'recurring:4500':{n:'Hosted + your own domain',s:'We connect your custom domain and keep your site updated for you. Cancel anytime.'},
-    'one_time:150000':{n:'Own it outright',s:'One payment. Full handover of the site and domain. No subscription.'}
+    'recurring:2500':{n:'Starter',s:'Your site stays online. Edits included. Cancel anytime.'},
+    'recurring:4500':{n:'Your own domain',s:'Everything in Starter, on your own web address. Domain bought separately, about $20 a year. Cancel anytime.'},
+    'one_time:150000':{n:'Own it',s:'One payment. The site is yours to keep. No monthly fee.'}
   };
   function planName(p){if(p.name)return p.name;var d=PKG[p.type+':'+p.unitAmount];return d?d.n:(p.type==='recurring'?'Monthly plan':'One-time purchase');}
   function planSub(p){if(p.description)return p.description;var d=PKG[p.type+':'+p.unitAmount];return d?d.s:(p.type==='recurring'?'Billed monthly, cancel anytime':'One payment, yours to keep');}
