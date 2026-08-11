@@ -1,7 +1,10 @@
-// POST/GET /api/plans -> 200 { plans: [{id, unitAmount, currency, type, interval}] }
+// POST/GET /api/plans -> 200 { plans: [{id, unitAmount, currency, type, interval, name, description}] }
 // Lists the active prices on the configured product so the claim banner renders the
 // exact purchase options you set up in Stripe (e.g. $1,500 one-time, $24/mo, $45/mo).
 // No amounts are hardcoded — add/remove prices in Stripe and the banner follows.
+// Package copy is Stripe-driven too: `name` = the price's nickname, `description` =
+// the price's metadata.description. Edit those in the Stripe dashboard to change what
+// the picker says, no code deploy needed. The banner has safe fallbacks when unset.
 
 const Stripe = require('stripe');
 const { cors, sendJson } = require('./_relay');
@@ -25,6 +28,8 @@ module.exports = async (req, res) => {
           currency: p.currency,
           type: p.recurring ? 'recurring' : 'one_time',
           interval: p.recurring ? p.recurring.interval : null,
+          name: p.nickname || null,
+          description: (p.metadata && p.metadata.description) || null,
         };
       });
     // recurring first (cheapest -> dearest), then one-time
