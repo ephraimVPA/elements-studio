@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crandalls Quality Landscaping | Maumee, OH Landscape Design &amp; Build</title>
+<meta name="description" content="Crandalls Quality Landscaping designs and builds yards in Maumee, OH: landscape design, paver patios, planting beds, and lawn care. Rated 4.5 stars across 76 reviews. Call (419) 704-5471.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5EFE3;
+    --paper:#FBF7EE;
+    --ink:#22301E;
+    --moss:#2C4A32;
+    --moss-2:#1E3623;
+    --clay:#C1683B;
+    --clay-2:#A9552E;
+    --sage:#7E9370;
+    --line:#E4DAC6;
+    --muted:#5A6551;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Karla',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:.2px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1140px,92vw);margin-inline:auto}
+  .eyebrow{
+    font-family:'Karla',sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.18em;font-size:.72rem;color:var(--clay-2);
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    background:var(--clay);color:#fff;font-weight:700;
+    padding:.95rem 1.5rem;border-radius:999px;font-size:1.02rem;
+    border:0;cursor:pointer;
+    box-shadow:0 10px 24px rgba(169,85,46,.28);
+    transition:transform .28s cubic-bezier(.34,1.56,.64,1),background .2s,box-shadow .28s;
+  }
+  .btn:hover{transform:translateY(-3px) scale(1.02);background:var(--clay-2);box-shadow:0 16px 30px rgba(169,85,46,.34)}
+  .btn.ghost{background:transparent;color:var(--moss);box-shadow:none;border:1.5px solid var(--moss)}
+  .btn.ghost:hover{background:var(--moss);color:#fff}
+  .btn svg{width:19px;height:19px}
+
+  /* progress bar */
+  #bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--clay);
+    transform:scaleX(0);transform-origin:left;z-index:120}
+
+  /* nav */
+  header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s}
+  header.scrolled{background:rgba(245,239,227,.92);backdrop-filter:blur(9px);box-shadow:0 4px 22px rgba(30,54,35,.10)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1.05rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:'DM Serif Display',serif;font-size:1.24rem;color:var(--moss)}
+  .brand .mark{width:34px;height:34px;flex:0 0 auto}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-weight:600;font-size:.98rem;color:var(--ink);opacity:.82;transition:opacity .2s}
+  .nav-links a:hover{opacity:1;color:var(--moss)}
+  .nav .btn{padding:.7rem 1.15rem;font-size:.95rem}
+  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:96vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;
+    background-image:url('https://images.pexels.com/photos/130154/pexels-photo-130154.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#2C4A32,#1E3623);
+    background-size:cover;background-position:center;
+    transform:scale(1.06);animation:ken 22s ease-out forwards;
+  }
+  @keyframes ken{to{transform:scale(1)}}
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(20,32,22,.30) 0%,rgba(20,32,22,.50) 55%,rgba(20,32,22,.86) 100%);
+  }
+  .hero-inner{position:relative;z-index:2;color:#F7F3E9;padding:0 0 5.5rem}
+  .hero .eyebrow{color:#E7C6A6}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,5rem);color:#FCF8EF;margin:.7rem 0 1rem;max-width:16ch;text-shadow:0 2px 24px rgba(0,0,0,.28)}
+  .hero p.lede{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:44ch;color:#EDE6D6;margin-bottom:1.9rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+  .trust{display:flex;align-items:center;gap:.85rem;margin-top:1.7rem;font-size:.98rem;color:#EDE6D6}
+  .stars{display:inline-flex;gap:2px}
+  .stars svg{width:18px;height:18px}
+  .stars svg path{fill:#E7B15A}
+  .stars .half{position:relative}
+
+  /* generic section */
+  section{padding:5.4rem 0}
+  .sec-head{max-width:60ch}
+  .sec-head h2{font-size:clamp(2rem,4.2vw,2.9rem);color:var(--moss-2);margin:.5rem 0 .7rem}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2.4rem}
+  @media(max-width:960px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.svc-grid{grid-template-columns:1fr}}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:1.6rem 1.4rem;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(30,54,35,.12);border-color:#D8CBB0}
+  .ic{
+    width:48px;height:48px;border-radius:12px;display:grid;place-items:center;
+    background:rgba(44,74,50,.09);color:var(--moss);margin-bottom:1rem;
+  }
+  .ic svg{width:25px;height:25px;stroke:var(--moss);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:1.32rem;color:var(--moss-2);margin-bottom:.4rem}
+  .card p{color:var(--muted);font-size:.99rem}
+
+  /* proof band */
+  .proof{background:var(--moss-2);color:#EDE6D6}
+  .proof .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
+  @media(max-width:820px){.proof .wrap{grid-template-columns:1fr;gap:2rem}}
+  .proof h2{color:#FCF8EF;font-size:clamp(1.9rem,4vw,2.7rem)}
+  .proof p{color:#CFD8C6;margin-top:.8rem}
+  .stat-row{display:flex;gap:2.6rem;flex-wrap:wrap}
+  .stat{}
+  .stat .num{font-family:'DM Serif Display',serif;font-size:3.1rem;color:#E7B15A;line-height:1}
+  .stat .lbl{font-size:.86rem;text-transform:uppercase;letter-spacing:.13em;color:#B8C4AC;margin-top:.4rem}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.4rem}
+  @media(max-width:820px){.gal{grid-template-columns:1fr}}
+  .ph{
+    position:relative;height:300px;border-radius:16px;overflow:hidden;
+    background-size:cover;background-position:center;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);
+    transition:transform .5s cubic-bezier(.16,1,.3,1);
+  }
+  .ph:hover{transform:scale(1.02)}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,32,22,.72));}
+  .ph .cap{position:absolute;left:1rem;bottom:.9rem;z-index:2;color:#F7F3E9;font-weight:600;font-size:1rem;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+  .g1{background-image:url('https://images.pexels.com/photos/16239802/pexels-photo-16239802.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(120deg,#2C4A32,#1E3623)}
+  .g2{background-image:url('https://images.pexels.com/photos/15369750/pexels-photo-15369750.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(120deg,#2C4A32,#1E3623)}
+  .g3{background-image:url('https://images.pexels.com/photos/3999647/pexels-photo-3999647.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(120deg,#2C4A32,#1E3623)}
+
+  /* process w/ signature motif */
+  .process{position:relative;background:var(--paper);overflow:hidden}
+  .leaves{position:absolute;inset:0;z-index:0;opacity:.10;color:var(--sage);pointer-events:none}
+  .process .wrap{position:relative;z-index:1}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+  .step{padding:1.4rem 0}
+  .step .n{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;background:var(--clay);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;margin-bottom:.9rem}
+  .step h3{font-size:1.3rem;color:var(--moss-2);margin-bottom:.35rem}
+  .step p{color:var(--muted);font-size:.99rem}
+
+  /* area / cta */
+  .cta{background:linear-gradient(150deg,var(--moss) 0%,var(--moss-2) 100%);color:#F1ECDD;text-align:center}
+  .cta h2{color:#FCF8EF;font-size:clamp(2rem,4.4vw,3rem);max-width:20ch;margin:0 auto .8rem}
+  .cta p{color:#CFD8C6;max-width:52ch;margin:0 auto 1.9rem}
+  .cta .btn{font-size:1.1rem;padding:1.1rem 1.9rem}
+  .cta .meta{margin-top:1.6rem;font-size:.98rem;color:#CFD8C6;display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;align-items:center}
+  .cta .meta a{color:#E7C6A6;font-weight:600}
+
+  /* footer */
+  footer{background:#141F16;color:#AFBBA6;padding:2.6rem 0}
+  .foot{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:flex-start}
+  .foot .brand{color:#EDE6D6}
+  .foot a{color:#CFD8C6}
+  .fine{font-size:.82rem;color:#7E896F;margin-top:1.4rem;line-height:1.7}
+
+  /* sticky mobile call */
+  .sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;
+    background:var(--clay);color:#fff;text-align:center;font-weight:700;
+    padding:.95rem;font-size:1.05rem;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+  .sticky-call svg{width:18px;height:18px;vertical-align:-3px;margin-right:.4rem}
+  @media(max-width:720px){.sticky-call{display:block}body{padding-bottom:3.4rem}}
+
+  /* reveal */
+  .rise{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .rise.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .rise{opacity:1;transform:none;transition:none}
+    .hero-bg{animation:none;transform:none}
+  }
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Crandalls Quality Landscaping home">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 29c0-8 4-13 11-15-2 8-5 12-11 15Z" fill="#7E9370"/>
+        <path d="M16 29C16 20 12 15 5 13c2 8 5 12 11 16Z" fill="#2C4A32"/>
+        <path d="M16 29V13" stroke="#C1683B" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Crandalls Quality Landscaping
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#area">Service Area</a>
+      <a class="btn" href="tel:+14197045471">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        (419) 704-5471
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="A landscaped garden pathway in Maumee lined with lush plantings and blooming flower beds"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Landscape Design &amp; Build &middot; Maumee, Ohio</p>
+      <h1>Landscaping Maumee yards, done right the first time.</h1>
+      <p class="lede">Design, patios, planting, and season-long care from a local crew that treats your yard like its own. One call gets it started.</p>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+14197045471">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call (419) 704-5471
+        </a>
+        <a class="btn ghost" href="#services" style="color:#FCF8EF;border-color:rgba(252,248,239,.6)">See what we do</a>
+      </div>
+      <div class="trust">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21l1.18-6.88-5-4.87 7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21l1.18-6.88-5-4.87 7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21l1.18-6.88-5-4.87 7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21l1.18-6.88-5-4.87 7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21l1.18-6.88-5-4.87 7.1-1.01L12 2z"/></svg>
+        </span>
+        <span>Rated 4.5 across 76 Google reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <p class="eyebrow">What we do</p>
+        <h2>From bare dirt to a finished yard.</h2>
+        <p>Four core services, one accountable crew. We handle the design, the build, and the upkeep so you deal with one team from start to finish.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="card rise">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>Landscape Design</h3>
+          <p>A clear plan for your whole yard, drawn to fit how you actually use the space and your budget.</p>
+        </div>
+        <div class="card rise">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9h18M9 3v18M3 5.5h18a1.5 1.5 0 0 1 0 3H3z" opacity="0"/><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M9 4v16M15 4v16M3 16h18"/></svg></div>
+          <h3>Patios &amp; Hardscape</h3>
+          <p>Paver patios, walkways, and retaining walls built on a base that holds up to Ohio winters.</p>
+        </div>
+        <div class="card rise">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M12 12c0-3 2-5 5-5 0 3-2 5-5 5Z"/><path d="M12 12c0-3-2-5-5-5 0 3 2 5 5 5Z"/><path d="M8 22h8"/></svg></div>
+          <h3>Planting &amp; Beds</h3>
+          <p>Trees, shrubs, and mulched beds chosen to thrive here and look full without constant fuss.</p>
+        </div>
+        <div class="card rise">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M4 20v-4M8 20v-6M12 20v-8M16 20v-6M20 20v-4"/><path d="M4 12c4-2 12-2 16 0"/></svg></div>
+          <h3>Lawn Care &amp; Cleanups</h3>
+          <p>Mowing, edging, and spring and fall cleanups that keep the finished look sharp all season.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof">
+    <div class="wrap">
+      <div class="rise">
+        <p class="eyebrow" style="color:#E7C6A6">Neighbors trust the work</p>
+        <h2>76 reviews. A 4.5 average. Same crew every time.</h2>
+        <p>We are a Maumee company doing local yards for local people. The rating comes straight from the homeowners we have already worked for.</p>
+      </div>
+      <div class="stat-row rise">
+        <div class="stat"><div class="num" data-count="4.5" data-dec="1">0</div><div class="lbl">Google rating</div></div>
+        <div class="stat"><div class="num" data-count="76">0</div><div class="lbl">Reviews</div></div>
+        <div class="stat"><div class="num" data-count="1" data-suffix=" crew">0</div><div class="lbl">You deal with</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <p class="eyebrow">Our work</p>
+        <h2>Built, planted, and kept up.</h2>
+        <p>A look at the kind of projects we take on around Maumee and the west-side suburbs.</p>
+      </div>
+      <div class="gal">
+        <div class="ph g1 rise" role="img" aria-label="A landscaper laying paver stones to build a new backyard patio">
+          <span class="cap">Paver patios &amp; walkways</span>
+        </div>
+        <div class="ph g2 rise" role="img" aria-label="A finished suburban backyard with a paver patio, seating, and fresh landscaping">
+          <span class="cap">Full backyard makeovers</span>
+        </div>
+        <div class="ph g3 rise" role="img" aria-label="A crew member mowing and maintaining a healthy green lawn">
+          <span class="cap">Season-long lawn care</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS w/ signature botanical motif -->
+  <section class="process">
+    <svg class="leaves" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M60 380 C 160 260 160 160 120 40"/>
+        <path d="M120 300 C 60 280 40 240 30 200"/>
+        <path d="M120 300 C 190 280 210 240 220 200"/>
+        <path d="M120 180 C 70 160 55 130 48 100"/>
+        <path d="M120 180 C 172 160 188 130 196 100"/>
+        <path d="M1140 380 C 1040 260 1040 160 1080 40"/>
+        <path d="M1080 300 C 1140 280 1160 240 1170 200"/>
+        <path d="M1080 300 C 1010 280 990 240 980 200"/>
+        <path d="M1080 180 C 1130 160 1146 130 1153 100"/>
+        <path d="M600 400 C 640 320 640 240 610 150"/>
+        <path d="M610 300 C 660 285 678 250 686 215"/>
+        <path d="M610 300 C 560 285 542 250 534 215"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <div class="sec-head rise">
+        <p class="eyebrow">How we work</p>
+        <h2>Simple, and no surprises.</h2>
+        <p>Three steps from your first call to a yard you are glad to come home to.</p>
+      </div>
+      <div class="steps">
+        <div class="step rise">
+          <div class="n">1</div>
+          <h3>Walk the yard</h3>
+          <p>We meet at your place, listen to what you want, and give you a written quote with real numbers.</p>
+        </div>
+        <div class="step rise">
+          <div class="n">2</div>
+          <h3>Build it</h3>
+          <p>Our crew shows up on the day we said, keeps the site tidy, and does the work the way we quoted it.</p>
+        </div>
+        <div class="step rise">
+          <div class="n">3</div>
+          <h3>Keep it looking right</h3>
+          <p>Want it maintained after? We can handle the mowing, beds, and cleanups so it stays sharp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / AREA -->
+  <section class="cta" id="area">
+    <div class="wrap rise">
+      <p class="eyebrow" style="color:#E7C6A6">Serving Maumee &amp; nearby</p>
+      <h2>Ready to fix the yard you keep putting off?</h2>
+      <p>Crandalls Quality Landscaping serves Maumee and the surrounding west Toledo suburbs. Tell us what you have in mind and we will give you a straight quote.</p>
+      <a class="btn" href="tel:+14197045471">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call (419) 704-5471
+      </a>
+      <div class="meta">
+        <span>720 Illinois Ave, Maumee, OH 43537</span>
+        <span aria-hidden="true">&middot;</span>
+        <a href="tel:+14197045471">(419) 704-5471</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand" style="font-size:1.15rem;margin-bottom:.5rem">Crandalls Quality Landscaping LLC</div>
+      <div>720 Illinois Ave, Maumee, OH 43537</div>
+      <div><a href="tel:+14197045471">(419) 704-5471</a></div>
+    </div>
+    <div style="text-align:right">
+      <div>Landscape design, hardscape, planting, and lawn care.</div>
+      <div>Maumee &amp; the west Toledo suburbs.</div>
+    </div>
+  </div>
+  <div class="wrap fine">
+    Rating and review count shown are from public Google reviews at the time this page was built.
+    Website by Elements Studio.
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14197045471">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+  Call Crandalls: (419) 704-5471
+</a>
+
+<script>
+  // progress bar
+  var bar=document.getElementById('bar');
+  var hdr=document.getElementById('hdr');
+  function onScroll(){
+    var h=document.documentElement;
+    var sc=h.scrollTop/(h.scrollHeight-h.clientHeight);
+    bar.style.transform='scaleX('+sc+')';
+    hdr.classList.toggle('scrolled',h.scrollTop>24);
+  }
+  document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e,i){
+      if(e.isIntersecting){
+        var el=e.target;
+        setTimeout(function(){el.classList.add('in')}, (el.dataset.d?+el.dataset.d:0));
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.16});
+  var group={};
+  document.querySelectorAll('.rise').forEach(function(el){
+    var p=el.parentElement;
+    group[p]=(group[p]||0);
+    el.dataset.d=group[p]*80;
+    group[p]++;
+    io.observe(el);
+  });
+
+  // count up (supports decimals + suffix)
+  var counted=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el=e.target, target=parseFloat(el.dataset.count),
+          dec=el.dataset.dec?+el.dataset.dec:0, suf=el.dataset.suffix||'',
+          t0=null, dur=1300;
+      function step(ts){
+        if(!t0)t0=ts;
+        var p=Math.min((ts-t0)/dur,1);
+        var e2=1-Math.pow(1-p,3);
+        el.textContent=(target*e2).toFixed(dec)+suf;
+        if(p<1)requestAnimationFrame(step);
+        else el.textContent=target.toFixed(dec)+suf;
+      }
+      requestAnimationFrame(step);
+      counted.unobserve(el);
+    });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){counted.observe(el)});
+</script>
+</body>
+</html>
