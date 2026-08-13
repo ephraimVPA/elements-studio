@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockman Fence | Fence Installation & Repair in Toledo, OH</title>
+<meta name="description" content="Stockman Fence builds and repairs wood, vinyl, chain link and aluminum fences across the Toledo area. 4.8 stars from 73 Google reviews. Call for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#153528; --pine2:#0e241b; --cedar:#c79a4b; --cedar-d:#a97f34;
+  --cream:#f5f1e8; --card:#ffffff; --ink:#1a1a1a; --muted:#5c6b62; --line:#e2ddcf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Staatliches",sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.accent{color:var(--cedar)}
+
+/* scroll progress */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--cedar);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s ease,box-shadow .35s ease,padding .35s ease;padding:18px 0}
+header.solid{background:var(--pine);box-shadow:0 10px 30px rgba(0,0,0,.18);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Staatliches",sans-serif;font-size:26px;color:var(--cream);letter-spacing:1px;display:flex;align-items:center;gap:10px}
+.brand .mark{width:26px;height:26px;color:var(--cedar)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--cream);font-size:15px;font-weight:500;opacity:.9}
+.nav-links a:hover{opacity:1;color:var(--cedar)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;border-radius:8px;padding:13px 22px;font-size:15px;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s ease,background .25s ease}
+.btn-call{background:var(--cedar);color:#20160a}
+.btn-call:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(199,154,75,.4)}
+.btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(245,241,232,.55)}
+.btn-ghost:hover{border-color:var(--cedar);color:var(--cedar);transform:translateY(-3px)}
+.nav .btn-call{padding:11px 18px}
+.ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:var(--cream);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/35182397/pexels-photo-35182397.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,var(--pine),var(--pine2));background-size:cover;background-position:center;animation:ken 20s ease-in-out infinite alternate;transform-origin:center}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,20,15,.86) 0%,rgba(9,20,15,.66) 45%,rgba(9,20,15,.4) 100%)}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 90px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(199,154,75,.16);border:1px solid rgba(199,154,75,.5);color:var(--cedar);padding:7px 15px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.hero h1{font-size:clamp(44px,7vw,86px);margin:22px 0 18px;max-width:16ch}
+.hero p.lede{font-size:clamp(17px,2.1vw,21px);max-width:52ch;color:#e7e2d5}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.rating-chip{display:inline-flex;align-items:center;gap:12px;margin-top:30px;background:rgba(245,241,232,.08);border:1px solid rgba(245,241,232,.18);padding:12px 18px;border-radius:12px}
+.stars{color:var(--cedar);letter-spacing:2px;font-size:18px}
+.rating-chip b{font-family:"Staatliches",sans-serif;font-size:22px;letter-spacing:1px}
+.rating-chip span{font-size:14px;color:#d8d3c6}
+
+/* section shell */
+section{padding:96px 0}
+.sec-head{max-width:60ch}
+.kicker{font-size:14px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cedar-d)}
+.sec-head h2{font-size:clamp(32px,4.6vw,52px);margin:12px 0 14px;color:var(--pine)}
+.sec-head p{color:var(--muted);font-size:17px}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease,border-color .3s ease}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(21,53,40,.12);border-color:var(--cedar)}
+.svc .icn{width:52px;height:52px;border-radius:12px;background:var(--pine);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.svc .icn svg{width:26px;height:26px;stroke:var(--cedar);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:23px;color:var(--pine);margin-bottom:8px}
+.svc p{color:var(--muted);font-size:15.5px}
+
+/* why / stats with picket motif */
+.why{background:var(--pine);color:var(--cream);position:relative;overflow:hidden}
+.pickets{position:absolute;inset:0;z-index:0;opacity:.10;background-image:repeating-linear-gradient(90deg,var(--cedar) 0 8px,transparent 8px 46px);mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
+.why .wrap{position:relative;z-index:1}
+.why .sec-head h2{color:var(--cream)}
+.why .sec-head p{color:#cfd6cf}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.stat{text-align:center;border:1px solid rgba(245,241,232,.16);border-radius:16px;padding:34px 18px;background:rgba(245,241,232,.04)}
+.stat .num{font-family:"Staatliches",sans-serif;font-size:clamp(46px,7vw,68px);color:var(--cedar);line-height:1}
+.stat .lbl{margin-top:10px;font-size:15px;color:#dfe3dd;letter-spacing:.3px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.ph{position:relative;height:300px;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;filter:saturate(1.03)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,36,27,.55));transition:opacity .3s}
+.ph{transition:transform .4s ease}
+.ph:hover{transform:scale(1.02)}
+.ph .cap{position:absolute;left:16px;bottom:14px;z-index:2;color:var(--cream);font-family:"Staatliches",sans-serif;font-size:19px;letter-spacing:.6px}
+
+/* contact band */
+.contact{background:var(--cedar);color:#20160a;text-align:center}
+.contact h2{font-size:clamp(34px,5vw,58px);color:#20160a}
+.contact p{max-width:48ch;margin:14px auto 0;font-size:18px;color:#3a2a10;font-weight:500}
+.contact .btn-call{background:var(--pine);color:var(--cream);margin-top:30px;font-size:18px;padding:17px 34px}
+.contact .btn-call:hover{box-shadow:0 14px 30px rgba(14,36,27,.35)}
+.addr{margin-top:22px;font-size:15px;color:#3a2a10}
+
+/* footer */
+footer{background:var(--pine2);color:#b9c2ba;padding:44px 0;font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .brand{font-size:22px}
+.foot a{color:var(--cedar)}
+.unsub{color:#8b968c;font-size:12.5px;margin-top:14px}
+
+/* sticky mobile call */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--pine);padding:11px 16px;box-shadow:0 -6px 20px rgba(0,0,0,.25)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--cedar);color:#20160a;font-weight:700;padding:14px;border-radius:10px;font-size:16px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .grid,.stats,.gallery{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .callbar{display:block}
+  body{padding-bottom:72px}
+  .hero-scrim{background:linear-gradient(180deg,rgba(9,20,15,.7),rgba(9,20,15,.82))}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .reveal{transition:none;opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21V9l3-3 3 3v12M9 21V9l3-3 3 3v12M15 21V9l3-3 3 3v12"/><path d="M2 13h20M2 17h20"/></svg>
+      STOCKMAN FENCE
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#work">Our Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+14192602654">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      (419) 260-2654
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A newly built wooden privacy fence running along a green property line in Toledo, Ohio"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Fence builders serving Greater Toledo</span>
+    <h1>We build fences that hold the line.</h1>
+    <p class="lede">Wood, vinyl, chain link and aluminum, installed straight and set to last. Locally owned, and we treat your property line like it is our own.</p>
+    <div class="hero-cta">
+      <a class="btn btn-call" href="tel:+14192602654">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call for a free quote
+      </a>
+      <a class="btn btn-ghost" href="#work">See our work</a>
+    </div>
+    <div class="rating-chip">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <b>4.8</b>
+      <span>rated across 73 Google reviews</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we build</div>
+      <h2>Every kind of fence, one crew</h2>
+      <p>From backyard privacy to a new front gate, we handle the layout, the digging and the finish so the line comes out clean.</p>
+    </div>
+    <div class="grid">
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M3 21V8l4-3 4 3v13M3 12h8M3 16h8M13 21V8l4-3 4 3v13M13 12h8M13 16h8"/></svg></div>
+        <h3>Wood fences</h3>
+        <p>Privacy panels, picket and shadowbox in cedar and treated pine, built to sit level on your grade.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M9 4v16M15 4v16M3 10h18M3 15h18"/></svg></div>
+        <h3>Vinyl fences</h3>
+        <p>Low upkeep white and tan vinyl that keeps its color and wipes clean season after season.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M3 3l6 6M9 3l6 6M15 3l6 6M3 9l6 6M9 9l6 6M15 9l6 6M3 15l6 6M9 15l6 6M15 15l6 6"/></svg></div>
+        <h3>Chain link</h3>
+        <p>Galvanized and vinyl coated chain link for yards, pets and commercial lots, at a fair price.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M4 21V6M4 6l4-2 4 2M8 4v17M12 21V6M20 21V6M20 6l-4-2M16 4v17M4 11h16M4 16h16"/></svg></div>
+        <h3>Aluminum & ornamental</h3>
+        <p>Powder coated aluminum with a wrought iron look that suits pools and front yards without the rust.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M3 21V5h8v16M13 21V9h8v12M3 13h8M13 15h8"/><path d="M11 12l3 0"/></svg></div>
+        <h3>Gates & operators</h3>
+        <p>Walk gates and double drive gates hung true, with latches and hardware that still close in five years.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-9 9-6 0 0-6z"/><path d="M11 7l6 6"/></svg></div>
+        <h3>Repairs & replacement</h3>
+        <p>Leaning posts, storm damage and sagging gates fixed fast, or a full tear out and rebuild.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="pickets" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Why Stockman</div>
+      <h2>Neighbors keep calling us back</h2>
+      <p>We show up when we say we will, price it straight and leave the site cleaner than we found it. The reviews are from real Toledo customers.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="4.8" data-dec="1">4.8</div><div class="lbl">Average Google rating</div></div>
+      <div class="stat reveal"><div class="num" data-count="73">73</div><div class="lbl">Verified Google reviews</div></div>
+      <div class="stat reveal"><div class="num">Toledo</div><div class="lbl">Locally owned and operated</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Recent work</div>
+      <h2>Lines we are proud of</h2>
+      <p>A few of the styles we install around the area. Yours gets the same square posts and clean finish.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph reveal" role="img" aria-label="A bright backyard bordered by a fresh white privacy fence with green climbing plants" style="background-image:url('https://images.pexels.com/photos/9735388/pexels-photo-9735388.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Backyard privacy</span></div>
+      <div class="ph reveal" role="img" aria-label="A white picket fence running in front of a farmhouse with a green lawn" style="background-image:url('https://images.pexels.com/photos/32714633/pexels-photo-32714633.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Picket & front yard</span></div>
+      <div class="ph reveal" role="img" aria-label="A white wooden garden gate set into a fence with plantings on either side" style="background-image:url('https://images.pexels.com/photos/9581523/pexels-photo-9581523.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Gates & entries</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Ready for a straight line?</h2>
+    <p>Tell us what you are fencing and we will get you a free, no pressure quote.</p>
+    <a class="btn btn-call" href="tel:+14192602654">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call (419) 260-2654
+    </a>
+    <div class="addr">Stockman Fence &bull; E Manhattan Blvd, Toledo, OH 43611</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand" style="color:var(--cream)">STOCKMAN FENCE</div>
+      <div class="unsub">Site by Elements Studio. Reply STOP and we will not contact you again.</div>
+    </div>
+    <div>
+      <a href="tel:+14192602654">(419) 260-2654</a><br>
+      E Manhattan Blvd, Toledo, OH 43611
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+14192602654">
+  <svg class="ico" viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#20160a"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+  Call Stockman Fence
+</a></div>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'), bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||0;
+    hd.classList.toggle('solid', y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i%3*70)+'ms'; io.observe(el); });
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count')), dec=parseInt(el.getAttribute('data-dec')||'0',10), t0=null, dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec); if(p<1)requestAnimationFrame(step); else el.textContent=target.toFixed(dec); }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); cio.unobserve(e.target);} });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>

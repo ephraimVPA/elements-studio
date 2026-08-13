@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bud's Auto Services | Trusted Auto Repair in Toledo, OH</title>
+<meta name="description" content="Bud's Auto Services is a neighborhood auto repair shop in Toledo, OH. Brakes, diagnostics, oil, tires and engine work. 4.7 stars from 73 Google reviews. Call the shop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#5a1720; --ox-d:#3f0f16; --brass:#d9a441; --brass-d:#b6842c;
+  --cream:#f4ead6; --cream2:#efe2c9; --card:#fffdf8; --ink:#211a17; --muted:#6d5f52; --line:#e3d6bd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Barlow",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Racing Sans One",sans-serif;font-weight:400;line-height:1.05}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,92%);margin:0 auto}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left;z-index:120}
+
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s ease,box-shadow .35s ease,padding .35s ease;padding:18px 0}
+header.solid{background:var(--ox);box-shadow:0 10px 30px rgba(0,0,0,.22);padding:11px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Racing Sans One",sans-serif;font-size:27px;color:var(--cream);letter-spacing:.5px;display:flex;align-items:center;gap:11px}
+.brand .mark{width:30px;height:30px;color:var(--brass)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--cream);font-size:15px;font-weight:600;opacity:.9;text-transform:uppercase;letter-spacing:.6px}
+.nav-links a:hover{opacity:1;color:var(--brass)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;border-radius:6px;padding:13px 22px;font-size:15px;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s ease,background .25s ease;text-transform:uppercase;letter-spacing:.5px}
+.btn-call{background:var(--brass);color:#2a1908}
+.btn-call:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(217,164,65,.4)}
+.btn-ghost{background:transparent;color:var(--cream);border:2px solid rgba(244,234,214,.5)}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass);transform:translateY(-3px)}
+.nav .btn-call{padding:11px 18px}
+.ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:var(--cream);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,var(--ox),var(--ox-d));background-size:cover;background-position:center;animation:ken 22s ease-in-out infinite alternate;transform-origin:center}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(38,9,13,.9) 0%,rgba(38,9,13,.7) 48%,rgba(38,9,13,.42) 100%)}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 90px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(217,164,65,.16);border:1px solid rgba(217,164,65,.55);color:var(--brass);padding:7px 15px;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,6.6vw,80px);margin:22px 0 18px;max-width:15ch;text-transform:uppercase}
+.hero p.lede{font-size:clamp(17px,2.1vw,21px);max-width:52ch;color:#f0e6d3}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.rating-chip{display:inline-flex;align-items:center;gap:12px;margin-top:30px;background:rgba(244,234,214,.08);border:1px solid rgba(244,234,214,.2);padding:12px 18px;border-radius:8px}
+.stars{color:var(--brass);letter-spacing:2px;font-size:18px}
+.rating-chip b{font-family:"Racing Sans One",sans-serif;font-size:22px}
+.rating-chip span{font-size:14px;color:#e6dcc8}
+
+section{padding:96px 0}
+.sec-head{max-width:60ch}
+.kicker{font-size:14px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--brass-d)}
+.sec-head h2{font-size:clamp(32px,4.6vw,52px);margin:12px 0 14px;color:var(--ox);text-transform:uppercase}
+.sec-head p{color:var(--muted);font-size:17px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.svc{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brass);border-radius:10px;padding:28px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(90,23,32,.14)}
+.svc .icn{width:50px;height:50px;border-radius:8px;background:var(--ox);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc .icn svg{width:26px;height:26px;stroke:var(--brass);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:24px;color:var(--ox);margin-bottom:7px;text-transform:uppercase;letter-spacing:.4px}
+.svc p{color:var(--muted);font-size:15.5px}
+
+.why{background:var(--ox);color:var(--cream);position:relative;overflow:hidden}
+.motif{position:absolute;inset:0;z-index:0;opacity:.12;
+  background-image:radial-gradient(circle,transparent 0 5px,var(--brass) 5px 6.5px,transparent 7px),radial-gradient(circle,transparent 0 2px,var(--brass) 2px 3px,transparent 3.5px);
+  background-size:52px 52px,52px 52px;background-position:0 0,0 0;
+  mask-image:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent)}
+.why .wrap{position:relative;z-index:1}
+.why .sec-head h2{color:var(--cream)}
+.why .sec-head p{color:#e8d9c2}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.stat{text-align:center;border:1px solid rgba(244,234,214,.18);border-radius:12px;padding:34px 18px;background:rgba(244,234,214,.05)}
+.stat .num{font-family:"Racing Sans One",sans-serif;font-size:clamp(46px,7vw,66px);color:var(--brass);line-height:1}
+.stat .lbl{margin-top:10px;font-size:15px;color:#ecdfc9}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.ph{position:relative;height:300px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;transition:transform .4s ease}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(63,15,22,.6))}
+.ph:hover{transform:scale(1.02)}
+.ph .cap{position:absolute;left:16px;bottom:14px;z-index:2;color:var(--cream);font-family:"Racing Sans One",sans-serif;font-size:20px}
+
+.contact{background:var(--brass);color:#2a1908;text-align:center}
+.contact h2{font-size:clamp(34px,5vw,58px);color:#2a1908;text-transform:uppercase}
+.contact p{max-width:48ch;margin:14px auto 0;font-size:18px;color:#40290f;font-weight:500}
+.contact .btn-call{background:var(--ox);color:var(--cream);margin-top:30px;font-size:18px;padding:17px 34px}
+.contact .btn-call:hover{box-shadow:0 14px 30px rgba(63,15,22,.35)}
+.addr{margin-top:22px;font-size:15px;color:#40290f;font-weight:500}
+
+footer{background:var(--ox-d);color:#d3bfa6;padding:44px 0;font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .brand{font-size:23px}
+.foot a{color:var(--brass)}
+.unsub{color:#a68f74;font-size:12.5px;margin-top:14px}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--ox);padding:11px 16px;box-shadow:0 -6px 20px rgba(0,0,0,.28)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--brass);color:#2a1908;font-weight:700;padding:14px;border-radius:8px;font-size:16px;text-transform:uppercase}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .grid,.stats,.gallery{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .callbar{display:block}
+  body{padding-bottom:72px}
+  .hero-scrim{background:linear-gradient(180deg,rgba(38,9,13,.72),rgba(38,9,13,.86))}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .reveal{transition:none;opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.7-.7-.7-2.7z"/></svg>
+      BUD'S AUTO
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Bud's</a>
+      <a href="#work">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+14192424834">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      (419) 242-4834
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A mechanic in a Toledo garage leaning under the hood to check a car engine"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Neighborhood auto repair in Toledo</span>
+    <h1>Honest repairs, done right the first time.</h1>
+    <p class="lede">Bring us the noise, the light on the dash or the ride that just feels off. We tell you what it needs, what it does not, and what it costs before we start.</p>
+    <div class="hero-cta">
+      <a class="btn btn-call" href="tel:+14192424834">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call the shop
+      </a>
+      <a class="btn btn-ghost" href="#services">See what we fix</a>
+    </div>
+    <div class="rating-chip">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <b>4.7</b>
+      <span>rated across 73 Google reviews</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we fix</div>
+      <h2>Full service under one roof</h2>
+      <p>Foreign and domestic, cars and light trucks. If it drives in, we can look at it.</p>
+    </div>
+    <div class="grid">
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Check engine light on? We pull the codes and find the real cause, not just the easy guess.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div>
+        <h3>Brakes</h3>
+        <p>Pads, rotors, calipers and lines. We fix the squeal and the shake so you stop with confidence.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M4 15a4 4 0 0 0 8 0V6a2 2 0 0 1 4 0v2a2 2 0 0 0 2 2h1"/><path d="M4 15h8"/><path d="M8 3v3"/></svg></div>
+        <h3>Oil & fluids</h3>
+        <p>Oil changes, coolant, transmission and brake fluid, done quick with the right spec for your car.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3l1.5 3M12 21l-1.5-3M21 12l-3 1.5M3 12l3-1.5"/></svg></div>
+        <h3>Tires & alignment</h3>
+        <p>Mount, balance, rotate and align so your tires wear even and the wheel sits straight.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M3 13h4l2-3h6l2 3h4v5H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/><path d="M9 10V6h6v4"/></svg></div>
+        <h3>Engine & transmission</h3>
+        <p>Belts, hoses, water pumps and bigger repairs handled by hands that have seen it before.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M8 12a4 4 0 0 1 8 0"/><path d="M12 12v6M9 21h6"/></svg></div>
+        <h3>Heating & AC</h3>
+        <p>Blowing warm in July or cold in January? We recharge, repair and get the cabin comfortable again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Why Bud's</div>
+      <h2>The shop people send their friends to</h2>
+      <p>Straight answers, fair prices and work that holds up. The numbers below come from real Toledo customers on Google.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="4.7" data-dec="1">4.7</div><div class="lbl">Average Google rating</div></div>
+      <div class="stat reveal"><div class="num" data-count="73">73</div><div class="lbl">Verified Google reviews</div></div>
+      <div class="stat reveal"><div class="num">Toledo</div><div class="lbl">Your neighborhood shop</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">In the shop</div>
+      <h2>Real work, real hands</h2>
+      <p>No boilerplate. This is the kind of work that rolls through the bay every week.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph reveal" role="img" aria-label="A smiling mechanic in blue coveralls inspecting a car engine bay" style="background-image:url('https://images.pexels.com/photos/8985457/pexels-photo-8985457.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Engine service</span></div>
+      <div class="ph reveal" role="img" aria-label="A technician performing routine maintenance on a car engine in the garage" style="background-image:url('https://images.pexels.com/photos/4116224/pexels-photo-4116224.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Tune ups</span></div>
+      <div class="ph reveal" role="img" aria-label="A mechanic checking the engine bay and battery during a car repair" style="background-image:url('https://images.pexels.com/photos/8478228/pexels-photo-8478228.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Diagnostics</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Something wrong with your ride?</h2>
+    <p>Give the shop a call and we will get you in and back on the road.</p>
+    <a class="btn btn-call" href="tel:+14192424834">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call (419) 242-4834
+    </a>
+    <div class="addr">Bud's Auto Services &bull; 419 11th St, Toledo, OH 43604</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand" style="color:var(--cream)">BUD'S AUTO SERVICES</div>
+      <div class="unsub">Site by Elements Studio. Reply STOP and we will not contact you again.</div>
+    </div>
+    <div>
+      <a href="tel:+14192424834">(419) 242-4834</a><br>
+      419 11th St, Toledo, OH 43604
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+14192424834">
+  <svg class="ico" viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#2a1908"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+  Call Bud's Auto
+</a></div>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'), bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||0;
+    hd.classList.toggle('solid', y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i%3*70)+'ms'; io.observe(el); });
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count')), dec=parseInt(el.getAttribute('data-dec')||'0',10), t0=null, dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec); if(p<1)requestAnimationFrame(step); else el.textContent=target.toFixed(dec); }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); cio.unobserve(e.target);} });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>
