@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warren Street Garage | Auto Repair in Toledo, OH</title>
+<meta name="description" content="Warren Street Garage is a full-service auto repair shop on Warren St in Toledo, OH. Diagnostics, brakes, engine, tires and more. 4.9 stars from 55 Google reviews. Call the garage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1f5bff; --blue-d:#1441c9; --ink:#101318; --ink2:#2a3240; --muted:#5b6472;
+  --paper:#f5f6f8; --paper2:#eceef2; --card:#ffffff; --line:#dfe3ea; --white:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Anton",system-ui,sans-serif;font-weight:400;line-height:1;letter-spacing:.5px;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,92%);margin:0 auto}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:left;z-index:120}
+
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s ease,box-shadow .35s ease,padding .35s ease;padding:18px 0}
+header.solid{background:var(--white);box-shadow:0 8px 26px rgba(16,19,24,.12);padding:11px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Anton",sans-serif;font-size:26px;color:var(--white);letter-spacing:1px;display:flex;align-items:center;gap:11px;transition:color .35s ease}
+header.solid .brand{color:var(--ink)}
+.brand .mark{width:30px;height:30px;color:var(--blue);flex:none}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--white);font-size:14px;font-weight:600;letter-spacing:.4px;opacity:.92;transition:color .3s ease}
+header.solid .nav-links a{color:var(--ink2)}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;border-radius:8px;padding:13px 22px;font-size:15px;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s ease,background .25s ease}
+.btn-call{background:var(--blue);color:#fff}
+.btn-call:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(31,91,255,.4);background:var(--blue-d)}
+.btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.55)}
+.btn-ghost:hover{border-color:var(--blue);color:#fff;background:rgba(31,91,255,.25);transform:translateY(-3px)}
+.nav .btn-call{padding:11px 18px}
+.ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:var(--white);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/33814734/pexels-photo-33814734.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#101318,#1c2634);background-size:cover;background-position:center;animation:ken 22s ease-in-out infinite alternate;transform-origin:center}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(11,14,20,.9) 0%,rgba(11,14,20,.72) 46%,rgba(16,25,46,.5) 100%)}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 90px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(31,91,255,.2);border:1px solid rgba(31,91,255,.65);color:#bcd0ff;padding:7px 15px;border-radius:6px;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.hero h1{font-size:clamp(44px,7vw,86px);margin:22px 0 18px;max-width:15ch}
+.hero p.lede{font-size:clamp(17px,2.1vw,21px);max-width:52ch;color:#dbe1ea}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.rating-chip{display:inline-flex;align-items:center;gap:12px;margin-top:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:12px 18px;border-radius:10px}
+.stars{color:var(--blue);letter-spacing:2px;font-size:18px}
+.rating-chip b{font-family:"Anton",sans-serif;font-size:22px;letter-spacing:.5px}
+.rating-chip span{font-size:14px;color:#dbe1ea}
+
+section{padding:96px 0}
+.sec-head{max-width:60ch}
+.kicker{font-size:13px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--blue-d)}
+.sec-head h2{font-size:clamp(32px,4.8vw,54px);margin:12px 0 14px;color:var(--ink)}
+.sec-head p{color:var(--muted);font-size:17px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease,border-color .3s ease}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(16,19,24,.1);border-color:var(--blue)}
+.svc .icn{width:50px;height:50px;border-radius:10px;background:var(--paper2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .3s ease}
+.svc:hover .icn{background:var(--blue)}
+.svc .icn svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s ease}
+.svc:hover .icn svg{stroke:#fff}
+.svc h3{font-size:23px;color:var(--ink);margin-bottom:7px;letter-spacing:.5px}
+.svc p{color:var(--muted);font-size:15.5px}
+
+.why{background:var(--ink);color:var(--white);position:relative;overflow:hidden}
+.motif{position:absolute;inset:0;z-index:0;opacity:.16;
+  background-image:repeating-linear-gradient(-45deg,transparent 0 22px,var(--blue) 22px 25px,transparent 25px 47px);
+  mask-image:linear-gradient(180deg,transparent,#000 26%,#000 74%,transparent)}
+.why .wrap{position:relative;z-index:1}
+.why .sec-head h2{color:var(--white)}
+.why .sec-head p{color:#c6cedb}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.stat{text-align:center;border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:34px 18px;background:rgba(255,255,255,.04)}
+.stat .num{font-family:"Anton",sans-serif;font-size:clamp(46px,7vw,66px);color:var(--blue);line-height:1;letter-spacing:1px}
+.stat .lbl{margin-top:10px;font-size:15px;color:#c6cedb}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.ph{position:relative;height:300px;border-radius:14px;overflow:hidden;background-size:cover;background-position:center;transition:transform .4s ease}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(11,14,20,.72))}
+.ph:hover{transform:scale(1.02)}
+.ph .cap{position:absolute;left:16px;bottom:14px;z-index:2;color:var(--white);font-family:"Anton",sans-serif;font-size:20px;letter-spacing:.6px}
+
+.contact{background:var(--blue);color:#fff;text-align:center}
+.contact h2{font-size:clamp(34px,5.2vw,60px);color:#fff}
+.contact p{max-width:48ch;margin:14px auto 0;font-size:18px;color:#e4ecff;font-weight:500}
+.contact .btn-call{background:#fff;color:var(--blue-d);margin-top:30px;font-size:18px;padding:17px 34px}
+.contact .btn-call:hover{box-shadow:0 14px 30px rgba(11,14,20,.28)}
+.addr{margin-top:22px;font-size:15px;color:#e4ecff;font-weight:500}
+
+footer{background:var(--ink);color:#aab3c2;padding:44px 0;font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .brand{font-size:23px;color:var(--white)}
+.foot a{color:#bcd0ff}
+.unsub{color:#7e8798;font-size:12.5px;margin-top:14px}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--ink);padding:11px 16px;box-shadow:0 -6px 20px rgba(0,0,0,.28)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--blue);color:#fff;font-weight:700;padding:14px;border-radius:10px;font-size:16px}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .grid,.stats,.gallery{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .callbar{display:block}
+  body{padding-bottom:72px}
+  .hero-scrim{background:linear-gradient(180deg,rgba(11,14,20,.74),rgba(11,14,20,.88))}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .reveal{transition:none;opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.7-.7-.7-2.7z"/></svg>
+      WARREN ST GARAGE
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#work">The bay</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+14192460885">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      (419) 246-0885
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Interior of the Warren Street auto repair shop in Toledo with cars up on lifts for service"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Full-service auto repair in Toledo</span>
+    <h1>Straight answers and solid work on Warren Street.</h1>
+    <p class="lede">Bring in the noise, the warning light or the ride that just feels off. We find what is actually wrong, tell you the price up front, and fix it right.</p>
+    <div class="hero-cta">
+      <a class="btn btn-call" href="tel:+14192460885">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call the garage
+      </a>
+      <a class="btn btn-ghost" href="#services">See what we fix</a>
+    </div>
+    <div class="rating-chip">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <b>4.9</b>
+      <span>rated across 55 Google reviews</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we fix</div>
+      <h2>Repairs and maintenance, all in one bay</h2>
+      <p>Cars and light trucks, foreign and domestic. If it drives in, we will take a look at it.</p>
+    </div>
+    <div class="grid">
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Warning light on the dash? We pull the codes and track down the real cause instead of guessing.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div>
+        <h3>Brakes</h3>
+        <p>Pads, rotors, calipers and lines. We stop the squeal and the shake so you stop with confidence.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M4 15a4 4 0 0 0 8 0V6a2 2 0 0 1 4 0v2a2 2 0 0 0 2 2h1"/><path d="M4 15h8"/><path d="M8 3v3"/></svg></div>
+        <h3>Oil &amp; fluids</h3>
+        <p>Oil changes, coolant, transmission and brake fluid done quick and to the right spec for your car.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3l1.5 3M12 21l-1.5-3M21 12l-3 1.5M3 12l3-1.5"/></svg></div>
+        <h3>Tires &amp; alignment</h3>
+        <p>Mount, balance, rotate and align so your tires wear even and the wheel sits straight.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M3 13h4l2-3h6l2 3h4v5H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/><path d="M9 10V6h6v4"/></svg></div>
+        <h3>Engine &amp; drivetrain</h3>
+        <p>Belts, hoses, water pumps and the bigger jobs, handled by hands that have done it before.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M8 12a4 4 0 0 1 8 0"/><path d="M12 12v6M9 21h6"/></svg></div>
+        <h3>Heating &amp; AC</h3>
+        <p>Warm air in July or cold in January? We recharge and repair so the cabin is comfortable again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Why Warren Street</div>
+      <h2>The garage neighbors keep coming back to</h2>
+      <p>Fair prices, honest calls and work that holds up. The numbers below come from real Toledo drivers on Google.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="4.9" data-dec="1">4.9</div><div class="lbl">Average Google rating</div></div>
+      <div class="stat reveal"><div class="num" data-count="55">55</div><div class="lbl">Verified Google reviews</div></div>
+      <div class="stat reveal"><div class="num">Toledo</div><div class="lbl">On Warren Street</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">In the bay</div>
+      <h2>Real work, real hands</h2>
+      <p>No stock car showroom. This is the kind of work that rolls through the shop every week.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph reveal" role="img" aria-label="A mechanic in blue coveralls working on a car inside the repair shop" style="background-image:url('https://images.pexels.com/photos/8985967/pexels-photo-8985967.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Under the hood</span></div>
+      <div class="ph reveal" role="img" aria-label="A smiling auto mechanic inspecting a car in a service garage" style="background-image:url('https://images.pexels.com/photos/6870324/pexels-photo-6870324.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Full inspection</span></div>
+      <div class="ph reveal" role="img" aria-label="Mechanics working together in an automotive workshop repairing a vehicle" style="background-image:url('https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">In the shop</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Something wrong with your ride?</h2>
+    <p>Give the garage a call and we will get you in and back on the road.</p>
+    <a class="btn btn-call" href="tel:+14192460885">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call (419) 246-0885
+    </a>
+    <div class="addr">Warren Street Garage &bull; 1924 Warren St, Toledo, OH 43604</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand">WARREN STREET GARAGE</div>
+      <div class="unsub">Site by Elements Studio. Reply STOP and we will not contact you again.</div>
+    </div>
+    <div>
+      <a href="tel:+14192460885">(419) 246-0885</a><br>
+      1924 Warren St, Toledo, OH 43604
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+14192460885">
+  <svg class="ico" viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#fff"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+  Call Warren St Garage
+</a></div>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'), bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||0;
+    hd.classList.toggle('solid', y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i%3*70)+'ms'; io.observe(el); });
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count')), dec=parseInt(el.getAttribute('data-dec')||'0',10), t0=null, dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec); if(p<1)requestAnimationFrame(step); else el.textContent=target.toFixed(dec); }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); cio.unobserve(e.target);} });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carissa's Green Cleaning | Eco-Friendly Cleaning in Toledo, OH</title>
+<meta name="description" content="Carissa's Green Cleaning Service is a plant-forward home and office cleaning company in Toledo, OH. Deep cleans, recurring visits and move-in and move-out. 4.6 stars from 60 Google reviews. Call for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --euc:#2f6b4f; --euc-d:#204d39; --leaf:#3f8a63; --gold:#e0a63e; --gold-d:#c98c25;
+  --mint:#eef6ef; --mint2:#e2efe5; --card:#ffffff; --ink:#1c2b23; --muted:#5c6b62; --line:#d8e6dc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--mint);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.05;letter-spacing:-.5px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,92%);margin:0 auto}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:120}
+
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s ease,box-shadow .35s ease,padding .35s ease;padding:18px 0}
+header.solid{background:var(--card);box-shadow:0 8px 26px rgba(32,77,57,.12);padding:11px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:24px;color:var(--white,#fff);letter-spacing:-.5px;display:flex;align-items:center;gap:10px;transition:color .35s ease;color:#fff}
+header.solid .brand{color:var(--euc)}
+.brand .mark{width:30px;height:30px;color:var(--gold);flex:none}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:#fff;font-size:14px;font-weight:600;letter-spacing:.2px;opacity:.94;transition:color .3s ease}
+header.solid .nav-links a{color:var(--euc-d)}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s ease,background .25s ease}
+.btn-call{background:var(--gold);color:#3a2a06}
+.btn-call:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(224,166,62,.42);background:var(--gold-d)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.nav .btn-call{padding:11px 20px}
+.ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/6195116/pexels-photo-6195116.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,var(--euc),var(--euc-d));background-size:cover;background-position:center;animation:ken 22s ease-in-out infinite alternate;transform-origin:center}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(24,54,40,.9) 0%,rgba(24,54,40,.72) 46%,rgba(31,77,57,.48) 100%)}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 90px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(224,166,62,.18);border:1px solid rgba(224,166,62,.6);color:#f2d79a;padding:7px 15px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,6.4vw,76px);margin:22px 0 18px;max-width:16ch}
+.hero p.lede{font-size:clamp(17px,2.1vw,21px);max-width:52ch;color:#e7f0e9}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.rating-chip{display:inline-flex;align-items:center;gap:12px;margin-top:30px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:12px 18px;border-radius:12px}
+.stars{color:var(--gold);letter-spacing:2px;font-size:18px}
+.rating-chip b{font-family:"Bricolage Grotesque",sans-serif;font-size:21px}
+.rating-chip span{font-size:14px;color:#e7f0e9}
+
+section{padding:96px 0}
+.sec-head{max-width:60ch}
+.kicker{font-size:13px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--leaf)}
+.sec-head h2{font-size:clamp(32px,4.6vw,50px);margin:12px 0 14px;color:var(--euc-d)}
+.sec-head p{color:var(--muted);font-size:17px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(32,77,57,.12)}
+.svc .icn{width:52px;height:52px;border-radius:14px;background:var(--mint2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .3s ease}
+.svc:hover .icn{background:var(--euc)}
+.svc .icn svg{width:26px;height:26px;stroke:var(--euc);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s ease}
+.svc:hover .icn svg{stroke:#fff}
+.svc h3{font-size:22px;color:var(--euc-d);margin-bottom:7px}
+.svc p{color:var(--muted);font-size:15.5px}
+
+.why{background:var(--euc);color:#fff;position:relative;overflow:hidden}
+.motif{position:absolute;inset:0;z-index:0;opacity:.14;
+  background-image:radial-gradient(circle at 30% 30%,var(--gold) 0 4px,transparent 5px),radial-gradient(circle at 70% 65%,#fff 0 3px,transparent 4px),radial-gradient(circle at 50% 50%,var(--gold) 0 2.5px,transparent 3.5px);
+  background-size:70px 70px,90px 90px,50px 50px;
+  mask-image:linear-gradient(180deg,transparent,#000 26%,#000 74%,transparent)}
+.why .wrap{position:relative;z-index:1}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:#d6e6db}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.stat{text-align:center;border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:34px 18px;background:rgba(255,255,255,.05)}
+.stat .num{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(46px,7vw,64px);color:var(--gold);line-height:1}
+.stat .lbl{margin-top:10px;font-size:15px;color:#d6e6db}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.ph{position:relative;height:300px;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;transition:transform .4s ease}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(24,54,40,.68))}
+.ph:hover{transform:scale(1.02)}
+.ph .cap{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:19px}
+
+.contact{background:var(--gold);color:#3a2a06;text-align:center}
+.contact h2{font-size:clamp(34px,5vw,56px);color:#3a2a06}
+.contact p{max-width:48ch;margin:14px auto 0;font-size:18px;color:#4a3708;font-weight:500}
+.contact .btn-call{background:var(--euc);color:#fff;margin-top:30px;font-size:18px;padding:17px 36px}
+.contact .btn-call:hover{box-shadow:0 14px 30px rgba(32,77,57,.3)}
+.addr{margin-top:22px;font-size:15px;color:#4a3708;font-weight:500}
+
+footer{background:var(--euc-d);color:#b9cdbf;padding:44px 0;font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .brand{font-size:22px;color:#fff}
+.foot a{color:var(--gold)}
+.unsub{color:#88a294;font-size:12.5px;margin-top:14px}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--euc);padding:11px 16px;box-shadow:0 -6px 20px rgba(0,0,0,.24)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#3a2a06;font-weight:700;padding:14px;border-radius:999px;font-size:16px}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .grid,.stats,.gallery{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .callbar{display:block}
+  body{padding-bottom:72px}
+  .hero-scrim{background:linear-gradient(180deg,rgba(24,54,40,.74),rgba(24,54,40,.88))}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .reveal{transition:none;opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+      CARISSA'S GREEN CLEANING
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#work">Our work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+14197649610">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      (419) 764-9610
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A cleaner wiping down a bright kitchen surface in natural light in a Toledo home"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Eco-friendly home cleaning in Toledo</span>
+    <h1>A cleaner home, without the harsh stuff.</h1>
+    <p class="lede">We clean with plant-forward products that are safe around kids, pets and the people you love, and we leave every room fresh and spotless. Tell us what you need and we will build a plan around it.</p>
+    <div class="hero-cta">
+      <a class="btn btn-call" href="tel:+14197649610">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call for a quote
+      </a>
+      <a class="btn btn-ghost" href="#services">See our services</a>
+    </div>
+    <div class="rating-chip">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <b>4.6</b>
+      <span>rated across 60 Google reviews</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we clean</div>
+      <h2>Cleaning that fits your home and schedule</h2>
+      <p>Homes and small offices across the Toledo area. Pick a one-time deep clean or a routine we keep on track for you.</p>
+    </div>
+    <div class="grid">
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M19 21V8l-7-5-7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Deep cleaning</h3>
+        <p>Top to bottom scrub of kitchens, baths, floors and the spots that usually get skipped.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+        <h3>Recurring visits</h3>
+        <p>Weekly, every other week or monthly. The same careful clean on a schedule you can count on.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Move in &amp; move out</h3>
+        <p>Empty-home cleans that get a place ready for the next chapter, or back to deposit-ready.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div>
+        <h3>Plant-forward products</h3>
+        <p>Non-toxic, low-scent supplies that are gentle on your family and kind to the surfaces they touch.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M8 4v6"/></svg></div>
+        <h3>Kitchens &amp; baths</h3>
+        <p>Counters, sinks, tile and appliances degreased and sanitized so the rooms feel truly fresh.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="icn"><svg viewBox="0 0 24 24"><path d="M4 22V6a2 2 0 0 1 2-2h9l5 5v13"/><path d="M14 4v5h5"/><path d="M8 13h7M8 17h7"/></svg></div>
+        <h3>Small offices</h3>
+        <p>Tidy, sanitized workspaces after hours so your team walks into a clean start every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Why Carissa's</div>
+      <h2>Cleaning you can feel good about</h2>
+      <p>Careful, reliable and easy on your home. The numbers below come from real Toledo customers on Google.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="4.6" data-dec="1">4.6</div><div class="lbl">Average Google rating</div></div>
+      <div class="stat reveal"><div class="num" data-count="60">60</div><div class="lbl">Verified Google reviews</div></div>
+      <div class="stat reveal"><div class="num">Toledo</div><div class="lbl">Your local cleaners</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Our work</div>
+      <h2>Fresh rooms, top to bottom</h2>
+      <p>A look at the kind of clean we bring to homes across Toledo every week.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph reveal" role="img" aria-label="A cleaner wiping a window with a cloth in bright natural light" style="background-image:url('https://images.pexels.com/photos/6195281/pexels-photo-6195281.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Windows &amp; glass</span></div>
+      <div class="ph reveal" role="img" aria-label="A professional cleaner wearing gloves wiping a wooden table surface" style="background-image:url('https://images.pexels.com/photos/9462157/pexels-photo-9462157.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Surfaces</span></div>
+      <div class="ph reveal" role="img" aria-label="Gloved hands cleaning a cabinet handle in a kitchen" style="background-image:url('https://images.pexels.com/photos/4239032/pexels-photo-4239032.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">The details</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Ready for a fresher home?</h2>
+    <p>Give us a call and we will put together a quote and a plan that fits your place.</p>
+    <a class="btn btn-call" href="tel:+14197649610">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call (419) 764-9610
+    </a>
+    <div class="addr">Carissa's Green Cleaning Service &bull; 2200 W Alexis Rd E, Toledo, OH 43613</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand">CARISSA'S GREEN CLEANING</div>
+      <div class="unsub">Site by Elements Studio. Reply STOP and we will not contact you again.</div>
+    </div>
+    <div>
+      <a href="tel:+14197649610">(419) 764-9610</a><br>
+      2200 W Alexis Rd E, Toledo, OH 43613
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+14197649610">
+  <svg class="ico" viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#3a2a06"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+  Call Carissa's
+</a></div>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'), bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||0;
+    hd.classList.toggle('solid', y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i%3*70)+'ms'; io.observe(el); });
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count')), dec=parseInt(el.getAttribute('data-dec')||'0',10), t0=null, dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec); if(p<1)requestAnimationFrame(step); else el.textContent=target.toFixed(dec); }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); cio.unobserve(e.target);} });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>
