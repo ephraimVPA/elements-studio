@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Siding Professor - Siding, Roofing &amp; Exteriors in Northwood, OH</title>
+<meta name="description" content="The Siding Professor installs and repairs siding, roofing and gutters for homes around Northwood and Toledo. Rated 4.6 from 43 Google reviews. Call (419) 356-1626.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F2EC; --paper2:#ffffff; --panel:#EDE7DD;
+  --ink:#26303A; --ink-soft:#4a5762; --muted:#6c7783;
+  --clay:#B85C38; --clay-deep:#9e4a2b; --clay-soft:#c8724d;
+  --line:#ddd4c6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.005em;line-height:1.02}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:0 auto}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--clay);transform:scaleX(0);transform-origin:left;z-index:120}
+
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
+header.scrolled{background:rgba(245,242,236,.94);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(38,48,58,.08);padding:11px 0}
+nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em;color:var(--ink)}
+.brand span{color:var(--clay)}
+.navlinks{display:flex;gap:26px;align-items:center;font-size:.92rem;font-weight:600}
+.navlinks a{color:var(--ink-soft);transition:color .2s}
+.navlinks a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--clay);color:#fff;padding:13px 22px;border-radius:6px;font-weight:700;font-size:.95rem;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .2s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-3px) scale(1.02);background:var(--clay-deep)}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--clay);background:transparent}
+.navlinks .btn{color:#fff}
+@media(max-width:760px){.navlinks a:not(.btn){display:none}}
+
+.hero{position:relative;min-height:98vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/18093637/pexels-photo-18093637.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#26303A,#4a5762);background-size:cover;background-position:center;transform:scale(1.06);animation:ken 22s ease-out infinite alternate}
+@keyframes ken{to{transform:scale(1.15)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(24,30,36,.82) 0%,rgba(24,30,36,.6) 48%,rgba(24,30,36,.42) 100%)}
+.hero-inner{position:relative;z-index:3;padding:120px 0 70px;color:#fff}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-soft);margin-bottom:20px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--clay)}
+.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);max-width:15ch;margin-bottom:20px;color:#fff}
+.hero p.lead{font-size:1.16rem;color:#e8ecef;max-width:52ch;margin-bottom:32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.stars-line{display:flex;align-items:center;gap:12px;margin-top:32px;font-size:.98rem;color:#cfd6db}
+.stars{color:#f0b64a;letter-spacing:2px}
+
+.strip{background:var(--paper2);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 0}
+.stat b{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:2.3rem;display:block;color:var(--ink)}
+.stat span{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:680px){.strip .wrap{grid-template-columns:repeat(2,1fr);gap:26px}}
+
+section{padding:92px 0}
+.tag{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+.h-sec{font-size:clamp(2rem,4.4vw,3.2rem);max-width:20ch;margin-bottom:16px;color:var(--ink)}
+.sub{color:var(--muted);max-width:60ch;margin-bottom:48px;font-size:1.05rem}
+
+/* siding motif: horizontal clapboard lap lines */
+#services{position:relative;background:var(--panel)}
+.sidingmotif{position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:repeating-linear-gradient(180deg,transparent 0 30px,rgba(184,92,56,.09) 30px 31px,transparent 31px 34px)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:30px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--clay);box-shadow:0 16px 34px rgba(38,48,58,.1)}
+.ico{width:46px;height:46px;border-radius:10px;background:rgba(184,92,56,.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--clay)}
+.card h3{font-size:1.35rem;margin-bottom:9px;color:var(--ink)}
+.card p{color:var(--ink-soft);font-size:.97rem}
+
+#how{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding:30px 26px;border:1px solid var(--line);border-radius:12px;background:var(--paper2)}
+.step .n{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:2.3rem;color:var(--clay);line-height:1;margin-bottom:10px}
+.step h3{font-size:1.3rem;margin-bottom:8px;color:var(--ink)}
+.step p{color:var(--ink-soft);font-size:.97rem}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.gal{grid-template-columns:1fr}}
+.ph{position:relative;height:300px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;border:1px solid var(--line)}
+.ph1{background-image:url('https://images.pexels.com/photos/31763541/pexels-photo-31763541.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#4a5762,#26303A)}
+.ph2{background-image:url('https://images.pexels.com/photos/5667308/pexels-photo-5667308.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#4a5762,#26303A)}
+.ph3{background-image:url('https://images.pexels.com/photos/18214902/pexels-photo-18214902.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#4a5762,#26303A)}
+.ph .lab{position:absolute;left:0;bottom:0;right:0;padding:16px 18px;background:linear-gradient(transparent,rgba(24,30,36,.88));color:#fff;font-weight:600;font-size:.95rem}
+
+#reviews{text-align:center;background:var(--panel)}
+.bigrate{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(3.6rem,10vw,6.2rem);color:var(--clay);line-height:1}
+.rev-sub{color:var(--muted);max-width:44ch;margin:16px auto 0}
+
+#cta{text-align:center}
+.cta-box{background:var(--ink);border-radius:18px;padding:64px 32px;position:relative;overflow:hidden}
+.cta-box::after{content:"";position:absolute;inset:0;opacity:.16;background-image:repeating-linear-gradient(180deg,transparent 0 26px,rgba(184,92,56,.5) 26px 27px)}
+.cta-box h2{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);max-width:20ch;margin:0 auto 16px;position:relative}
+.cta-box p{color:#cfd6db;max-width:48ch;margin:0 auto 30px;position:relative}
+.cta-box .btn{position:relative}
+
+footer{background:var(--paper2);border-top:1px solid var(--line);padding:56px 0 120px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
+@media(max-width:720px){.fgrid{grid-template-columns:1fr}}
+footer .brand{font-size:1.6rem;margin-bottom:12px}
+footer p,footer a{color:var(--muted);font-size:.95rem}
+footer h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:12px}
+.copy{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:.85rem;color:#9aa2ab}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;padding:12px 16px;background:rgba(245,242,236,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.sticky-call .btn{width:100%;justify-content:center}
+@media(max-width:760px){.sticky-call{display:block}}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hd">
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand">The Siding <span>Professor</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#work">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="tel:4193561626" class="btn">Call (419) 356-1626</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A row of suburban homes with fresh siding and clean exterior trim on a bright day near Northwood, Ohio"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Siding &amp; exteriors · Northwood</span>
+    <h1>Siding that sits straight and holds through Ohio winters.</h1>
+    <p class="lead">Siding, roofing and gutters installed and repaired for homes around Northwood and Toledo. Careful measuring, clean lines and a written quote before we start, so the outside of your house looks right for years.</p>
+    <div class="cta-row">
+      <a href="tel:4193561626" class="btn">Call (419) 356-1626</a>
+      <a href="#services" class="btn ghost" style="color:#fff;border-color:rgba(255,255,255,.4)">See what we do</a>
+    </div>
+    <div class="stars-line"><span class="stars">★★★★★</span> <strong style="color:#fff">4.6</strong> from 43 Google reviews</div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><b class="count" data-to="4.6" data-dec="1">0.0</b><span>Google rating</span></div>
+    <div class="stat"><b class="count" data-to="43">0</b><span>Verified reviews</span></div>
+    <div class="stat"><b>Siding &amp; roofing</b><span>Full exterior</span></div>
+    <div class="stat"><b>Northwood</b><span>On Drouillard Rd</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="sidingmotif" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="tag">What we do</p>
+    <h2 class="h-sec reveal">Exterior work that is measured twice and installed once</h2>
+    <p class="sub reveal">One crew for the siding, the roof and the gutters, with the prep done right so the finish lasts.</p>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M3 12h18M3 16h18"/></svg></div>
+        <h3>Siding install &amp; replace</h3>
+        <p>Vinyl and fiber cement hung level and tight, with old boards stripped and the wall checked before a single panel goes up.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 4l9 8"/><path d="M5 11v8h14v-8"/><path d="M9 19v-5h6v5"/></svg></div>
+        <h3>Roofing &amp; repair</h3>
+        <p>Shingle replacement, leak repair and full tear-offs done clean, so water goes where it should and the deck stays dry.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l16-3v5L4 12z"/><path d="M4 12v6a2 2 0 0 0 2 2h1"/><path d="M9 16v3"/></svg></div>
+        <h3>Gutters &amp; downspouts</h3>
+        <p>One-piece gutters sized and pitched to pull water off the roof and away from the foundation, not down the wall.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 3v18M4 9h5M4 15h5"/></svg></div>
+        <h3>Soffit, fascia &amp; trim</h3>
+        <p>Wrapped fascia and vented soffit that seals the edges, keeps pests out and finishes the roofline cleanly.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 12h16M12 4v16"/></svg></div>
+        <h3>Windows &amp; wrap</h3>
+        <p>Exterior window trim and house wrap installed to shed water and cut drafts, sealed at every seam.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.4-3 8-7 9-4-1-7-4.6-7-9V7l7-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Storm &amp; leak repair</h3>
+        <p>Wind and hail damage assessed and fixed, with a straight read on what the storm actually hit and what can wait.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="tag">How it works</p>
+    <h2 class="h-sec reveal">A written quote before anyone climbs a ladder</h2>
+    <p class="sub reveal">You know the scope and the price up front, and the crew leaves the yard cleaner than they found it.</p>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Walk the exterior</h3><p>We measure the siding, roof and gutters, look at what is failing and talk through your options with no pressure.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>Written quote</h3><p>You get the scope and the price in writing, so there are no vague numbers and no surprises once we start.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>Install and clean up</h3><p>We do the work, magnet-sweep for nails and haul off the old material, then walk it with you at the end.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="tag">Our work</p>
+    <h2 class="h-sec reveal">Exteriors finished around Northwood</h2>
+    <p class="sub reveal">Siding, roofing and gutter work on the homes our neighbors around Northwood and Toledo live in.</p>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="A roofer working on a residential roof installing shingles"><span class="lab">Roofing</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="A close view of a home gutter and downspout installed along the roofline"><span class="lab">Gutters &amp; downspouts</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="A modern home exterior with clean siding and trim"><span class="lab">Siding &amp; trim</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="tag" style="text-align:center">Reviews</p>
+    <div class="bigrate count" data-to="4.6" data-dec="1">0.0</div>
+    <div class="stars" style="color:#f0b64a;font-size:1.6rem">★★★★★</div>
+    <p class="rev-sub">Rated 4.6 across 43 Google reviews from homeowners around Northwood.</p>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>Siding peeling or roof leaking? Get a real quote.</h2>
+      <p>Call for a free walk-through of your exterior and a written quote on siding, roofing or gutters.</p>
+      <a href="tel:4193561626" class="btn">Call (419) 356-1626</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand">The Siding <span style="color:var(--clay)">Professor</span></div>
+        <p>Siding, roofing and gutter work for homes around Northwood, Toledo and the surrounding area.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:4193561626">(419) 356-1626</a><br>2190 Drouillard Rd, Northwood, OH 43619</p>
+      </div>
+      <div>
+        <h4>Service area</h4>
+        <p>Northwood, Toledo, Oregon, Rossford and nearby</p>
+      </div>
+    </div>
+    <div class="copy">© <span id="yr"></span> The Siding Professor. Site by Elements Studio.</div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:4193561626" class="btn">Call (419) 356-1626</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>{hd.classList.toggle('scrolled',scrollY>30);
+  const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  document.getElementById('bar').style.transform='scaleX('+sc+')';});
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%4)*70);io.unobserve(e.target);}});},{threshold:.16});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const to=parseFloat(el.dataset.to);const dec=parseInt(el.dataset.dec||'0');let s=null;const dur=1100;
+  function tick(t){if(!s)s=t;const p=Math.min((t-s)/dur,1);const v=(to*(0.2+0.8*p));el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(tick);else el.textContent=to.toFixed(dec);}
+  requestAnimationFrame(tick);cio.unobserve(el);});},{threshold:.6});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>

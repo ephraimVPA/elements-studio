@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cutchers Automotive - Honest Auto Repair in East Toledo, OH</title>
+<meta name="description" content="Cutchers Automotive handles diagnostics, brakes, engine and general repair for East Toledo drivers. Rated 4.4 from 69 Google reviews. Call (419) 690-0909.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16130F; --panel:#1e1a15; --panel2:#262019;
+  --copper:#C24B32; --copper-soft:#d9613f;
+  --cream:#F3ECE2; --muted:#b3a794; --line:#332b22;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:0 auto}
+.accent{color:var(--copper-soft)}
+
+/* scroll progress */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--copper);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
+header.scrolled{background:rgba(22,19,15,.92);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.4);padding:10px 0}
+nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Anton',sans-serif;font-size:1.35rem;text-transform:uppercase;letter-spacing:.02em}
+.brand b{color:var(--copper-soft)}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:.9rem;font-weight:500}
+.navlinks a{color:var(--muted);transition:color .2s}
+.navlinks a:hover{color:var(--cream)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--copper);color:#fff;padding:13px 22px;border-radius:6px;font-weight:600;font-size:.95rem;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .2s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-3px) scale(1.02);background:var(--copper-soft)}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--cream)}
+.btn.ghost:hover{border-color:var(--copper);background:transparent}
+.navlinks .btn{color:#fff}
+@media(max-width:760px){.navlinks a:not(.btn){display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/8986105/pexels-photo-8986105.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#16130F,#262019);background-size:cover;background-position:center;transform:scale(1.06);animation:ken 22s ease-out infinite alternate}
+@keyframes ken{to{transform:scale(1.16)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(105deg,rgba(16,13,10,.9) 0%,rgba(16,13,10,.72) 45%,rgba(16,13,10,.5) 100%)}
+.hero-inner{position:relative;z-index:3;padding:120px 0 70px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-soft);margin-bottom:22px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--copper)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,5rem);max-width:16ch;margin-bottom:22px}
+.hero p.lead{font-size:1.16rem;color:#e5dccf;max-width:52ch;margin-bottom:34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.stars-line{display:flex;align-items:center;gap:12px;margin-top:34px;font-size:.98rem;color:var(--muted)}
+.stars{color:#f0b64a;letter-spacing:2px}
+
+/* strip stats */
+.strip{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 0}
+.stat b{font-family:'Anton',sans-serif;font-size:2.2rem;display:block;color:var(--cream)}
+.stat span{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:680px){.strip .wrap{grid-template-columns:repeat(2,1fr);gap:26px}}
+
+/* sections */
+section{padding:92px 0}
+.tag{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-soft);margin-bottom:14px}
+.h-sec{font-size:clamp(1.9rem,4vw,3rem);max-width:20ch;margin-bottom:16px}
+.sub{color:var(--muted);max-width:60ch;margin-bottom:48px;font-size:1.05rem}
+
+/* services grid + hex motif */
+#services{position:relative}
+.hexmotif{position:absolute;inset:0;opacity:.05;pointer-events:none;
+  background-image:radial-gradient(circle at 50% 50%,var(--copper) 0 2px,transparent 3px);
+  background-size:26px 26px;background-position:0 0,13px 13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),border-color .25s,background .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--copper);background:var(--panel2)}
+.ico{width:46px;height:46px;border-radius:10px;background:rgba(194,75,50,.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--copper-soft)}
+.card h3{font-size:1.15rem;margin-bottom:9px;letter-spacing:.02em}
+.card p{color:var(--muted);font-size:.96rem}
+
+/* steps */
+#how{background:var(--panel)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding:30px 26px;border:1px solid var(--line);border-radius:12px;background:var(--ink)}
+.step .n{font-family:'Anton',sans-serif;font-size:2rem;color:var(--copper);line-height:1;margin-bottom:12px}
+.step h3{font-size:1.1rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.96rem}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.gal{grid-template-columns:1fr}}
+.ph{position:relative;height:280px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;border:1px solid var(--line)}
+.ph1{background-image:url('https://images.pexels.com/photos/32152042/pexels-photo-32152042.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#262019,#16130F)}
+.ph2{background-image:url('https://images.pexels.com/photos/8478228/pexels-photo-8478228.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#262019,#16130F)}
+.ph3{background-image:url('https://images.pexels.com/photos/4489776/pexels-photo-4489776.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#262019,#16130F)}
+.ph .lab{position:absolute;left:0;bottom:0;right:0;padding:16px 18px;background:linear-gradient(transparent,rgba(16,13,10,.9));font-weight:600;font-size:.95rem}
+
+/* reviews band */
+#reviews{text-align:center;background:linear-gradient(180deg,var(--ink),var(--panel))}
+.bigrate{font-family:'Anton',sans-serif;font-size:clamp(3.4rem,10vw,6rem);color:var(--copper-soft);line-height:1}
+.bigrate + .stars{font-size:1.6rem}
+.rev-sub{color:var(--muted);max-width:44ch;margin:18px auto 0}
+
+/* cta */
+#cta{text-align:center}
+.cta-box{background:var(--copper);border-radius:18px;padding:64px 32px;position:relative;overflow:hidden}
+.cta-box h2{color:#fff;font-size:clamp(2rem,5vw,3.2rem);max-width:20ch;margin:0 auto 16px}
+.cta-box p{color:#ffe9e2;max-width:48ch;margin:0 auto 30px}
+.cta-box .btn{background:#16130F;color:#fff}
+.cta-box .btn:hover{background:#000}
+
+/* footer */
+footer{background:var(--panel);border-top:1px solid var(--line);padding:56px 0 120px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
+@media(max-width:720px){.fgrid{grid-template-columns:1fr}}
+footer .brand{font-size:1.4rem;margin-bottom:12px}
+footer p,footer a{color:var(--muted);font-size:.95rem}
+footer h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cream);margin-bottom:12px}
+.copy{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:.85rem;color:#7d715f}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;padding:12px 16px;background:rgba(22,19,15,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.sticky-call .btn{width:100%;justify-content:center}
+@media(max-width:760px){.sticky-call{display:block}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hd">
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand">CUTCHERS<b>.</b></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#work">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="tel:4196900909" class="btn">Call (419) 690-0909</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A mechanic in a blue coverall inspecting a car engine inside the Cutchers Automotive repair shop in East Toledo"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Auto repair · East Toledo</span>
+    <h1>Drop it off. We find the real problem and fix it right.</h1>
+    <p class="lead">Diagnostics, brakes, engine and everyday repair for East Toledo drivers. You get a straight estimate before we touch it, and the car back running the way it should.</p>
+    <div class="cta-row">
+      <a href="tel:4196900909" class="btn">Call (419) 690-0909</a>
+      <a href="#services" class="btn ghost">See what we fix</a>
+    </div>
+    <div class="stars-line"><span class="stars">★★★★★</span> <strong style="color:#e5dccf">4.4</strong> from 69 Google reviews</div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><b class="count" data-to="4.4" data-dec="1">0.0</b><span>Google rating</span></div>
+    <div class="stat"><b class="count" data-to="69">0</b><span>Verified reviews</span></div>
+    <div class="stat"><b>All makes</b><span>Foreign &amp; domestic</span></div>
+    <div class="stat"><b>East Toledo</b><span>On Woodville Rd</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="hexmotif" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="tag">What we fix</p>
+    <h2 class="h-sec reveal">Repairs and maintenance, done right the first time</h2>
+    <p class="sub reveal">One shop for the routine stuff and the bigger jobs, with a clear price before any wrench comes out.</p>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Check-engine diagnostics</h3>
+        <p>We read the codes and track down the actual cause, so you fix the problem instead of guessing at parts.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes &amp; rotors</h3>
+        <p>Pads, rotors and lines checked and replaced so the car stops short and quiet, the way it should.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13v5h4l2-3h6l2 3h2v-6l-3-4H8L3 13z"/><path d="M7 9V6h4"/></svg></div>
+        <h3>Engine &amp; general repair</h3>
+        <p>Belts, water pumps, sensors and engine work handled by hands that have done it thousands of times.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-4M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M22 12h-4"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Oil &amp; fluid service</h3>
+        <p>Oil, filter and a full fluid check on schedule, with a heads up on anything starting to wear.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M3 17V7a2 2 0 0 1 2-2h9l4 5v7M9 17h6"/></svg></div>
+        <h3>Suspension &amp; steering</h3>
+        <p>Struts, tie rods and alignment sorted so the ride is smooth and your tires wear even.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></div>
+        <h3>Pre-trip inspections</h3>
+        <p>A full once-over before a long drive so a small issue does not turn into a breakdown on the highway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="tag">How it works</p>
+    <h2 class="h-sec reveal">A clear estimate before any work starts</h2>
+    <p class="sub reveal">No surprise charges, no work you did not approve. Here is how a repair goes at Cutchers.</p>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Tell us what it is doing</h3><p>Call or drop it off and describe the noise, light or feel. We take it from there.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>We diagnose and price it</h3><p>We find the cause and call you with an estimate before we begin, so nothing is a surprise.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>Fixed and back to you</h3><p>We do the repair, test it, and hand you the keys with a plain rundown of what we did.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="tag">Our work</p>
+    <h2 class="h-sec reveal">In the bays on Woodville Road</h2>
+    <p class="sub reveal">Everyday maintenance and real repairs on the cars and trucks our East Toledo neighbors drive to work every morning.</p>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="A mechanic working underneath a vehicle on a lift during an undercarriage repair"><span class="lab">Undercarriage &amp; repair</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="A technician inspecting a car engine bay and battery during routine maintenance"><span class="lab">Diagnostics</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="Two mechanics working together on a vehicle inside the garage"><span class="lab">Engine &amp; maintenance</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="tag" style="text-align:center">Reviews</p>
+    <div class="bigrate count" data-to="4.4" data-dec="1">0.0</div>
+    <div class="stars" style="color:#f0b64a">★★★★★</div>
+    <p class="rev-sub">Rated 4.4 across 69 Google reviews from drivers around East Toledo.</p>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>Something not running right? Get a straight answer.</h2>
+      <p>Call and tell us what is going on. We will look it over and give you a real estimate before any work starts.</p>
+      <a href="tel:4196900909" class="btn">Call (419) 690-0909</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand">CUTCHERS<b style="color:var(--copper-soft)">.</b></div>
+        <p>Honest diagnostics, maintenance and repair for drivers in East Toledo and the surrounding neighborhoods.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:4196900909">(419) 690-0909</a><br>920 Woodville Rd, Toledo, OH 43605</p>
+      </div>
+      <div>
+        <h4>Service area</h4>
+        <p>Toledo, Oregon, Northwood, Rossford and nearby</p>
+      </div>
+    </div>
+    <div class="copy">© <span id="yr"></span> Cutchers Automotive. Site by Elements Studio.</div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:4196900909" class="btn">Call (419) 690-0909</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// nav shadow
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>{hd.classList.toggle('scrolled',scrollY>30);
+  const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  document.getElementById('bar').style.transform='scaleX('+sc+')';});
+// reveal
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%4)*70);io.unobserve(e.target);}});},{threshold:.16});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// count up
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const to=parseFloat(el.dataset.to);const dec=parseInt(el.dataset.dec||'0');let s=null;const dur=1100;
+  function tick(t){if(!s)s=t;const p=Math.min((t-s)/dur,1);const v=(to*(0.2+0.8*p));el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(tick);else el.textContent=to.toFixed(dec);}
+  requestAnimationFrame(tick);cio.unobserve(el);});},{threshold:.6});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
