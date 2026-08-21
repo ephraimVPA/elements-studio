@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Larry's Auto Center | Honest Auto Repair in Rossford, OH</title>
+<meta name="description" content="Straight-talking auto repair in Rossford, Ohio. Larry's Auto Center handles diagnostics, brakes, oil changes, engine work, tires and AC. Rated 4.6 on Google. Call (419) 666-0418.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5EFE4;
+    --cream-2:#EFE7D8;
+    --paper:#FBF7F0;
+    --ink:#241E1B;
+    --muted:#6E645B;
+    --maroon:#7B2D26;
+    --maroon-2:#96382F;
+    --brass:#C08A2D;
+    --line:#E1D6C4;
+    --radius:14px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Instrument Sans',system-ui,sans-serif;
+    background:var(--cream);color:var(--ink);line-height:1.62;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;line-height:1.04;letter-spacing:-.015em}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--maroon);
+    transform:scaleX(0);transform-origin:left;z-index:120}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(251,247,240,.9);backdrop-filter:blur(9px);border-color:var(--line);box-shadow:0 8px 26px rgba(36,30,27,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;color:var(--maroon)}
+  .mark{width:30px;height:30px;border-radius:8px;background:var(--maroon);color:var(--cream);display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;flex:none}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:15px;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-family:'Bricolage Grotesque';
+    padding:13px 22px;border-radius:10px;cursor:pointer;border:0;font-size:15px;
+    transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .2s}
+  .btn-maroon{background:var(--maroon);color:var(--paper);box-shadow:0 10px 22px rgba(123,45,38,.22)}
+  .btn-maroon:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 16px 30px rgba(123,45,38,.32);background:var(--maroon-2)}
+  .btn-outline{background:transparent;color:var(--ink);border:1.6px solid var(--ink)}
+  .btn-outline:hover{transform:translateY(-3px);border-color:var(--maroon);color:var(--maroon)}
+  .nav .btn{padding:11px 18px}
+  @media(max-width:820px){.nav-links a:not(.btn){display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:96svh;display:flex;align-items:center;padding:120px 0 70px}
+  .hero-bg{position:absolute;inset:0;z-index:0;
+    background-image:url('https://images.pexels.com/photos/8985457/pexels-photo-8985457.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#241E1B,#7B2D26);
+    background-size:cover;background-position:center;animation:kb 24s ease-out infinite alternate}
+  @keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.1)}}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(88deg,rgba(24,17,15,.9) 0%,rgba(36,30,27,.72) 48%,rgba(36,30,27,.42) 100%)}
+  .hero .wrap{position:relative;z-index:2;color:var(--paper)}
+  .pin{display:inline-flex;align-items:center;gap:9px;font-family:'Bricolage Grotesque';font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#F0C98A;background:rgba(192,138,45,.16);border:1px solid rgba(192,138,45,.42);padding:8px 15px;border-radius:8px}
+  .hero h1{font-size:clamp(2.5rem,6.2vw,4.5rem);font-weight:800;margin:22px 0 16px;max-width:16ch;color:#fff}
+  .hero p.lede{font-size:clamp(1.05rem,2vw,1.26rem);color:#EADFCF;max-width:52ch;margin-bottom:30px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-note{display:flex;align-items:center;gap:8px;color:#EADFCF;font-size:14.5px;margin-top:22px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* trust */
+  .trust{background:var(--paper);border-bottom:1px solid var(--line)}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 0}
+  .stat{text-align:center;position:relative}
+  .stat:not(:last-child)::after{content:"";position:absolute;right:-10px;top:12%;height:76%;width:1px;background:var(--line)}
+  .stat .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.05rem;color:var(--maroon)}
+  .stat .label{color:var(--muted);font-size:13.5px;margin-top:2px}
+  @media(max-width:720px){.trust-grid{grid-template-columns:repeat(2,1fr);gap:26px}.stat::after{display:none}}
+
+  section{padding:86px 0}
+  .sec-head{max-width:60ch;margin-bottom:44px}
+  .sec-head .pin{margin-bottom:16px}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800}
+  .sec-head p{color:var(--muted);margin-top:14px;font-size:1.08rem}
+
+  /* services with pinstripe motif */
+  .services{position:relative;overflow:hidden}
+  .stripes{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.05;
+    background:repeating-linear-gradient(135deg,var(--maroon) 0 2px,transparent 2px 16px)}
+  .services .wrap{position:relative;z-index:1}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;
+    transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(36,30,27,.1);border-color:var(--brass)}
+  .ic{width:50px;height:50px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px;background:rgba(123,45,38,.09);color:var(--maroon)}
+  .ic svg{width:25px;height:25px}
+  .card h3{font-size:1.2rem;font-weight:700;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.97rem}
+
+  /* why */
+  .why{background:var(--maroon);color:var(--paper)}
+  .why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  @media(max-width:820px){.why .wrap{grid-template-columns:1fr}}
+  .why h2{color:#fff;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800}
+  .why p.sub{color:#EBD9C6;margin-top:14px;font-size:1.08rem}
+  .why ul{list-style:none;display:grid;gap:16px;margin-top:8px}
+  .why li{display:flex;gap:13px;align-items:flex-start}
+  .why li .ci{width:34px;height:34px;border-radius:9px;background:rgba(240,201,138,.16);color:#F0C98A;display:grid;place-items:center;flex:none}
+  .why li .ci svg{width:18px;height:18px}
+  .why li h3{font-family:'Bricolage Grotesque';font-size:1.08rem;color:#fff;font-weight:700}
+  .why li p{color:#E7D4C1;font-size:.97rem}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:820px){.gal{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.gal{grid-template-columns:1fr}}
+  .ph{position:relative;border-radius:var(--radius);min-height:270px;background-size:cover;background-position:center;border:1px solid var(--line);overflow:hidden}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(36,30,27,.68))}
+  .ph .cap{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-family:'Bricolage Grotesque';font-weight:700;font-size:.95rem}
+
+  /* visit */
+  .visit{background:var(--cream-2)}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  @media(max-width:820px){.visit .wrap{grid-template-columns:1fr}}
+  .visit-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:34px}
+  .visit-card h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:800}
+  .visit-card .big{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.9rem;color:var(--maroon);margin:16px 0 4px}
+  .visit-card address{font-style:normal;color:var(--muted);line-height:1.7;font-size:1rem}
+  .visit-card .btn{margin-top:20px}
+  .hours{background:var(--ink);color:var(--cream);border-radius:18px;padding:34px}
+  .hours h3{font-family:'Bricolage Grotesque';color:#fff;font-size:1.3rem;margin-bottom:16px}
+  .hours .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(245,239,228,.14);font-size:.98rem}
+  .hours .row:last-child{border-bottom:0}
+  .hours .row span:last-child{color:#E7D4C1}
+  .hours .closed{color:#F0C98A;font-weight:600}
+
+  footer{background:var(--ink);color:#C9BEB2;padding:44px 0 40px}
+  .foot{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  .foot .brand{color:#fff;margin-bottom:10px}
+  .foot .brand .mark{background:var(--brass);color:var(--ink)}
+  .foot address{font-style:normal;line-height:1.7;font-size:.95rem}
+  .foot a:hover{color:var(--brass)}
+  .foot .made{font-size:.82rem;opacity:.7;margin-top:26px}
+
+  .sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--maroon);color:#fff;font-family:'Bricolage Grotesque';font-weight:800;text-align:center;padding:15px;font-size:1.05rem;box-shadow:0 -8px 24px rgba(36,30,27,.25)}
+  @media(max-width:820px){.sticky-call{display:block}body{padding-bottom:54px}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">L</span> Larry's Auto Center</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Larry's</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-maroon" href="tel:+14196660418">Call now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A smiling auto mechanic in blue coveralls inspecting a car engine in a garage bay"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="pin">Rossford, Ohio &middot; Since the neighborhood needed one</span>
+    <h1>Honest repairs, done right the first time.</h1>
+    <p class="lede">Larry's Auto Center keeps Rossford drivers on the road with straight answers, fair pricing and work that holds up. Bring us the noise, the light or the leak.</p>
+    <div class="hero-cta">
+      <a class="btn btn-maroon" href="tel:+14196660418">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (419) 666-0418
+      </a>
+      <a class="btn btn-outline" href="#services" style="color:#fff;border-color:#fff">See our services</a>
+    </div>
+    <div class="hero-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F0C98A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polygon points="12 2 15 9 22 9.3 16.5 13.8 18.5 21 12 16.8 5.5 21 7.5 13.8 2 9.3 9 9"/></svg>
+      Rated 4.6 out of 5 across 41 Google reviews
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="stat reveal"><div class="num" data-count="4.6" data-dec="1">0</div><div class="label">Google rating</div></div>
+      <div class="stat reveal"><div class="num"><span data-count="41">0</span></div><div class="label">Verified reviews</div></div>
+      <div class="stat reveal"><div class="num">All makes</div><div class="label">Foreign &amp; domestic</div></div>
+      <div class="stat reveal"><div class="num">Rossford</div><div class="label">On Superior St</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="services" class="services">
+  <div class="stripes" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pin">Under the hood</span>
+      <h2>The repairs that keep you moving</h2>
+      <p>From the quick stuff to the jobs other shops want to over-sell, we handle it and tell you what your car actually needs.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3>Check-engine diagnostics</h3>
+        <p>We read the codes and find the real cause instead of guessing at parts.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/></svg></div>
+        <h3>Brakes</h3>
+        <p>Pads, rotors and lines done right so you stop straight and quiet.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M14 9h3l3 3v7a2 2 0 0 1-4 0"/><path d="M3 14h11"/></svg></div>
+        <h3>Oil &amp; maintenance</h3>
+        <p>Oil, filters, fluids and the checklist that heads off bigger bills later.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.4-.6-.6-2.4 2.3-2.3z"/></svg></div>
+        <h3>Engine work</h3>
+        <p>Belts, gaskets, cooling and the bigger repairs, explained before we start.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3.4v3M12 17.6v3M3.4 12h3M17.6 12h3"/></svg></div>
+        <h3>Tires &amp; alignment</h3>
+        <p>Mount, balance, rotate and align so your tread lasts and the wheel sits centered.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 6l14 12M19 6L5 18"/></svg></div>
+        <h3>Heating &amp; AC</h3>
+        <p>Recharge and repair so the cab is warm in winter and cold in July.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="pin" style="color:#F0C98A;border-color:rgba(240,201,138,.5)">Why Rossford calls Larry's</span>
+      <h2>A garage that talks to you like a neighbor.</h2>
+      <p class="sub">You should not need a mechanic friend to feel safe at a shop. That is the whole idea here.</p>
+    </div>
+    <div class="reveal">
+      <ul>
+        <li>
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <div><h3>Straight talk</h3><p>We show you what is worn and what can wait, so you decide with the facts in front of you.</p></div>
+        </li>
+        <li>
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <div><h3>Fair pricing</h3><p>A clear estimate before the wrench turns. No surprise line items at pickup.</p></div>
+        </li>
+        <li>
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h3>Work that holds</h3><p>Quality parts and careful labor, because a repair you call back about helps no one.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pin">In the bays</span>
+      <h2>Hands-on, every job</h2>
+    </div>
+    <div class="gal">
+      <div class="ph" role="img" aria-label="A mechanic checking a car engine in the shop for quality maintenance" style="background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Diagnostics</span></div>
+      <div class="ph" role="img" aria-label="A technician performing brake repair on a vehicle at the garage" style="background-image:url('https://images.pexels.com/photos/36044141/pexels-photo-36044141.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Brake work</span></div>
+      <div class="ph" role="img" aria-label="A mechanic working underneath a car on the undercarriage in the shop" style="background-image:url('https://images.pexels.com/photos/32152042/pexels-photo-32152042.jpeg?auto=compress&cs=tinysrgb&w=900')"><span class="cap">Underneath</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div class="visit-card reveal">
+      <span class="pin">Come by</span>
+      <h2 style="margin-top:14px">Bring it in or call ahead.</h2>
+      <p style="color:var(--muted);margin-top:10px">Describe the sound or the symptom and we will tell you the next step honestly, even if that step is not a repair.</p>
+      <div class="big">(419) 666-0418</div>
+      <address>219 Superior St<br>Rossford, OH 43460</address>
+      <a class="btn btn-maroon" href="tel:+14196660418">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Larry's</a>
+    </div>
+    <div class="hours reveal">
+      <h3>Shop hours</h3>
+      <div class="row"><span>Monday</span><span>8:00 AM - 5:30 PM</span></div>
+      <div class="row"><span>Tuesday</span><span>8:00 AM - 5:30 PM</span></div>
+      <div class="row"><span>Wednesday</span><span>8:00 AM - 5:30 PM</span></div>
+      <div class="row"><span>Thursday</span><span>8:00 AM - 5:30 PM</span></div>
+      <div class="row"><span>Friday</span><span>8:00 AM - 5:00 PM</span></div>
+      <div class="row"><span>Saturday</span><span class="closed">By appointment</span></div>
+      <div class="row"><span>Sunday</span><span class="closed">Closed</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand"><span class="mark">L</span> Larry's Auto Center</div>
+      <address>
+        219 Superior St<br>Rossford, OH 43460<br>
+        <a href="tel:+14196660418">(419) 666-0418</a>
+      </address>
+      <div class="made">Site by Elements Studio</div>
+    </div>
+    <div>
+      <div style="color:#fff;font-family:'Bricolage Grotesque';font-weight:700;margin-bottom:10px">Services</div>
+      Diagnostics &middot; Brakes &middot; Oil &amp; maintenance<br>Engine work &middot; Tires &middot; Heating &amp; AC
+    </div>
+    <div>
+      <div style="color:#fff;font-family:'Bricolage Grotesque';font-weight:700;margin-bottom:10px">Serving</div>
+      Rossford, Perrysburg, Northwood<br>and greater Toledo
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14196660418">Call Larry's &middot; (419) 666-0418</a>
+
+<script>
+  var prog=document.getElementById('progress');
+  var hdr=document.getElementById('hdr');
+  function onScroll(){
+    var st=document.documentElement.scrollTop||document.body.scrollTop;
+    var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    prog.style.transform='scaleX('+(h>0?st/h:0)+')';
+    hdr.classList.toggle('scrolled',st>24);
+  }
+  document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');},(i%4)*70); io.unobserve(e.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1300;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var val=target*(0.2+0.8*p);
+      el.textContent=dec?val.toFixed(dec):Math.round(val);
+      if(p<1)requestAnimationFrame(step); else el.textContent=dec?target.toFixed(dec):target;
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.querySelectorAll('[data-count]').forEach(animateCount); cio.unobserve(e.target);} });
+  },{threshold:.5});
+  document.querySelectorAll('.trust-grid .stat').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
