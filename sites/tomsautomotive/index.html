@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tom's Automotive | Auto Repair in Oregon, OH</title>
+<meta name="description" content="Honest auto repair in Oregon, Ohio. Tom's Automotive fixes cars and trucks right the first time. Call for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFE6; --petrol:#123B37; --petrol-deep:#0C2A27;
+  --amber:#E0A21E; --char:#1A1A1A; --muted:#5c6360; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--char);background:var(--bone);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.accent{color:var(--amber)}
+
+/* scroll progress */
+#bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(18,59,55,.92);backdrop-filter:blur(8px);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.28)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;color:var(--white)}
+.brand{font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:1px;color:var(--white)}
+.brand .accent{color:var(--amber)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--petrol-deep);font-weight:700;padding:11px 18px;border-radius:6px;font-size:.95rem;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.nav-cta:hover{transform:translateY(-2px) scale(1.03)}
+.nav-links{display:flex;gap:26px;font-weight:600;font-size:.95rem}
+.nav-links a{color:#dfe7e4}
+.nav-links a:hover{color:var(--amber)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;color:var(--white)}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#0C2A27,#123B37);background-size:cover;background-position:center;animation:ken 22s ease-in-out infinite alternate}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,26,24,.82) 0%,rgba(9,26,24,.55) 55%,rgba(9,26,24,.35) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(224,162,30,.16);border:1px solid rgba(224,162,30,.5);color:var(--amber);font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:40px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.7rem,7vw,5.3rem);max-width:15ch;margin-bottom:18px}
+.hero p{font-size:1.2rem;max-width:46ch;color:#e9efec;margin-bottom:30px}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:15px 26px;border-radius:8px;font-size:1.02rem;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.btn-primary{background:var(--amber);color:var(--petrol-deep)}
+.btn-ghost{background:rgba(255,255,255,.08);color:var(--white);border:1.5px solid rgba(255,255,255,.4)}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.hero-strip{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}
+.hero-strip div{font-size:.92rem;color:#cdd8d4}
+.hero-strip b{display:block;font-family:'Anton',sans-serif;font-size:1.7rem;color:var(--white);letter-spacing:.5px}
+
+/* sections */
+section{padding:92px 0}
+.sec-head{max-width:60ch;margin-bottom:52px}
+.kicker{color:var(--amber);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:12px}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3.1rem);color:var(--petrol);margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--white);border:1px solid #e6ded1;border-radius:14px;padding:30px 26px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(18,59,55,.14)}
+.ic{width:52px;height:52px;border-radius:12px;background:var(--petrol);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.ic svg{width:26px;height:26px;stroke:var(--amber);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.15rem;color:var(--petrol);margin-bottom:8px;letter-spacing:.3px}
+.card p{color:var(--muted);font-size:.98rem}
+
+/* why / stats band */
+.band{position:relative;background:var(--petrol);color:var(--white);overflow:hidden}
+.band .motif{position:absolute;inset:0;opacity:.10;background:repeating-linear-gradient(-45deg,var(--amber) 0 3px,transparent 3px 26px)}
+.band .wrap{position:relative;z-index:1}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;text-align:center}
+.stat b{font-family:'Anton',sans-serif;font-size:3.1rem;color:var(--amber);display:block;letter-spacing:1px}
+.stat span{color:#d3ddd9;font-size:.98rem}
+.band-lead{text-align:center;max-width:60ch;margin:0 auto 48px}
+.band-lead h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px}
+.band-lead p{color:#d3ddd9;font-size:1.08rem}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ph{position:relative;min-height:270px;border-radius:14px;background-size:cover;background-position:center;overflow:hidden;box-shadow:inset 0 -70px 80px -40px rgba(9,26,24,.75)}
+.ph span{position:absolute;left:18px;bottom:16px;color:var(--white);font-weight:600;font-size:.98rem;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.ph.g1{background-image:url('https://images.pexels.com/photos/6720507/pexels-photo-6720507.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#123B37,#0C2A27)}
+.ph.g2{background-image:url('https://images.pexels.com/photos/4489776/pexels-photo-4489776.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#123B37,#0C2A27)}
+.ph.g3{background-image:url('https://images.pexels.com/photos/8478261/pexels-photo-8478261.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#123B37,#0C2A27)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.info-row{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid #e6ded1}
+.info-row svg{width:24px;height:24px;stroke:var(--amber);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-top:2px}
+.info-row b{display:block;color:var(--petrol);font-size:1.02rem;letter-spacing:.3px}
+.info-row span{color:var(--muted);font-size:.98rem}
+.hours-card{background:var(--white);border:1px solid #e6ded1;border-radius:16px;padding:28px}
+.hours-card h3{color:var(--petrol);font-size:1.25rem;margin-bottom:16px}
+.hours-card .r{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed #e6ded1;font-size:.98rem}
+.hours-card .r span:first-child{color:var(--muted)}
+.hours-card .r b{color:var(--char)}
+@media(max-width:760px){.visit{grid-template-columns:1fr}}
+
+/* final CTA */
+.final{background:var(--petrol-deep);color:var(--white);text-align:center}
+.final h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:16px}
+.final p{color:#cdd8d4;max-width:48ch;margin:0 auto 30px;font-size:1.1rem}
+
+footer{background:#0A2320;color:#9fb0ab;padding:40px 0;font-size:.92rem}
+.foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.foot .brand{font-size:1.2rem}
+.foot a{color:var(--amber)}
+
+/* sticky mobile call */
+.sticky-call{display:none}
+@media(max-width:760px){
+  .sticky-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:110;align-items:center;justify-content:center;gap:10px;background:var(--amber);color:var(--petrol-deep);font-weight:700;padding:15px;box-shadow:0 -4px 20px rgba(0,0,0,.25)}
+  section{padding:64px 0}
+}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand">TOM'S <span class="accent">AUTOMOTIVE</span></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Tom's</a>
+      <a href="#work">Our Work</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="tel:+14196914001" class="nav-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 691-4001
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero">
+  <div class="hero-bg" role="img" aria-label="Mechanic working under the hood of a car inside Tom's Automotive service bay in Oregon, Ohio"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Oregon, Ohio &bull; Since the neighborhood needed us</span>
+    <h1>We fix it right the first time.</h1>
+    <p>Straight answers, fair prices, and repairs that hold up. Bring us the car you rely on and drive it home sooner.</p>
+    <div class="btn-row">
+      <a href="tel:+14196914001" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a quote
+      </a>
+      <a href="#services" class="btn btn-ghost">See what we fix</a>
+    </div>
+    <div class="hero-strip">
+      <div><b id="hRate">4.4</b>Google rating</div>
+      <div><b id="hRev">40</b>customer reviews</div>
+      <div><b>Local</b>owned and run in Oregon</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we do</div>
+      <h2>Repairs and maintenance for the car you drive every day</h2>
+      <p>From the light on your dash to the noise you can't place, we diagnose it clearly and fix what actually needs fixing.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></div>
+        <h3>Diagnostics &amp; check-engine</h3>
+        <p>We read the codes, then find the real cause instead of guessing at parts.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <h3>Brakes &amp; suspension</h3>
+        <p>Pads, rotors, struts and steering so the car stops straight and rides smooth.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 17a2 2 0 1 0 0-.01M19 17a2 2 0 1 0 0-.01M5 17h9M3 5h13v12M16 8h4l1 4v5h-2"/></svg></div>
+        <h3>Oil changes &amp; tune-ups</h3>
+        <p>Fluids, filters and the routine work that keeps small problems from getting big.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
+        <h3>Engine &amp; transmission</h3>
+        <p>Bigger repairs handled in-house, explained before we touch a wrench.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg></div>
+        <h3>AC &amp; heating</h3>
+        <p>Cold in July, warm in January. We recharge, seal and repair the whole system.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9z"/></svg></div>
+        <h3>Inspections &amp; pre-trip</h3>
+        <p>A full look before winter or a long drive, so you leave the lot with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="band">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="band-lead reveal">
+      <div class="kicker">Why drivers stay</div>
+      <h2>The shop your neighbors already trust</h2>
+      <p>People come back because the work holds up and the bill matches the quote. That shows up in the numbers.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b id="sRate">4.4</b><span>Average Google rating</span></div>
+      <div class="stat reveal"><b id="sRev">40</b><span>Reviews from local drivers</span></div>
+      <div class="stat reveal"><b>1</b><span>Fair estimate, no surprises</span></div>
+      <div class="stat reveal"><b>OH</b><span>Serving Oregon and Toledo</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">In the bay</div>
+      <h2>Real work on real cars</h2>
+      <p>A look at the shop where your repair actually happens.</p>
+    </div>
+    <div class="gal">
+      <div class="ph g1" role="img" aria-label="Technician inspecting an engine bay with diagnostic tools at Tom's Automotive"><span>Diagnostics done right</span></div>
+      <div class="ph g2" role="img" aria-label="Car raised on a lift for brake and undercarriage service"><span>Brakes and undercarriage</span></div>
+      <div class="ph g3" role="img" aria-label="Mechanic tightening a bolt with a hand tool during a repair"><span>Repairs that hold up</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Find us</div>
+      <h2>Stop in or give us a call</h2>
+    </div>
+    <div class="visit">
+      <div class="reveal">
+        <div class="info-row">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b>Location</b><span>2007 Woodville Rd, Oregon, OH 43616</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><b>Phone</b><span>(419) 691-4001</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b>Drop-offs welcome</b><span>Leave the keys and we'll call with a quote before any work starts.</span></div>
+        </div>
+      </div>
+      <div class="hours-card reveal">
+        <h3>Shop hours</h3>
+        <div class="r"><span>Monday &ndash; Friday</span><b>8:00a &ndash; 5:30p</b></div>
+        <div class="r"><span>Saturday</span><b>By appointment</b></div>
+        <div class="r"><span>Sunday</span><b>Closed</b></div>
+        <a href="tel:+14196914001" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (419) 691-4001
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Ready when your car is</h2>
+    <p>Tell us what it's doing and we'll tell you what it needs. No pressure, no runaround.</p>
+    <a href="tel:+14196914001" class="btn btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call for a quote
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand">TOM'S <span class="accent">AUTOMOTIVE</span></div>
+      <div style="margin-top:8px">2007 Woodville Rd, Oregon, OH 43616</div>
+    </div>
+    <div>
+      <a href="tel:+14196914001">(419) 691-4001</a><br>
+      <span style="color:#7d8f8a">Auto repair &bull; Oregon, Ohio</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+14196914001" class="sticky-call">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call (419) 691-4001
+</a>
+
+<script>
+// scroll progress + nav shadow
+var bar=document.getElementById('bar'),hdr=document.getElementById('hdr');
+addEventListener('scroll',function(){
+  var h=document.documentElement,st=h.scrollTop,sh=h.scrollHeight-h.clientHeight;
+  bar.style.transform='scaleX('+(sh?st/sh:0)+')';
+  hdr.classList.toggle('scrolled',st>10);
+});
+// reveal on scroll, staggered
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in')}, (e.target.dataset.d||0)); io.unobserve(e.target);} });
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el,i){ el.dataset.d=(i%5)*70; io.observe(el); });
+// count-up
+function countUp(el,to,dec){
+  var start=null,dur=1300;
+  function step(t){ if(!start)start=t; var p=Math.min((t-start)/dur,1);
+    var v=to*(1-Math.pow(1-p,3)); el.textContent=dec?v.toFixed(1):Math.round(v); if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
+}
+var counted=false;
+var cio=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting&&!counted){counted=true;
+    countUp(document.getElementById('sRate'),4.4,1);
+    countUp(document.getElementById('sRev'),40,0);
+    countUp(document.getElementById('hRate'),4.4,1);
+    countUp(document.getElementById('hRev'),40,0);
+  }});
+},{threshold:.4});
+cio.observe(document.getElementById('why'));
+</script>
+</body>
+</html>
