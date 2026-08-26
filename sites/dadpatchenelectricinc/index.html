@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dad Patchen Electric Inc | Licensed Electrician in Oregon, OH</title>
+<meta name="description" content="Dad Patchen Electric is a licensed electrician serving Oregon, OH. Panel upgrades, wiring, outlets and troubleshooting. Call (419) 693-9001 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2E5C; --navy-deep:#08213F; --blue:#1D5FC4; --volt:#FFC400; --volt-deep:#E0A800;
+  --ink:#141A24; --muted:#5A6474; --paper:#F7F8FB; --line:#E4E8EF; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+h1,h2,h3,.display{font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.08;font-weight:700;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--volt);color:#1a1500;font-weight:700;padding:15px 26px;border-radius:6px;font-size:16px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 6px 18px rgba(255,196,0,.35)}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 26px rgba(255,196,0,.5)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);box-shadow:none}
+.btn.ghost:hover{border-color:var(--volt);color:var(--volt)}
+.btn svg{width:19px;height:19px}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--volt);transform:scaleX(0);transform-origin:left;z-index:120}
+nav{position:fixed;top:0;left:0;right:0;z-index:110;transition:.3s;padding:18px 0}
+nav.scrolled{background:rgba(8,33,63,.97);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:11px 0}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;color:#fff;font-family:'Space Grotesk';font-weight:700;font-size:20px}
+.brand .mark{width:34px;height:34px;display:grid;place-items:center;background:var(--volt);border-radius:7px;color:#1a1500}
+.brand .mark svg{width:20px;height:20px}
+.nav-call{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700}
+.nav-call svg{width:18px;height:18px;color:var(--volt)}
+header{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#08213F,#0B2E5C);background-size:cover;background-position:center;transform:scale(1.05);animation:ken 22s ease-out infinite alternate;z-index:0}
+@keyframes ken{to{transform:scale(1.16)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.9) 0%,rgba(8,33,63,.68) 55%,rgba(11,46,92,.52) 100%);z-index:1}
+header .wrap{position:relative;z-index:2;color:#fff;padding-top:110px;padding-bottom:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--volt);margin-bottom:20px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--volt)}
+header h1{font-size:clamp(2.5rem,6vw,4.4rem);max-width:15ch}
+header p.lede{font-size:clamp(1.05rem,2vw,1.28rem);max-width:52ch;margin:22px 0 32px;color:rgba(255,255,255,.9)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.proof{display:flex;align-items:center;gap:14px;margin-top:34px;flex-wrap:wrap;font-size:15px;color:rgba(255,255,255,.86)}
+.stars{color:var(--volt);letter-spacing:2px}
+.proof b{color:#fff}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.5)}
+section{padding:96px 0}
+.tag{display:inline-block;font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:12.5px;color:var(--blue);margin-bottom:14px}
+.h-sec{font-size:clamp(1.9rem,3.6vw,2.9rem);max-width:20ch;color:var(--navy)}
+.sub{color:var(--muted);max-width:56ch;margin-top:14px;font-size:1.05rem}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:48px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px 26px;transition:.3s;position:relative}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(11,46,92,.14);border-color:var(--blue)}
+.card::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:3px;background:var(--volt);border-radius:3px;opacity:0;transition:.3s}
+.card:hover::before{opacity:1}
+.ic{width:52px;height:52px;border-radius:10px;background:rgba(29,95,196,.1);display:grid;place-items:center;margin-bottom:18px;color:var(--blue)}
+.ic svg{width:26px;height:26px}
+.card h3{font-size:1.28rem;margin-bottom:9px;color:var(--navy)}
+.card p{color:var(--muted);font-size:1rem}
+/* stats + circuit motif */
+.stats{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.circuit{position:absolute;inset:0;z-index:0;opacity:.22;background:
+  linear-gradient(90deg,transparent 49%,var(--volt) 49% 51%,transparent 51%) 0 0/120px 120px,
+  linear-gradient(0deg,transparent 49%,var(--volt) 49% 51%,transparent 51%) 0 0/120px 120px,
+  repeating-linear-gradient(45deg,transparent 0 58px,rgba(255,196,0,.4) 58px 60px);
+  -webkit-mask-image:radial-gradient(circle at 78% 40%,#000,transparent 70%);mask-image:radial-gradient(circle at 78% 40%,#000,transparent 70%)}
+.stats .wrap{position:relative;z-index:1}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px;text-align:center}
+.stat .num{font-family:'Space Grotesk';font-weight:700;font-size:3.2rem;color:var(--volt);line-height:1}
+.stat p{margin-top:8px;color:rgba(255,255,255,.82);font-size:.98rem}
+.stats-head{text-align:center;margin-bottom:46px}
+.stats-head h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.gallery{padding-top:40px}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px}
+.ph{position:relative;height:300px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 12px 30px rgba(11,46,92,.16)}
+.ph::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:34px 18px 16px;color:#fff;font-weight:600;font-size:.98rem;background:linear-gradient(to top,rgba(6,20,40,.85),transparent)}
+.ph.g1{background-image:linear-gradient(rgba(8,33,63,.12),rgba(8,33,63,.12)),url('https://images.pexels.com/photos/5691588/pexels-photo-5691588.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.ph.g2{background-image:linear-gradient(rgba(8,33,63,.12),rgba(8,33,63,.12)),url('https://images.pexels.com/photos/34054464/pexels-photo-34054464.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.ph.g3{background-image:linear-gradient(rgba(8,33,63,.12),rgba(8,33,63,.12)),url('https://images.pexels.com/photos/29871587/pexels-photo-29871587.jpeg?auto=compress&cs=tinysrgb&w=900')}
+/* process */
+.proc{background:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:46px}
+.step{position:relative;padding:28px 24px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.step .n{font-family:'Space Grotesk';font-weight:700;font-size:1rem;color:#1a1500;background:var(--volt);width:38px;height:38px;border-radius:9px;display:grid;place-items:center;margin-bottom:16px}
+.step h3{font-size:1.2rem;color:var(--navy);margin-bottom:8px}
+.step p{color:var(--muted);font-size:1rem}
+/* final */
+.final{position:relative;background:var(--navy-deep);color:#fff;text-align:center;overflow:hidden}
+.final .circuit{opacity:.16;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%);mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%)}
+.final .wrap{position:relative;z-index:1}
+.final h2{color:#fff;font-size:clamp(2rem,4vw,3rem);max-width:18ch;margin:0 auto 16px}
+.final p{color:rgba(255,255,255,.85);max-width:48ch;margin:0 auto 30px}
+.final .phone-big{display:inline-flex;align-items:center;gap:12px;font-family:'Space Grotesk';font-weight:700;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--volt);margin-top:8px}
+footer{background:#061A33;color:rgba(255,255,255,.72);padding:56px 0 30px;font-size:.96rem}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-bottom:34px}
+.foot-grid h4{color:var(--volt);font-family:'Space Grotesk';font-size:1rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
+.foot-grid a{color:#fff}
+.foot-bar{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.88rem;color:rgba(255,255,255,.55)}
+.sticky-call{display:none;position:fixed;left:0;right:0;bottom:0;z-index:130;background:var(--volt);color:#1a1500;text-align:center;padding:15px;font-weight:700;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:640px){section{padding:70px 0}header .wrap{padding-bottom:100px}.sticky-call{display:block}.nav-call span{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span>Dad Patchen Electric</a>
+    <a href="tel:+14196939001" class="nav-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>(419) 693-9001</span></a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-bg" role="img" aria-label="Licensed electrician using a drill on an open indoor circuit breaker panel"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Licensed Electrician in Oregon, OH</span>
+    <h1>Wired right the first time.</h1>
+    <p class="lede">Dad Patchen Electric handles panel upgrades, new wiring, outlets and the odd flickering circuit for homes and shops around Oregon, OH. Licensed, insured, and straight with you about the price.</p>
+    <div class="cta-row">
+      <a href="tel:+14196939001" class="btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call for a free estimate</a>
+      <a href="#services" class="btn ghost">See services</a>
+    </div>
+    <div class="proof">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span><b>4.4</b> rating from <b>28</b> Google reviews</span>
+      <span class="dot"></span>
+      <span>Serving Oregon &amp; east Toledo</span>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <span class="tag">What we handle</span>
+    <h2 class="h-sec reveal">Residential and light commercial electrical.</h2>
+    <p class="sub reveal">From a dead outlet to a full panel swap, Dad Patchen Electric does the work to code and leaves it safe.</p>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M11 15h2"/></svg></div>
+        <h3>Panel upgrades</h3>
+        <p>Old or overloaded panels swapped for modern breakers so your home can handle today's load safely.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><circle cx="9" cy="10" r="1.2"/><circle cx="15" cy="10" r="1.2"/><path d="M9 15h6"/></svg></div>
+        <h3>Outlets &amp; switches</h3>
+        <p>New outlets, GFCIs, switches and dimmers installed clean, plus dead ones tracked down and fixed.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg></div>
+        <h3>Wiring &amp; rewiring</h3>
+        <p>New circuits for additions, garages and remodels, and safe rewiring of tired old runs.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Troubleshooting</h3>
+        <p>Flickering lights, tripping breakers and lost power diagnosed and repaired, not just patched over.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="circuit" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="stats-head reveal">
+      <span class="tag" style="color:var(--volt)">By the numbers</span>
+      <h2>Oregon homeowners call Dad Patchen back.</h2>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal"><div class="num" data-count="4.4" data-dec="1">0</div><p>Google star rating</p></div>
+      <div class="stat reveal"><div class="num" data-count="28">0</div><p>Verified reviews</p></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suf="%">0</div><p>Work done to code</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <span class="tag">On the job</span>
+    <h2 class="h-sec reveal">Neat panels, tidy runs, safe connections.</h2>
+    <div class="gal-grid">
+      <div class="ph g1 reveal" role="img" aria-label="Electrician installing outlets and switches on a wall during a room build" data-cap="Outlets &amp; switches"></div>
+      <div class="ph g2 reveal" role="img" aria-label="Electrician using a multimeter to test voltages in an open electrical panel" data-cap="Testing &amp; diagnostics"></div>
+      <div class="ph g3 reveal" role="img" aria-label="Electrician running new wiring during a building renovation" data-cap="New wiring runs"></div>
+    </div>
+  </div>
+</section>
+
+<section class="proc">
+  <div class="wrap">
+    <span class="tag">How it works</span>
+    <h2 class="h-sec reveal">Look, quote, then do it right.</h2>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Tell us the problem</h3><p>Call and describe what is going on. We set a time and come take a look at the panel or the circuit.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>Get a clear estimate</h3><p>We find the real issue, explain it in plain terms, and give you a straight price before any work.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>Fixed and safe</h3><p>We do the work to code, test it, and clean up, so you know the wiring is sound before we leave.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="circuit" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="tag" style="color:var(--volt)">Ready when you are</span>
+    <h2>Got an electrical job or a problem to chase down?</h2>
+    <p>Call Dad Patchen Electric for a free estimate. Licensed, insured, and honest about what your home actually needs.</p>
+    <a href="tel:+14196939001" class="phone-big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 693-9001</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Call</h4>
+        <a href="tel:+14196939001">(419) 693-9001</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>2665 Navarre Ave<br>Oregon, OH 43616</p>
+      </div>
+      <div>
+        <h4>Area</h4>
+        <p>Oregon, OH and the<br>east Toledo suburbs</p>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>Dad Patchen Electric Inc &middot; 2665 Navarre Ave, Oregon, OH 43616 &middot; (419) 693-9001</span>
+      <span>Site by Elements Studio</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+14196939001" class="sticky-call">Call (419) 693-9001</a>
+
+<script>
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const h=document.documentElement;const s=h.scrollTop/(h.scrollHeight-h.clientHeight);bar.style.transform='scaleX('+s+')';},{passive:true});
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40);},{passive:true});
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%4)*80);io.unobserve(e.target);}});},{threshold:.16});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const end=parseFloat(el.dataset.count);const dec=+(el.dataset.dec||0);const suf=el.dataset.suf||'';let t0=null;const dur=1400;function step(ts){if(!t0)t0=ts;const p=Math.min((ts-t0)/dur,1);const ease=1-Math.pow(1-p,3);const val=end*ease;el.textContent=(dec?val.toFixed(dec):Math.round(val))+suf;if(p<1)requestAnimationFrame(step);else el.textContent=(dec?end.toFixed(dec):end)+suf;}requestAnimationFrame(step);cio.unobserve(el);});},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
