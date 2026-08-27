@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwood Auto Sales | Used Cars & Repairs in Northwood, OH</title>
+<meta name="description" content="Northwood Auto Sales in Northwood, OH sells dependable used cars and handles honest repairs, tires and diagnostics. Rated 4.3 stars by 27 local drivers. Call (419) 698-2113.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15171c;
+  --ink-2:#1d2027;
+  --panel:#20242d;
+  --line:#2c313c;
+  --paper:#f4f5f7;
+  --muted:#a9b0bd;
+  --white:#ffffff;
+  --accent:#ff6a1a;
+  --accent-2:#ff8846;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',system-ui,Arial,sans-serif;
+  color:var(--paper);
+  background:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.5px;line-height:.98}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+.accent{color:var(--accent)}
+
+/* scroll progress */
+#bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:110;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
+header.scrolled{background:rgba(21,23,28,.94);backdrop-filter:blur(8px);box-shadow:0 8px 30px rgba(0,0,0,.4);padding:11px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mark{width:40px;height:40px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:0 0 auto;box-shadow:0 6px 18px rgba(255,106,26,.35)}
+.brand .mark svg{width:23px;height:23px;stroke:#15171c;fill:none;stroke-width:2.2}
+.brand b{font-family:'Anton',sans-serif;font-size:20px;letter-spacing:.6px;text-transform:uppercase}
+.brand span{display:block;font-size:11px;color:var(--muted);letter-spacing:2px;font-weight:600;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:14px;font-weight:600;color:#d7dbe2;letter-spacing:.3px}
+.nav-links a:hover{color:var(--accent)}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#15171c;
+  font-weight:700;font-size:15px;padding:13px 22px;border-radius:10px;letter-spacing:.3px;
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .25s;
+  box-shadow:0 8px 22px rgba(255,106,26,.3);border:none;cursor:pointer;
+}
+.btn svg{width:18px;height:18px;stroke:#15171c;fill:none;stroke-width:2.2}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 30px rgba(255,106,26,.45);background:var(--accent-2)}
+.btn.ghost{background:transparent;color:var(--paper);border:2px solid var(--line);box-shadow:none}
+.btn.ghost svg{stroke:var(--accent)}
+.btn.ghost:hover{border-color:var(--accent);background:rgba(255,106,26,.08)}
+.nav .btn{padding:11px 18px;font-size:14px}
+.nav-links .callnum{display:none}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 70px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/29566899/pexels-photo-29566899.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#15171c,#20242d);background-size:cover;background-position:center;transform:scale(1.06);animation:ken 22s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.06) translateY(0)}to{transform:scale(1.16) translateY(-14px)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,16,20,.9) 0%,rgba(15,16,20,.72) 45%,rgba(15,16,20,.5) 100%);z-index:1}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,106,26,.14);border:1px solid rgba(255,106,26,.4);color:var(--accent-2);padding:8px 15px;border-radius:100px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px}
+.eyebrow svg{width:15px;height:15px;stroke:var(--accent-2);fill:none;stroke-width:2.4}
+.hero h1{font-size:clamp(42px,7vw,80px);max-width:15ch;margin-bottom:20px}
+.hero h1 .accent{-webkit-text-stroke:0;color:var(--accent)}
+.hero p.sub{font-size:clamp(17px,2.2vw,20px);color:#d3d8e0;max-width:52ch;margin-bottom:32px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-meta{display:flex;flex-wrap:wrap;gap:26px;margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
+.hero-meta .stat b{font-family:'Anton',sans-serif;font-size:34px;color:var(--white);display:block;letter-spacing:1px}
+.hero-meta .stat span{font-size:12.5px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.stars{color:var(--accent);letter-spacing:3px;font-size:19px}
+
+/* sections */
+section{position:relative}
+.pad{padding:92px 0}
+.head{max-width:620px;margin-bottom:48px}
+.kicker{color:var(--accent);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:13px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:30px;height:2px;background:var(--accent);display:inline-block}
+.head h2{font-size:clamp(30px,4.4vw,46px);color:var(--white);margin-bottom:14px}
+.head p{color:var(--muted);font-size:17px}
+
+/* services */
+.services{background:var(--ink-2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,106,26,.6);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.card .ic{width:54px;height:54px;border-radius:12px;background:rgba(255,106,26,.13);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:27px;height:27px;stroke:var(--accent);fill:none;stroke-width:2}
+.card h3{font-size:21px;color:var(--white);margin-bottom:9px;letter-spacing:.6px}
+.card p{color:var(--muted);font-size:15px}
+
+/* why - with road motif */
+.why{background:var(--ink);overflow:hidden}
+.why .motif{position:absolute;inset:0;z-index:0;opacity:.5;
+  background-image:repeating-linear-gradient(90deg,transparent 0,transparent 46px,rgba(255,106,26,.16) 46px,rgba(255,106,26,.16) 92px);
+  background-position:0 50%;background-size:100% 8px;background-repeat:no-repeat}
+.why .motif::after{content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,transparent 0,transparent 46px,rgba(255,106,26,.07) 46px,rgba(255,106,26,.07) 92px);
+  background-position:0 30%,0 70%;background-size:100% 5px;background-repeat:no-repeat}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.why ul{list-style:none;margin-top:24px;display:grid;gap:16px}
+.why li{display:flex;gap:14px;align-items:flex-start}
+.why li .tick{width:30px;height:30px;border-radius:8px;background:var(--accent);flex:0 0 auto;display:grid;place-items:center;margin-top:2px}
+.why li .tick svg{width:17px;height:17px;stroke:#15171c;fill:none;stroke-width:2.6}
+.why li b{color:var(--white);font-size:16.5px;display:block}
+.why li span{color:var(--muted);font-size:14.5px}
+.proof{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:34px 30px;text-align:center}
+.proof .big{font-family:'Anton',sans-serif;font-size:74px;color:var(--accent);line-height:1;letter-spacing:2px}
+.proof .stars{font-size:24px;margin:10px 0}
+.proof p{color:var(--muted);font-size:15px}
+.proof .rev{font-family:'Anton',sans-serif;font-size:30px;color:var(--white);margin-top:20px}
+.proof .rev small{display:block;font-family:'Barlow';font-size:12.5px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+
+/* gallery */
+.gallery{background:var(--ink-2)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ph{position:relative;height:270px;border-radius:14px;overflow:hidden;background-size:cover;background-position:center;border:1px solid var(--line)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,16,20,.75),transparent 55%);transition:opacity .3s}
+.ph .cap{position:absolute;left:16px;bottom:14px;z-index:2;font-weight:700;font-size:15px;color:var(--white);letter-spacing:.4px}
+.ph:hover{transform:translateY(-4px)}
+.ph{transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.ph1{background-image:url('https://images.pexels.com/photos/8985457/pexels-photo-8985457.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#20242d,#2c313c)}
+.ph2{background-image:url('https://images.pexels.com/photos/33814734/pexels-photo-33814734.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#20242d,#2c313c)}
+.ph3{background-image:url('https://images.pexels.com/photos/29566906/pexels-photo-29566906.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#20242d,#2c313c)}
+
+/* visit */
+.visit{background:var(--ink)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.info{display:grid;gap:20px}
+.info .row{display:flex;gap:15px;align-items:flex-start}
+.info .row .ic{width:46px;height:46px;border-radius:11px;background:rgba(255,106,26,.13);display:grid;place-items:center;flex:0 0 auto}
+.info .row .ic svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2}
+.info .row b{color:var(--white);font-size:16px;display:block;letter-spacing:.4px}
+.info .row span{color:var(--muted);font-size:15px}
+.hours{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 26px}
+.hours h3{color:var(--white);font-size:20px;margin-bottom:16px;letter-spacing:.6px}
+.hours .hr{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hours .hr:last-child{border-bottom:none}
+.hours .hr span:first-child{color:#d3d8e0;font-weight:600}
+.hours .hr span:last-child{color:var(--muted)}
+.hours .hr.closed span:last-child{color:var(--accent-2)}
+
+/* cta */
+.cta{background:linear-gradient(120deg,var(--accent),#e2530a);color:#15171c;text-align:center;padding:82px 0}
+.cta h2{font-size:clamp(32px,5vw,58px);color:#15171c;margin-bottom:14px}
+.cta p{font-size:18px;color:#3a1c07;max-width:46ch;margin:0 auto 30px;font-weight:500}
+.cta .btn{background:#15171c;color:var(--white);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.cta .btn svg{stroke:var(--white)}
+.cta .btn:hover{background:#0c0d10}
+
+/* footer */
+footer{background:#0f1013;padding:52px 0 30px;border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px}
+.foot .brand b{font-size:19px}
+.foot p{color:var(--muted);font-size:14px;max-width:38ch;margin-top:12px}
+.foot .fcol h4{color:var(--white);font-size:14px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.foot .fcol a,.foot .fcol span{display:block;color:var(--muted);font-size:14.5px;margin-bottom:9px}
+.foot .fcol a:hover{color:var(--accent)}
+.legal{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);color:#6b7280;font-size:12.5px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* sticky mobile call */
+.sticky-call{display:none;position:fixed;left:0;right:0;bottom:0;z-index:130;background:var(--accent);color:#15171c;text-align:center;font-weight:700;font-size:16px;padding:15px;letter-spacing:.4px;box-shadow:0 -6px 20px rgba(0,0,0,.35)}
+.sticky-call svg{width:18px;height:18px;stroke:#15171c;fill:none;stroke-width:2.4;vertical-align:-3px;margin-right:7px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .nav-links a:not(.callnum){display:none}
+  .nav-links .callnum{display:inline-flex}
+  .why-grid,.visit-grid{grid-template-columns:1fr;gap:34px}
+  .gal{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .nav .btn{display:none}
+  .gal{grid-template-columns:1fr}
+  .sticky-call{display:block}
+  .hero{padding-bottom:96px}
+  .hero-meta{gap:20px}
+  footer{padding-bottom:84px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Northwood Auto Sales home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M4 13h16v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg>
+      </span>
+      <span><b>Northwood Auto Sales</b><span>Northwood, Ohio</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#gallery">Our Lot</a>
+      <a href="#visit">Visit</a>
+      <a class="btn callnum" href="tel:+14196982113" aria-label="Call Northwood Auto Sales at (419) 698-2113">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+        Call
+      </a>
+    </nav>
+    <a class="btn" href="tel:+14196982113" aria-label="Call Northwood Auto Sales at (419) 698-2113">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+      (419) 698-2113
+    </a>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A row of clean used cars and SUVs lined up on the Northwood Auto Sales lot at dusk"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow reveal">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 20l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg>
+      Family-run in Northwood, Ohio
+    </span>
+    <h1 class="reveal">Honest cars and honest <span class="accent">repairs</span>, right here in Northwood.</h1>
+    <p class="sub reveal">Dependable used vehicles, straight answers, and a shop that fixes what your car actually needs. No pressure, no runaround. Just the folks your neighbors already trust.</p>
+    <div class="hero-cta reveal">
+      <a class="btn" href="tel:+14196982113">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+        Call (419) 698-2113
+      </a>
+      <a class="btn ghost" href="#services">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        See what we do
+      </a>
+    </div>
+    <div class="hero-meta reveal">
+      <div class="stat"><b><span class="cu" data-to="4.3" data-dec="1">0</span></b><span>Google rating</span></div>
+      <div class="stat"><b><span class="cu" data-to="27">0</span></b><span>Local reviews</span></div>
+      <div class="stat"><b class="stars" aria-label="4.3 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</b><span>What drivers say</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services pad" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="kicker">What we do</div>
+      <h2>Sales and service under one roof</h2>
+      <p>Buying and keeping a car should be simple. We handle both, so you are not bouncing between a dealer and a shop that do not talk to each other.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M4 13h16v4H4z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></div>
+        <h3>Used Car Sales</h3>
+        <p>A rotating lot of inspected, road-ready vehicles priced to be fair. We tell you what we know about every car we sell.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L4 17l3 3 5.7-5.7a4 4 0 0 0 5-5l-2.6 2.6-2.1-.5-.5-2.1z"/></svg></div>
+        <h3>Repairs &amp; Maintenance</h3>
+        <p>Brakes, engines, suspension and the routine upkeep that keeps a car dependable. We fix what is needed, not what pads a bill.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3.5M12 17.5V21M3 12h3.5M17.5 12H21"/></svg></div>
+        <h3>Tires &amp; Alignment</h3>
+        <p>New and quality used tires, mounting, balancing and alignment so your car tracks straight and stops sure.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M4 20h16"/><path d="M8 9l2 2-2 2M12 13h4"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Check-engine light on? We read the codes, explain the cause in plain English, and quote the repair before we start.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why pad" id="why">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div>
+        <div class="head reveal" style="margin-bottom:20px">
+          <div class="kicker">Why Northwood drivers pick us</div>
+          <h2>Treated like a neighbor, not a number</h2>
+        </div>
+        <ul>
+          <li class="reveal"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><div><b>Straight pricing</b><span>You hear the cost before the wrench turns. No surprise line items.</span></div></li>
+          <li class="reveal"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><div><b>Sales and repair in one place</b><span>Buy a car and keep it running with the same team that knows it.</span></div></li>
+          <li class="reveal"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><div><b>Local and here to stay</b><span>Right on Woodville Road, serving Northwood and greater Toledo.</span></div></li>
+          <li class="reveal"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><div><b>Work explained plainly</b><span>We show you what we found and why it matters before you decide.</span></div></li>
+        </ul>
+      </div>
+      <div class="proof reveal">
+        <div class="big"><span class="cu" data-to="4.3" data-dec="1">0</span></div>
+        <div class="stars" aria-label="4.3 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Average Google rating from drivers around Northwood and Toledo.</p>
+        <div class="rev"><span class="cu" data-to="27">0</span> reviews<small>and counting</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery pad" id="gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="kicker">Around the shop</div>
+      <h2>Our lot and our bays</h2>
+      <p>Cars ready to drive home and a shop set up to keep them that way.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="A mechanic in coveralls inspecting a car engine under the hood in the service bay"><span class="cap">In the shop</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="A vehicle up on a lift getting routine service at Northwood Auto Sales"><span class="cap">Service &amp; maintenance</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="A row of clean used SUVs and cars parked and ready for sale on the lot"><span class="cap">Ready to drive home</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit pad" id="visit">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="kicker">Stop by</div>
+      <h2>Find us on Woodville Road</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="info">
+        <div class="row reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><b>Address</b><span>3501 Woodville Rd, Northwood, OH 43619</span></div>
+        </div>
+        <div class="row reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></div>
+          <div><b>Phone</b><span><a href="tel:+14196982113">(419) 698-2113</a></span></div>
+        </div>
+        <div class="row reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><b>Best time to reach us</b><span>Call during shop hours and you will get a person, not a menu.</span></div>
+        </div>
+      </div>
+      <div class="hours reveal">
+        <h3>Shop Hours</h3>
+        <div class="hr"><span>Monday</span><span>8:00 AM &#8211; 6:00 PM</span></div>
+        <div class="hr"><span>Tuesday</span><span>8:00 AM &#8211; 6:00 PM</span></div>
+        <div class="hr"><span>Wednesday</span><span>8:00 AM &#8211; 6:00 PM</span></div>
+        <div class="hr"><span>Thursday</span><span>8:00 AM &#8211; 6:00 PM</span></div>
+        <div class="hr"><span>Friday</span><span>8:00 AM &#8211; 6:00 PM</span></div>
+        <div class="hr"><span>Saturday</span><span>9:00 AM &#8211; 2:00 PM</span></div>
+        <div class="hr closed"><span>Sunday</span><span>Closed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="reveal">Ready when you are</h2>
+    <p class="reveal">Looking for your next car or need a repair you can trust? Give Northwood Auto Sales a call and talk to a real person.</p>
+    <a class="btn reveal" href="tel:+14196982113">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+      Call (419) 698-2113
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M4 13h16v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></span>
+          <span><b>Northwood Auto Sales</b><span>Northwood, Ohio</span></span>
+        </div>
+        <p>Used cars and honest repairs for Northwood and greater Toledo.</p>
+      </div>
+      <div class="fcol">
+        <h4>Services</h4>
+        <a href="#services">Used Car Sales</a>
+        <a href="#services">Repairs &amp; Maintenance</a>
+        <a href="#services">Tires &amp; Alignment</a>
+        <a href="#services">Diagnostics</a>
+      </div>
+      <div class="fcol">
+        <h4>Visit</h4>
+        <span>3501 Woodville Rd</span>
+        <span>Northwood, OH 43619</span>
+        <a href="tel:+14196982113">(419) 698-2113</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&#169; <span id="yr">2026</span> Northwood Auto Sales. All rights reserved.</span>
+      <span>Site by Elements Studio</span>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14196982113" aria-label="Call Northwood Auto Sales">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+  Call (419) 698-2113
+</a>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    hdr.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target,sibs=Array.prototype.slice.call(el.parentNode.children).filter(function(n){return n.classList.contains('reveal')});
+        var i=sibs.indexOf(el);setTimeout(function(){el.classList.add('in')},Math.max(0,i)*75);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  function countUp(el){
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0',10),start=null,dur=1400;
+    function step(ts){
+      if(!start)start=ts;var p=Math.min((ts-start)/dur,1),e=1-Math.pow(1-p,3),v=to*e;
+      el.textContent=dec?v.toFixed(dec):Math.round(v);
+      if(p<1)requestAnimationFrame(step);else el.textContent=dec?to.toFixed(dec):to;
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});
+  },{threshold:.5});
+  document.querySelectorAll('.cu').forEach(function(el){cio.observe(el)});
+})();
+</script>
+</body>
+</html>
