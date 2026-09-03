@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presidential Automotive | Auto Repair in Toledo, OH</title>
+<meta name="description" content="Presidential Automotive in Toledo, OH. Straight answers and repairs that hold up. Rated 4.8 stars across 49 reviews. Call (419) 297-9212.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14110D; --bg2:#1C1813; --panel:#221D16; --ink:#EDE6D6; --muted:#B7AC97;
+  --brass:#C79A3B; --brassdk:#A67C24; --line:rgba(199,154,59,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.62;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Playfair Display',Georgia,serif;line-height:1.1;letter-spacing:0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--brass);color:#1a1509;font-weight:700;padding:15px 27px;border-radius:6px;font-size:17px;box-shadow:0 8px 24px rgba(199,154,59,.26);transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .2s;min-height:52px}
+.btn:hover{transform:translateY(-3px) scale(1.03);background:#D9AE4E}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass)}
+.icn{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left;z-index:60}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(20,17,13,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 6px 26px rgba(0,0,0,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{font-family:'Playfair Display';font-weight:800;font-size:21px;display:flex;align-items:center;gap:12px}
+.crest{width:30px;height:30px;flex:none}
+.brand small{display:block;font-family:'Inter';font-weight:500;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.nav .btn{padding:11px 20px;font-size:15px;min-height:44px}
+.navlinks{display:flex;gap:28px;align-items:center;font-weight:600;font-size:15px}
+.navlinks a{color:var(--muted)}.navlinks a:hover{color:var(--brass)}
+@media(max-width:820px){.navlinks{display:none}}
+
+header{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/8478259/pexels-photo-8478259.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#14110d,#2a2115);background-size:cover;background-position:center;animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.06)}to{transform:scale(1.17) translateY(-16px)}}
+.scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,12,9,.9) 0%,rgba(15,12,9,.72) 44%,rgba(15,12,9,.5) 100%);z-index:1}
+.hero-in{position:relative;z-index:2;padding:108px 0 122px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);color:var(--brass);padding:8px 16px;border-radius:100px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:24px}
+.hero-in h1{font-size:clamp(2.6rem,6.2vw,4.6rem);font-weight:800;max-width:15ch;color:#fff}
+.hero-in p{font-size:1.2rem;max-width:44ch;margin:22px 0 34px;color:rgba(237,230,214,.86)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.trust{display:flex;gap:30px;margin-top:44px;flex-wrap:wrap}
+.trust div{display:flex;flex-direction:column}
+.trust b{font-family:'Playfair Display';font-size:2rem;font-weight:700;line-height:1;color:var(--brass)}
+.trust span{font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:rgba(237,230,214,.7);margin-top:7px}
+.stars{color:var(--brass);letter-spacing:2px}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+section{padding:90px 0}
+.kicker{font-weight:700;color:var(--brass);text-transform:uppercase;letter-spacing:.18em;font-size:12.5px;margin-bottom:14px}
+.sec-head{max-width:60ch}
+.sec-head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:700;color:#fff}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:1.08rem}
+.rule{width:64px;height:3px;background:var(--brass);margin:16px 0 0;border-radius:2px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:32px 28px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(0,0,0,.5);border-color:var(--brass)}
+.badge{width:54px;height:54px;border-radius:10px;background:rgba(199,154,59,.14);color:var(--brass);display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:1px solid var(--line)}
+.badge .icn{width:26px;height:26px}
+.card h3{font-size:1.28rem;font-weight:700;margin-bottom:10px;color:#fff}
+.card p{color:var(--muted);font-size:.99rem}
+
+.why{background:var(--bg2);position:relative;overflow:hidden}
+.why .motif{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(199,154,59,.09) 0 2px,transparent 2px 26px);z-index:0;-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent);mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent)}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+@media(max-width:860px){.why-grid{grid-template-columns:1fr;gap:36px}}
+.stat-row{display:flex;gap:44px;flex-wrap:wrap}
+.stat b{font-family:'Playfair Display';font-size:3rem;font-weight:800;color:var(--brass);line-height:1;display:block}
+.stat span{color:var(--muted);font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;margin-top:9px;display:block}
+.checks{list-style:none;margin-top:28px;display:grid;gap:15px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.checks .icn{color:var(--brass);margin-top:3px}
+
+.gwrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+@media(max-width:860px){.gwrap{grid-template-columns:1fr}}
+.ph{position:relative;height:280px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;border:1px solid var(--line)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(10,8,5,.66))}
+.ph1{background-image:url('https://images.pexels.com/photos/4489758/pexels-photo-4489758.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2a2115,#3a2f1c)}
+.ph2{background-image:url('https://images.pexels.com/photos/35828170/pexels-photo-35828170.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#22303a,#161f27)}
+.ph3{background-image:url('https://images.pexels.com/photos/8986105/pexels-photo-8986105.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2a2115,#3a2f1c)}
+.cap{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:600;font-size:.95rem;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+@media(max-width:860px){.loc-grid{grid-template-columns:1fr;gap:28px}}
+.info li{list-style:none;display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
+.info .icn{color:var(--brass);margin-top:2px}
+.info b{display:block;font-family:'Playfair Display';font-weight:600;color:#fff}
+.info span{color:var(--muted);font-size:.98rem}
+.hours{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px}
+.hours h3{font-size:1.2rem;margin-bottom:16px;color:#fff}
+.hours .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+.hours .row:last-child{border:0}
+.hours .row span:first-child{color:var(--muted)}
+
+.final{background:linear-gradient(180deg,var(--bg2),var(--bg));text-align:center;border-top:1px solid var(--line)}
+.final h2{font-size:clamp(2.1rem,5vw,3.3rem);font-weight:800;color:#fff;max-width:18ch;margin:0 auto}
+.final p{color:var(--muted);margin:18px auto 32px;max-width:46ch}
+
+footer{background:#0F0C09;color:var(--muted);padding:38px 0;font-size:.9rem;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;background:var(--brass);color:#1a1509;text-align:center;padding:15px;font-weight:700;box-shadow:0 -4px 18px rgba(0,0,0,.4)}
+@media(max-width:820px){.sticky-call{display:block}body{padding-bottom:56px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav id="nav"><div class="wrap nav">
+  <a class="brand" href="#top">
+    <svg class="crest" viewBox="0 0 24 24" fill="none" stroke="#C79A3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V5z"/><path d="M9 12l2 2 4-4"/></svg>
+    <span>Presidential<small>Automotive &middot; Toledo</small></span>
+  </a>
+  <div class="navlinks"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">The Shop</a><a href="#visit">Visit</a></div>
+  <a class="btn" href="tel:+14192979212"><svg class="icn" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+</div></nav>
+
+<header id="top">
+  <div class="hero-bg" role="img" aria-label="Mechanic inspecting a car engine in the Presidential Automotive service bay in Toledo"></div>
+  <div class="scrim"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">Trusted auto repair in Toledo, OH</span>
+    <h1>Straight answers and repairs that hold up.</h1>
+    <p>Presidential Automotive treats your car and your time with respect. Clear estimates, careful work, and no upsell.</p>
+    <div class="cta-row">
+      <a class="btn" href="tel:+14192979212"><svg class="icn" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 297-9212</a>
+      <a class="btn ghost" href="#services">Our services</a>
+    </div>
+    <div class="trust">
+      <div><b><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></b><span><span data-count="4.8" data-dec="1">0</span> average rating</span></div>
+      <div><b><span data-count="49">0</span></b><span>Google reviews</span></div>
+      <div><b>Bennett Rd</b><span>North Toledo</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="kicker">What we handle</div>
+      <h2>Full-service repair, done with care</h2>
+      <div class="rule"></div>
+      <p>Bring the noise, the light, or the leak. You get a real diagnosis and a clear price before we start.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv"><div class="badge"><svg class="icn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h3>Engine diagnostics</h3><p>We trace the warning light to its cause and tell you exactly what it means.</p></div>
+      <div class="card rv"><div class="badge"><svg class="icn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h3>Brake service</h3><p>Pads, rotors, and lines inspected and replaced so your stops feel solid.</p></div>
+      <div class="card rv"><div class="badge"><svg class="icn" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div><h3>Oil and maintenance</h3><p>Oil, filters, and fluids on schedule to keep small issues from growing.</p></div>
+      <div class="card rv"><div class="badge"><svg class="icn" viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 14 0"/><path d="M12 12l3-3"/><path d="M2 19h20"/></svg></div><h3>Suspension and alignment</h3><p>Struts, shocks, and steering set right so the car tracks straight.</p></div>
+      <div class="card rv"><div class="badge"><svg class="icn" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"/><path d="M7 7V5h10v2M7 12h.01M17 12h.01"/></svg></div><h3>Electrical and batteries</h3><p>Starting trouble and dead batteries traced down and repaired.</p></div>
+      <div class="card rv"><div class="badge"><svg class="icn" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Inspections</h3><p>A thorough look before you buy a used car or head out on a long trip.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="motif"></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="rv">
+        <div class="kicker">Why drivers pick Presidential</div>
+        <h2 style="font-family:'Playfair Display';font-size:clamp(2rem,4vw,2.9rem);font-weight:700;color:#fff">Respect for your car and your wallet</h2>
+        <div class="rule"></div>
+        <p style="color:var(--muted);margin-top:16px">We tell you what the car needs now and what can wait. The price you hear is the price you pay.</p>
+        <ul class="checks">
+          <li><svg class="icn" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A clear written estimate before any work</li>
+          <li><svg class="icn" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Repairs stand behind a warranty</li>
+          <li><svg class="icn" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>No upsell, no surprises on the bill</li>
+          <li><svg class="icn" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Local shop that stands by its work</li>
+        </ul>
+      </div>
+      <div class="rv">
+        <div class="stat-row">
+          <div class="stat"><b><span data-count="4.8" data-dec="1">0</span></b><span>Average Google rating</span></div>
+          <div class="stat"><b><span data-count="49">0</span></b><span>Customer reviews</span></div>
+        </div>
+        <a class="btn" style="margin-top:34px" href="tel:+14192979212"><svg class="icn" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Talk to Presidential</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="kicker">Inside the shop</div><h2>Where the work gets done</h2><div class="rule"></div></div>
+    <div class="gwrap">
+      <div class="ph ph1 rv" role="img" aria-label="Mechanic working under the hood of a car at Presidential Automotive"><span class="cap">Under the hood</span></div>
+      <div class="ph ph2 rv" role="img" aria-label="Car raised on the service lift during a repair"><span class="cap">On the lift</span></div>
+      <div class="ph ph3 rv" role="img" aria-label="Technician inspecting a vehicle in the Toledo service bay"><span class="cap">Careful inspection</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="why" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="kicker">Find us</div><h2>Come by or call ahead</h2><div class="rule"></div></div>
+    <div class="loc-grid" style="margin-top:42px">
+      <ul class="info rv">
+        <li><svg class="icn" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Address</b><span>4409 Bennett Rd, Toledo, OH 43612</span></span></li>
+        <li><svg class="icn" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span><b>Phone</b><span>(419) 297-9212</span></span></li>
+        <li><svg class="icn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Best for</b><span>Drop-offs welcome, call ahead for same-day</span></span></li>
+      </ul>
+      <div class="hours rv">
+        <h3>Shop hours</h3>
+        <div class="row"><span>Mon &ndash; Fri</span><span>8:00a &ndash; 5:30p</span></div>
+        <div class="row"><span>Saturday</span><span>By appointment</span></div>
+        <div class="row"><span>Sunday</span><span>Closed</span></div>
+        <a class="btn" style="margin-top:18px;width:100%;justify-content:center" href="tel:+14192979212">Call to book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="rv">Something not right with the car?</h2>
+    <p class="rv">Call Presidential Automotive for an honest look and a fair price.</p>
+    <a class="btn rv" href="tel:+14192979212"><svg class="icn" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 297-9212</a>
+  </div>
+</section>
+
+<footer><div class="wrap foot">
+  <div><strong style="color:#fff;font-family:'Playfair Display'">Presidential Automotive</strong> &middot; 4409 Bennett Rd, Toledo, OH 43612</div>
+  <div>(419) 297-9212 &middot; Rated 4.8 across 49 reviews</div>
+</div></footer>
+
+<a class="sticky-call" href="tel:+14192979212">&#9742; Call Presidential &middot; (419) 297-9212</a>
+
+<script>
+const bar=document.getElementById('bar'),nav=document.getElementById('nav');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  bar.style.transform='scaleX('+p+')';
+  nav.classList.toggle('scrolled',h.scrollTop>10);
+},{passive:true});
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(i%4)*70);io.unobserve(e.target);}});},{threshold:.16});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+function countUp(el){const t=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||'0');let s=null;const d=1300;
+  function step(ts){if(!s)s=ts;const p=Math.min((ts-s)/d,1);const e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=t.toFixed(dec);}
+  requestAnimationFrame(step);}
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
