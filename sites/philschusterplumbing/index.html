@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phil Schuster Plumbing | Toledo, OH</title>
+<meta name="description" content="Phil Schuster Plumbing in Toledo, Ohio. Drain, water heater, fixture and repair work done by a local plumber who answers the phone. Call (419) 476-8088.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0e3746;
+  --water:#12546c;
+  --sky:#2b8fb0;
+  --copper:#c0693a;
+  --copper-dk:#a4552c;
+  --cool:#eef4f6;
+  --cool-2:#e0eaee;
+  --ink:#0d2530;
+  --muted:#587380;
+  --white:#fff;
+  --radius:14px;
+  --shadow:0 20px 46px rgba(13,37,48,.22);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Barlow Condensed',sans-serif;line-height:1;text-transform:uppercase;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+section{padding:clamp(60px,8.5vw,116px) 0;position:relative}
+
+.progress{position:fixed;top:0;left:0;height:4px;width:100%;z-index:120}
+.progress span{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--copper),var(--sky));transform:scaleX(0);transform-origin:left;transition:transform .05s linear}
+
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;padding:18px 0;transition:all .3s var(--ease)}
+.nav.scrolled{background:rgba(14,55,70,.95);backdrop-filter:blur(10px);box-shadow:0 8px 28px rgba(13,37,48,.3);padding:11px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.brand .mark{width:40px;height:40px;border-radius:10px;background:var(--copper);display:grid;place-items:center;flex:none;box-shadow:0 6px 16px rgba(192,105,58,.5)}
+.brand .mark svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:2}
+.brand .txt b{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase;display:block;line-height:.95}
+.brand .txt small{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;opacity:.85;font-weight:600}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--copper);color:#fff;font-weight:700;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;letter-spacing:.03em;text-transform:uppercase;padding:11px 20px;border-radius:8px;transition:transform .3s var(--spring),box-shadow .3s var(--ease)}
+.nav-cta:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 24px rgba(192,105,58,.5)}
+.nav-cta svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;isolation:isolate;padding-top:110px}
+.hero-bg{position:absolute;inset:0;z-index:-2;background-image:url('https://images.pexels.com/photos/8581897/pexels-photo-8581897.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#0e3746,#12546c);background-size:cover;background-position:center;animation:ken 24s ease-in-out infinite alternate}
+@keyframes ken{from{transform:scale(1.07)}to{transform:scale(1.17)}}
+.hero-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,rgba(9,31,40,.86) 0%,rgba(9,31,40,.6) 52%,rgba(9,31,40,.32) 100%)}
+.hero-inner{color:#fff;max-width:740px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);padding:7px 15px;border-radius:6px;font-weight:600;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--copper)}
+.hero h1{font-size:clamp(2.9rem,8vw,6rem);font-weight:700;margin-bottom:20px;text-shadow:0 3px 26px rgba(0,0,0,.4)}
+.hero h1 .accent{color:#e79a63}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);max-width:560px;margin-bottom:32px;color:rgba(255,255,255,.9);text-transform:none;font-family:'IBM Plex Sans',sans-serif;line-height:1.6}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.03em;border-radius:9px;padding:15px 30px;font-size:1.18rem;cursor:pointer;border:none;transition:transform .3s var(--spring),box-shadow .3s var(--ease)}
+.btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:2}
+.btn-primary{background:var(--copper);color:#fff;box-shadow:0 14px 30px rgba(192,105,58,.5)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 20px 40px rgba(192,105,58,.6)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.16)}
+.hero-badge{position:absolute;right:6vw;bottom:9vh;background:rgba(255,255,255,.96);color:var(--ink);border-radius:var(--radius);padding:16px 22px;box-shadow:var(--shadow);z-index:1;text-align:center}
+.hero-badge .stars{color:var(--copper);font-size:1.1rem;letter-spacing:2px}
+.hero-badge b{font-family:'Barlow Condensed',sans-serif;font-size:2rem;display:block;line-height:1}
+.hero-badge small{color:var(--muted);font-weight:600}
+@media(max-width:720px){.hero-badge{display:none}}
+
+.trust{background:var(--deep);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center}
+.trust .stat b{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,4.4vw,3rem);display:block;color:#e79a63;line-height:1;font-weight:700}
+.trust .stat span{font-weight:500;font-size:.86rem;color:rgba(255,255,255,.8);display:block;margin-top:8px}
+@media(max-width:640px){.trust .wrap{grid-template-columns:repeat(2,1fr);gap:30px 18px}}
+
+.head{max-width:640px;margin-bottom:50px}
+.head .kicker{color:var(--copper);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.8rem;margin-bottom:12px;display:block}
+.head h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700;color:var(--deep)}
+.head p{margin-top:14px;color:var(--muted);font-size:1.08rem}
+
+.services{background:var(--cool);position:relative;overflow:hidden}
+.pipes{position:absolute;inset:0;z-index:0;opacity:.5;background:
+  repeating-linear-gradient(90deg, transparent 0 58px, rgba(43,143,176,.12) 58px 62px);
+  pointer-events:none}
+.services .wrap{position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:var(--white);border-radius:var(--radius);padding:30px 26px;box-shadow:0 10px 28px rgba(13,37,48,.09);border:1px solid rgba(13,37,48,.06);border-top:3px solid var(--copper);transition:transform .35s var(--spring),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.card .ico{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--water),var(--sky));display:grid;place-items:center;margin-bottom:18px}
+.card .ico svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2}
+.card h3{font-size:1.5rem;color:var(--deep);margin-bottom:8px;font-weight:700}
+.card p{color:var(--muted)}
+
+.gallery .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.gallery .gal-grid{grid-template-columns:1fr 1fr}.gallery .gal-item:first-child{grid-column:1/-1}}
+@media(max-width:520px){.gallery .gal-grid{grid-template-columns:1fr}}
+.gal-item{border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 30px rgba(13,37,48,.16)}
+.gal-item:first-child{grid-row:span 2}
+.gal-item .ph{width:100%;height:100%;min-height:230px;background-size:cover;background-position:center;transition:transform .8s var(--ease)}
+.gal-item:first-child .ph{min-height:476px}
+.gal-item:hover .ph{transform:scale(1.07)}
+.ph.g1{background-image:url('https://images.pexels.com/photos/8486978/pexels-photo-8486978.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#12546c,#0e3746)}
+.ph.g2{background-image:url('https://images.pexels.com/photos/34593293/pexels-photo-34593293.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2b8fb0,#12546c)}
+.ph.g3{background-image:url('https://images.pexels.com/photos/36215888/pexels-photo-36215888.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#c0693a,#a4552c)}
+
+.why{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.wavemotif{position:absolute;left:0;right:0;bottom:0;height:220px;z-index:0;opacity:.16}
+.wavemotif svg{width:100%;height:100%;stroke:var(--sky);fill:none;stroke-width:2}
+.why .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+@media(max-width:840px){.why .wrap{grid-template-columns:1fr;gap:32px}}
+.why h2{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;margin-bottom:16px}
+.why h2 .accent{color:#e79a63}
+.why p{color:rgba(255,255,255,.85);margin-bottom:14px;font-size:1.06rem}
+.checks{list-style:none;display:grid;gap:15px;margin-top:6px}
+.checks li{display:flex;gap:14px;align-items:flex-start}
+.checks .tick{flex:none;width:30px;height:30px;border-radius:8px;background:rgba(231,154,99,.2);display:grid;place-items:center;margin-top:2px}
+.checks .tick svg{width:17px;height:17px;stroke:#e79a63;stroke-width:2.5;fill:none}
+.checks b{font-family:'Barlow Condensed',sans-serif;font-size:1.24rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.checks span{display:block;color:rgba(255,255,255,.76);font-size:.95rem}
+
+.cta{background:var(--white);text-align:center}
+.cta-card{background:linear-gradient(135deg,var(--water),var(--deep));color:#fff;border-radius:22px;padding:clamp(44px,7vw,74px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 40px,rgba(255,255,255,.05) 40px 44px);pointer-events:none}
+.cta-card h2{font-size:clamp(2.3rem,5.2vw,3.6rem);font-weight:700;margin-bottom:14px;position:relative}
+.cta-card p{max-width:520px;margin:0 auto 28px;font-size:1.12rem;color:rgba(255,255,255,.9);position:relative}
+.cta-card .btn-primary{background:#fff;color:var(--copper-dk);position:relative}
+.cta-phone{margin-top:18px;font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:700;position:relative}
+
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:52px 0 32px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+@media(max-width:700px){footer .wrap{grid-template-columns:1fr;gap:22px}}
+footer h4{font-family:'Barlow Condensed',sans-serif;color:#fff;margin-bottom:12px;font-size:1.3rem;text-transform:uppercase;letter-spacing:.03em}
+footer a:hover{color:#e79a63}
+footer .row{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px}
+footer .row svg{width:17px;height:17px;stroke:#e79a63;flex:none;margin-top:3px;fill:none;stroke-width:2}
+.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:22px;font-size:.84rem;text-align:center;color:rgba(255,255,255,.5)}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--copper);color:#fff;display:none;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:700;font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;text-transform:uppercase;letter-spacing:.03em;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+.sticky-call svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:2}
+@media(max-width:720px){.sticky-call{display:flex}body{padding-bottom:58px}}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="progress"><span id="bar"></span></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h6V4"/><path d="M10 10l7-7 4 4-7 7"/><path d="M14 14l-4 4a3 3 0 0 1-4 0 3 3 0 0 1 0-4l4-4"/></svg></span>
+      <span class="txt"><b>Phil Schuster</b><small>Plumbing &middot; Toledo</small></span>
+    </a>
+    <a class="nav-cta" href="tel:+14194768088"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 11.5a16 16 0 0 0 6 6l1.1-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>(419) 476-8088</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="Copper water supply pipes running along a wall in a Toledo home"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow"><span class="dot"></span>Toledo, Ohio</span>
+    <h1>When it leaks, <span class="accent">Phil picks up.</span></h1>
+    <p class="lead">A local Toledo plumber for drains, water heaters, fixtures and the repairs you would rather not think about. You call the number, you get Phil, not a call center.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+14194768088"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 11.5a16 16 0 0 0 6 6l1.1-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>Call (419) 476-8088</a>
+      <a class="btn btn-ghost" href="#services">What we fix</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <b data-count="4.5" data-dec="1">4.5</b>
+    <small>19 Google reviews</small>
+  </div>
+</header>
+
+<section class="trust" aria-label="At a glance">
+  <div class="wrap">
+    <div class="stat reveal"><b data-count="4.5" data-dec="1">4.5</b><span>Google rating</span></div>
+    <div class="stat reveal"><b data-count="19">19</b><span>Customer reviews</span></div>
+    <div class="stat reveal"><b>Local</b><span>Toledo plumber</span></div>
+    <div class="stat reveal"><b>Direct</b><span>You reach Phil</span></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="pipes" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">What we fix</span>
+      <h2>Plumbing done right the first time.</h2>
+      <p>Straightforward residential plumbing across Toledo. Tell Phil what is going on and you get a clear answer, not a runaround.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a6 6 0 0 0 12 0V3"/><path d="M12 15v6"/><path d="M9 21h6"/></svg></div>
+        <h3>Drain cleaning</h3>
+        <p>Slow sinks, backed-up tubs and clogged main lines cleared out so the water goes where it should.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 7h4"/><path d="M12 12v4"/></svg></div>
+        <h3>Water heaters</h3>
+        <p>No hot water? Repairs and full replacements for tank and tankless units, sized to your home.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h4v4"/><path d="M4 20l11-11"/><path d="M9 4H5a1 1 0 0 0-1 1v4"/></svg></div>
+        <h3>Leak repair</h3>
+        <p>Dripping fittings and hidden leaks found and fixed before they turn into water damage.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8"/><path d="M12 4v8"/><path d="M6 12h12l-1 8H7Z"/></svg></div>
+        <h3>Faucets &amp; fixtures</h3>
+        <p>New faucets, toilets, sinks and shower valves installed clean and running the way they should.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg></div>
+        <h3>Repipe &amp; supply lines</h3>
+        <p>Old or failing supply lines swapped out, so you stop patching the same problem twice.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.9 4.9l2.8 2.8"/><path d="M16.3 16.3l2.8 2.8"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Everyday repairs</h3>
+        <p>Running toilets, low pressure and the small jobs most shops do not want to bother with.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" aria-label="Recent work">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">On the job</span>
+      <h2>Clean work, done and gone.</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item reveal"><div class="ph g1" role="img" aria-label="A plumber tightening a connection under a sink during a repair"></div></div>
+      <div class="gal-item reveal"><div class="ph g2" role="img" aria-label="A residential water heater installed and connected in a utility space"></div></div>
+      <div class="gal-item reveal"><div class="ph g3" role="img" aria-label="A newly installed chrome faucet running clear water"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" aria-label="Why Phil Schuster">
+  <div class="wavemotif" aria-hidden="true"><svg viewBox="0 0 400 120" preserveAspectRatio="none"><path d="M0 60 Q50 20 100 60 T200 60 T300 60 T400 60"/><path d="M0 90 Q50 50 100 90 T200 90 T300 90 T400 90"/></svg></div>
+  <div class="wrap">
+    <div>
+      <h2>A plumber who <span class="accent">answers the phone.</span></h2>
+      <p>The worst part of a plumbing problem is often the wait: the call center, the four-hour window, the tech who has never seen your house. With Phil Schuster you talk to the person who does the work.</p>
+      <p>That means honest pricing up front, an actual time, and a clean job site when it is done.</p>
+    </div>
+    <ul class="checks">
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>You reach Phil</b><span>One number, one plumber, no phone tree.</span></div></li>
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>4.5 stars, 19 reviews</b><span>Rated by real Toledo customers on Google.</span></div></li>
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Clear pricing</b><span>You hear the cost before the work starts.</span></div></li>
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Tidy work</b><span>The mess leaves with the plumber.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <h2>Got a plumbing problem?</h2>
+      <p>Call Phil Schuster Plumbing and describe what is going on. You will get a straight answer and a real time.</p>
+      <a class="btn btn-primary" href="tel:+14194768088"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 11.5a16 16 0 0 0 6 6l1.1-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>Call (419) 476-8088</a>
+      <div class="cta-phone">(419) 476-8088</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Phil Schuster Plumbing</h4>
+      <p>Residential plumbing repair, drains, water heaters and fixtures for Toledo and the surrounding area.</p>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <div class="row"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>5104 Homeside Ave,<br>Toledo, OH 43612</span></div>
+    </div>
+    <div>
+      <h4>Call</h4>
+      <div class="row"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 11.5a16 16 0 0 0 6 6l1.1-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:+14194768088">(419) 476-8088</a></div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2026 Phil Schuster Plumbing. Site by Elements Studio.</p>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14194768088"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 11.5a16 16 0 0 0 6 6l1.1-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>Call (419) 476-8088</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+  function onScroll(){
+    if(scrollY>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+    var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+    bar.style.transform='scaleX('+(max>0?scrollY/max:0)+')';
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4*70)+'ms';io.observe(el);});
+
+  function countUp(el){
+    var end=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||'0'),start=null,dur=1400;
+    function step(t){if(!start)start=t;var p=Math.min((t-start)/dur,1);var e=1-Math.pow(1-p,3);
+      var v=end*e;el.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString();
+      if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>
