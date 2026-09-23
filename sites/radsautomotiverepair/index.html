@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rads Automotive Repair | Precision Auto Repair in Toledo, OH</title>
+<meta name="description" content="Rads Automotive Repair on Hess Rd in Toledo. Diagnostics, brakes, and engine work done right by techs who know your car. Call to book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#111315; --panel:#181B1E; --panel-2:#1F2429; --ink:#F2F4F3; --muted:#9AA3A6;
+  --lime:#C8FF00; --lime-dim:#A9D900; --line:#2A2F33; --steel:#3A4147;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Chakra Petch',system-ui,sans-serif;line-height:1.05;letter-spacing:-.01em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.lime{color:var(--lime)}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:left;z-index:120}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(17,19,21,.86);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Chakra Petch';font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.02em}
+.mark{width:36px;height:36px;background:var(--lime);display:grid;place-items:center;color:#0d0f10;flex:none;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
+.nav-links{display:flex;gap:30px;align-items:center;font-weight:500;font-size:15px}
+.nav-links a.n{color:var(--muted);transition:color .2s}
+.nav-links a.n:hover{color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Chakra Petch';font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.03em;padding:13px 22px;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .2s;border:0;clip-path:polygon(0 0,100% 0,100% 70%,88% 100%,0 100%)}
+.btn-primary{background:var(--lime);color:#0d0f10}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,255,0,.28)}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--steel);clip-path:none}
+.btn-outline:hover{border-color:var(--lime);color:var(--lime);transform:translateY(-2px)}
+.nav-links .btn{padding:11px 18px}
+
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/6720507/pexels-photo-6720507.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#1a1e21,#0d0f10);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 26s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.06)}to{transform:scale(1.15)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,15,16,.94) 0%,rgba(13,15,16,.78) 42%,rgba(13,15,16,.5) 100%);z-index:1}
+.hero-streak{position:absolute;inset:0;z-index:1;opacity:.5;background-image:repeating-linear-gradient(115deg,rgba(200,255,0,.14) 0,rgba(200,255,0,.14) 2px,transparent 2px,transparent 46px)}
+.hero-in{position:relative;z-index:2;padding:64px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Chakra Petch';font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:22px}
+.eyebrow .bars{display:inline-flex;gap:3px}
+.eyebrow .bars i{width:4px;height:14px;background:var(--lime);display:block;opacity:.85}
+.hero h1{font-size:clamp(2.5rem,6.5vw,4.6rem);font-weight:700;max-width:15ch;margin-bottom:22px}
+.hero p.sub{font-family:'Inter';font-size:clamp(1.05rem,2vw,1.3rem);max-width:50ch;color:#D2D8D6;margin-bottom:34px;line-height:1.6}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-note{display:flex;align-items:center;gap:9px;font-size:14px;color:#C3CBC9;margin-top:24px;font-weight:500}
+.stars{color:var(--lime);letter-spacing:2px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+.ticker{background:var(--lime);color:#0d0f10;font-family:'Chakra Petch';font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:14px}
+.ticker .row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;padding:16px 24px}
+.ticker span{display:inline-flex;align-items:center;gap:9px}
+.ticker svg{opacity:.7}
+
+section.pad{padding:96px 0}
+.head{max-width:60ch;margin-bottom:54px}
+.kick{font-family:'Chakra Petch';font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+h2.title{font-size:clamp(2rem,4.4vw,3rem);font-weight:700;margin-bottom:16px}
+.lead{color:var(--muted);font-size:1.08rem}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:8px}
+.stat{background:var(--panel);border:1px solid var(--line);padding:30px 26px;clip-path:polygon(0 0,100% 0,100% 84%,90% 100%,0 100%)}
+.stat .n{font-family:'Chakra Petch';font-weight:700;font-size:clamp(2rem,4.5vw,2.9rem);color:var(--lime)}
+.stat .l{color:var(--muted);font-size:14px;margin-top:5px;text-transform:uppercase;letter-spacing:.05em}
+
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);padding:32px 28px;position:relative;transition:transform .3s cubic-bezier(.34,1.56,.64,1),border-color .3s;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime);transform:scaleY(0);transform-origin:top;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.card:hover{transform:translateY(-6px);border-color:var(--steel)}
+.card:hover::before{transform:scaleY(1)}
+.ic{width:52px;height:52px;background:var(--panel-2);border:1px solid var(--line);display:grid;place-items:center;color:var(--lime);margin-bottom:20px}
+.card h3{font-size:1.2rem;font-weight:600;margin-bottom:9px}
+.card p{color:var(--muted);font-size:.97rem;font-family:'Inter'}
+
+.split{position:relative;background:var(--panel);overflow:hidden}
+.split .motif{position:absolute;inset:0;opacity:.05;z-index:0;background-image:repeating-linear-gradient(115deg,var(--lime) 0,var(--lime) 3px,transparent 3px,transparent 40px)}
+.split .wrap{position:relative;z-index:1}
+.split-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.split-photo{min-height:440px;background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#1F2429,#0d0f10);background-size:cover;background-position:center;border:1px solid var(--line);clip-path:polygon(0 0,100% 0,100% 100%,7% 100%)}
+.ptlist{list-style:none;display:grid;gap:24px;margin-top:6px}
+.ptlist li{display:flex;gap:16px;align-items:flex-start}
+.chk{width:30px;height:30px;background:var(--lime);color:#0d0f10;display:grid;place-items:center;flex:none;margin-top:2px;clip-path:polygon(0 0,100% 0,100% 74%,74% 100%,0 100%)}
+.ptlist h3{font-size:1.1rem;font-weight:600;margin-bottom:3px;font-family:'Chakra Petch';text-transform:none}
+.ptlist p{color:var(--muted);font-size:.96rem;font-family:'Inter'}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ph{min-height:280px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.ph:hover{transform:translateY(-5px)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,15,16,.6))}
+.ph1{background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#1F2429,#0d0f10)}
+.ph2{background-image:url('https://images.pexels.com/photos/4488644/pexels-photo-4488644.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#181B1E,#0d0f10)}
+.ph3{background-image:url('https://images.pexels.com/photos/6870331/pexels-photo-6870331.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#1F2429,#0d0f10)}
+
+.cta{position:relative;background:var(--panel-2);border:1px solid var(--line);padding:66px 48px;text-align:center;overflow:hidden}
+.cta .motif2{position:absolute;inset:0;opacity:.08;background-image:repeating-linear-gradient(115deg,var(--lime) 0,var(--lime) 3px,transparent 3px,transparent 34px)}
+.cta-in{position:relative;z-index:1}
+.cta h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:700;margin-bottom:14px}
+.cta p{color:var(--muted);max-width:48ch;margin:0 auto 28px;font-size:1.08rem;font-family:'Inter'}
+.phone-big{font-family:'Chakra Petch';font-weight:700;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--lime);display:inline-flex;align-items:center;gap:13px;margin-top:8px}
+
+footer{background:#0c0e0f;color:#8A9295;padding:56px 0 30px;font-size:14.5px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:34px}
+footer .brand-f{color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:12px;font-family:'Chakra Petch';font-weight:700;font-size:19px;text-transform:uppercase}
+footer a:hover{color:var(--lime)}
+.foot-h{color:#fff;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;font-family:'Chakra Petch'}
+.foot-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.foot-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#6A7276}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;padding:11px 16px;background:var(--lime)}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;color:#0d0f10;font-weight:700;font-size:16px;font-family:'Chakra Petch';text-transform:uppercase}
+
+@media(max-width:860px){
+  .nav-links .n{display:none}
+  .svc,.stats{grid-template-columns:1fr 1fr}
+  .split-grid,.foot-grid{grid-template-columns:1fr;gap:34px}
+  .split-photo{min-height:300px;clip-path:none}
+  .gal{grid-template-columns:1fr}
+  section.pad{padding:66px 0}
+  .cta{padding:48px 24px}
+  .sticky-call{display:block}
+  body{padding-bottom:64px}
+}
+@media(max-width:480px){.svc,.stats{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </span>
+      Rads Automotive
+    </a>
+    <div class="nav-links">
+      <a class="n" href="#services">Services</a>
+      <a class="n" href="#why">Why Rads</a>
+      <a class="n" href="#area">Location</a>
+      <a class="btn btn-primary" href="tel:+14195399600">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (419) 539-9600
+      </a>
+    </div>
+  </div>
+</nav>
+
+<a id="top"></a>
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Rads Automotive Repair technician working on a vehicle in the Toledo shop"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-streak" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="reveal in">
+      <span class="eyebrow"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Hess Rd &middot; Toledo, Ohio</span>
+      <h1>Repairs done right by techs who know cars.</h1>
+      <p class="sub">Rads Automotive Repair gets Toledo drivers back on the road fast, with real diagnostics, honest pricing, and work that holds up. Book your car in today.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+14195399600">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Book a repair
+        </a>
+        <a class="btn btn-outline" href="#services">What we handle</a>
+      </div>
+      <div class="hero-note"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 stars from 100 Google reviews</div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="wrap">
+    <div class="row">
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Diagnostics</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Brakes</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Engine Work</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Suspension</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Oil &amp; Tune-Ups</span>
+    </div>
+  </div>
+</div>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="stats" style="margin-bottom:60px">
+      <div class="stat reveal"><div class="n"><span data-count="4.7" data-dec="1">4.7</span></div><div class="l">Google Rating</div></div>
+      <div class="stat reveal"><div class="n"><span data-count="100">0</span>+</div><div class="l">Reviews</div></div>
+      <div class="stat reveal"><div class="n">Most</div><div class="l">Repairs Same Week</div></div>
+    </div>
+    <div class="head reveal">
+      <div class="kick">Services</div>
+      <h2 class="title">The work that keeps Toledo moving</h2>
+      <p class="lead">Whatever the light, the leak, or the noise, we find the real problem and fix it so it stays fixed.</p>
+    </div>
+    <div class="svc">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M9 14h6"/></svg></div>
+        <h3>Check-Engine Diagnostics</h3>
+        <p>Scan, test, and pinpoint the fault instead of throwing parts at it. You get the real story.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes &amp; Rotors</h3>
+        <p>Pads, rotors, calipers, and fluid so you stop firm and quiet, checked before they cost you more.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13V7a2 2 0 0 1 2-2h9l4 4v4"/><circle cx="7.5" cy="17" r="2.2"/><circle cx="16.5" cy="17" r="2.2"/></svg></div>
+        <h3>Engine &amp; Drivetrain</h3>
+        <p>Belts, timing, cooling, and repairs on the parts that move you, done with quality components.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
+        <h3>Oil &amp; Tune-Ups</h3>
+        <p>Oil, filters, plugs, and scheduled service that stretch the miles and dodge the breakdowns.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Suspension &amp; Steering</h3>
+        <p>Struts, shocks, alignment, and front-end work that pull the wander and shake out of your ride.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div>
+        <h3>Inspections</h3>
+        <p>A clear, honest once-over before a road trip or a used-car buy so nothing catches you out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad split" id="why">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="split-grid">
+      <div class="split-photo reveal" role="img" aria-label="Mechanic servicing a vehicle up on a lift at Rads Automotive Repair"></div>
+      <div class="reveal">
+        <div class="kick">Why Rads</div>
+        <h2 class="title">100 reviews, one reason</h2>
+        <p class="lead" style="margin-bottom:6px">Drivers keep coming back to Hess Rd because the work is straight and the price is what we said it would be.</p>
+        <ul class="ptlist">
+          <li><span class="chk" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h3>Real diagnostics, not guesswork</h3><p>We test before we quote, so you pay to fix the problem, not to try a part.</p></div></li>
+          <li><span class="chk" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h3>A price you approve first</h3><p>Clear estimates and a call before anything changes. You are never surprised by the bill.</p></div></li>
+          <li><span class="chk" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h3>Back on the road fast</h3><p>Most jobs turn around the same week, with quality parts and careful labor behind them.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="kick">The Shop</div>
+      <h2 class="title">Where the work gets done</h2>
+    </div>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="Technician working on a car engine at Rads Automotive Repair"></div>
+      <div class="ph ph2 reveal" role="img" aria-label="Automotive repair tools and parts laid out in the service bay"></div>
+      <div class="ph ph3 reveal" role="img" aria-label="Vehicle raised on a lift for brake and suspension service"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div class="motif2" aria-hidden="true"></div>
+      <div class="cta-in">
+        <div class="kick">1629 Hess Rd &middot; Toledo, OH 43615</div>
+        <h2>Ready when your car is</h2>
+        <p>Call the shop, tell us what it is doing, and we will get you booked in and back on the road.</p>
+        <a class="phone-big" href="tel:+14195399600">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (419) 539-9600
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-f"><span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Rads Automotive</div>
+        <p style="max-width:34ch">Precision auto repair for Toledo drivers. Rated 4.7 stars across 100 Google reviews.</p>
+      </div>
+      <div>
+        <div class="foot-h">Location</div>
+        <div class="foot-row"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1629 Hess Rd<br>Toledo, OH 43615</span></div>
+      </div>
+      <div>
+        <div class="foot-h">Call</div>
+        <div class="foot-row"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+14195399600">(419) 539-9600</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Rads Automotive Repair. All rights reserved.</span>
+      <span>Website by Elements Studio</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+14195399600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 539-9600</a></div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>10);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');},Math.min(i*75,300)); io.unobserve(e.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count')),dec=parseInt(el.getAttribute('data-dec')||'0',10),start=null,dur=1300;
+    function step(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1); var v=target*(1-Math.pow(1-p,3)); el.textContent=dec?v.toFixed(dec):Math.round(v); if(p<1)requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);} });
+  },{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>
