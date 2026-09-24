@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kickin Mule Car Wash | Fast, Foamy Car Wash in Lambertville, MI</title>
+<meta name="description" content="Kickin Mule Car Wash on W Dean Rd in Lambertville. A fast, foamy, spot-free wash that treats your car right. Rated 4.9 stars. Drive in today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B3B6B;
+  --ocean:#0B4F8A;
+  --cyan:#12B5E5;
+  --cyan-l:#7FD9F2;
+  --sun:#FFC531;
+  --sun-d:#F2A93B;
+  --ink:#0E2439;
+  --paper:#F1FAFE;
+  --white:#ffffff;
+  --shadow:0 18px 44px rgba(11,79,138,.20);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.62;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Baloo 2',cursive;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+.section{padding:92px 0}
+.eyebrow{font-family:'Baloo 2',cursive;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:13px;color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Baloo 2',cursive;font-weight:700;font-size:17px;padding:14px 28px;border-radius:999px;cursor:pointer;border:none;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s}
+.btn-sun{background:var(--sun);color:#3a2b00;box-shadow:0 12px 26px rgba(255,197,49,.45)}
+.btn-sun:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 34px rgba(255,197,49,.55)}
+.btn-white{background:#fff;color:var(--ocean)}
+.btn-white:hover{transform:translateY(-3px)}
+.btn-line{background:rgba(255,255,255,.14);color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn-line:hover{transform:translateY(-3px);background:rgba(255,255,255,.22)}
+
+#bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--sun);transform:scaleX(0);transform-origin:left;z-index:120}
+
+header{position:sticky;top:0;z-index:100;background:rgba(241,250,254,.85);backdrop-filter:blur(10px);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 6px 22px rgba(11,79,138,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Baloo 2',cursive;font-weight:800;font-size:20px;color:var(--ocean)}
+.brand .mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(150deg,var(--cyan),var(--ocean));display:grid;place-items:center;flex:none;box-shadow:0 6px 14px rgba(18,181,229,.4)}
+.navlinks{display:flex;gap:28px;align-items:center;font-weight:700;font-size:15px}
+.navlinks a.n{color:var(--ocean);transition:color .2s}
+.navlinks a.n:hover{color:var(--cyan)}
+.nav-call{display:inline-flex;align-items:center;gap:8px;font-family:'Baloo 2',cursive;font-weight:700;color:var(--ink)}
+@media(max-width:820px){.navlinks a.n{display:none}}
+
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(140deg,#0B4F8A,#12B5E5);background-size:cover;background-position:center;transform:scale(1.06);animation:ken 20s ease-in-out infinite alternate}
+@keyframes ken{to{transform:scale(1.17)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(115deg,rgba(9,41,70,.8) 6%,rgba(11,79,138,.5) 55%,rgba(18,181,229,.32) 100%)}
+.bubbles{position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.14) 0 9px,transparent 10px),radial-gradient(circle at 70% 60%,rgba(255,255,255,.10) 0 14px,transparent 15px),radial-gradient(circle at 40% 80%,rgba(255,255,255,.12) 0 7px,transparent 8px),radial-gradient(circle at 85% 25%,rgba(255,255,255,.09) 0 11px,transparent 12px);background-size:340px 340px;opacity:.7}
+.hero-inner{position:relative;padding:120px 0}
+.hero .eyebrow{color:var(--sun)}
+.badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:700;margin-bottom:22px}
+.badge .stars{color:var(--sun);letter-spacing:1px}
+h1.hh{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;max-width:15ch;margin:8px 0 16px}
+.hero p.lede{font-size:1.22rem;max-width:50ch;color:rgba(255,255,255,.94);margin-bottom:30px;font-weight:600}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:8px 15px;border-radius:999px;font-size:14px;font-weight:700}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+.stats{background:linear-gradient(120deg,var(--ocean),var(--cyan));color:#fff;position:relative;overflow:hidden}
+.stats .bubbles{opacity:.5}
+.statgrid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:50px 0}
+.stat h3{font-size:2.9rem;color:#fff;font-weight:800}
+.stat span{display:block;color:rgba(255,255,255,.82);font-weight:700;font-size:14px;margin-top:2px}
+.stat b{color:var(--sun)}
+@media(max-width:760px){.statgrid{grid-template-columns:repeat(2,1fr);gap:30px}}
+
+.shead{max-width:60ch;margin-bottom:44px}
+.shead h2{font-size:clamp(2rem,3.8vw,2.9rem);font-weight:800;margin:12px 0 12px;color:var(--ocean)}
+.shead p{color:#3f5568}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:22px;padding:30px 26px;box-shadow:0 10px 30px rgba(11,79,138,.08);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.ico{width:54px;height:54px;border-radius:16px;background:rgba(18,181,229,.14);color:var(--ocean);display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-size:1.28rem;margin-bottom:7px;color:var(--ink)}
+.card p{color:#4b6072;font-size:15.5px}
+.card .price{margin-top:14px;font-family:'Baloo 2';font-weight:700;color:var(--cyan)}
+
+.why{background:linear-gradient(180deg,#E4F5FC,#F1FAFE)}
+.split{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
+@media(max-width:880px){.split{grid-template-columns:1fr;gap:34px}}
+.gal{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:180px 180px;gap:14px}
+.ph{border-radius:20px;background-size:cover;background-position:center;box-shadow:var(--shadow)}
+.ph.big{grid-row:span 2}
+.g1{background-image:url('https://images.pexels.com/photos/14677029/pexels-photo-14677029.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.g2{background-image:url('https://images.pexels.com/photos/4870724/pexels-photo-4870724.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.g3{background-image:url('https://images.pexels.com/photos/33093191/pexels-photo-33093191.jpeg?auto=compress&cs=tinysrgb&w=900')}
+.whylist{display:grid;gap:18px;margin-top:24px}
+.wrow{display:flex;gap:15px;align-items:flex-start}
+.wtick{width:32px;height:32px;border-radius:50%;background:var(--cyan);color:#fff;display:grid;place-items:center;flex:none;margin-top:2px}
+.wrow h3{font-size:1.14rem;margin-bottom:2px;color:var(--ink)}
+.wrow p{color:#4b6072;font-size:15px}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border-radius:22px;padding:28px;text-align:center;box-shadow:0 10px 30px rgba(11,79,138,.08)}
+.step .num{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:var(--sun);color:#3a2b00;font-family:'Baloo 2';font-weight:800;font-size:1.5rem;display:grid;place-items:center}
+.step h3{color:var(--ocean);margin-bottom:6px}
+.step p{color:#4b6072;font-size:15px}
+
+.band{background:linear-gradient(130deg,var(--ocean),var(--cyan));color:#fff;border-radius:30px;padding:62px 46px;text-align:center;position:relative;overflow:hidden}
+.band .bubbles{opacity:.6}
+.band h2{position:relative;font-size:clamp(2rem,3.6vw,2.8rem);max-width:20ch;margin:0 auto 12px}
+.band p{position:relative;color:rgba(255,255,255,.92);max-width:52ch;margin:0 auto 26px;font-weight:600}
+.band .btn{position:relative}
+
+footer{background:var(--ink);color:rgba(255,255,255,.74);padding:56px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:34px}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+footer h4{font-family:'Baloo 2';color:#fff;font-size:16px;margin-bottom:12px}
+footer a{color:rgba(255,255,255,.74)}
+footer a:hover{color:var(--sun)}
+.fbrand{display:flex;align-items:center;gap:11px;color:#fff;font-family:'Baloo 2';font-weight:800;font-size:20px;margin-bottom:12px}
+.fbar{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:13.5px;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;padding:11px 16px;background:rgba(11,59,107,.97);backdrop-filter:blur(6px)}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--sun);color:#3a2b00;font-family:'Baloo 2';font-weight:800;padding:13px;border-radius:999px}
+@media(max-width:760px){.sticky-call{display:block}body{padding-bottom:74px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body id="top">
+<div id="bar"></div>
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-5.5a2 2 0 0 0-1.9-1.5H8.4a2 2 0 0 0-1.9 1.5L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M4 11l1-3"/><path d="M20 11l-1-3"/></svg></span>Kickin Mule Car Wash</a>
+    <nav class="navlinks">
+      <a class="n" href="#wash">The Wash</a>
+      <a class="n" href="#why">Why Us</a>
+      <a class="n" href="#how">How It Works</a>
+      <a class="nav-call" href="tel:+17349616766"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(734) 961-6766</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A car rolling through an automated wash covered in colorful foam"></div>
+  <div class="hero-scrim"></div>
+  <div class="bubbles"></div>
+  <div class="wrap hero-inner">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated 4.9 across 37 Google reviews</div>
+    <p class="eyebrow">Car wash &middot; Lambertville, Michigan</p>
+    <h1 class="hh reveal">The fastest, foamiest wash in Lambertville.</h1>
+    <p class="lede reveal">Kickin Mule gets your car clean, dry, and spot-free without eating your afternoon. Pull in, sit back, and drive out shining.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-sun" href="tel:+17349616766">Call the wash</a>
+      <a class="btn btn-line" href="#wash">See the wash</a>
+    </div>
+    <div class="chips reveal">
+      <span class="chip">Soft-touch foam</span>
+      <span class="chip">Spot-free rinse</span>
+      <span class="chip">Wheel &amp; tire shine</span>
+      <span class="chip">Free vacuums</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="bubbles"></div>
+  <div class="wrap statgrid">
+    <div class="stat reveal"><h3><span class="count" data-to="4.9" data-dec="1">0</span></h3><span>Google rating</span></div>
+    <div class="stat reveal"><h3><span class="count" data-to="37">0</span><b>+</b></h3><span>Verified reviews</span></div>
+    <div class="stat reveal"><h3>Minutes,<br>not hours</h3><span>In and out fast</span></div>
+    <div class="stat reveal"><h3>Spot<br>free</h3><span>Drive off dry</span></div>
+  </div>
+</section>
+
+<section class="section" id="wash">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">The wash</p>
+      <h2>A clean that treats your paint right</h2>
+      <p>Gentle foam, strong rinse, and a real dry at the end. Pick the wash that fits your day and let the tunnel do the rest.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17a5 5 0 0 1 0-10 6 6 0 0 1 11.3 1.5A4 4 0 0 1 18 17H7z"/></svg></div><h3>The Quick Kick</h3><p>A fast foam bath and spot-free rinse for the car that just needs the road dust knocked off.</p><div class="price">Everyday clean</div></div>
+      <div class="card reveal"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div><h3>The Full Mule</h3><p>Soft-touch foam, wheel and tire cleaner, undercarriage flush, and a wax coat that beads the rain.</p><div class="price">Our most popular</div></div>
+      <div class="card reveal"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Shine &amp; Seal</h3><p>The full wash plus a ceramic sealant that leaves a deep shine and keeps your paint slick for weeks.</p><div class="price">Best protection</div></div>
+      <div class="card reveal"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Free Self-Vacuums</h3><p>Every wash comes with time at our vacuum stalls to clear out the floor mats and seats yourself.</p><div class="price">With any wash</div></div>
+      <div class="card reveal"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Unlimited Club</h3><p>One monthly plan, wash as often as you like. Great for daily drivers and long commutes.</p><div class="price">Ask at the pay station</div></div>
+      <div class="card reveal"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6h6"/><path d="M4 2h10l6 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M8 16h8M8 12h8"/></svg></div><h3>Fleet &amp; Commercial</h3><p>Work trucks and small fleets welcome. Keep the whole crew looking sharp on a simple account.</p><div class="price">Call for rates</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap split">
+    <div class="gal reveal">
+      <div class="ph big g1" role="img" aria-label="A classic car covered in thick white soap foam at the wash"></div>
+      <div class="ph g2" role="img" aria-label="Close-up of soap suds sliding down a clean car door"></div>
+      <div class="ph g3" role="img" aria-label="A car mid-wash with soap and water running over the paint"></div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Why Kickin Mule</p>
+      <h2 style="font-family:'Baloo 2';font-size:clamp(2rem,3.6vw,2.7rem);font-weight:800;color:var(--ocean);margin:12px 0 6px">Clean car, happy neighbors</h2>
+      <p style="color:#4b6072">Thirty-seven Lambertville drivers rated us 4.9 stars because the wash is quick, the equipment is easy on paint, and the crew keeps the place running right.</p>
+      <div class="whylist">
+        <div class="wrow"><span class="wtick"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>Gentle on your paint</h3><p>Soft foam and clean water instead of stiff brushes, so the finish stays smooth wash after wash.</p></div></div>
+        <div class="wrow"><span class="wtick"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>In and out in minutes</h3><p>Pull up, pay, and roll through. You are back on W Dean Rd before the coffee gets cold.</p></div></div>
+        <div class="wrow"><span class="wtick"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>Spot-free every time</h3><p>A purified final rinse means no water spots drying on your hood, even on a sunny afternoon.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how" style="background:#fff">
+  <div class="wrap">
+    <div class="shead reveal" style="text-align:center;margin:0 auto 40px">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps to a clean car</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Pull in &amp; pick</h3><p>Choose your wash right at the pay station on W Dean Rd. Cash or card, no appointment.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Ride the tunnel</h3><p>Foam, scrub, rinse, and dry while you stay in the driver seat. Sit back and watch the suds fly.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Shine &amp; vacuum</h3><p>Drive out spot-free, then pull into a free vacuum stall to finish the inside your way.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="band">
+      <div class="bubbles"></div>
+      <h2>Ready for a clean car today?</h2>
+      <p>Swing by Kickin Mule Car Wash on W Dean Rd in Lambertville, or call with a question about our washes and the Unlimited Club.</p>
+      <a class="btn btn-sun" href="tel:+17349616766"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a2b00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(734) 961-6766</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand"><span class="mark" style="width:34px;height:34px;border-radius:50%;background:linear-gradient(150deg,var(--cyan),var(--ocean));display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-5.5a2 2 0 0 0-1.9-1.5H8.4a2 2 0 0 0-1.9 1.5L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span>Kickin Mule</div>
+        <p style="max-width:34ch;font-size:15px">A fast, foamy, spot-free car wash for Lambertville drivers. Rated 4.9 stars across 37 Google reviews.</p>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <p style="font-size:15px">2339 W Dean Rd<br>Lambertville, MI 48144</p>
+      </div>
+      <div>
+        <h4>Call</h4>
+        <p style="font-size:15px"><a href="tel:+17349616766">(734) 961-6766</a></p>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>&copy; 2026 Kickin Mule Car Wash. All rights reserved.</span>
+      <span>Website by Elements Studio</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+17349616766"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a2b00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (734) 961-6766</a></div>
+
+<script>
+const bar=document.getElementById('bar'),hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>{
+  const h=document.documentElement,sc=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  bar.style.transform='scaleX('+sc+')';
+  hdr.classList.toggle('scrolled',h.scrollTop>10);
+});
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target);}});},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0');let s=null;const step=(t)=>{if(!s)s=t;const p=Math.min((t-s)/1100,1),v=(to*(0.3+0.7*p));el.textContent=dec?v.toFixed(dec):Math.floor(v);if(p<1)requestAnimationFrame(step);else el.textContent=dec?to.toFixed(dec):to;};requestAnimationFrame(step);cio.unobserve(el);}});},{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
