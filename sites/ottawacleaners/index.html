@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ottawa Cleaners | Dry Cleaning &amp; Laundry in Toledo, OH</title>
+<meta name="description" content="Ottawa Cleaners on Central Ave in Toledo, Ohio. Dry cleaning, laundered shirts, wash and fold, and alterations. Rated 4.4 stars on Google. Call (419) 536-7411.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F4EF; --ink:#23302B; --green:#21473C; --green-2:#2E5E4F;
+  --brass:#B0894A; --muted:#5E6B64; --card:#FFFFFF; --line:#E6E0D4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.08;letter-spacing:0}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--brass);color:#fff;font-weight:600;
+  padding:.95rem 1.6rem;border-radius:6px;font-size:1rem;letter-spacing:.01em;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 8px 22px rgba(176,137,74,.28)}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 30px rgba(176,137,74,.34)}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:none;border:1.5px solid var(--green)}
+.btn.ghost:hover{background:var(--green);color:#fff}
+.eyebrow{font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.76rem;font-weight:600;color:var(--brass)}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left;z-index:60}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s,padding .3s;padding:1.1rem 0}
+header.scrolled{background:rgba(247,244,239,.94);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(33,71,60,.08);padding:.7rem 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.65rem;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.5rem;color:var(--green)}
+.brand .mark{width:38px;height:38px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff}
+.nav-links{display:flex;gap:1.8rem;align-items:center}
+.nav-links a{font-weight:500;color:var(--ink);font-size:.98rem}
+.nav-links a.callnum{color:var(--green);font-weight:600}
+@media(max-width:760px){.nav-links{display:none}}
+
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2;background-image:url('https://images.pexels.com/photos/965632/pexels-photo-965632.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#21473C,#12231D);background-size:cover;background-position:center;transform:scale(1.05);animation:ken 24s ease-in-out infinite alternate}
+@keyframes ken{to{transform:scale(1.14)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(18,35,29,.84) 0%,rgba(18,35,29,.58) 48%,rgba(33,71,60,.4) 100%)}
+.hero-inner{color:#fff;padding:8rem 0 4rem;max-width:720px}
+.hero h1{font-size:clamp(2.7rem,6.4vw,4.8rem);font-weight:700;margin:.5rem 0 1rem}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:#EAF0EC;max-width:540px;margin-bottom:2rem;font-family:'Inter',sans-serif}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.stars{color:#E7C15A;letter-spacing:2px}
+
+.trust{background:var(--green)}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;padding:1.6rem 0;color:#fff}
+.trust .stat{display:flex;flex-direction:column;min-width:150px}
+.trust .num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;line-height:1}
+.trust .lbl{font-size:.9rem;color:#B9CEC5;margin-top:.3rem;font-family:'Inter',sans-serif}
+
+section.pad{padding:5.5rem 0}
+.sec-head{max-width:640px;margin-bottom:3rem}
+.sec-head h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:700;margin:.4rem 0 .8rem;color:var(--green)}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.3rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.9rem;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s,border-color .28s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(33,71,60,.12);border-color:#DDD3BF}
+.ico{width:52px;height:52px;border-radius:10px;background:rgba(176,137,74,.12);display:grid;place-items:center;margin-bottom:1.1rem;color:var(--brass)}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;margin-bottom:.4rem;color:var(--ink)}
+.card p{color:var(--muted);font-size:.98rem}
+
+.why{position:relative;background:#EFEBE1;overflow:hidden}
+.why .motif{position:absolute;inset:0;z-index:0;background:repeating-linear-gradient(90deg,rgba(176,137,74,.14) 0,rgba(176,137,74,.14) 1px,transparent 1px,transparent 12px);opacity:.85}
+.why .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+@media(max-width:820px){.why .wrap{grid-template-columns:1fr}}
+.why h2{font-size:clamp(2rem,4.4vw,2.9rem);color:var(--green);font-weight:700;margin-bottom:1.2rem}
+.pts{list-style:none;display:flex;flex-direction:column;gap:1.1rem}
+.pts li{display:flex;gap:.9rem;align-items:flex-start}
+.pts .tick{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--brass);color:#fff;display:grid;place-items:center;margin-top:.15rem}
+.pts b{font-weight:600}
+.ratingcard{background:var(--green);color:#fff;border-radius:16px;padding:2.6rem;text-align:center}
+.ratingcard .big{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:700;line-height:1}
+.ratingcard .stars{font-size:1.4rem;margin:.4rem 0}
+.ratingcard p{color:#B9CEC5;font-family:'Inter',sans-serif}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:720px){.gallery{grid-template-columns:1fr}}
+.gal-item{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3}
+.gal-item .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.gal-item:hover .ph{transform:scale(1.08)}
+.gal-item .cap{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1.1rem .9rem;background:linear-gradient(transparent,rgba(18,35,29,.82));color:#fff;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.25rem}
+
+.band{background:linear-gradient(120deg,var(--green),var(--green-2));color:#fff;text-align:center;border-radius:18px;padding:3.6rem 2rem}
+.band h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:700;margin-bottom:.6rem}
+.band p{color:#CFE0D9;margin-bottom:1.8rem;font-size:1.08rem;font-family:'Inter',sans-serif}
+.contactline{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;color:#CFE0D9;font-size:.98rem}
+.contactline a{color:#fff;font-weight:600}
+
+footer{padding:3rem 0;color:var(--muted);font-size:.94rem}
+.foot{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.foot .brand{color:var(--green)}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;background:var(--brass);color:#fff;text-align:center;padding:.95rem;font-weight:600}
+@media(max-width:760px){.sticky-call{display:block}}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  *{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l3 2 4 1 1 4-2 3 2 3-1 4-4 1-3 2-3-2-4-1-1-4 2-3-2-3 1-4 4-1z"/></svg></span>
+      Ottawa Cleaners
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#work">Our work</a>
+      <a class="callnum" href="tel:+14195367411">(419) 536-7411</a>
+    </nav>
+    <a class="btn" href="tel:+14195367411">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call now
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Freshly pressed shirts hanging on a garment rack at Ottawa Cleaners"></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Dry cleaning &amp; laundry &middot; Toledo, OH</span>
+      <h1>Clean, pressed, and ready when you are.</h1>
+      <p class="lead">Ottawa Cleaners has kept Toledo looking sharp for years, caring for shirts, suits and everyday laundry one order at a time.</p>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+14195367411">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (419) 536-7411
+        </a>
+        <span style="color:#fff"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &nbsp;4.4 on Google</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div class="stat"><span class="num"><span data-count="4.4" data-dec="1">0</span></span><span class="lbl">Google rating</span></div>
+      <div class="stat"><span class="num"><span data-count="20">0</span>+</span><span class="lbl">Customer reviews</span></div>
+      <div class="stat"><span class="num">Central Ave</span><span class="lbl">West Toledo location</span></div>
+      <div class="stat"><span class="num">Local</span><span class="lbl">Neighborhood cleaners</span></div>
+    </div>
+  </div>
+
+  <section class="pad" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2>Careful cleaning for everything you wear</h2>
+        <p>From the shirt you press for Monday to the coat you save for winter, we treat each piece with the care it deserves.</p>
+      </div>
+      <div class="grid">
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l-2 4v12H8V8L6 4z"/><path d="M9 8h6"/></svg></div>
+          <h3>Dry cleaning</h3>
+          <p>Suits, dresses, coats and delicates cleaned and pressed to a crisp, finished look.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3l2 2h6l2-2M6 5h12v16H6zM10 5v3h4V5"/></svg></div>
+          <h3>Laundered shirts</h3>
+          <p>Dress shirts washed, starched to taste and pressed sharp on the collar and cuffs.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="6"/><circle cx="12" cy="13" r="2.3"/><path d="M5 4h14v3H5z"/></svg></div>
+          <h3>Wash &amp; fold</h3>
+          <p>Drop off the everyday laundry and pick it up clean, folded and ready to put away.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M8 7l12 11M8 17L20 6"/></svg></div>
+          <h3>Alterations &amp; repairs</h3>
+          <p>Hems, buttons, zippers and adjustments so your favorites fit and last longer.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l8-5 8 5v11H4zM9 20v-6h6v6"/></svg></div>
+          <h3>Household items</h3>
+          <p>Comforters, bedding, tablecloths and drapes cleaned and freshened for the home.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s5 4 5 9a5 5 0 0 1-10 0c0-5 5-9 5-9z"/></svg></div>
+          <h3>Delicate &amp; specialty care</h3>
+          <p>Silk, wool and special-occasion pieces handled with the gentle attention they need.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad why" id="why">
+    <div class="motif" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Why Ottawa Cleaners</span>
+        <h2>A neighborhood cleaner that remembers your order</h2>
+        <ul class="pts">
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Careful with every piece.</b> Your clothes come back clean, pressed and ready to wear.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Right here in West Toledo.</b> A familiar counter on Central Ave that greets you by name.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Rated 4.4 on Google.</b> Regulars who trust us with their shirts and suits week after week.</span></li>
+        </ul>
+        <div style="margin-top:2rem"><a class="btn ghost" href="tel:+14195367411">Call about your order</a></div>
+      </div>
+      <div class="ratingcard reveal">
+        <div class="big"><span data-count="4.4" data-dec="1">0</span></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Average across <b style="color:#fff"><span data-count="20">0</span> Google reviews</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">At the counter</span>
+        <h2>Fresh, pressed, and organized</h2>
+        <p>A steady routine and an eye for detail on every rack.</p>
+      </div>
+      <div class="gallery">
+        <div class="gal-item reveal"><div class="ph" role="img" aria-label="A pressed dress shirt being handled on a garment rack" style="background-image:url('https://images.pexels.com/photos/9558253/pexels-photo-9558253.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="cap">Pressed &amp; ready</div></div>
+        <div class="gal-item reveal"><div class="ph" role="img" aria-label="A row of clean white garments hanging in the shop" style="background-image:url('https://images.pexels.com/photos/13036797/pexels-photo-13036797.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="cap">Clean whites</div></div>
+        <div class="gal-item reveal"><div class="ph" role="img" aria-label="Clothes being loaded into a washing machine for laundry service" style="background-image:url('https://images.pexels.com/photos/5591639/pexels-photo-5591639.jpeg?auto=compress&cs=tinysrgb&w=900')"></div><div class="cap">Wash &amp; fold</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="contact">
+    <div class="wrap">
+      <div class="band reveal">
+        <h2>Drop off, and leave the rest to us</h2>
+        <p>Give us a call with any question about your order. We are glad to help.</p>
+        <a class="btn" style="background:#fff;color:var(--green);box-shadow:none" href="tel:+14195367411">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (419) 536-7411
+        </a>
+        <div class="contactline">
+          <span><b style="color:#fff">Visit:</b> 4330 Central Ave, Toledo, OH 43615</span>
+          <span><b style="color:#fff">Call:</b> <a href="tel:+14195367411">(419) 536-7411</a></span>
+          <span>Call ahead for current hours</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top">Ottawa Cleaners</a>
+    <div>4330 Central Ave, Toledo, OH 43615 &middot; <a href="tel:+14195367411" style="color:var(--green);font-weight:600">(419) 536-7411</a></div>
+    <div>&copy; 2026 Ottawa Cleaners</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14195367411">Call Ottawa Cleaners &middot; (419) 536-7411</a>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    if(y>20)hdr.classList.add('scrolled');else hdr.classList.remove('scrolled');
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var revs=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e,i){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')},(i%6)*70);io.unobserve(el);}});
+    },{threshold:.16});
+    revs.forEach(function(el){io.observe(el)});
+  }else{revs.forEach(function(el){el.classList.add('in')});}
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1400;
+    function step(ts){
+      if(!start)start=ts;var p=Math.min((ts-start)/dur,1);
+      var ease=1-Math.pow(1-p,3);
+      el.textContent=(target*ease).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  var counted=false;
+  var counters=document.querySelectorAll('[data-count]');
+  function maybeCount(){
+    if(counted)return;var t=document.querySelector('.trust');if(!t)return;
+    var r=t.getBoundingClientRect();
+    if(r.top<window.innerHeight&&r.bottom>0){counted=true;counters.forEach(countUp);}
+  }
+  if(reduce){counters.forEach(function(el){el.textContent=parseFloat(el.getAttribute('data-count')).toFixed(parseInt(el.getAttribute('data-dec')||'0',10));});}
+  else{window.addEventListener('scroll',maybeCount,{passive:true});maybeCount();}
+})();
+</script>
+</body>
+</html>
