@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Point Place Automotive | Auto Repair in Toledo, OH</title>
+<meta name="description" content="Family auto repair in Point Place, Toledo. Oil changes, brakes, diagnostics, tires and engine work. Rated 4.6 stars. Call (419) 729-5337.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F1EA; --panel:#FFFFFF; --ink:#123536; --ink2:#1E4A48;
+  --muted:#5A6A64; --line:#E0DDD2; --accent:#CF561C; --accent2:#EA7638;
+  --shadow:0 18px 40px -18px rgba(18,53,54,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.08;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;padding:14px 22px;border-radius:12px;text-decoration:none;border:0;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 22px -8px rgba(207,86,28,.6)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--ink)}
+svg.ic{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* progress */
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+header{position:sticky;top:0;z-index:100;background:rgba(243,241,234,.86);backdrop-filter:blur(10px);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 24px -16px rgba(18,53,54,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:11px;font-family:"Space Grotesk";font-weight:700;font-size:19px}
+.brand .mk{width:34px;height:34px;border-radius:9px;background:var(--ink);display:grid;place-items:center;color:var(--accent2)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none;font-size:15px}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#123536 0%,#0C2526 60%,#1E4A48 100%);background-size:cover;background-position:center;animation:ken 26s ease-out infinite alternate;will-change:transform}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(9,26,27,.82) 0%,rgba(9,26,27,.62) 45%,rgba(9,26,27,.35) 100%)}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero .wrap{position:relative;z-index:2;padding-top:60px;padding-bottom:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin-bottom:18px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.3rem);font-weight:700;max-width:15ch;margin-bottom:20px}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);max-width:46ch;color:#E8EDEB;margin-bottom:30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.rate{display:flex;align-items:center;gap:14px;margin-top:34px;flex-wrap:wrap}
+.stars{display:flex;gap:3px;color:var(--accent2)}
+.stars svg{width:19px;height:19px;fill:currentColor;stroke:none}
+.rate b{font-size:1.35rem;font-family:"Space Grotesk";font-weight:700}
+.rate span{color:#CDD8D5;font-size:.95rem}
+
+/* sections */
+section{padding:88px 0}
+.sec-head{max-width:60ch;margin-bottom:46px}
+.sec-head .kick{color:var(--accent);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:13px;margin-bottom:12px}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 24px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card .ico{width:48px;height:48px;border-radius:12px;background:rgba(207,86,28,.1);color:var(--accent);display:grid;place-items:center;margin-bottom:16px}
+.card .ico svg{width:24px;height:24px}
+.card h3{font-size:1.22rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+
+/* gauge motif */
+.motif{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+.motif::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 82% 30%,transparent 0 26px,rgba(234,118,56,.14) 26px 27px);opacity:.9}
+.motif .wrap{position:relative;z-index:1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+.stat .n{font-family:"Space Grotesk";font-weight:700;font-size:clamp(2.4rem,5vw,3.4rem);color:var(--accent2)}
+.stat .l{color:#C9D4D1;font-size:.98rem;margin-top:4px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal-item{border-radius:16px;overflow:hidden;position:relative}
+.gal-item .ph{height:260px;background-size:cover;background-position:center;transition:transform .6s ease}
+.gal-item:hover .ph{transform:scale(1.06)}
+.gal-item .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;color:#fff;font-weight:600;background:linear-gradient(0deg,rgba(9,26,27,.8),transparent)}
+.g1 .ph{background-image:url('https://images.pexels.com/photos/36281957/pexels-photo-36281957.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#123536,#0C2526)}
+.g2 .ph{background-image:url('https://images.pexels.com/photos/33814734/pexels-photo-33814734.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#1E4A48,#0C2526)}
+.g3 .ph{background-image:url('https://images.pexels.com/photos/4116221/pexels-photo-4116221.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#123536,#1E4A48)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.about ul{list-style:none;margin-top:22px;display:grid;gap:14px}
+.about li{display:flex;gap:12px;align-items:flex-start}
+.about li .ck{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(207,86,28,.12);color:var(--accent);display:grid;place-items:center;margin-top:2px}
+.about-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow)}
+.about-card .big{font-family:"Space Grotesk";font-weight:700;font-size:2rem}
+.about-card .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.about-card .row:last-child{border-bottom:0}
+.about-card .row span{color:var(--muted)}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:16px}
+.contact p{color:#C9D4D1;margin-bottom:26px;max-width:42ch}
+.info .item{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.info .item .ico{color:var(--accent2)}
+.info .item a{color:#fff;text-decoration:none;font-weight:600}
+.info .k{font-size:.82rem;color:#9FB3AF;text-transform:uppercase;letter-spacing:.08em}
+
+footer{background:#0C2526;color:#9FB3AF;padding:34px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer a{color:#EA7638;text-decoration:none}
+
+.sticky-call{position:fixed;left:16px;right:16px;bottom:16px;z-index:110;display:none;justify-content:center;align-items:center;gap:9px;background:var(--accent);color:#fff;padding:15px;border-radius:14px;font-weight:700;text-decoration:none;box-shadow:0 14px 30px -8px rgba(207,86,28,.7)}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  .nav-links{display:none}
+  .svc-grid,.stats,.gal{grid-template-columns:1fr}
+  .about,.contact .grid{grid-template-columns:1fr}
+  .gal-item .ph{height:230px}
+  .sticky-call{display:flex}
+  section{padding:64px 0}
+  footer .wrap{flex-direction:column;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand"><span class="mk"><svg class="ic" viewBox="0 0 24 24"><path d="M3 17h18M5 17l1.5-5.5A2 2 0 0 1 8.4 10h7.2a2 2 0 0 1 1.9 1.5L19 17M7 17v2M17 17v2"/><circle cx="8" cy="17" r="1"/><circle cx="16" cy="17" r="1"/></svg></span>Point Place Automotive</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="tel:+14197295337">(419) 729-5337</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Mechanic checking a car engine in a service bay at an auto repair garage"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2 4 7v6c0 5 3.5 7.5 8 9 4.5-1.5 8-4 8-9V7z"/></svg>Point Place, Toledo</span>
+    <h1>Your car fixed right, the first time.</h1>
+    <p class="lead">Neighborhood auto repair on North Summit Street. Straight answers, fair prices, and work we stand behind.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="tel:+14197295337"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (419) 729-5337</a>
+      <a class="btn btn-ghost" href="#services">See services</a>
+    </div>
+    <div class="rate">
+      <span class="stars" id="stars" aria-hidden="true"></span>
+      <b><span id="rnum">4.6</span> stars</b>
+      <span>from <span id="rev">37</span> Google reviews</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">What we do</div>
+      <h2>Repairs and service for daily drivers</h2>
+      <p>One shop for the work that keeps your car on the road. If we cannot fix it, we will tell you straight.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal"><div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M14 4h2a2 2 0 0 1 2 2v3h2v4h-2v5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M10 4v4h4V4"/></svg></div><h3>Oil &amp; fluid changes</h3><p>Fast oil changes with a full fluid and filter check so small problems stay small.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h3>Brakes</h3><p>Pads, rotors and brake lines inspected and replaced so you stop with confidence.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div><h3>Check-engine diagnostics</h3><p>We read the codes and explain what is really going on before any work begins.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div><h3>Tires &amp; alignment</h3><p>Mounting, balancing, rotations and alignment to keep tires wearing evenly.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M4 13V7a2 2 0 0 1 2-2h9l3 3v5"/><circle cx="7.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/><path d="M10 16.5h4"/></svg></div><h3>Engine repair</h3><p>From belts and hoses to bigger jobs, handled by hands that have seen it before.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M6 12h12M7 16h10"/></svg></div><h3>Heating &amp; AC</h3><p>Cabin comfort restored, from a warm heater in winter to cold air all summer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="motif">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="n" data-count="4.6" data-dec="1">4.6</div><div class="l">Average Google rating</div></div>
+      <div class="stat reveal"><div class="n" data-count="37">0</div><div class="l">Reviews from local drivers</div></div>
+      <div class="stat reveal"><div class="n">Toledo</div><div class="l">Serving Point Place and beyond</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">In the shop</div>
+      <h2>Real work, done in-house</h2>
+      <p>A look at the everyday jobs that come through the bay.</p>
+    </div>
+    <div class="gal">
+      <div class="gal-item g1 reveal"><div class="ph" role="img" aria-label="Technician performing an oil change under a raised vehicle"></div><div class="cap">Oil and fluid service</div></div>
+      <div class="gal-item g2 reveal"><div class="ph" role="img" aria-label="Interior of the auto repair shop with a vehicle up on the lift"></div><div class="cap">In the service bay</div></div>
+      <div class="gal-item g3 reveal"><div class="ph" role="img" aria-label="Mechanic working on a car engine during a repair"></div><div class="cap">Engine repair</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="reveal">
+      <div class="kick" style="color:var(--accent);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:13px;margin-bottom:12px">Why drivers call us</div>
+      <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:14px">A shop that treats you like a neighbor</h2>
+      <p style="color:var(--muted);font-size:1.05rem">We are a local Point Place shop, not a chain. You talk to the person doing the work, you hear the real story on your car, and you leave knowing what was done and why.</p>
+      <ul>
+        <li><span class="ck"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div>Clear estimates before we start any job</div></li>
+        <li><span class="ck"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div>Honest advice on what needs fixing now and what can wait</div></li>
+        <li><span class="ck"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div>Work backed by a 4.6 star rating from local drivers</div></li>
+      </ul>
+    </div>
+    <div class="about-card reveal">
+      <div class="big">Book your visit</div>
+      <p style="color:var(--muted);margin:8px 0 18px">Give us a call and we will get you scheduled.</p>
+      <div class="row"><span>Phone</span><a href="tel:+14197295337" style="color:var(--accent);font-weight:600;text-decoration:none">(419) 729-5337</a></div>
+      <div class="row"><span>Location</span><div style="text-align:right">5040 N Summit St<br>Toledo, OH 43611</div></div>
+      <div class="row"><span>Hours</span><div style="text-align:right">Call for current hours</div></div>
+      <a class="btn btn-primary" href="tel:+14197295337" style="width:100%;justify-content:center;margin-top:20px"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the shop</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div class="reveal">
+      <h2>Bring it by the shop on Summit Street</h2>
+      <p>Point Place Automotive is here for oil changes, brakes, tires, diagnostics and engine work. Call and we will take care of the rest.</p>
+      <a class="btn btn-primary" href="tel:+14197295337"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (419) 729-5337</a>
+    </div>
+    <div class="info reveal">
+      <div class="item"><span class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><div class="k">Call</div><a href="tel:+14197295337">(419) 729-5337</a></div></div>
+      <div class="item"><span class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="k">Visit</div><div style="font-weight:600">5040 N Summit St, Toledo, OH 43611</div></div></div>
+      <div class="item"><span class="ico"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><div class="k">Hours</div><div style="font-weight:600">Call for current hours</div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Point Place Automotive &middot; 5040 N Summit St, Toledo, OH 43611</div>
+    <div><a href="tel:+14197295337">(419) 729-5337</a></div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14197295337"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (419) 729-5337</a>
+
+<script>
+// scroll progress
+var prog=document.getElementById('prog'),hdr=document.getElementById('hdr');
+addEventListener('scroll',function(){
+  var h=document.documentElement,sc=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
+  prog.style.transform='scaleX('+sc+')';
+  hdr.classList.toggle('scrolled',h.scrollTop>8);
+},{passive:true});
+// stars
+(function(){var s='';for(var i=0;i<5;i++){s+='<svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>';}document.getElementById('stars').innerHTML=s;})();
+// reveal + count-up
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(function(el){
+      var end=parseFloat(el.getAttribute('data-count')),dec=parseInt(el.getAttribute('data-dec')||'0'),t0=null;
+      function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1100,1);el.textContent=(end*(p<1?(1-Math.pow(1-p,3)):1)).toFixed(dec);if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    });
+    io.unobserve(e.target);
+  }});},{threshold:.2});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
