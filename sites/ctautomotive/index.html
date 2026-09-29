@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C&T Automotive | Honest Auto Repair in Toledo, OH</title>
+<meta name="description" content="C&T Automotive in Toledo, OH. Engine diagnostics, brake service, and honest maintenance. Rated 4.9 stars across 43 reviews. Call (419) 917-5062.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1012;--panel:#16181c;--panel2:#1d2026;--line:#2a2e35;
+  --steel:#8b929c;--fog:#c7ccd3;--white:#f4f5f7;
+  --crim:#e23a45;--crim-d:#b02a33;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--fog);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Anton',Impact,sans-serif;font-weight:400;color:var(--white);text-transform:uppercase;letter-spacing:.5px;line-height:.98}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92vw);margin:0 auto}
+.accent{color:var(--crim)}
+
+/* scroll progress */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--crim);transform:scaleX(0);transform-origin:0 50%;z-index:120}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(15,16,18,.92);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.4);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Anton';font-size:22px;color:var(--white);letter-spacing:1px}
+.mark{width:34px;height:34px;border:2px solid var(--crim);display:grid;place-items:center;color:var(--crim);font-size:16px;transform:rotate(45deg)}
+.mark span{transform:rotate(-45deg)}
+.navcta{display:inline-flex;align-items:center;gap:8px;background:var(--crim);color:#fff;padding:11px 18px;border-radius:2px;font-weight:700;font-family:'DM Sans';transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+.navcta:hover{transform:translateY(-2px);background:var(--crim-d)}
+.navcta svg{width:17px;height:17px}
+@media(max-width:640px){.navcta .lbl{display:none}.navcta{padding:11px 13px}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 90px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/6870313/pexels-photo-6870313.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#1a0e10,#121316);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 22s ease-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,12,14,.9) 0%,rgba(11,12,14,.72) 45%,rgba(11,12,14,.5) 100%)}
+@keyframes ken{to{transform:scale(1)}}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--crim);margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--crim)}
+.hero h1{font-size:clamp(44px,8vw,92px);max-width:15ch;margin-bottom:20px}
+.hero p.sub{font-size:clamp(17px,2.2vw,21px);max-width:52ch;color:var(--fog);margin-bottom:34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:2px;font-weight:700;font-family:'DM Sans';font-size:17px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s,border-color .2s}
+.btn svg{width:19px;height:19px}
+.btn-p{background:var(--crim);color:#fff}
+.btn-p:hover{transform:translateY(-3px);background:var(--crim-d)}
+.btn-g{border:1.5px solid var(--line);color:var(--white)}
+.btn-g:hover{transform:translateY(-3px);border-color:var(--crim)}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;align-items:center}
+.stars{display:flex;gap:3px;color:var(--crim)}
+.stars svg{width:18px;height:18px;fill:var(--crim);stroke:none}
+.trust b{color:var(--white)}
+
+/* stat band */
+.stats{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;text-align:center}
+.stat{padding:44px 18px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat .num{font-family:'Anton';font-size:clamp(40px,6vw,62px);color:var(--white);line-height:1}
+.stat .num i{font-style:normal;color:var(--crim)}
+.stat .cap{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--steel);margin-top:8px}
+@media(max-width:640px){.stat-grid{grid-template-columns:1fr}.stat{border-right:none;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:none}}
+
+/* sections */
+section{padding:96px 0}
+.head{max-width:60ch;margin-bottom:52px}
+.head .eyebrow{margin-bottom:14px}
+.head h2{font-size:clamp(32px,5vw,54px)}
+.head p{margin-top:16px;color:var(--steel)}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:30px 26px;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s,background .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--crim);background:var(--panel2)}
+.ico{width:52px;height:52px;border-radius:3px;display:grid;place-items:center;background:rgba(226,58,69,.12);color:var(--crim);margin-bottom:18px}
+.ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:21px;margin-bottom:9px;letter-spacing:.3px}
+.card p{font-size:15.5px;color:var(--steel)}
+
+/* why (motif) */
+.why{position:relative;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.why .rotor{position:absolute;right:-160px;top:50%;transform:translateY(-50%);width:620px;height:620px;border-radius:50%;
+  background:repeating-radial-gradient(circle at center,transparent 0 26px,rgba(226,58,69,.09) 26px 28px);
+  opacity:.6;pointer-events:none}
+.why .rotor::after{content:"";position:absolute;inset:38%;border-radius:50%;border:2px dashed rgba(226,58,69,.18)}
+.why .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media(max-width:820px){.why .wrap{grid-template-columns:1fr;gap:34px}}
+.why h2{font-size:clamp(30px,4.6vw,48px);margin-bottom:20px}
+.plist{list-style:none;display:grid;gap:16px;margin-top:10px}
+.plist li{display:flex;gap:14px;align-items:flex-start}
+.plist .chk{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--crim);display:grid;place-items:center;margin-top:2px}
+.plist .chk svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.plist b{color:var(--white)}
+.why-side{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:34px}
+.why-side .big{font-family:'Anton';font-size:64px;color:var(--crim);line-height:1}
+.why-side .stars{margin:12px 0}
+.why-side p{color:var(--steel);font-size:15px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.gal{grid-template-columns:1fr}}
+.ph{height:300px;border-radius:6px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,12,14,.7));opacity:.9}
+.ph:hover{transform:scale(1.02)}
+.ph .tag{position:absolute;left:16px;bottom:14px;z-index:2;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--white);font-weight:600}
+
+/* final cta */
+.final{position:relative;text-align:center;background:linear-gradient(135deg,#1a0e10,#121316);border-top:1px solid var(--line)}
+.final h2{font-size:clamp(34px,6vw,68px);margin-bottom:14px}
+.final p{color:var(--fog);max-width:46ch;margin:0 auto 30px}
+.phone-big{font-family:'Anton';font-size:clamp(30px,6vw,54px);color:var(--crim);letter-spacing:2px;display:inline-block;margin-top:8px}
+
+/* footer */
+footer{background:#0b0c0e;border-top:1px solid var(--line);padding:46px 0;font-size:15px;color:var(--steel)}
+.foot{display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:flex-start}
+.foot .brand{margin-bottom:12px}
+.foot a:hover{color:var(--crim)}
+
+/* sticky mobile call */
+.sticky{display:none}
+@media(max-width:640px){
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--crim);color:#fff;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:700;box-shadow:0 -8px 24px rgba(0,0,0,.4)}
+  .sticky svg{width:19px;height:19px}
+  body{padding-bottom:58px}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none;transform:scale(1)}
+  #bar{display:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="mark"><span>CT</span></span>C&amp;T Automotive</a>
+    <a class="navcta" href="tel:+14199175062" aria-label="Call C and T Automotive at (419) 917-5062">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="lbl">(419) 917-5062</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A C and T Automotive mechanic running engine diagnostics on a vehicle in the shop"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Toledo, Ohio</span>
+    <h1 class="rv">Toledo trusts C&amp;T to fix it right the first time</h1>
+    <p class="sub rv">Straight answers, honest diagnostics, and engine and brake work done properly. No upsell, no runaround. Just your car fixed and back on the road.</p>
+    <div class="cta-row rv">
+      <a class="btn btn-p" href="tel:+14199175062">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (419) 917-5062
+      </a>
+      <a class="btn btn-g" href="#services">See what we fix</a>
+    </div>
+    <div class="trust rv">
+      <span class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+      </span>
+      <span><b>4.9</b> rating from <b>43</b> Google reviews</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats" style="padding:0">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat rv"><div class="num" data-count="4.9" data-dec="1">0.0</div><div class="cap">Star Rating</div></div>
+      <div class="stat rv"><div class="num" data-count="43">0</div><div class="cap">Google Reviews</div></div>
+      <div class="stat rv"><div class="num"><i>Toledo</i></div><div class="cap">Front St, Ohio</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">What we fix</span>
+      <h2>From a warning light to a full repair</h2>
+      <p>One shop for diagnostics, routine maintenance, and the bigger jobs. Tell us the symptom and we will tell you straight what it needs.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h3>Engine Diagnostics</h3><p>Check-engine light on? We read the codes and find the real cause before you spend a dollar on parts.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h3>Brake Service</h3><p>Pads, rotors, lines, and fluid. Squealing or soft pedal, we make sure you stop when you need to.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 4h3a2 2 0 0 1 2 2v3M3 8v9a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M14 10h4v5a2 2 0 0 1-4 0"/></svg></div><h3>Oil &amp; Maintenance</h3><p>Oil changes, filters, fluids, and scheduled service that keeps small problems from becoming big ones.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg></div><h3>Suspension &amp; Steering</h3><p>Struts, shocks, alignment, and steering. If it pulls, bounces, or clunks, we track it down.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M6 6l12 12M18 6L6 18"/></svg></div><h3>Heating &amp; AC</h3><p>Blowing warm in July or cold in January? We recharge, repair, and get the cabin comfortable again.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6l-6.4 6.4a2 2 0 0 0 2.8 2.8l6.4-6.4a4 4 0 0 0 5.6-5.6l-2.6 2.6-2.2-2.2 2.6-2.6z"/></svg></div><h3>Repairs &amp; Tune-Ups</h3><p>Belts, batteries, sensors, and the odd noise you cannot place. Bring it in and we will sort it out.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="rotor" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Why drivers stay</span>
+      <h2>A shop that treats your car like it is theirs</h2>
+      <p>C&amp;T has earned a 4.9-star reputation in Toledo the slow way: by being honest about what a car needs and what it does not.</p>
+      <ul class="plist">
+        <li><span class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span><b>Straight answers.</b> We explain the problem in plain English and only recommend the work your car actually needs.</span></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span><b>Done right the first time.</b> Careful diagnostics up front means fewer comebacks and fewer surprises.</span></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span><b>Local and accountable.</b> A Toledo shop your neighbors already trust, right on Front Street.</span></li>
+      </ul>
+    </div>
+    <div class="why-side rv">
+      <div class="big">4.9</div>
+      <span class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+      </span>
+      <p>Based on 43 verified Google reviews from Toledo drivers.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">In the shop</span>
+      <h2>Real work, real cars</h2>
+    </div>
+    <div class="gal">
+      <div class="ph rv" role="img" aria-label="Mechanic working on a car engine with hand tools during a repair" style="background-image:url('https://images.pexels.com/photos/4315574/pexels-photo-4315574.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900'),linear-gradient(135deg,#1a0e10,#16181c)"><span class="tag">Engine work</span></div>
+      <div class="ph rv" role="img" aria-label="Mechanic inspecting the undercarriage of a vehicle raised in the garage" style="background-image:url('https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900'),linear-gradient(135deg,#1a0e10,#16181c)"><span class="tag">Diagnostics</span></div>
+      <div class="ph rv" role="img" aria-label="Two technicians working together on vehicle repairs inside the shop" style="background-image:url('https://images.pexels.com/photos/4489758/pexels-photo-4489758.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900'),linear-gradient(135deg,#1a0e10,#16181c)"><span class="tag">Full service</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="rv">Got a noise, a light, or a bad feeling?</h2>
+    <p class="rv">Call C&amp;T Automotive and talk to someone who will give it to you straight. We are happy to take a look.</p>
+    <div class="rv">
+      <a class="btn btn-p" href="tel:+14199175062">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call the shop
+      </a>
+      <div><a class="phone-big" href="tel:+14199175062">(419) 917-5062</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><span class="mark"><span>CT</span></span>C&amp;T Automotive</a>
+      <div>2028 Front St, Toledo, OH 43605</div>
+      <div><a href="tel:+14199175062">(419) 917-5062</a></div>
+    </div>
+    <div>
+      <div>Honest auto repair for Toledo drivers.</div>
+      <div style="margin-top:8px;color:#5a5f68">Rated 4.9 stars, 43 Google reviews.</div>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky" href="tel:+14199175062" aria-label="Call C and T Automotive">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call (419) 917-5062
+</a>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    hdr.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');}, (e.target.dataset.d||0)); io.unobserve(e.target);} });
+    },{threshold:.14});
+    rv.forEach(function(el,i){ el.dataset.d=(i%6)*70; io.observe(el); });
+  } else { rv.forEach(function(el){el.classList.add('in');}); }
+
+  function countUp(el){
+    var target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||'0',10),t0=null,dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec); if(p<1)requestAnimationFrame(step); else el.textContent=target.toFixed(dec); }
+    requestAnimationFrame(step);
+  }
+  var nums=document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window){
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);io2.unobserve(e.target);}});},{threshold:.6});
+    nums.forEach(function(n){io2.observe(n);});
+  } else { nums.forEach(function(n){n.textContent=parseFloat(n.dataset.count).toFixed(parseInt(n.dataset.dec||'0',10));}); }
+})();
+</script>
+</body>
+</html>

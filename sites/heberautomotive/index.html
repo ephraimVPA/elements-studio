@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heber Automotive | Trusted Auto Repair in Swanton, OH</title>
+<meta name="description" content="Heber Automotive in Swanton, OH. Family auto repair, maintenance, and diagnostics done honestly. Rated 4.8 stars across 32 reviews. Call (419) 875-6723.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f4ee;--card:#ffffff;--ink:#1b2530;--slate:#5a6472;--mist:#e7e2d8;--line:#e2ddd2;
+  --blue:#1f4e8c;--blue-d:#173a68;--rust:#b5532a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Syne','Inter',sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.5px;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92vw);margin:0 auto}
+.blue{color:var(--blue)}.rust{color:var(--rust)}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--rust);transform:scaleX(0);transform-origin:0 50%;z-index:120}
+
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(247,244,238,.92);backdrop-filter:blur(10px);box-shadow:0 8px 26px rgba(27,37,48,.1);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Syne';font-weight:800;font-size:22px;color:var(--ink);letter-spacing:-.5px}
+.mark{width:36px;height:36px;border-radius:9px;background:var(--blue);display:grid;place-items:center;color:#fff}
+.mark svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.navcta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:11px 18px;border-radius:10px;font-weight:700;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+.navcta:hover{transform:translateY(-2px);background:var(--blue-d)}
+.navcta svg{width:17px;height:17px}
+@media(max-width:640px){.navcta .lbl{display:none}.navcta{padding:11px 13px}}
+
+/* hero split */
+.hero{padding:132px 0 70px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:34px}.hero{padding:118px 0 50px}}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);margin-bottom:20px}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--rust)}
+.hero h1{font-size:clamp(40px,6.4vw,72px);margin-bottom:20px}
+.hero p.sub{font-size:clamp(17px,2vw,20px);color:var(--slate);max-width:48ch;margin-bottom:30px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:11px;font-weight:700;font-size:17px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s,border-color .2s,color .2s}
+.btn svg{width:19px;height:19px}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{transform:translateY(-3px);background:var(--blue-d)}
+.btn-g{border:1.6px solid var(--mist);color:var(--ink);background:var(--card)}
+.btn-g:hover{transform:translateY(-3px);border-color:var(--blue)}
+.trust{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:28px;align-items:center;font-size:15px;color:var(--slate)}
+.stars{display:inline-flex;gap:3px}
+.stars svg{width:18px;height:18px;fill:var(--rust);stroke:none}
+.trust b{color:var(--ink)}
+
+.hero-media{position:relative}
+.hero-bg{height:clamp(340px,46vw,500px);border-radius:20px;background-image:url('https://images.pexels.com/photos/6870324/pexels-photo-6870324.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#1f4e8c,#173a68);background-size:cover;background-position:center;box-shadow:0 30px 60px rgba(27,37,48,.22);transform:scale(1.001);overflow:hidden}
+.hero-bg::after{content:"";position:absolute;inset:0;border-radius:20px;background:linear-gradient(180deg,rgba(23,58,104,.12),rgba(23,58,104,.28))}
+.badge{position:absolute;left:-18px;bottom:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:0 18px 40px rgba(27,37,48,.16);display:flex;gap:13px;align-items:center}
+@media(max-width:900px){.badge{left:14px}}
+.badge .r{font-family:'Syne';font-weight:800;font-size:30px;color:var(--blue);line-height:1}
+.badge small{color:var(--slate);font-size:13px}
+
+/* stat strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.strip .s{padding:38px 16px;border-right:1px solid var(--line)}
+.strip .s:last-child{border-right:none}
+.strip .num{font-family:'Syne';font-weight:800;font-size:clamp(34px,5vw,52px);color:var(--ink)}
+.strip .num i{font-style:normal;color:var(--rust)}
+.strip .cap{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--slate);margin-top:6px}
+@media(max-width:600px){.strip .wrap{grid-template-columns:1fr}.strip .s{border-right:none;border-bottom:1px solid var(--line)}.strip .s:last-child{border-bottom:none}}
+
+section{padding:92px 0}
+.head{max-width:60ch;margin-bottom:48px}
+.head h2{font-size:clamp(30px,4.6vw,50px)}
+.head p{margin-top:15px;color:var(--slate)}
+
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 24px;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(27,37,48,.12);border-color:var(--blue)}
+.ico{width:50px;height:50px;border-radius:12px;display:grid;place-items:center;background:rgba(31,78,140,.1);color:var(--blue);margin-bottom:16px}
+.ico svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{font-size:15.5px;color:var(--slate)}
+
+/* blueprint band */
+.why{position:relative;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.why::before{content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(0deg,rgba(31,78,140,.07) 0 1px,transparent 1px 42px),repeating-linear-gradient(90deg,rgba(31,78,140,.07) 0 1px,transparent 1px 42px);
+  mask-image:linear-gradient(90deg,transparent,#000 30%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%,#000 100%)}
+.why .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:820px){.why .wrap{grid-template-columns:1fr;gap:32px}}
+.why h2{font-size:clamp(28px,4.4vw,46px);margin-bottom:18px}
+.plist{list-style:none;display:grid;gap:15px;margin-top:8px}
+.plist li{display:flex;gap:13px;align-items:flex-start}
+.plist .chk{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--blue);display:grid;place-items:center;margin-top:2px}
+.plist .chk svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.plist b{color:var(--ink)}
+.why-side{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:32px}
+.why-side .big{font-family:'Syne';font-weight:800;font-size:60px;color:var(--rust);line-height:1}
+.why-side .stars{margin:10px 0}
+.why-side p{color:var(--slate);font-size:15px}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.gal{grid-template-columns:1fr}}
+.ph{height:290px;border-radius:16px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .5s cubic-bezier(.16,1,.3,1);box-shadow:0 12px 30px rgba(27,37,48,.08)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(23,37,52,.6))}
+.ph:hover{transform:scale(1.02)}
+.ph .tag{position:absolute;left:16px;bottom:14px;z-index:2;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#fff;font-weight:700}
+
+.final{text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;border-top:1px solid var(--line)}
+.final h2{color:#fff;font-size:clamp(30px,5.4vw,58px);margin-bottom:14px}
+.final p{color:#dbe6f4;max-width:46ch;margin:0 auto 28px}
+.final .btn-w{background:#fff;color:var(--blue)}
+.final .btn-w:hover{background:var(--paper)}
+.phone-big{font-family:'Syne';font-weight:800;font-size:clamp(28px,5.4vw,48px);color:#fff;letter-spacing:1px;display:inline-block;margin-top:6px}
+
+footer{background:#141d27;color:#9aa6b3;padding:44px 0;font-size:15px}
+.foot{display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:flex-start}
+.foot .brand{color:#fff;margin-bottom:12px}
+.foot .mark{background:var(--rust)}
+.foot a:hover{color:#fff}
+
+.sticky{display:none}
+@media(max-width:640px){
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--blue);color:#fff;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:700;box-shadow:0 -8px 24px rgba(27,37,48,.28)}
+  .sticky svg{width:19px;height:19px}
+  body{padding-bottom:58px}
+}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}#bar{display:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="mark"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6l-6.4 6.4a2 2 0 0 0 2.8 2.8l6.4-6.4a4 4 0 0 0 5.6-5.6l-2.6 2.6-2.2-2.2 2.6-2.6z"/></svg></span>Heber Automotive</a>
+    <a class="navcta" href="tel:+14198756723" aria-label="Call Heber Automotive at (419) 875-6723">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="lbl">(419) 875-6723</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">Swanton, Ohio</span>
+      <h1 class="rv">The family auto shop Swanton keeps coming back to</h1>
+      <p class="sub rv">Repairs and maintenance done honestly, explained clearly, and priced fairly. Bring in the car you rely on and leave knowing it was handled right.</p>
+      <div class="cta-row rv">
+        <a class="btn btn-p" href="tel:+14198756723">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (419) 875-6723
+        </a>
+        <a class="btn btn-g" href="#services">Our services</a>
+      </div>
+      <div class="trust rv">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        </span>
+        <span><b>4.8</b> stars from <b>32</b> Google reviews</span>
+      </div>
+    </div>
+    <div class="hero-media rv">
+      <div class="hero-bg" role="img" aria-label="A friendly Heber Automotive mechanic inspecting a customer car in the service garage"></div>
+      <div class="badge">
+        <div class="r">4.8</div>
+        <div><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg></span><br><small>32 Google reviews</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="s rv"><div class="num" data-count="4.8" data-dec="1">0.0</div><div class="cap">Star Rating</div></div>
+    <div class="s rv"><div class="num" data-count="32">0</div><div class="cap">Google Reviews</div></div>
+    <div class="s rv"><div class="num"><i>Swanton</i></div><div class="cap">Co Rd B, Ohio</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">What we do</span>
+      <h2>Everything your car needs, under one roof</h2>
+      <p>From an oil change to a check-engine light, Heber Automotive handles the routine and the tricky with the same care.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 4h3a2 2 0 0 1 2 2v3M3 8v9a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M14 10h4v5a2 2 0 0 1-4 0"/></svg></div><h3>Oil &amp; Maintenance</h3><p>Oil changes, filters, fluids, and the routine service that keeps your car dependable for years.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h3>Brakes &amp; Tires</h3><p>Pads, rotors, rotations, and new tires. We keep you stopping short and rolling straight.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h3>Engine Diagnostics</h3><p>Warning light on? We find the real cause with proper diagnostics before recommending any repair.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg></div><h3>Suspension &amp; Alignment</h3><p>Struts, shocks, and alignment so your car tracks true and rides the way it should.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M6 6l12 12M18 6L6 18"/></svg></div><h3>Heating &amp; AC</h3><p>Comfortable in every Ohio season. We repair and recharge so the cabin stays the temperature you want.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4v6c0 5 3.5 7.5 8 9 4.5-1.5 8-4 8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Inspections &amp; Repairs</h3><p>Pre-trip checks, batteries, belts, and the fixes that keep small issues from stranding you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Why Swanton trusts us</span>
+      <h2>Honest work from people who live here too</h2>
+      <p>Heber Automotive built a 4.8-star reputation by doing right by the people who walk in. No pressure, no padded bills, just good work.</p>
+      <ul class="plist">
+        <li><span class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span><b>Clear estimates.</b> You hear what the car needs and what it costs before we touch it.</span></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span><b>Fair pricing.</b> We fix what needs fixing and tell you what can wait.</span></li>
+        <li><span class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span><b>A shop that remembers you.</b> Local, friendly, and here for the long haul on Co Rd B.</span></li>
+      </ul>
+    </div>
+    <div class="why-side rv">
+      <div class="big">4.8</div>
+      <span class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+      </span>
+      <p>Averaged across 32 verified Google reviews from Swanton area drivers.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">In the bay</span><h2>The work behind the reviews</h2></div>
+    <div class="gal">
+      <div class="ph rv" role="img" aria-label="Close view of a mechanic performing engine maintenance by hand" style="background-image:url('https://images.pexels.com/photos/8478259/pexels-photo-8478259.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900'),linear-gradient(135deg,#1f4e8c,#173a68)"><span class="tag">Maintenance</span></div>
+      <div class="ph rv" role="img" aria-label="Technicians repairing a vehicle in the Heber Automotive workshop" style="background-image:url('https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900'),linear-gradient(135deg,#1f4e8c,#173a68)"><span class="tag">Repairs</span></div>
+      <div class="ph rv" role="img" aria-label="A car raised on a lift for inspection and service in the shop" style="background-image:url('https://images.pexels.com/photos/8986132/pexels-photo-8986132.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900'),linear-gradient(135deg,#1f4e8c,#173a68)"><span class="tag">Inspection</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="rv">Ready when your car is</h2>
+    <p class="rv">Call Heber Automotive to book a visit or ask about a repair. We are glad to help and happy to give you a straight answer.</p>
+    <div class="rv">
+      <a class="btn btn-w" href="tel:+14198756723">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call the shop
+      </a>
+      <div><a class="phone-big" href="tel:+14198756723">(419) 875-6723</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6l-6.4 6.4a2 2 0 0 0 2.8 2.8l6.4-6.4a4 4 0 0 0 5.6-5.6l-2.6 2.6-2.2-2.2 2.6-2.6z"/></svg></span>Heber Automotive</a>
+      <div>3781 Co Rd B, Swanton, OH 43558</div>
+      <div><a href="tel:+14198756723">(419) 875-6723</a></div>
+    </div>
+    <div>
+      <div>Trusted family auto repair in Swanton.</div>
+      <div style="margin-top:8px;color:#6b7684">Rated 4.8 stars, 32 Google reviews.</div>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky" href="tel:+14198756723" aria-label="Call Heber Automotive">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call (419) 875-6723
+</a>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),bar=document.getElementById('bar');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    hdr.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');}, (e.target.dataset.d||0)); io.unobserve(e.target);} });
+    },{threshold:.14});
+    rv.forEach(function(el,i){ el.dataset.d=(i%6)*70; io.observe(el); });
+  } else { rv.forEach(function(el){el.classList.add('in');}); }
+
+  function countUp(el){
+    var target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||'0',10),t0=null,dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec); if(p<1)requestAnimationFrame(step); else el.textContent=target.toFixed(dec); }
+    requestAnimationFrame(step);
+  }
+  var nums=document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window){
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);io2.unobserve(e.target);}});},{threshold:.6});
+    nums.forEach(function(n){io2.observe(n);});
+  } else { nums.forEach(function(n){n.textContent=parseFloat(n.dataset.count).toFixed(parseInt(n.dataset.dec||'0',10));}); }
+})();
+</script>
+</body>
+</html>
