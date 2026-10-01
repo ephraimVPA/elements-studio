@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T&amp;B Automotive &amp; Resto-Mod | Oregon, OH</title>
+<meta name="description" content="Classic car restoration, resto-mod builds, and everyday auto repair in Oregon, OH. Rated 4.6 from 18 Google reviews. Call T&amp;B to talk about your car.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17120D; --ink2:#221A12; --panel:#2A2016; --line:#3C2F20;
+  --cream:#ECE0CC; --muted:#B6A68C; --rust:#C14A1E; --rust-d:#9A3912; --brass:#C8A24A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:Barlow,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Racing Sans One',Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:.005em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--rust);transform:scaleX(0);transform-origin:left;z-index:60}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:all .3s cubic-bezier(.16,1,.3,1)}
+.nav.scrolled{background:rgba(18,13,9,.95);box-shadow:0 10px 34px rgba(0,0,0,.55);padding:11px 0;backdrop-filter:blur(9px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Racing Sans One',serif;font-size:21px;letter-spacing:.02em}
+.brand .mark{width:36px;height:36px;border-radius:8px;background:var(--rust);display:flex;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid #D86334}
+.brand .mark svg{width:21px;height:21px;stroke:#fff}
+.nav .cta{display:inline-flex;align-items:center;gap:8px;background:var(--rust);color:#fff;font-weight:700;padding:11px 18px;border-radius:7px;font-family:Barlow,sans-serif;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.nav .cta:hover{transform:translateY(-2px)}
+.nav .cta svg{width:17px;height:17px;stroke:#fff}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/4489766/pexels-photo-4489766.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#17120D,#2A2016);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.06) translateY(0)}to{transform:scale(1.16) translateY(-14px)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(98deg,rgba(15,11,7,.95) 0%,rgba(15,11,7,.82) 46%,rgba(15,11,7,.46) 100%);z-index:1}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 70px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;color:var(--brass);background:rgba(200,162,74,.1);border:1px solid rgba(200,162,74,.32);padding:7px 14px;border-radius:5px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.5rem,6.6vw,5rem);max-width:16ch;margin-bottom:20px;text-shadow:0 3px 24px rgba(0,0,0,.5)}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);color:#E6DCC9;max-width:50ch;margin-bottom:34px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:16px 26px;border-radius:7px;font-size:1.05rem;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s}
+.btn-primary{background:var(--rust);color:#fff;box-shadow:0 14px 34px rgba(193,74,30,.36)}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-ghost{border:1.5px solid rgba(236,224,204,.38);color:var(--cream)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--brass)}
+.btn svg{width:19px;height:19px;stroke:#fff}
+.btn-ghost svg{stroke:var(--cream)}
+.proof{display:flex;flex-wrap:wrap;gap:26px;margin-top:40px;align-items:center}
+.proof .stars{color:var(--brass);font-size:20px;letter-spacing:2px}
+.proof b{font-family:'Racing Sans One',serif;font-size:1.7rem;color:var(--cream)}
+.proof span{display:block;font-size:13px;color:var(--muted)}
+
+section.pad{padding:92px 0}
+.kicker{color:var(--rust);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin-bottom:12px}
+.h2{font-size:clamp(1.9rem,4.2vw,3.1rem);margin-bottom:16px}
+.sub{color:var(--muted);max-width:58ch;font-size:1.08rem;margin-bottom:46px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:20px}
+.card{background:linear-gradient(180deg,#241B13,#1C150E);border:1px solid var(--line);border-radius:12px;padding:30px 26px;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,border-color .4s}
+.card:hover{transform:translateY(-7px);border-color:var(--rust-d);box-shadow:0 22px 48px rgba(0,0,0,.5)}
+.card .ic{width:52px;height:52px;border-radius:10px;background:rgba(193,74,30,.14);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.card .ic svg{width:26px;height:26px;stroke:var(--rust)}
+.card h3{font-size:1.2rem;margin-bottom:10px;font-family:Barlow,sans-serif;font-weight:800;letter-spacing:0}
+.card p{color:var(--muted);font-size:.98rem}
+
+.why{position:relative;background:#1C150E;overflow:hidden}
+.pins{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;background:
+  repeating-linear-gradient(90deg,
+    transparent 0px, transparent 46px,
+    rgba(200,162,74,.10) 46px, rgba(200,162,74,.10) 47px,
+    transparent 47px, transparent 50px,
+    rgba(193,74,30,.08) 50px, rgba(193,74,30,.08) 51px)}
+.why .wrap{position:relative;z-index:1}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;margin-top:10px}
+.stat{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:26px 22px}
+.stat b{font-family:'Racing Sans One',serif;font-size:2.6rem;color:var(--rust);display:block;line-height:1}
+.stat span{color:var(--muted);font-size:.96rem;margin-top:8px;display:block}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px;margin-top:40px}
+.feat .f{display:flex;gap:14px;align-items:flex-start}
+.feat .f svg{width:24px;height:24px;stroke:var(--brass);flex:0 0 auto;margin-top:3px}
+.feat .f h4{font-family:Barlow,sans-serif;font-weight:800;font-size:1.06rem;margin-bottom:4px}
+.feat .f p{color:var(--muted);font-size:.95rem}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.ph{position:relative;height:320px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 16px 40px rgba(0,0,0,.46);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.ph:hover{transform:scale(1.025)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(15,11,7,.74));z-index:1}
+.ph1{background-image:url('https://images.pexels.com/photos/8310758/pexels-photo-8310758.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2A2016,#17120D)}
+.ph2{background-image:url('https://images.pexels.com/photos/4489760/pexels-photo-4489760.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2A2016,#17120D)}
+.ph3{background-image:url('https://images.pexels.com/photos/16041070/pexels-photo-16041070.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2A2016,#17120D)}
+.ph .cap{position:absolute;left:18px;bottom:16px;z-index:2;font-weight:600;font-size:.98rem;text-shadow:0 2px 12px rgba(0,0,0,.65)}
+
+.cta-band{background:linear-gradient(135deg,#C14A1E,#8F330F);color:#fff;border-radius:16px;padding:56px 44px;text-align:center;position:relative;overflow:hidden}
+.cta-band h2{font-size:clamp(1.8rem,3.8vw,2.8rem);margin-bottom:14px;color:#fff}
+.cta-band p{color:#FCEaDF;max-width:50ch;margin:0 auto 30px;font-weight:500}
+.cta-band .btn-dark{background:#17120D;color:#fff;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+.cta-band .btn-dark svg{stroke:#fff}
+.area{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.area span{background:rgba(23,18,13,.2);border:1px solid rgba(255,255,255,.22);color:#FCEaDF;padding:7px 15px;border-radius:5px;font-size:.9rem;font-weight:600}
+
+footer{padding:54px 0 42px;border-top:1px solid var(--line);margin-top:4px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.fcol h4{font-family:'Racing Sans One',serif;font-size:1.2rem;margin-bottom:8px}
+.fcol p{color:var(--muted);font-size:.95rem}
+.fcol a.tel{color:var(--rust);font-weight:800;font-size:1.2rem}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;padding:12px 16px;background:rgba(18,13,9,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--rust);color:#fff;font-weight:800;padding:15px;border-radius:9px;font-size:1.08rem}
+.sticky-call a svg{width:20px;height:20px;stroke:#fff}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:720px){
+  section.pad{padding:66px 0}
+  .sticky-call{display:block}
+  .hero .wrap{padding:108px 0 110px}
+  .nav .cta{display:none}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11"/><path d="M5 11h14v5H5z"/><circle cx="8" cy="16" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg></span>
+      T&amp;B Resto-Mod
+    </a>
+    <a class="cta" href="tel:5673128888"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(567) 312-8888</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="Mechanics working on a classic car under restoration in a warmly lit garage"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Oregon, OH</span>
+    <h1>Old iron, brought back <em>right.</em></h1>
+    <p class="lead">Full restorations, resto-mod builds, and the everyday repair that keeps your daily driver going. One shop that treats a project car the way you would.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="tel:5673128888"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call about your build</a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+    <div class="proof">
+      <div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <span>Rated on Google</span>
+      </div>
+      <div><b><span class="count" data-to="4.6" data-dec="1">0.0</span></b><span>Average rating</span></div>
+      <div><b><span class="count" data-to="18">0</span></b><span>Google reviews</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="kicker">What we do</p>
+      <h2 class="h2">From a frame-off build to a brake job</h2>
+      <p class="sub">The same hands that chase a rust problem on a 60s project will also sort out the check-engine light on your commuter.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5a3 3 0 0 1 2.8-2h8.4A3 3 0 0 1 19 8l2 5"/><path d="M3 13h18v4a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="7" cy="15" r="1"/><circle cx="17" cy="15" r="1"/></svg></div>
+        <h3>Restoration and resto-mod</h3>
+        <p>Factory-correct or modernized your way: suspension, brakes, and drivetrain upgrades built into a classic body.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h-4v3H7l-2 3v4l2 3h3v3h4v-3h3l2-3v-4l-2-3h-3z"/><circle cx="12" cy="12" r="2.3"/></svg></div>
+        <h3>Engine and drivetrain</h3>
+        <p>Rebuilds, swaps, and tuning. More power if you want it, dependable if you just need it to run clean.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-3 9-9 3 3-9 9z"/><path d="M15 6l3-3 3 3-3 3"/></svg></div>
+        <h3>Bodywork and rust repair</h3>
+        <p>Metal work, panel fit, and prep done so the paint has something solid to sit on and stays looking sharp.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3>Everyday repair and diagnostics</h3>
+        <p>Brakes, oil, check-engine lights, and no-start problems on your daily driver, sorted and explained.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad why">
+  <div class="pins" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <p class="kicker">Why owners trust T&amp;B</p>
+      <h2 class="h2">Project-car care, honest shop prices</h2>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b><span class="count" data-to="4.6" data-dec="1">0.0</span></b><span>Star rating on Google reviews</span></div>
+      <div class="stat reveal"><b><span class="count" data-to="18">0</span></b><span>Reviews from local owners</span></div>
+      <div class="stat reveal"><b>2</b><span>Builders who know classic and modern alike</span></div>
+    </div>
+    <div class="feat">
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><h4>Straight answers</h4><p>You hear what the car needs now and what can wait, before any work starts.</p></div></div>
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9M14 17H5"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/></svg><div><h4>Classic and modern</h4><p>We read factory manuals and modern scan tools, so one shop handles both ends of your garage.</p></div></div>
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><h4>Right on Woodville Rd</h4><p>Local to Oregon and the east side of Toledo, easy to reach and easy to check in on.</p></div></div>
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l-2 7h5l-7 11 2-8H7z"/></svg><div><h4>Built to last</h4><p>Parts and prep are done once and done well, so the car holds up after it leaves the lift.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="kicker">In the shop</p>
+      <h2 class="h2">A look at the bench</h2>
+      <p class="sub">Builds and repairs in progress at the Woodville Rd shop in Oregon, OH.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="A classic car with the hood open showing the engine during service"><span class="cap">Under the hood</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="Two mechanics restoring a classic car in a well lit garage"><span class="cap">Restoration in progress</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="Vintage muscle cars with red detailing parked in an indoor garage"><span class="cap">Finished builds</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap reveal">
+    <div class="cta-band">
+      <h2>Have a car in mind? Let's talk.</h2>
+      <p>Call T&amp;B to walk through your project, a repair, or an idea you have been sitting on. No pressure, just a straight conversation about the car.</p>
+      <a class="btn btn-dark" href="tel:5673128888"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (567) 312-8888</a>
+      <div class="area">
+        <span>Oregon</span><span>East Toledo</span><span>Northwood</span><span>Jerusalem Twp</span><span>Walbridge</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcol">
+      <h4>T&amp;B Automotive &amp; Resto-Mod, LLC</h4>
+      <p>2007 Woodville Rd, Oregon, OH 43616</p>
+      <p>Rated 4.6 from 18 Google reviews</p>
+    </div>
+    <div class="fcol">
+      <p>Call the shop</p>
+      <a class="tel" href="tel:5673128888">(567) 312-8888</a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:5673128888"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call the shop</a>
+</div>
+
+<script>
+var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+function onScroll(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  if(y>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');}, (i%6)*70); io.unobserve(e.target);} });
+},{threshold:.16});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+function runCount(el){
+  var to=parseFloat(el.getAttribute('data-to')),dec=parseInt(el.getAttribute('data-dec')||'0',10),t0=null,dur=1400;
+  function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3),v=to*e;
+    el.textContent=dec?v.toFixed(dec):Math.round(v).toString();
+    if(p<1)requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+var cio=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ runCount(e.target); cio.unobserve(e.target);} });
+},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
