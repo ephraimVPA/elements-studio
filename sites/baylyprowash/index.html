@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayly ProWash | Pressure Washing in Waterville, OH</title>
+<meta name="description" content="Exterior pressure washing in Waterville, OH: siding, driveways, decks, and walkways washed clean. Rated 5.0 from 13 Google reviews. Call Bayly ProWash for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F3EC; --card:#FFFFFF; --ink:#16241D; --ink2:#2C3C33; --muted:#5E6E63;
+  --line:#E4DECF; --emerald:#0E6B4E; --emerald-d:#0A5540; --deep:#0C2C22;
+  --water:#1C8FB8; --water-d:#157architecture;
+}
+:root{--water-d:#13708F}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.015em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--emerald);transform:scaleX(0);transform-origin:left;z-index:60}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:all .3s cubic-bezier(.16,1,.3,1)}
+.nav.scrolled{background:rgba(246,243,236,.95);box-shadow:0 10px 30px rgba(12,44,34,.12);padding:11px 0;backdrop-filter:blur(9px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;color:var(--ink)}
+.nav.scrolled .brand,.nav .brand{color:#fff}
+.nav.scrolled .brand{color:var(--ink)}
+.brand .mark{width:40px;height:40px;border-radius:11px;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.brand .mark svg{width:22px;height:22px;stroke:#fff}
+.nav .cta{display:inline-flex;align-items:center;gap:8px;background:var(--emerald);color:#fff;font-weight:800;font-family:Figtree,sans-serif;padding:11px 18px;border-radius:10px;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.nav .cta:hover{transform:translateY(-2px);background:var(--emerald-d)}
+.nav .cta svg{width:17px;height:17px;stroke:#fff}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/5652626/pexels-photo-5652626.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#0C2C22,#0E6B4E);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 26s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.06) translateY(0)}to{transform:scale(1.16) translateY(-14px)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(105deg,rgba(9,30,23,.92) 0%,rgba(9,30,23,.74) 50%,rgba(9,30,23,.42) 100%);z-index:1}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 70px;color:#fff}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:Figtree,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:7px 14px;border-radius:30px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.6rem,6.8vw,5.2rem);max-width:16ch;margin-bottom:20px;color:#fff;text-shadow:0 3px 24px rgba(0,0,0,.4)}
+.hero h1 em{font-style:normal;color:#8BE3C4}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:#E7EFE9;max-width:54ch;margin-bottom:34px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:Figtree,sans-serif;font-weight:800;padding:16px 26px;border-radius:12px;font-size:1.05rem;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s}
+.btn-primary{background:var(--emerald);color:#fff;box-shadow:0 14px 34px rgba(14,107,78,.4)}
+.btn-primary:hover{transform:translateY(-3px);background:var(--emerald-d)}
+.btn-primary svg{stroke:#fff}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{transform:translateY(-3px);border-color:#fff;background:rgba(255,255,255,.08)}
+.btn svg{width:19px;height:19px}
+.btn-ghost svg{stroke:#fff}
+.proof{display:flex;flex-wrap:wrap;gap:26px;margin-top:40px;align-items:center}
+.proof .stars{color:#FFD36B;font-size:20px;letter-spacing:2px}
+.proof b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;display:block;line-height:1}
+.proof span{display:block;font-size:13px;color:#C7D4CC}
+
+section.pad{padding:92px 0}
+.kicker{color:var(--emerald);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin-bottom:12px;font-family:Figtree,sans-serif}
+.h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:16px;color:var(--ink)}
+.sub{color:var(--muted);max-width:60ch;font-size:1.08rem;margin-bottom:46px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px;box-shadow:0 1px 0 rgba(12,44,34,.03);transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,border-color .4s}
+.card:hover{transform:translateY(-7px);border-color:#CDE3D8;box-shadow:0 22px 48px rgba(12,44,34,.12)}
+.card .ic{width:52px;height:52px;border-radius:13px;background:rgba(14,107,78,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.card .ic svg{width:26px;height:26px;stroke:var(--emerald)}
+.card h3{font-size:1.3rem;margin-bottom:10px;color:var(--ink)}
+.card p{color:var(--muted);font-size:.98rem}
+
+.why{position:relative;background:var(--deep);color:#EAF1EC;overflow:hidden}
+.ripple{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;background:
+  radial-gradient(circle at 82% 28%, transparent 0 38px, rgba(28,143,184,.16) 39px 41px, transparent 42px 78px, rgba(28,143,184,.12) 79px 81px, transparent 82px 120px, rgba(28,143,184,.09) 121px 123px, transparent 124px 170px),
+  radial-gradient(circle at 14% 84%, transparent 0 30px, rgba(139,227,196,.14) 31px 33px, transparent 34px 68px, rgba(139,227,196,.1) 69px 71px, transparent 72px 110px)}
+.why .wrap{position:relative;z-index:1}
+.why .h2,.why .kicker{color:#fff}
+.why .kicker{color:#8BE3C4}
+.why .sub{color:#B6C7BC}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;margin-top:10px}
+.stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px 22px}
+.stat b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:2.7rem;color:#8BE3C4;display:block;line-height:1}
+.stat span{color:#B6C7BC;font-size:.96rem;margin-top:8px;display:block}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px;margin-top:40px}
+.feat .f{display:flex;gap:14px;align-items:flex-start}
+.feat .f svg{width:24px;height:24px;stroke:#8BE3C4;flex:0 0 auto;margin-top:3px}
+.feat .f h4{font-family:Figtree,sans-serif;font-weight:800;font-size:1.06rem;margin-bottom:4px;color:#fff}
+.feat .f p{color:#B6C7BC;font-size:.95rem}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.ph{position:relative;height:320px;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 16px 40px rgba(12,44,34,.16);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.ph:hover{transform:scale(1.025)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 46%,rgba(9,30,23,.72));z-index:1}
+.ph1{background-image:url('https://images.pexels.com/photos/14965464/pexels-photo-14965464.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#0E6B4E,#0C2C22)}
+.ph2{background-image:url('https://images.pexels.com/photos/20296972/pexels-photo-20296972.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#0E6B4E,#0C2C22)}
+.ph3{background-image:url('https://images.pexels.com/photos/10133570/pexels-photo-10133570.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#0E6B4E,#0C2C22)}
+.ph .cap{position:absolute;left:18px;bottom:16px;z-index:2;font-weight:600;font-size:.98rem;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+
+.cta-band{background:linear-gradient(135deg,var(--emerald),var(--emerald-d));color:#fff;border-radius:20px;padding:56px 44px;text-align:center;position:relative;overflow:hidden}
+.cta-band h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:14px;color:#fff}
+.cta-band p{color:#D9ECE2;max-width:52ch;margin:0 auto 30px;font-weight:500}
+.cta-band .btn-dark{background:#fff;color:var(--emerald-d)}
+.cta-band .btn-dark svg{stroke:var(--emerald-d)}
+.area{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.area span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.26);color:#fff;padding:7px 15px;border-radius:30px;font-size:.9rem;font-weight:700}
+
+footer{padding:54px 0 90px;border-top:1px solid var(--line);margin-top:4px;background:var(--paper)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+.fcol h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;margin-bottom:8px;color:var(--ink)}
+.fcol p{color:var(--muted);font-size:.95rem}
+.fcol a.tel{color:var(--emerald);font-weight:800;font-size:1.2rem;font-family:Figtree,sans-serif}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;padding:12px 16px;background:rgba(246,243,236,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--emerald);color:#fff;font-weight:800;padding:15px;border-radius:12px;font-size:1.08rem}
+.sticky-call a svg{width:20px;height:20px;stroke:#fff}
+
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(max-width:720px){
+  .nav .cta{display:none}
+  .nav .brand{color:#fff}
+  .sticky-call{display:block}
+  .hero .wrap{padding:104px 0 60px}
+  section.pad{padding:68px 0}
+  .cta-band{padding:44px 22px}
+  footer{padding-bottom:100px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+      Bayly ProWash
+    </a>
+    <a class="cta" href="tel:+14199364377"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg> (419) 936-4377</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A Bayly ProWash technician in protective gear washing house siding with a pressure washer"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Pressure washing · Waterville, OH</span>
+    <h1>Your home, <em>washed clean</em> the first time.</h1>
+    <p class="lead">Bayly ProWash cleans siding, driveways, decks, and walkways around Waterville and the surrounding area. The grime comes off, the surface stays safe, and your place looks cared for again.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="tel:+14199364377"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg> Call for a free estimate</a>
+      <a class="btn btn-ghost" href="#work"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg> See the results</a>
+    </div>
+    <div class="proof">
+      <div><span class="stars">★★★★★</span><span>Google rating</span></div>
+      <div><b id="rateNum">5.0</b><span>out of 5</span></div>
+      <div><b id="revNum">13</b><span>Google reviews</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">What we wash</div>
+      <h2 class="h2">Exterior cleaning for the whole property</h2>
+      <p class="sub">The right pressure and the right method for each surface, so dirt, algae, and buildup come off without damage.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div>
+        <h3>House and siding</h3>
+        <p>Vinyl, brick, and stucco washed to lift mildew and years of dirt from the walls.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M8 7V4M16 7V4"/></svg></div>
+        <h3>Driveways and concrete</h3>
+        <p>Flat surface cleaning that pulls out oil, tire marks, and grime for an even finish.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18M3 13h18M6 9v10M18 9v10M4 9l2-4h12l2 4"/></svg></div>
+        <h3>Decks and fences</h3>
+        <p>Gentle washing for wood and composite that clears buildup without chewing up the grain.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 5l8 7M6 11v7h12v-7"/><path d="M10 18v-4h4v4"/></svg></div>
+        <h3>Roof soft wash</h3>
+        <p>Low pressure treatment that clears black streaks and algae and protects the shingles.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v3H3zM5 10v8M19 10v8M5 18h14"/><path d="M8 4l1 3M16 4l-1 3"/></svg></div>
+        <h3>Gutter brightening</h3>
+        <p>Streaks and oxidation scrubbed off the face of the gutters so the trim looks sharp.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V9l6-5 6 5v11M10 20v-6h4v6"/></svg></div>
+        <h3>Patios and walkways</h3>
+        <p>Pavers, steps, and sidewalks cleaned so the whole entry reads fresh from the curb.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad why" id="why">
+  <div class="ripple" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Why Bayly ProWash</div>
+      <h2 class="h2">Washed right, cleaned up, done when promised</h2>
+      <p class="sub">We match the pressure to the surface, protect the plants and finishes around the work, and leave the site tidy. The result holds up and the job gets done on schedule.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b id="s1">5.0</b><span>Average Google rating</span></div>
+      <div class="stat reveal"><b id="s2">13</b><span>Google reviews</span></div>
+      <div class="stat reveal"><b>1</b><span>Locally owned and operated</span></div>
+    </div>
+    <div class="feat">
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>Free estimates</h4><p>A clear price up front before any water hits the house.</p></div></div>
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>Surface safe methods</h4><p>Soft wash where it belongs so nothing gets etched or stripped.</p></div></div>
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>We respect the yard</h4><p>Plants and fixtures covered or rinsed, water cleared when we leave.</p></div></div>
+      <div class="f reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>Waterville local</h4><p>A nearby crew you can reach on one phone number.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">The results</div>
+      <h2 class="h2">Clean you can see</h2>
+      <p class="sub">A few of the surfaces Bayly ProWash gets called out for most.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1 reveal" role="img" aria-label="Worker pressure washing stone steps until the surface is clean"><span class="cap">Steps and stairways</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="Technician cleaning a sidewalk and walkway with a pressure washer"><span class="cap">Walkways and flatwork</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="Crew washing the exterior face of a building with a pressure hose"><span class="cap">Building exteriors</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="contact">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Ready for a cleaner exterior?</h2>
+      <p>Tell us what you want washed and we will give you a free estimate. A call is the quickest way to get on the schedule.</p>
+      <a class="btn btn-dark" href="tel:+14199364377"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg> (419) 936-4377</a>
+      <div class="area">
+        <span>Waterville</span><span>Whitehouse</span><span>Maumee</span><span>Perrysburg</span><span>Sylvania</span><span>Toledo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcol">
+      <h4>Bayly ProWash</h4>
+      <p>240 S River Rd<br>Waterville, OH 43566</p>
+    </div>
+    <div class="fcol">
+      <h4>Call us</h4>
+      <a class="tel" href="tel:+14199364377">(419) 936-4377</a>
+      <p>Rated 5.0 from 13 Google reviews</p>
+    </div>
+    <div class="fcol">
+      <h4>Service area</h4>
+      <p>Waterville and the surrounding communities across the Toledo area.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+14199364377"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg> Call (419) 936-4377</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+function onScroll(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  nav.classList.toggle('scrolled',y>40);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')},(parseInt(el.dataset.d||0)));io.unobserve(el);}});
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.dataset.d=(i%6)*70;io.observe(el);});
+
+function countUp(id,to,dec){
+  var el=document.getElementById(id);if(!el)return;
+  var done=false;
+  var ob=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting&&!done){done=true;var t0=null;
+        function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);
+          var v=to*(1-Math.pow(1-p,3));
+          el.textContent=dec?v.toFixed(1):Math.round(v);
+          if(p<1)requestAnimationFrame(step);else el.textContent=dec?to.toFixed(1):to;}
+        requestAnimationFrame(step);}
+    });
+  },{threshold:.5});
+  ob.observe(el);
+}
+countUp('rateNum',5.0,true);countUp('revNum',13,false);
+countUp('s1',5.0,true);countUp('s2',13,false);
+</script>
+</body>
+</html>
