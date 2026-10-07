@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lee's Plumbing Inc | Plumber in Sylvania, OH</title>
+<meta name="description" content="Lee's Plumbing Inc is a licensed plumber serving Sylvania, OH. Leaks, clogs, water heaters, and repairs done right the first time. Call for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marine:#0C3B4A;
+    --marine-deep:#082a35;
+    --copper:#C47B3C;
+    --copper-soft:#d69a62;
+    --cream:#F7F4EF;
+    --ink:#122a32;
+    --muted:#5c7079;
+    --white:#ffffff;
+    --ring:rgba(12,59,74,.12);
+    --spring:cubic-bezier(.34,1.56,.64,1);
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bricolage Grotesque','Inter',sans-serif;line-height:1.05;font-weight:800;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  section{padding:92px 0}
+
+  /* scroll progress */
+  #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--copper);transform:scaleX(0);transform-origin:left;z-index:60}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s var(--ease),box-shadow .3s var(--ease),padding .3s var(--ease);padding:20px 0}
+  nav.scrolled{background:rgba(247,244,239,.92);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(8,42,53,.1);padding:12px 0}
+  .nav-row{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;color:var(--marine)}
+  nav.scrolled .brand{color:var(--marine)}
+  .brand .logo{width:34px;height:34px;display:grid;place-items:center;background:var(--copper);border-radius:9px;color:#fff;flex:none}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--copper);color:#fff;padding:11px 18px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .3s var(--spring),box-shadow .3s var(--ease);box-shadow:0 6px 18px rgba(196,123,60,.35)}
+  .nav-cta:hover{transform:translateY(-2px) scale(1.03)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--marine);font-weight:500;font-size:15px;opacity:.8;transition:opacity .2s}
+  .nav-links a:hover{opacity:1}
+
+  /* hero */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+  .hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,var(--marine-deep),var(--marine));background-size:cover;background-position:center;animation:ken 22s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(8,42,53,.82) 0%,rgba(8,42,53,.6) 45%,rgba(8,42,53,.38) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding:120px 0 60px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--copper-soft);margin-bottom:22px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--copper)}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);max-width:15ch;margin-bottom:22px}
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.35rem);max-width:46ch;color:rgba(255,255,255,.9);margin-bottom:34px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--copper);color:#fff;padding:17px 30px;border-radius:999px;font-weight:600;font-size:17px;transition:transform .3s var(--spring),box-shadow .3s var(--ease);box-shadow:0 10px 30px rgba(196,123,60,.4)}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 40px rgba(196,123,60,.5)}
+  .btn-ghost{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:600;padding:15px 8px;border-bottom:2px solid transparent;transition:border-color .25s}
+  .btn-ghost:hover{border-color:var(--copper)}
+  .hero-badge{display:flex;align-items:center;gap:14px;margin-top:40px;color:rgba(255,255,255,.92)}
+  .stars{display:flex;gap:3px;color:var(--copper-soft)}
+  .hero-badge b{font-family:'Bricolage Grotesque',sans-serif;font-size:19px}
+
+  /* generic reveal (JS only) */
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js .reveal.in{opacity:1;transform:none}
+
+  /* services */
+  .sec-head{max-width:60ch;margin-bottom:54px}
+  .sec-head .tag{color:var(--copper);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px;display:block;margin-bottom:14px}
+  .sec-head h2{font-size:clamp(2rem,4vw,3rem);color:var(--marine);margin-bottom:14px}
+  .sec-head p{color:var(--muted);font-size:1.1rem}
+  .grid{display:grid;gap:22px}
+  .cards{grid-template-columns:repeat(auto-fit,minmax(248px,1fr))}
+  .card{background:var(--white);border:1px solid var(--ring);border-radius:18px;padding:30px;transition:transform .35s var(--spring),box-shadow .35s var(--ease)}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(8,42,53,.12)}
+  .ico{width:52px;height:52px;border-radius:13px;background:rgba(196,123,60,.12);color:var(--copper);display:grid;place-items:center;margin-bottom:20px}
+  .card h3{font-size:1.28rem;color:var(--marine);margin-bottom:9px;font-weight:700}
+  .card p{color:var(--muted);font-size:1rem}
+
+  /* proof */
+  .proof{position:relative;background:var(--marine);color:#fff;border-radius:28px;padding:66px 44px;overflow:hidden}
+  .proof .ripple{position:absolute;right:-120px;top:50%;transform:translateY(-50%);z-index:0;opacity:.5;pointer-events:none}
+  .proof-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+  .proof h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:18px}
+  .proof p{color:rgba(255,255,255,.85);margin-bottom:12px}
+  .stat-row{display:flex;gap:40px;flex-wrap:wrap}
+  .stat .n{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.6rem,5vw,3.6rem);font-weight:800;color:var(--copper-soft);line-height:1}
+  .stat .l{font-size:.95rem;color:rgba(255,255,255,.8);margin-top:6px;max-width:16ch}
+  .trust{list-style:none;display:flex;flex-direction:column;gap:16px}
+  .trust li{display:flex;gap:13px;align-items:flex-start;font-size:1.05rem}
+  .trust .ti{flex:none;width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.12);display:grid;place-items:center;color:var(--copper-soft)}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:16px}
+  .ph{border-radius:18px;background-size:cover;background-position:center;position:relative;overflow:hidden;min-height:200px}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,42,53,0) 40%,rgba(8,42,53,.55));transition:opacity .4s}
+  .ph.big{grid-row:span 2}
+  .ph-cap{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-weight:600;font-size:.95rem;letter-spacing:.01em}
+  .g1{background-image:url('https://images.pexels.com/photos/8488035/pexels-photo-8488035.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--marine),var(--marine-deep))}
+  .g2{background-image:url('https://images.pexels.com/photos/32588548/pexels-photo-32588548.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--marine),var(--marine-deep))}
+  .g3{background-image:url('https://images.pexels.com/photos/12142829/pexels-photo-12142829.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--marine),var(--marine-deep))}
+
+  /* area + cta */
+  .area-row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .area-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .chip{background:var(--white);border:1px solid var(--ring);border-radius:999px;padding:9px 16px;font-size:.95rem;font-weight:500;color:var(--marine)}
+  .cta-band{background:linear-gradient(120deg,var(--marine-deep),var(--marine));color:#fff;border-radius:28px;padding:60px 44px;text-align:center}
+  .cta-band h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px}
+  .cta-band p{color:rgba(255,255,255,.85);max-width:48ch;margin:0 auto 30px}
+  .phone-big{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:var(--copper-soft);display:inline-flex;align-items:center;gap:12px}
+
+  footer{background:var(--marine-deep);color:rgba(255,255,255,.75);padding:50px 0 120px}
+  .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+  .foot-brand{display:flex;align-items:center;gap:11px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;color:#fff}
+  footer a{color:var(--copper-soft)}
+  .foot-meta{font-size:.9rem;line-height:1.7}
+
+  /* sticky mobile call */
+  .mobile-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;background:var(--copper);color:#fff;padding:15px;text-align:center;font-weight:700;font-size:17px;box-shadow:0 -6px 20px rgba(8,42,53,.2)}
+
+  @media(max-width:860px){
+    .nav-links{display:none}
+    .proof-inner,.area-row{grid-template-columns:1fr;gap:30px}
+    .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    .ph.big{grid-column:span 2;grid-row:auto}
+    section{padding:64px 0}
+    .mobile-call{display:block}
+    footer{padding-bottom:50px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .hero-bg{animation:none}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav id="nav">
+  <div class="wrap nav-row">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.5 3.4 6 6.6 6 10a6 6 0 0 1-12 0c0-3.4 2.5-6.6 6-10z"/></svg>
+      </span>
+      Lee's Plumbing
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#proof">Why Lee's</a>
+      <a href="#work">Work</a>
+      <a href="#area">Service Area</a>
+    </div>
+    <a class="nav-cta" href="tel:+14198828392">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 882-8392
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A plumber in work gloves fitting steel supply pipes during an indoor repair"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> Licensed plumber in Sylvania, OH</span>
+    <h1>Leaks, clogs, and water heaters, handled right the first time.</h1>
+    <p class="lead">Lee's Plumbing keeps the water moving in homes and shops across Sylvania. Straight answers, clean work, and a price you hear before we start.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:+14198828392">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a quote
+      </a>
+      <a class="btn-ghost" href="#services">See what we fix
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="hero-badge">
+      <span class="stars" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+      </span>
+      <span>Rated <b>5.0</b> from <b>12</b> Google reviews</span>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">What we do</span>
+      <h2>One plumber for the whole house</h2>
+      <p>From a dripping faucet to a water heater that gave out overnight, Lee's handles the jobs that keep a home running.</p>
+    </div>
+    <div class="grid cards">
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16a4 4 0 0 1 0-8h1"/><path d="M17 8a4 4 0 0 1 0 8h-1"/><path d="M8 12h8"/></svg></div>
+        <h3>Leaks and repairs</h3>
+        <p>Dripping faucets, running toilets, pinhole pipe leaks, and the fitting under the sink you keep eyeing. Found and fixed.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-14 2 9h6"/></svg></div>
+        <h3>Drains and clogs</h3>
+        <p>Slow sinks, backed-up tubs, and main line clogs cleared with the right tool, not a guess. We leave it draining fast.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6"/><circle cx="12" cy="16.5" r="1.5"/></svg></div>
+        <h3>Water heaters</h3>
+        <p>No hot water this morning? We repair and replace tank and tankless heaters, and size the new one to your house.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-4 4-6-6z"/><path d="M10 8L3 15v6h6l7-7"/></svg></div>
+        <h3>Fixtures and installs</h3>
+        <p>New faucets, sinks, toilets, and shutoff valves put in clean and tested before we pack up the truck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof" style="padding-top:0">
+  <div class="wrap">
+    <div class="proof reveal">
+      <svg class="ripple" width="420" height="420" viewBox="0 0 420 420" fill="none" aria-hidden="true">
+        <circle cx="210" cy="210" r="60" stroke="#C47B3C" stroke-width="2"/>
+        <circle cx="210" cy="210" r="110" stroke="#C47B3C" stroke-width="2"/>
+        <circle cx="210" cy="210" r="160" stroke="#C47B3C" stroke-width="2"/>
+        <circle cx="210" cy="210" r="205" stroke="#C47B3C" stroke-width="2"/>
+      </svg>
+      <div class="proof-inner">
+        <div>
+          <h2>Neighbors trust Lee's for a reason</h2>
+          <p>Lee's Plumbing earns its rating one job at a time, with honest quotes and work that holds up long after the truck pulls away.</p>
+          <div class="stat-row" style="margin-top:28px">
+            <div class="stat"><div class="n" data-count="5.0" data-dec="1">5.0</div><div class="l">Google rating</div></div>
+            <div class="stat"><div class="n" data-count="12">12</div><div class="l">verified reviews</div></div>
+            <div class="stat"><div class="n" data-count="100" data-suffix="%">100%</div><div class="l">local, Sylvania based</div></div>
+          </div>
+        </div>
+        <ul class="trust">
+          <li><span class="ti" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> You get the price before we start, not a surprise at the end.</li>
+          <li><span class="ti" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> One plumber on the job, start to finish. No rotating crew.</li>
+          <li><span class="ti" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> We clean up the work area before we leave your home.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">On the job</span>
+      <h2>The work speaks plainly</h2>
+      <p>Tight joints, clean copper, and pipe runs that look as good as they perform.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="ph big g1" role="img" aria-label="Freshly installed plumbing supply lines under a sink with new shutoff valves"><span class="ph-cap">Fresh supply lines</span></div>
+      <div class="ph g2" role="img" aria-label="A plumber in a blue uniform repairing a pipe joint with a wrench"><span class="ph-cap">Pipe repair</span></div>
+      <div class="ph g3" role="img" aria-label="A run of connected gray metal water pipes along a wall"><span class="ph-cap">Clean pipe runs</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="area-row">
+      <div class="reveal">
+        <span class="tag" style="color:var(--copper);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px;display:block;margin-bottom:14px">Where we work</span>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--marine);margin-bottom:14px">Serving Sylvania and greater Toledo</h2>
+        <p style="color:var(--muted);font-size:1.1rem">If you are in Sylvania or the west side of Toledo, Lee's can be out to look at it soon. Call and tell us what the water is doing.</p>
+        <div class="area-list">
+          <span class="chip">Sylvania</span>
+          <span class="chip">Sylvania Township</span>
+          <span class="chip">West Toledo</span>
+          <span class="chip">Ottawa Hills</span>
+          <span class="chip">Holland</span>
+          <span class="chip">Berkey</span>
+        </div>
+      </div>
+      <div class="cta-band reveal">
+        <h2>Water trouble now?</h2>
+        <p>Pick up the phone and talk to the plumber who will do the work. No call center, no runaround.</p>
+        <a class="phone-big" href="tel:+14198828392">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (419) 882-8392
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div>
+        <div class="foot-brand">
+          <span style="width:30px;height:30px;display:grid;place-items:center;background:var(--copper);border-radius:8px" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.5 3.4 6 6.6 6 10a6 6 0 0 1-12 0c0-3.4 2.5-6.6 6-10z"/></svg>
+          </span>
+          Lee's Plumbing Inc
+        </div>
+        <p class="foot-meta" style="margin-top:14px">Licensed plumbing service<br>Sylvania, OH 43560<br>Rated 5.0 on Google from 12 reviews</p>
+      </div>
+      <div class="foot-meta" style="text-align:right">
+        <a href="tel:+14198828392" style="font-size:1.1rem;font-weight:700">(419) 882-8392</a><br>
+        <span style="opacity:.7">Mon to Sat, service calls welcome</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:+14198828392">Call Lee's Plumbing: (419) 882-8392</a>
+
+<script>
+  document.documentElement.classList.add('js');
+  // nav shadow
+  var nav=document.getElementById('nav'),prog=document.getElementById('progress');
+  function onScroll(){
+    nav.classList.toggle('scrolled',window.scrollY>24);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?window.scrollY/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // reveal
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');}, (e.target.dataset.d||0)); io.unobserve(e.target);} });
+  },{threshold:.15});
+  var rc=document.querySelectorAll('.reveal');rc.forEach(function(el,i){el.dataset.d=(i%4)*75;io.observe(el);});
+
+  // count-up
+  function animateCount(el){
+    var target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suffix||'';
+    var start=0,t0=null,dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var ease=1-Math.pow(1-p,3); var v=start+(target-start)*ease; el.textContent=(dec?v.toFixed(dec):Math.round(v))+suf; if(p<1)requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>

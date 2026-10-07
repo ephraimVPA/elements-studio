@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air Conditioning HVAC | AC &amp; Heating Repair in Toledo, OH</title>
+<meta name="description" content="Air Conditioning HVAC in Toledo, OH. AC repair, furnace and heating service, installs, and tune-ups. Call for fast, straight-talking service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#15203A;
+    --night-2:#0d1527;
+    --cyan:#2FB4D9;
+    --cyan-soft:#6fd0ec;
+    --ice:#F4F8FB;
+    --ink:#1b2744;
+    --muted:#5e6d87;
+    --line:rgba(21,32,58,.1);
+    --spring:cubic-bezier(.34,1.56,.64,1);
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--ice);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Outfit','IBM Plex Sans',sans-serif;line-height:1.06;font-weight:800;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  section{padding:96px 0}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--cyan);transform:scaleX(0);transform-origin:left;z-index:60}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:all .3s var(--ease);padding:22px 0}
+  nav.scrolled{background:rgba(244,248,251,.92);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(13,21,39,.1);padding:13px 0}
+  .nav-row{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:#fff;transition:color .3s}
+  nav.scrolled .brand{color:var(--night)}
+  .brand .logo{width:36px;height:36px;display:grid;place-items:center;background:var(--cyan);border-radius:10px;color:var(--night);flex:none}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:#fff;font-weight:500;font-size:15px;opacity:.85;transition:opacity .2s,color .3s}
+  nav.scrolled .nav-links a{color:var(--night);opacity:.75}
+  .nav-links a:hover{opacity:1}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--cyan);color:var(--night);padding:11px 18px;border-radius:10px;font-weight:700;font-size:15px;transition:transform .3s var(--spring),box-shadow .3s var(--ease);box-shadow:0 6px 18px rgba(47,180,217,.4)}
+  .nav-cta:hover{transform:translateY(-2px) scale(1.03)}
+
+  .hero{position:relative;min-height:94vh;display:flex;align-items:center;overflow:hidden;color:#fff;text-align:center}
+  .hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(140deg,var(--night-2),var(--night));background-size:cover;background-position:center;animation:ken 24s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.14)}}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:radial-gradient(120% 90% at 50% 20%,rgba(13,21,39,.5),rgba(13,21,39,.86))}
+  .hero .wrap{position:relative;z-index:2;padding:130px 0 70px;display:flex;flex-direction:column;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--cyan-soft);margin-bottom:24px;border:1px solid rgba(111,208,236,.35);padding:7px 15px;border-radius:999px}
+  .hero h1{font-size:clamp(2.5rem,6.2vw,4.6rem);max-width:17ch;margin-bottom:22px}
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.35rem);max-width:52ch;color:rgba(255,255,255,.9);margin-bottom:36px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:center}
+  .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--cyan);color:var(--night);padding:17px 30px;border-radius:12px;font-weight:700;font-size:17px;transition:transform .3s var(--spring),box-shadow .3s var(--ease);box-shadow:0 10px 30px rgba(47,180,217,.45)}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 40px rgba(47,180,217,.55)}
+  .btn-ghost{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:600;padding:16px 20px;border:1px solid rgba(255,255,255,.3);border-radius:12px;transition:border-color .25s,background .25s}
+  .btn-ghost:hover{border-color:var(--cyan-soft);background:rgba(255,255,255,.06)}
+  .hero-badge{display:flex;align-items:center;gap:12px;margin-top:40px;color:rgba(255,255,255,.92);font-size:1.02rem}
+  .stars{display:flex;gap:3px;color:var(--cyan-soft)}
+  .hero-badge b{font-family:'Outfit',sans-serif;font-weight:800;font-size:19px}
+
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js .reveal.in{opacity:1;transform:none}
+
+  .sec-head{max-width:62ch;margin:0 auto 56px;text-align:center}
+  .sec-head .tag{color:var(--cyan);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;display:block;margin-bottom:14px}
+  .sec-head h2{font-size:clamp(2rem,4vw,3rem);color:var(--night);margin-bottom:14px}
+  .sec-head p{color:var(--muted);font-size:1.1rem}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .svc{position:relative;background:#fff;border-radius:16px;padding:32px 28px 30px;border:1px solid var(--line);overflow:hidden;transition:transform .35s var(--spring),box-shadow .35s var(--ease)}
+  .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--cyan);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(13,21,39,.12)}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc .num{font-family:'Outfit',sans-serif;font-weight:800;font-size:.95rem;color:var(--cyan);letter-spacing:.08em}
+  .svc .ico{width:50px;height:50px;border-radius:12px;background:var(--night);color:var(--cyan-soft);display:grid;place-items:center;margin:16px 0 18px}
+  .svc h3{font-size:1.26rem;color:var(--night);margin-bottom:9px;font-weight:700}
+  .svc p{color:var(--muted);font-size:1rem}
+
+  .proof{position:relative;background:var(--night);color:#fff;border-radius:26px;padding:70px 44px;overflow:hidden;text-align:center}
+  .airflow{position:absolute;inset:0;z-index:0;opacity:.35;pointer-events:none}
+  .proof-inner{position:relative;z-index:1}
+  .proof h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:12px}
+  .proof .sub{color:rgba(255,255,255,.82);max-width:50ch;margin:0 auto 42px}
+  .stat-row{display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
+  .stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px 30px;min-width:190px}
+  .stat .n{font-family:'Outfit',sans-serif;font-size:clamp(2.6rem,5vw,3.4rem);font-weight:800;color:var(--cyan-soft);line-height:1}
+  .stat .l{font-size:.95rem;color:rgba(255,255,255,.78);margin-top:8px}
+
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .ph{border-radius:16px;background-size:cover;background-position:center;position:relative;overflow:hidden;min-height:300px}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,21,39,0) 45%,rgba(13,21,39,.62))}
+  .ph-cap{position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;font-weight:600}
+  .g1{background-image:url('https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--night),var(--night-2))}
+  .g2{background-image:url('https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--night),var(--night-2))}
+  .g3{background-image:url('https://images.pexels.com/photos/6471912/pexels-photo-6471912.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--night),var(--night-2))}
+
+  .area-row{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .area-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.95rem;font-weight:500;color:var(--night)}
+  .cta-band{background:linear-gradient(130deg,var(--cyan),#1f93b6);color:var(--night);border-radius:24px;padding:58px 44px;text-align:center}
+  .cta-band h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:12px;color:var(--night)}
+  .cta-band p{color:rgba(13,21,39,.78);max-width:46ch;margin:0 auto 28px;font-weight:500}
+  .phone-big{font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;color:var(--night);display:inline-flex;align-items:center;gap:12px;background:#fff;padding:14px 26px;border-radius:14px;transition:transform .3s var(--spring)}
+  .phone-big:hover{transform:translateY(-3px) scale(1.02)}
+
+  footer{background:var(--night-2);color:rgba(255,255,255,.75);padding:52px 0 120px}
+  .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+  .foot-brand{display:flex;align-items:center;gap:11px;font-family:'Outfit',sans-serif;font-weight:800;font-size:19px;color:#fff}
+  footer a{color:var(--cyan-soft)}
+  .foot-meta{font-size:.9rem;line-height:1.7}
+
+  .mobile-call{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;background:var(--cyan);color:var(--night);padding:15px;text-align:center;font-weight:800;font-size:17px;box-shadow:0 -6px 20px rgba(13,21,39,.25)}
+
+  @media(max-width:860px){
+    .nav-links{display:none}
+    .area-row{grid-template-columns:1fr;gap:30px}
+    .gallery{grid-template-columns:1fr 1fr}
+    .gallery .g3{grid-column:span 2}
+    section{padding:66px 0}
+    .mobile-call{display:block}
+    footer{padding-bottom:50px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .hero-bg{animation:none}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav id="nav">
+  <div class="wrap nav-row">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 8a2.5 2.5 0 1 1 2 4H3"/><path d="M14 5a2 2 0 1 1 1.6 3.2H3"/><path d="M12.5 19a2.5 2.5 0 1 0 2-4H3"/></svg>
+      </span>
+      Air Conditioning HVAC
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#proof">Why us</a>
+      <a href="#work">Work</a>
+      <a href="#area">Service Area</a>
+    </div>
+    <a class="nav-cta" href="tel:+14192164196">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 216-4196
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="An HVAC technician servicing an outdoor air conditioning condenser unit on a sunny day"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">AC &amp; Heating &middot; Toledo, OH</span>
+    <h1>Keep your house comfortable, whatever Toledo's weather does.</h1>
+    <p class="lead">Air Conditioning HVAC gets your cooling and heating running again fast, with honest diagnostics and a clear price before any work starts.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:+14192164196">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for service
+      </a>
+      <a class="btn-ghost" href="#services">See our services
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="hero-badge">
+      <span class="stars" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.5 7 .9-5 4.9 1.3 7L12 18l-6.6 3.3L6.7 14 1.7 9.4l7-.9z"/></svg>
+      </span>
+      <span>Rated <b>4.2</b> from <b>13</b> Google reviews</span>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">What we handle</span>
+      <h2>Cooling and heating, start to finish</h2>
+      <p>One Toledo team for the systems that keep your home livable in July and in January.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <span class="num">01</span>
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>AC repair</h3>
+        <p>Warm air, strange noises, or a unit that will not kick on. We find the fault and get the cold air back.</p>
+      </div>
+      <div class="svc reveal">
+        <span class="num">02</span>
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1.5 2 2 3.5 2 5a2 2 0 1 1-4 0c0-1.5.5-3 2-5z"/><path d="M6 9c1 1.5 1.5 2.5 1.5 3.8a1.5 1.5 0 1 1-3 0C4.5 11.5 5 10.5 6 9z"/><path d="M18 9c1 1.5 1.5 2.5 1.5 3.8a1.5 1.5 0 1 1-3 0C16.5 11.5 17 10.5 18 9z"/><path d="M4 20h16"/></svg></div>
+        <h3>Heating &amp; furnace</h3>
+        <p>Furnace repair, igniter and blower trouble, and no-heat calls when the first cold snap hits Toledo.</p>
+      </div>
+      <div class="svc reveal">
+        <span class="num">03</span>
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h5"/><path d="M15.5 16.5l1.5 1.5"/></svg></div>
+        <h3>Install &amp; replace</h3>
+        <p>New AC and furnace systems sized to your home, so you are not overpaying to heat and cool empty air.</p>
+      </div>
+      <div class="svc reveal">
+        <span class="num">04</span>
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 1.6 1.6 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2z"/></svg></div>
+        <h3>Tune-ups</h3>
+        <p>Seasonal maintenance that catches small problems early, so the system runs when you need it most.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof" style="padding-top:0">
+  <div class="wrap">
+    <div class="proof reveal">
+      <svg class="airflow" viewBox="0 0 1200 420" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path d="M-20 90 C 200 40, 380 140, 600 90 S 1000 40, 1240 90" stroke="#6fd0ec" stroke-width="2"/>
+        <path d="M-20 170 C 220 120, 400 220, 620 170 S 1020 120, 1240 170" stroke="#6fd0ec" stroke-width="2"/>
+        <path d="M-20 250 C 200 200, 380 300, 600 250 S 1000 200, 1240 250" stroke="#6fd0ec" stroke-width="2"/>
+        <path d="M-20 330 C 220 280, 400 380, 620 330 S 1020 280, 1240 330" stroke="#6fd0ec" stroke-width="2"/>
+      </svg>
+      <div class="proof-inner">
+        <h2>Toledo keeps calling us back</h2>
+        <p class="sub">Air Conditioning HVAC built its rating on quick answers, fair prices, and fixes that hold through the season.</p>
+        <div class="stat-row">
+          <div class="stat"><div class="n" data-count="4.2" data-dec="1">4.2</div><div class="l">Google rating</div></div>
+          <div class="stat"><div class="n" data-count="13">13</div><div class="l">verified reviews</div></div>
+          <div class="stat"><div class="n" data-count="2" data-suffix="x">2x</div><div class="l">systems we service: AC and heat</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">On the job</span>
+      <h2>Real units, real service calls</h2>
+      <p>Condensers, rooftop units, and the gauges that tell us a system is charged right.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="ph g1" role="img" aria-label="A technician repairing an air conditioning unit mounted on a rooftop"><span class="ph-cap">Rooftop service</span></div>
+      <div class="ph g2" role="img" aria-label="An HVAC technician inspecting an outdoor condenser unit for maintenance"><span class="ph-cap">Unit inspection</span></div>
+      <div class="ph g3" role="img" aria-label="A technician adjusting a refrigerant manifold gauge set during an AC service"><span class="ph-cap">Charging gauges</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="area-row">
+      <div class="reveal">
+        <span style="color:var(--cyan);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;display:block;margin-bottom:14px">Where we work</span>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--night);margin-bottom:14px">Serving Toledo and the surrounding towns</h2>
+        <p style="color:var(--muted);font-size:1.1rem">From central Toledo out to the suburbs, Air Conditioning HVAC takes same-area service calls. Tell us what the system is doing and we will talk you through the next step.</p>
+        <div class="area-list">
+          <span class="chip">Toledo</span>
+          <span class="chip">Sylvania</span>
+          <span class="chip">Maumee</span>
+          <span class="chip">Oregon</span>
+          <span class="chip">Perrysburg</span>
+          <span class="chip">Holland</span>
+        </div>
+      </div>
+      <div class="cta-band reveal">
+        <h2>No cool air? No heat?</h2>
+        <p>Call now and talk to a technician who can tell you what it will take to fix it.</p>
+        <a class="phone-big" href="tel:+14192164196">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (419) 216-4196
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div>
+        <div class="foot-brand">
+          <span style="width:32px;height:32px;display:grid;place-items:center;background:var(--cyan);border-radius:9px;color:var(--night)" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 8a2.5 2.5 0 1 1 2 4H3"/><path d="M14 5a2 2 0 1 1 1.6 3.2H3"/><path d="M12.5 19a2.5 2.5 0 1 0 2-4H3"/></svg>
+          </span>
+          Air Conditioning HVAC
+        </div>
+        <p class="foot-meta" style="margin-top:14px">AC and heating service<br>Toledo, OH 43607<br>Rated 4.2 on Google from 13 reviews</p>
+      </div>
+      <div class="foot-meta" style="text-align:right">
+        <a href="tel:+14192164196" style="font-size:1.1rem;font-weight:700">(419) 216-4196</a><br>
+        <span style="opacity:.7">Cooling and heating service calls</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:+14192164196">Call Air Conditioning HVAC: (419) 216-4196</a>
+
+<script>
+  document.documentElement.classList.add('js');
+  var nav=document.getElementById('nav'),prog=document.getElementById('progress');
+  function onScroll(){
+    nav.classList.toggle('scrolled',window.scrollY>24);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?window.scrollY/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in');}, (e.target.dataset.d||0)); io.unobserve(e.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.dataset.d=(i%4)*75;io.observe(el);});
+
+  function animateCount(el){
+    var target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suffix||'';
+    var t0=null,dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var ease=1-Math.pow(1-p,3); var v=(target)*ease; el.textContent=(dec?v.toFixed(dec):Math.round(v))+suf; if(p<1)requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
