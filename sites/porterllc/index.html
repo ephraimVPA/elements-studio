@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Porter LLC | Heating &amp; Air Conditioning Repair in Toledo, OH</title>
+<meta name="description" content="Porter LLC is a Toledo heating and air conditioning company. Same-day AC and furnace repair, new installs, and seasonal tune-ups. Call (419) 727-0950.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#16181d;
+  --char-2:#1d2128;
+  --char-3:#252a32;
+  --cream:#f4efe9;
+  --muted:#aeb4bd;
+  --line:rgba(244,239,233,.12);
+  --ember:#e8763a;
+  --ember-2:#f0945f;
+  --steel:#8b96a3;
+  --r:16px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  background:var(--char);
+  color:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:'Sora',sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--ember);color:#1a120b;font-weight:700;
+  font-family:'Sora',sans-serif;font-size:1.02rem;
+  padding:.95rem 1.5rem;border-radius:999px;border:0;cursor:pointer;
+  transition:transform .35s var(--spring),box-shadow .35s var(--ease),background .25s;
+  box-shadow:0 10px 30px -10px rgba(232,118,58,.6);
+}
+.btn:hover{transform:translateY(-3px) scale(1.03);background:var(--ember-2)}
+.btn svg{width:20px;height:20px}
+.btn-ghost{
+  background:transparent;color:var(--cream);border:1px solid var(--line);
+  box-shadow:none;font-weight:600;
+}
+.btn-ghost:hover{background:var(--char-3);transform:translateY(-2px)}
+
+/* scroll progress */
+#progress{position:fixed;top:0;left:0;height:3px;width:100%;
+  background:linear-gradient(90deg,var(--ember),var(--ember-2));
+  transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s}
+header.scrolled{background:rgba(22,24,29,.88);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:'Sora',sans-serif;font-weight:800;font-size:1.22rem}
+.brand .mark{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--ember),var(--ember-2));color:#1a120b}
+.brand .mark svg{width:19px;height:19px}
+.nav-links{display:flex;align-items:center;gap:1.7rem}
+.nav-links a.lnk{color:var(--muted);font-weight:600;font-size:.96rem;transition:color .2s}
+.nav-links a.lnk:hover{color:var(--cream)}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:'Sora',sans-serif;font-weight:700;color:var(--ember-2)}
+.nav-cta svg{width:18px;height:18px}
+@media(max-width:820px){.nav-links a.lnk{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:7rem 0 4rem;isolation:isolate}
+.hero-bg{
+  position:absolute;inset:0;z-index:-2;
+  background-image:url('https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#1d2128,#16181d);
+  background-size:cover;background-position:center;
+  animation:ken 22s ease-in-out infinite alternate;
+}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(18,20,24,.72),rgba(18,20,24,.52) 45%,rgba(18,20,24,.9));}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:'Sora',sans-serif;font-weight:600;
+  font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ember-2);
+  border:1px solid var(--line);padding:.4rem .85rem;border-radius:999px;background:rgba(22,24,29,.4)}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.3rem);font-weight:800;margin:1.3rem 0 1.1rem;max-width:16ch}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);color:#e7e2db;max-width:46ch;margin-bottom:2rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+.trust{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.6rem}
+.trust .ti{display:flex;align-items:center;gap:.6rem}
+.trust .ti svg{width:22px;height:22px;color:var(--ember-2);flex:none}
+.trust .ti b{font-family:'Sora',sans-serif;font-size:1.05rem}
+.trust .ti span{display:block;font-size:.82rem;color:var(--muted)}
+.stars{color:var(--ember-2);letter-spacing:2px}
+
+/* sections */
+section{padding:5.5rem 0}
+.sec-head{max-width:40ch;margin-bottom:3rem}
+.sec-head .eyebrow{background:transparent}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;margin:1rem 0 .8rem}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1.3rem}
+.card{background:var(--char-2);border:1px solid var(--line);border-radius:var(--r);padding:1.9rem 1.6rem;
+  transition:transform .4s var(--spring),border-color .3s,background .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(232,118,58,.5);background:var(--char-3)}
+.card .ic{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:1.1rem;
+  background:rgba(232,118,58,.14);color:var(--ember-2)}
+.card .ic svg{width:25px;height:25px}
+.card h3{font-size:1.22rem;font-weight:600;margin-bottom:.5rem}
+.card p{color:var(--muted);font-size:.98rem}
+
+/* proof band */
+.proof{position:relative;background:var(--char-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.airflow{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none;
+  background:
+   repeating-radial-gradient(circle at 15% 120%, rgba(232,118,58,.10) 0 2px, transparent 2px 46px),
+   repeating-radial-gradient(circle at 85% -20%, rgba(139,150,163,.08) 0 2px, transparent 2px 60px);}
+.proof .wrap{position:relative;z-index:1}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.6rem;text-align:center}
+.stat .num{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(2.4rem,5vw,3.4rem);color:var(--ember-2);line-height:1}
+.stat .num .u{color:var(--cream);font-size:.5em;margin-left:.1em}
+.stat .lbl{color:var(--muted);margin-top:.5rem;font-weight:500}
+.proof-note{text-align:center;color:var(--muted);margin-top:2.4rem;font-size:.95rem}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem}
+.ph{position:relative;height:290px;border-radius:var(--r);overflow:hidden;background-size:cover;background-position:center;
+  border:1px solid var(--line)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(18,20,24,.82));}
+.ph .cap{position:absolute;left:1.1rem;bottom:1rem;z-index:1;font-family:'Sora',sans-serif;font-weight:600;font-size:1rem}
+.ph.g1{background-image:url('https://images.pexels.com/photos/7347538/pexels-photo-7347538.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#1d2128,#16181d)}
+.ph.g2{background-image:url('https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#1d2128,#16181d)}
+.ph.g3{background-image:url('https://images.pexels.com/photos/5463587/pexels-photo-5463587.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#1d2128,#16181d)}
+
+/* contact */
+.contact{background:linear-gradient(160deg,var(--char-2),var(--char))}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:2rem}}
+.contact h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:700;margin-bottom:1rem}
+.contact .lead{color:var(--muted);font-size:1.1rem;margin-bottom:1.8rem;max-width:42ch}
+.info{display:flex;flex-direction:column;gap:1.15rem}
+.info .row{display:flex;gap:.9rem;align-items:flex-start}
+.info .row svg{width:22px;height:22px;color:var(--ember-2);flex:none;margin-top:3px}
+.info .row b{font-family:'Sora',sans-serif;font-weight:600;display:block}
+.info .row span{color:var(--muted)}
+.callcard{background:var(--char-3);border:1px solid var(--line);border-radius:20px;padding:2.2rem;text-align:center}
+.callcard .big{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;margin:.3rem 0 .2rem}
+.callcard .sub{color:var(--muted);margin-bottom:1.5rem}
+
+footer{padding:2.6rem 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.9rem}
+footer .brand{justify-content:center;margin-bottom:.8rem;color:var(--cream)}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;
+  padding:.7rem 1rem;background:rgba(22,24,29,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.sticky-call .btn{width:100%;justify-content:center}
+@media(max-width:820px){.sticky-call{display:block}body{padding-bottom:4.6rem}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Porter LLC home">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M12.59 11.41A2 2 0 1 0 14 15H2"/><path d="M17.73 6.27A2.5 2.5 0 1 1 19.5 10.5H2"/></svg></span>
+      Porter LLC
+    </a>
+    <nav class="nav-links">
+      <a class="lnk" href="#services">Services</a>
+      <a class="lnk" href="#why">Why us</a>
+      <a class="lnk" href="#work">Our work</a>
+      <a class="nav-cta" href="tel:+14197270950"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 727-0950</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="home">
+  <div class="hero-bg" role="img" aria-label="A Porter LLC technician servicing an outdoor air conditioning unit with gauges"></div>
+  <div class="wrap">
+    <span class="eyebrow reveal"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v6M12 2l3 3M12 2L9 5"/><circle cx="12" cy="15" r="6"/></svg>Toledo heating &amp; cooling</span>
+    <h1 class="reveal">When the heat or the AC quits, we get you comfortable fast.</h1>
+    <p class="lead reveal">Porter LLC keeps Toledo homes warm in January and cool in July. Same-day repair, honest pricing, and work we stand behind. Pick up the phone and we will get you on the schedule.</p>
+    <div class="hero-cta reveal">
+      <a class="btn" href="tel:+14197270950"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 727-0950</a>
+      <a class="btn btn-ghost" href="#services">See what we fix</a>
+    </div>
+    <div class="trust reveal">
+      <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><div><b>4.9 <span class="stars" aria-hidden="true">&#9733;</span></b><span>11 Google reviews</span></div></div>
+      <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Toledo local</b><span>Fast across the 419</span></div></div>
+      <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.64 0 3.17.44 4.5 1.2"/></svg><div><b>Repairs done right</b><span>We stand behind the work</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Heating and cooling, handled.</h2>
+      <p>One call covers the whole system, from a furnace that will not light to an AC that blows warm. If it heats or cools your home, Porter works on it.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a2.5 2.5 0 0 0 0 5H12V4.5A2.5 2.5 0 0 0 9.5 2z"/><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M6 12h.01M10 12h.01M6 16h8"/></svg></div>
+        <h3>AC repair</h3>
+        <p>Warm air, strange noises, or a unit that will not kick on. We find the real problem and fix it, not just top off the refrigerant.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-4 4-8 4-8z"/><path d="M12 22v-6"/></svg></div>
+        <h3>Heating &amp; furnace</h3>
+        <p>No heat on a cold night is an emergency. We get furnaces and heat pumps running again and keep Toledo winters off your back.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>New installs</h3>
+        <p>When a system is past saving, we size and install the right replacement for your home and budget, with no pressure to overbuy.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
+        <h3>Tune-ups</h3>
+        <p>A seasonal check keeps the bills lower and the breakdowns rare. We clean, test, and tell you straight what needs attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="why">
+  <div class="airflow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:46ch">
+      <span class="eyebrow">Why neighbors call us</span>
+      <h2>A rating you can check for yourself.</h2>
+      <p>These are the numbers from Porter's Google listing. No marketing spin, just what Toledo homeowners left after the work was done.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-target="4.9" data-dec="1">0</div><div class="lbl">Average Google rating</div></div>
+      <div class="stat reveal"><div class="num" data-target="11">0<span class="u">+</span></div><div class="lbl">Reviews from locals</div></div>
+      <div class="stat reveal"><div class="num" data-target="24">0<span class="u">/7</span></div><div class="lbl">Emergency line</div></div>
+      <div class="stat reveal"><div class="num" data-target="100">0<span class="u">%</span></div><div class="lbl">Work we stand behind</div></div>
+    </div>
+    <p class="proof-note reveal">Rated 4.9 out of 5 across 11 Google reviews. Call and we will treat your home like we would our own.</p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our work</span>
+      <h2>Real jobs, real units.</h2>
+      <p>A look at the kind of service calls Porter runs across Toledo every week.</p>
+    </div>
+    <div class="gal">
+      <div class="ph g1 reveal" role="img" aria-label="Porter technician repairing an outdoor air conditioning unit on a service call"><span class="cap">AC service calls</span></div>
+      <div class="ph g2 reveal" role="img" aria-label="Technician inspecting an outdoor HVAC condenser unit during a maintenance visit"><span class="cap">System checkups</span></div>
+      <div class="ph g3 reveal" role="img" aria-label="Technician repairing a rooftop air conditioning unit for a Toledo property"><span class="cap">Install &amp; replace</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get comfortable</span>
+      <h2>Let's get your system running.</h2>
+      <p class="lead">Tell us what it is doing and we will tell you what it needs. The fastest way to reach Porter is a phone call.</p>
+      <div class="info">
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><b>Phone</b><span>(419) 727-0950</span></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Service area</b><span>2828 107th St, Toledo, OH 43611</span></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Hours</b><span>Mon to Sat, with emergency service available</span></div></div>
+      </div>
+    </div>
+    <div class="callcard reveal">
+      <span class="eyebrow">Talk to Porter</span>
+      <div class="big">(419) 727-0950</div>
+      <div class="sub">One call, a real person, a plan to get you comfortable.</div>
+      <a class="btn" href="tel:+14197270950"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call now</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M12.59 11.41A2 2 0 1 0 14 15H2"/><path d="M17.73 6.27A2.5 2.5 0 1 1 19.5 10.5H2"/></svg></span>Porter LLC</div>
+    <p>Heating &amp; air conditioning &middot; 2828 107th St, Toledo, OH 43611 &middot; (419) 727-0950</p>
+    <p style="margin-top:.5rem">&copy; 2026 Porter LLC. Site by Elements Studio.</p>
+  </div>
+</footer>
+
+<div class="sticky-call"><a class="btn" href="tel:+14197270950"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 727-0950</a></div>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),prog=document.getElementById('progress');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    hdr.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  var rev=[].slice.call(document.querySelectorAll('.reveal'));
+  rev.forEach(function(el,i){el.style.transitionDelay=(Math.min(i,6)*70)+'ms';io.observe(el);});
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-target')),dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var us=el.querySelectorAll('.u'),suffix='';us.forEach(function(u){suffix+='';});
+    var start=null,dur=1300;
+    var tail=el.innerHTML.replace(/^[0-9.]*/,'');
+    function step(t){
+      if(!start)start=t;var p=Math.min((t-start)/dur,1);
+      var e=1-Math.pow(1-p,3);var val=target*e;
+      el.firstChild.nodeValue=dec?val.toFixed(1):Math.round(val).toString();
+      if(p<1)requestAnimationFrame(step);else el.firstChild.nodeValue=dec?target.toFixed(1):Math.round(target).toString();
+    }
+    requestAnimationFrame(step);
+  }
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){if(!reduce)countUp(e.target);else{var el=e.target;el.firstChild.nodeValue=parseFloat(el.getAttribute('data-target')).toString();}cio.unobserve(e.target);}});
+  },{threshold:.5});
+  document.querySelectorAll('.num').forEach(function(n){cio.observe(n);});
+})();
+</script>
+</body>
+</html>
