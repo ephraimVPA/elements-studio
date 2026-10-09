@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extreme Home Improvement and Repair LLC | Toledo Handyman &amp; Repairs</title>
+<meta name="description" content="Extreme Home Improvement and Repair LLC is a Toledo handyman doing repairs, remodels, and fix-it work done right the first time. Call (419) 677-2552 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1726; --panel:#13203A; --panel2:#0b1424;
+    --blue:#4C8DFF; --blue-d:#2f6fe0; --cream:#EEF3FB; --muted:#9DB0CC;
+    --line:rgba(120,150,200,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--cream);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Sora',system-ui,sans-serif;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  section{padding:92px 0}
+  .eyebrow{font-family:'Sora';font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:var(--blue)}
+
+  /* scroll progress */
+  #prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:left;z-index:60}
+
+  /* nav */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(10,18,32,.92);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.35);border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Sora';font-weight:800;font-size:1.04rem;letter-spacing:.01em}
+  .brand .mark{width:30px;height:30px;color:var(--blue)}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#061225;font-family:'Sora';font-weight:700;font-size:.9rem;padding:11px 18px;border-radius:10px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
+  .nav-cta:hover{transform:translateY(-2px);background:#6AA2FF}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{font-size:.92rem;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--cream)}
+  @media(max-width:820px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:70px}
+  .hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/12394619/pexels-photo-12394619.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#0b1526,#13203A);background-size:cover;background-position:center;animation:ken 22s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1)}to{transform:scale(1.08)}}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,14,26,.9) 0%,rgba(8,14,26,.72) 45%,rgba(8,14,26,.5) 100%)}
+  .hero-inner{position:relative;z-index:2;max-width:720px}
+  .hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800;letter-spacing:-.01em}
+  .hero p.lead{margin:22px 0 8px;font-size:1.18rem;color:#D6E2F4;max-width:560px}
+  .badges{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 34px}
+  .badge{display:inline-flex;align-items:center;gap:9px;background:rgba(76,141,255,.1);border:1px solid var(--line);padding:10px 15px;border-radius:999px;font-size:.9rem;color:#CBD9EE}
+  .badge svg{width:17px;height:17px;color:var(--blue)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Sora';font-weight:700;border-radius:12px;padding:16px 26px;font-size:1.02rem;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+  .btn-primary{background:var(--blue);color:#061225;box-shadow:0 12px 30px rgba(76,141,255,.35)}
+  .btn-primary:hover{transform:translateY(-3px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--cream)}
+  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--blue)}
+
+  /* blueprint motif */
+  .blueprint{position:relative}
+  .blueprint::before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+    background-image:repeating-linear-gradient(0deg,rgba(76,141,255,.09) 0 1px,transparent 1px 44px),repeating-linear-gradient(90deg,rgba(76,141,255,.09) 0 1px,transparent 1px 44px);
+    -webkit-mask-image:radial-gradient(circle at 70% 30%,#000,transparent 72%);mask-image:radial-gradient(circle at 70% 30%,#000,transparent 72%)}
+  .blueprint>*{position:relative;z-index:1}
+
+  /* services */
+  .head{max-width:640px;margin-bottom:46px}
+  .head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin:12px 0}
+  .head p{color:var(--muted);font-size:1.06rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),border-color .3s}
+  .card:hover{transform:translateY(-6px);border-color:var(--blue)}
+  .ic{width:46px;height:46px;border-radius:12px;background:rgba(76,141,255,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .ic svg{width:24px;height:24px;color:var(--blue)}
+  .card h3{font-size:1.18rem;font-weight:600;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.97rem}
+
+  /* proof stats */
+  .proof{background:var(--panel2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+  @media(max-width:700px){.stats{grid-template-columns:1fr;gap:34px}}
+  .stat .n{font-family:'Sora';font-weight:800;font-size:2.8rem;color:var(--blue);display:flex;align-items:center;justify-content:center;gap:4px}
+  .stat .l{color:var(--muted);margin-top:6px;font-size:.98rem}
+  .stars{color:var(--blue);letter-spacing:2px;font-size:1.3rem}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:860px){.gal{grid-template-columns:1fr}}
+  .ph{position:relative;height:300px;border-radius:16px;background-size:cover;background-position:center;border:1px solid var(--line);overflow:hidden}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,14,26,.55))}
+
+  /* contact */
+  .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  @media(max-width:860px){.contact{grid-template-columns:1fr}}
+  .contact h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700;margin-bottom:14px}
+  .info{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:10px}
+  .info li{display:flex;gap:13px;align-items:flex-start;color:#CBD9EE}
+  .info svg{width:21px;height:21px;color:var(--blue);flex:none;margin-top:2px}
+  .callcard{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:34px;text-align:center}
+  .callcard .big{font-family:'Sora';font-weight:800;font-size:1.9rem;margin:6px 0 4px}
+  .callcard a.num{color:var(--blue)}
+
+  footer{background:var(--panel2);border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem;text-align:center}
+
+  .sticky-call{position:fixed;left:16px;right:16px;bottom:16px;z-index:55;display:none;background:var(--blue);color:#061225;font-family:'Sora';font-weight:700;padding:15px;border-radius:14px;text-align:center;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+  @media(max-width:820px){.sticky-call{display:block}}
+
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .js .reveal{opacity:1!important;transform:none!important;transition:none}
+    .hero-bg{animation:none}
+  }
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+      Extreme Home Improvement
+    </div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="tel:+14196772552">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 677-2552
+    </a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A cluttered workbench with hand tools and equipment in a home workshop"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">Toledo, Ohio</span>
+    <h1 class="reveal">If it's broken, we'll fix it right the first time.</h1>
+    <p class="lead reveal">Repairs, remodels, and the punch-list jobs other contractors keep putting off. One local crew, honest estimates, clean work.</p>
+    <div class="badges reveal">
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free estimates</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; insured</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.9 4.9 2.9 2.9"/><path d="m16.2 16.2 2.9 2.9"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.9 19.1 2.9-2.9"/><path d="m16.2 7.8 2.9-2.9"/></svg> Workmanship you can see</span>
+    </div>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="tel:+14196772552">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a free estimate
+      </a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">What we handle</span>
+      <h2>One call for the whole punch list.</h2>
+      <p>From a leaking faucet to a full room refresh, we take on the jobs around your home and get them finished.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Repairs &amp; fixes</h3>
+        <p>Drywall, doors, trim, faucets, fixtures, and the small stuff that keeps nagging you. Done properly, not patched.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Remodels &amp; upgrades</h3>
+        <p>Bathrooms, kitchens, basements, and trim carpentry. Clean lines and a finish that holds up for years.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div>
+        <h3>Maintenance &amp; to-do lists</h3>
+        <p>Hand us the list you never get to. We knock it out in one visit and leave the place tidy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof blueprint" id="why">
+  <div class="wrap">
+    <div class="head reveal" style="margin:0 auto 46px;text-align:center">
+      <span class="eyebrow">Why neighbors call us back</span>
+      <h2>Rated by the people we've worked for.</h2>
+    </div>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="n"><span data-count="4.9" data-dec="1">0</span></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="l">Average Google rating</div>
+      </div>
+      <div class="stat reveal">
+        <div class="n"><span data-count="11">0</span></div>
+        <div class="l">Verified Google reviews</div>
+      </div>
+      <div class="stat reveal">
+        <div class="n">1</div>
+        <div class="l">Local crew, start to finish</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Recent work</span>
+      <h2>Tools down only when it's right.</h2>
+      <p>A look at the kind of hands-on work we bring to every job around Toledo.</p>
+    </div>
+    <div class="gal">
+      <div class="ph reveal" role="img" aria-label="A hand reaching for a hammer on a workshop bench full of tools" style="background-image:url('https://images.pexels.com/photos/7484798/pexels-photo-7484798.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#13203A,#0b1424)"></div>
+      <div class="ph reveal" role="img" aria-label="Carpentry tools arranged neatly on a wooden surface" style="background-image:url('https://images.pexels.com/photos/6790074/pexels-photo-6790074.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#13203A,#0b1424)"></div>
+      <div class="ph reveal" role="img" aria-label="Hand tools including saws, levels and a tape measure laid out on a dark surface" style="background-image:url('https://images.pexels.com/photos/4312854/pexels-photo-4312854.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#13203A,#0b1424)"></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="proof">
+  <div class="wrap contact">
+    <div class="reveal">
+      <span class="eyebrow">Get a free estimate</span>
+      <h2>Tell us what needs doing.</h2>
+      <p style="color:var(--muted);max-width:460px">Call and describe the job. We'll give you an honest estimate and a date we can start. No pressure, no runaround.</p>
+      <ul class="info">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (419) 677-2552</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> 2309 Waterworks Dr, Toledo, OH 43609</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Mon to Sat, 8:00 to 6:00</li>
+      </ul>
+    </div>
+    <div class="callcard reveal">
+      <span class="eyebrow">Call now</span>
+      <div class="big">Free estimate</div>
+      <a class="num" href="tel:+14196772552" style="font-family:'Sora';font-weight:800;font-size:1.5rem">(419) 677-2552</a>
+      <div style="margin-top:22px">
+        <a class="btn btn-primary" href="tel:+14196772552" style="width:100%;justify-content:center">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Extreme Home Improvement
+        </a>
+      </div>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:14px">Serving Toledo and the surrounding area.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Extreme Home Improvement and Repair LLC &middot; 2309 Waterworks Dr, Toledo, OH 43609 &middot; (419) 677-2552
+    <div style="margin-top:8px;opacity:.7">Site by Elements Studio</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14196772552">Call (419) 677-2552 for a free estimate</a>
+
+<script>
+  document.documentElement.classList.add('js');
+  var hdr=document.getElementById('hdr'),prog=document.getElementById('prog');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    hdr.classList.toggle('scrolled',y>20);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target,sibs=[].slice.call(el.parentNode.children).filter(function(c){return c.classList.contains('reveal')});
+        var i=sibs.indexOf(el);el.style.transitionDelay=(Math.max(i,0)*70)+'ms';
+        el.classList.add('in');
+        if(el.querySelector('[data-count]'))countUp(el);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.18});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  function countUp(scope){
+    scope.querySelectorAll('[data-count]').forEach(function(s){
+      var target=parseFloat(s.getAttribute('data-count')),dec=parseInt(s.getAttribute('data-dec')||'0',10);
+      if(reduce){s.textContent=target.toFixed(dec);return;}
+      var t0=null,dur=1200;
+      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);s.textContent=(target*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else s.textContent=target.toFixed(dec);}
+      requestAnimationFrame(step);
+    });
+  }
+</script>
+</body>
+</html>
