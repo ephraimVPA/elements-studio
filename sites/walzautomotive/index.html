@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walz Automotive | Toledo Auto Repair &amp; Service</title>
+<meta name="description" content="Walz Automotive on W Laskey Rd in Toledo. Honest diagnostics, brakes, engine and full service repair. Rated 4.7 stars by 195 Google reviewers. Call for an appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E131A; --panel:#161E28; --panel-2:#1C2733; --line:#263342;
+  --paper:#EDF2F8; --muted:#9FB2C4; --steel:#3C8EEA; --steel-soft:#5AA6FF;
+  --good:#5BD6A6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--ink);color:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Saira Condensed','Arial Narrow',sans-serif;font-weight:700;line-height:1.02;letter-spacing:.01em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.eyebrow{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.24em;font-size:13px;font-weight:600;color:var(--steel-soft)}
+
+/* scroll progress */
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--steel);transform:scaleX(0);transform-origin:left;z-index:60}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 0;transition:background .3s,box-shadow .3s,padding .3s}
+nav.scrolled{background:rgba(14,19,26,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:11px 0}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;width:min(1120px,92vw)}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+.brand .mk{width:34px;height:34px;border:2px solid var(--steel);border-radius:9px;display:grid;place-items:center;color:var(--steel-soft)}
+.nav-cta{display:inline-flex;align-items:center;gap:9px;background:var(--steel);color:#06101d;font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-weight:700;padding:10px 17px;border-radius:9px;font-size:15px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(60,142,234,.34)}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:120px 0 70px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/6870324/pexels-photo-6870324.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#0E131A,#1C2733);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.08)}to{transform:scale(1.18)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,20,.9) 0%,rgba(10,14,20,.72) 45%,rgba(10,14,20,.5) 100%);z-index:1}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(40px,7.4vw,82px);max-width:15ch;margin:18px 0 0;text-shadow:0 2px 24px rgba(0,0,0,.4)}
+.hero h1 .hi{color:var(--steel-soft)}
+.hero p.lede{margin-top:20px;max-width:50ch;font-size:19px;color:#d4e0ec}
+.hero-rate{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.stars{color:#FFC861;letter-spacing:3px;font-size:19px}
+.hero-rate b{font-family:'Saira Condensed',sans-serif;font-size:19px}
+.hero-cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-weight:700;padding:16px 26px;border-radius:11px;font-size:17px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .25s;cursor:pointer}
+.btn-primary{background:var(--steel);color:#06101d}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(60,142,234,.4)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--steel);transform:translateY(-3px)}
+
+/* trust band */
+.trust{position:relative;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.trust .motif{position:absolute;inset:0;opacity:.14;background:
+  repeating-radial-gradient(circle at 86% 50%, transparent 0 26px, rgba(60,142,234,.55) 26px 27px);
+  z-index:0}
+.trust .motif::after{content:"";position:absolute;right:7%;top:50%;width:260px;height:260px;transform:translateY(-50%);border-radius:50%;border:2px solid rgba(90,166,255,.5);box-shadow:0 0 0 22px rgba(60,142,234,.06)}
+.trust .wrap{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:40px 0}
+.tstat{text-align:center}
+.tnum{font-family:'Saira Condensed',sans-serif;font-size:42px;font-weight:700;color:#fff;line-height:1}
+.tlbl{font-size:13.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.11em;margin-top:6px}
+
+/* sections */
+section.pad{padding:84px 0}
+.shead{max-width:60ch}
+.shead h2{font-size:clamp(30px,4.6vw,48px);margin:12px 0 0}
+.shead p{color:var(--muted);margin-top:14px;font-size:18px}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 24px;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--steel);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.card .ic{width:46px;height:46px;border-radius:11px;background:var(--panel-2);display:grid;place-items:center;color:var(--steel-soft);margin-bottom:16px}
+.card h3{font-size:22px;letter-spacing:.02em}
+.card p{color:var(--muted);margin-top:9px;font-size:15.5px}
+
+/* why */
+.why{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:center}
+.why-list{list-style:none;margin-top:26px;display:grid;gap:18px}
+.why-list li{display:flex;gap:14px;align-items:flex-start}
+.why-list .ck{flex:none;width:30px;height:30px;border-radius:8px;background:rgba(91,214,166,.14);color:var(--good);display:grid;place-items:center;margin-top:2px}
+.why-list b{font-family:'Saira Condensed',sans-serif;font-size:19px;letter-spacing:.02em;display:block}
+.why-list span{color:var(--muted);font-size:15.5px}
+.why-photo{height:420px;border-radius:18px;background-image:url('https://images.pexels.com/photos/6870313/pexels-photo-6870313.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#1C2733,#0E131A);background-size:cover;background-position:center;border:1px solid var(--line)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.gal-item .ph{height:260px;border-radius:14px;background-size:cover;background-position:center;border:1px solid var(--line);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.gal-item:hover .ph{transform:scale(1.03)}
+.gal-item .cap{color:var(--muted);font-size:14px;margin-top:10px}
+.g1 .ph{background-image:url('https://images.pexels.com/photos/4116221/pexels-photo-4116221.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#1C2733,#0E131A)}
+.g2 .ph{background-image:url('https://images.pexels.com/photos/8478261/pexels-photo-8478261.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#1C2733,#0E131A)}
+.g3 .ph{background-image:url('https://images.pexels.com/photos/4489776/pexels-photo-4489776.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#1C2733,#0E131A)}
+
+/* contact / cta */
+.cta{position:relative;background:linear-gradient(150deg,#13202e,#0E131A);border:1px solid var(--line);border-radius:22px;padding:52px 44px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;overflow:hidden}
+.cta h2{font-size:clamp(28px,4vw,44px)}
+.cta p{color:var(--muted);margin-top:14px;font-size:17px}
+.info{display:grid;gap:16px}
+.info .row{display:flex;gap:13px;align-items:flex-start}
+.info .ic{flex:none;width:38px;height:38px;border-radius:10px;background:var(--panel-2);display:grid;place-items:center;color:var(--steel-soft)}
+.info b{font-family:'Saira Condensed',sans-serif;letter-spacing:.02em;font-size:17px;display:block}
+.info span{color:var(--muted);font-size:15px}
+
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* sticky mobile call */
+.mcall{display:none}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  .trust .wrap{grid-template-columns:repeat(2,1fr);gap:28px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr}
+  .why-photo{height:300px}
+  .gal{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr;padding:38px 26px}
+  .gal-item .ph{height:300px}
+}
+@media (max-width:560px){
+  .svc-grid{grid-template-columns:1fr}
+  nav .nav-cta{display:none}
+  .mcall{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--steel);color:#06101d;font-family:'Saira Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;align-items:center;justify-content:center;gap:10px;padding:15px;font-size:17px;box-shadow:0 -6px 20px rgba(0,0,0,.4)}
+  body{padding-bottom:58px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mk"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3l2-5h8l2 5h3"/><path d="M5 12v5h14v-5"/><circle cx="7.5" cy="17" r="1.6"/><circle cx="16.5" cy="17" r="1.6"/></svg></span>
+      Walz Automotive
+    </div>
+    <a class="nav-cta" href="tel:+14194766938">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+      (419) 476-6938
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="An auto mechanic inspecting a car inside a clean, well lit service garage at Walz Automotive in Toledo"></div>
+  <div class="wrap">
+    <span class="eyebrow">Toledo &middot; W Laskey Rd</span>
+    <h1>Toledo trusts us to <span class="hi">fix it right</span> the first time</h1>
+    <p class="lede">Full service auto repair and honest diagnostics. Bring us the noise, the light on the dash, or the maintenance you keep putting off. We will tell you straight what it needs.</p>
+    <div class="hero-rate">
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <b><span class="cu" data-to="4.7" data-dec="1">0</span> stars</b>
+      <span style="color:#d4e0ec">from <b class="cu" data-to="195">0</b> Google reviews</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="tel:+14194766938">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        Call the shop
+      </a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="tstat reveal"><div class="tnum"><span class="cu" data-to="4.7" data-dec="1">0</span></div><div class="tlbl">Google rating</div></div>
+    <div class="tstat reveal"><div class="tnum"><span class="cu" data-to="195">0</span></div><div class="tlbl">Customer reviews</div></div>
+    <div class="tstat reveal"><div class="tnum">6</div><div class="tlbl">Days a week</div></div>
+    <div class="tstat reveal"><div class="tnum">1</div><div class="tlbl">Honest estimate</div></div>
+  </div>
+</div>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Repair and service, under one roof</h2>
+      <p>Most makes and models, foreign and domestic. If it rolls into the bay, we can look at it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M4 10v8a2 2 0 0 0 2 2h8"/><circle cx="7" cy="7" r="3"/></svg></div>
+        <h3>Check Engine &amp; Diagnostics</h3>
+        <p>We read the codes and find the real cause before we touch a part, so you pay for the fix and not guesswork.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes &amp; Rotors</h3>
+        <p>Pads, rotors, lines and fluid. If it is grinding or soft underfoot, we get your stopping power back.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15a4 4 0 0 0 4 4h8a4 4 0 0 0 0-8h-1"/><path d="M7 11V7a2 2 0 0 1 2-2h3l3 3"/><path d="M7 11h6"/></svg></div>
+        <h3>Oil &amp; Fluid Service</h3>
+        <p>Oil, filters, coolant and the fluids that keep things running. Quick turnaround on routine maintenance.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3>Tires &amp; Alignment</h3>
+        <p>Mounting, balancing, rotation and alignment so your tires wear evenly and the car tracks straight.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10l3 3v7H4z"/><circle cx="8" cy="17" r="1.6"/><circle cx="15" cy="17" r="1.6"/><path d="M14 7V4h3l3 4v6h-3"/></svg></div>
+        <h3>Engine &amp; Transmission</h3>
+        <p>From belts and timing to bigger drivability problems, we handle the work that keeps a car on the road.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 7l4 2M21 7l-4 2M3 17l4-2M21 17l-4-2"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Heating &amp; AC</h3>
+        <p>Blowing warm in summer or cold in winter? We find the leak or the part and get the cabin comfortable again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad why">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="eyebrow">Why drivers come back</span>
+      <h2 style="font-size:clamp(28px,4.4vw,46px);margin-top:12px">A shop that explains before it wrenches</h2>
+      <ul class="why-list">
+        <li><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Straight answers</b><span>You hear what is wrong, what it costs, and what can wait, before any work starts.</span></div></li>
+        <li><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Work done once</b><span>We fix the cause, not the symptom, so you are not back next week for the same thing.</span></div></li>
+        <li><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Local and here to stay</b><span>A Toledo shop on W Laskey Rd with 195 reviews behind the name on the door.</span></div></li>
+      </ul>
+      <a class="btn btn-primary" style="margin-top:28px" href="tel:+14194766938">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        Talk to a mechanic
+      </a>
+    </div>
+    <div class="why-photo reveal" role="img" aria-label="A Walz Automotive mechanic running computer engine diagnostics on a car in the workshop"></div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="eyebrow">In the bay</span>
+      <h2>Inside the shop</h2>
+      <p>Real work on real cars at Walz Automotive in Toledo.</p>
+    </div>
+    <div class="gal">
+      <div class="gal-item g1 reveal"><div class="ph" role="img" aria-label="Close up of a technician's hands repairing components inside a car engine"></div><div class="cap">Engine work, done by hand</div></div>
+      <div class="gal-item g2 reveal"><div class="ph" role="img" aria-label="A technician performing engine maintenance on a car in the service bay"></div><div class="cap">Maintenance and repair</div></div>
+      <div class="gal-item g3 reveal"><div class="ph" role="img" aria-label="A car raised on a lift for brake and undercarriage service"></div><div class="cap">Up on the lift for a full look</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div>
+        <span class="eyebrow">Book your visit</span>
+        <h2>Ready when your car is</h2>
+        <p>Call the shop and tell us what it is doing. We will get you scheduled and give you a straight estimate before we start.</p>
+        <a class="btn btn-primary" style="margin-top:24px" href="tel:+14194766938">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+          (419) 476-6938
+        </a>
+      </div>
+      <div class="info">
+        <div class="row"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Visit the shop</b><span>1529 W Laskey Rd, Toledo, OH 43612</span></div></div>
+        <div class="row"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></span><div><b>Call or text to book</b><span>(419) 476-6938</span></div></div>
+        <div class="row"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Monday to Saturday</b><span>Call for same day availability</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Walz Automotive &middot; 1529 W Laskey Rd, Toledo, OH 43612</div>
+    <div>Rated 4.7 stars by 195 Google reviewers &middot; Website by Elements Studio</div>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+14194766938">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+  Call (419) 476-6938
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('prog');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>20);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){
+      var t=e.target,sibs=t.parentNode?[].slice.call(t.parentNode.children).filter(function(c){return c.classList.contains('reveal')}):[t];
+      var i=sibs.indexOf(t);setTimeout(function(){t.classList.add('in')},Math.max(0,i)*70);
+      io.unobserve(t);
+    }});
+  },{threshold:.14});
+  [].forEach.call(document.querySelectorAll('.reveal'),function(el){io.observe(el)});
+
+  function countUp(el){
+    var to=parseFloat(el.getAttribute('data-to')),dec=parseInt(el.getAttribute('data-dec')||'0',10),st=null,dur=1300;
+    function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/dur,1),e=1-Math.pow(1-p,3),v=to*e;el.textContent=dec?v.toFixed(dec):Math.round(v).toString();if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+  [].forEach.call(document.querySelectorAll('.cu'),function(el){cio.observe(el)});
+})();
+</script>
+</body>
+</html>
