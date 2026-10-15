@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JNR Auto and Fleet Repairs | Toledo, OH</title>
+<meta name="description" content="JNR Auto and Fleet Repairs keeps Toledo cars and work fleets on the road. Rated 5.0 stars by 53 drivers. Call for a repair quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15191E; --panel:#1C2228; --panel2:#222A31; --line:#2C343C;
+  --ink:#EDF0F2; --mut:#9AA7B0; --grn:#27C26A; --grn-dk:#16A354; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Teko',sans-serif;line-height:.98;color:var(--white);font-weight:600;letter-spacing:.01em;text-transform:uppercase}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+section{padding:94px 0}
+.eyebrow{font-family:'Barlow';font-weight:600;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--grn)}
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--grn);transform:scaleX(0);transform-origin:left;z-index:120}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;transition:background .3s,box-shadow .3s,padding .3s}
+nav.scrolled{background:rgba(21,25,30,.95);box-shadow:0 6px 24px rgba(0,0,0,.4);padding:11px 22px;backdrop-filter:blur(8px)}
+nav .brand{font-family:'Teko';font-weight:700;font-size:28px;color:#fff;letter-spacing:.03em;text-transform:uppercase;line-height:1}
+nav .brand b{color:var(--grn)}
+nav .ncall{display:inline-flex;align-items:center;gap:8px;background:var(--grn);color:#08140c;padding:9px 18px;border-radius:7px;font-weight:600;font-size:15px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+nav .ncall:hover{transform:translateY(-2px);background:var(--grn-dk)}
+nav .ncall svg{width:17px;height:17px}
+.hero{position:relative;min-height:93vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/8986132/pexels-photo-8986132.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#11161b,#16a354);background-size:cover;background-position:center;transform:scale(1.03);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.03)}to{transform:scale(1.15)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,18,22,.86),rgba(14,18,22,.58));z-index:1}
+.hero-inner{position:relative;z-index:3;padding:120px 0 60px}
+.hero h1{font-size:clamp(50px,9vw,104px);margin:10px 0 14px;max-width:15ch}
+.hero h1 span{color:var(--grn)}
+.hero p.lede{color:#dbe2e6;font-size:clamp(17px,2vw,21px);max-width:50ch;margin-bottom:32px;font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--grn);color:#08140c;padding:15px 28px;border-radius:9px;font-weight:600;font-size:17px;box-shadow:0 10px 26px rgba(39,194,106,.32);transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+.btn:hover{transform:translateY(-3px);background:var(--grn-dk)}
+.btn svg{width:20px;height:20px}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.4);box-shadow:none;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.hcta{display:flex;gap:14px;flex-wrap:wrap}
+.proof{background:var(--grn);color:#08140c}
+.proof .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;padding:34px 22px}
+.stat{flex:1;min-width:150px;text-align:center}
+.stat .num{font-family:'Teko';font-weight:700;font-size:62px;color:#08140c;line-height:.9}
+.stat .lab{font-size:13.5px;color:#0d3b22;margin-top:4px;letter-spacing:.04em;font-weight:600;text-transform:uppercase}
+.stars{color:#08140c;font-size:19px;letter-spacing:2px}
+.shead{max-width:60ch;margin-bottom:46px}
+.shead h2{font-size:clamp(38px,6vw,62px);margin:8px 0 12px}
+.shead p{color:var(--mut)}
+.services{position:relative;overflow:hidden;background:var(--bg)}
+.services .motif{position:absolute;inset:0;opacity:.09;z-index:0;pointer-events:none;background:
+  repeating-linear-gradient(45deg,var(--grn) 0 1px,transparent 1px 15px),
+  repeating-linear-gradient(-45deg,var(--grn) 0 1px,transparent 1px 15px)}
+.services .wrap{position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px 24px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--grn)}
+.card .ic{width:50px;height:50px;border-radius:10px;background:rgba(39,194,106,.14);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--grn)}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-size:27px;margin-bottom:4px;letter-spacing:.02em}
+.card p{color:var(--mut);font-size:15.5px}
+.gallery{background:var(--panel2)}
+.galgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+.ph{position:relative;height:260px;border-radius:12px;background-size:cover;background-position:center;overflow:hidden;border:1px solid var(--line)}
+.ph::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:16px;color:#fff;font-size:14px;font-weight:600;letter-spacing:.02em;background:linear-gradient(0deg,rgba(8,12,15,.9),transparent)}
+.about{background:var(--bg)}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.about ul{list-style:none;margin-top:18px}
+.about li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;color:var(--mut)}
+.about li svg{width:22px;height:22px;color:var(--grn);flex:none;margin-top:3px}
+.about-img{height:380px;border-radius:14px;background-image:url('https://images.pexels.com/photos/6870313/pexels-photo-6870313.jpeg?auto=compress&cs=tinysrgb&w=900');background-size:cover;background-position:center;border:1px solid var(--line)}
+.final{background:linear-gradient(135deg,#0f1317,#1d2a22);text-align:center;border-top:1px solid var(--line)}
+.final h2{font-size:clamp(40px,6vw,68px);max-width:16ch;margin:0 auto 12px}
+.final h2 span{color:var(--grn)}
+.final p{color:var(--mut);max-width:48ch;margin:0 auto 28px}
+.final .addr{margin-top:24px;color:var(--mut);font-size:15px}
+footer{background:#0F1317;color:var(--mut);padding:38px 0;font-size:14.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer b{color:#fff;font-family:'Teko';font-size:24px;letter-spacing:.03em}
+footer a{color:var(--grn)}
+.mcall{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--grn);color:#08140c;text-align:center;padding:15px;font-weight:600;box-shadow:0 -6px 20px rgba(0,0,0,.4)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){
+  section{padding:66px 0}
+  .about .wrap{grid-template-columns:1fr;gap:28px}
+  nav .ncall{display:none}
+  .mcall{display:block}
+  body{padding-bottom:54px}
+  .stat{min-width:40%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<nav id="nav">
+  <span class="brand">JNR <b>AUTO &amp; FLEET</b></span>
+  <a class="ncall" href="tel:+15674209771" aria-label="Call JNR Auto and Fleet Repairs at 567 420 9771">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (567) 420-9771
+  </a>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A mechanic inspecting a vehicle raised on a lift inside the JNR service bay"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Auto &amp; Fleet Repair &middot; Toledo, Ohio</span>
+    <h1>Back on the <span>road</span> fast.</h1>
+    <p class="lede">From the family car to a yard full of work trucks and vans, JNR gets Toledo drivers diagnosed, fixed and moving again, with honest quotes up front.</p>
+    <div class="hcta">
+      <a class="btn" href="tel:+15674209771">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a repair quote
+      </a>
+      <a class="btn ghost" href="#services">What we fix</a>
+    </div>
+  </div>
+</header>
+
+<section class="proof" style="padding:0">
+  <div class="wrap">
+    <div class="stat rv">
+      <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="num"><span data-count="5.0" data-dec="1">0.0</span></div>
+      <div class="lab">Google rating</div>
+    </div>
+    <div class="stat rv">
+      <div class="num"><span data-count="53">0</span></div>
+      <div class="lab">Driver reviews</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Cars + Fleet</div>
+      <div class="lab">Light and work vehicles</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Toledo</div>
+      <div class="lab">Francis Ave shop</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">What we fix</span>
+      <h2>Full service for every vehicle you run</h2>
+      <p>One shop for the daily driver and the commercial fleet, so downtime stays short and the work stays done right.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h-4v6H4v4h6v6h4v-6h6v-4h-6z" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Check-engine lights and hard-to-find faults traced with real equipment, not guesswork.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes &amp; tires</h3>
+        <p>Pads, rotors, alignments and tire work to keep every vehicle stopping and tracking straight.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13V9a2 2 0 0 1 2-2h7l3 4h2a2 2 0 0 1 2 2v2h-3"/><circle cx="7.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/><path d="M10 16.5h4"/></svg></div>
+        <h3>Fleet service</h3>
+        <p>Scheduled maintenance and priority repairs for vans and work trucks, built around your uptime.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9"/><path d="M12 12l4-2"/><path d="M3 12h2M19 12h2M12 3v2"/></svg></div>
+        <h3>Engine &amp; tune-ups</h3>
+        <p>Oil, belts, batteries, and larger engine work to keep miles adding up without surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">In the shop</span>
+      <h2>Real work, real vehicles</h2>
+    </div>
+    <div class="galgrid">
+      <div class="ph rv" role="img" aria-label="A mechanic repairing a work truck" data-cap="Cars and work trucks" style="background-image:url('https://images.pexels.com/photos/21831854/pexels-photo-21831854.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#11161b,#16a354)"></div>
+      <div class="ph rv" role="img" aria-label="Close-up of a car engine during repair with diagnostic tools" data-cap="Diagnostics done right" style="background-image:url('https://images.pexels.com/photos/4116207/pexels-photo-4116207.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#11161b,#16a354)"></div>
+      <div class="ph rv" role="img" aria-label="JNR service bay with lifts, tools and equipment" data-cap="Fully equipped bays" style="background-image:url('https://images.pexels.com/photos/34337558/pexels-photo-34337558.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#11161b,#16a354)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="about-img rv" role="img" aria-label="A skilled mechanic running engine diagnostics in the garage"></div>
+    <div class="rv">
+      <span class="eyebrow">Why JNR</span>
+      <h2 style="font-size:clamp(34px,5vw,54px);margin:8px 0 6px">The shop drivers and fleet owners trust</h2>
+      <p style="color:var(--mut)">A 5.0 rating across 53 reviews, earned by straight quotes, clean work and getting vehicles back where they belong.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Quotes up front, so you approve the work before it starts.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Cars and commercial fleets handled under one roof.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Toledo based on Francis Ave, quick to get you scheduled.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap">
+    <h2 class="rv">Need it fixed <span>right</span>?</h2>
+    <p class="rv">Call JNR for a quote on your car or your whole fleet. We will tell you what it needs and what it costs.</p>
+    <a class="btn rv" href="tel:+15674209771">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (567) 420-9771
+    </a>
+    <div class="addr rv">857 Francis Ave, Toledo, OH 43609</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>JNR AUTO &amp; FLEET REPAIRS</b><br>857 Francis Ave, Toledo, OH 43609</div>
+    <div>Diagnostics &middot; Brakes &middot; Fleet service &middot; Engine</div>
+    <div><a href="tel:+15674209771">(567) 420-9771</a></div>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+15674209771">Call (567) 420-9771</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('prog');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el,i){el.style.transitionDelay=(Math.min(i%4,3)*0.07)+'s';io.observe(el);});
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1400;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>

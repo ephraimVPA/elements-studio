@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMR HomePros | Roofing in Toledo, OH</title>
+<meta name="description" content="SMR HomePros installs and repairs residential roofs across Toledo, Ohio. Rated 4.8 stars by 147 homeowners. Call for a free roof estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F1EA; --paper2:#EBE6DB; --ink:#22303A; --ink2:#44555F;
+  --slate:#1A2730; --verd:#0E8C72; --verd-dk:#0A6B57; --line:#D9D2C4; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Zilla Slab',Georgia,serif;line-height:1.1;color:var(--slate);font-weight:700}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+section{padding:92px 0}
+.eyebrow{font-family:'Inter';font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--verd-dk)}
+/* progress bar */
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--verd);transform:scaleX(0);transform-origin:left;z-index:120}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;transition:background .3s,box-shadow .3s,padding .3s}
+nav.scrolled{background:rgba(244,241,234,.95);box-shadow:0 6px 24px rgba(26,39,48,.12);padding:11px 22px;backdrop-filter:blur(8px)}
+nav .brand{font-family:'Zilla Slab';font-weight:700;font-size:21px;color:var(--white);letter-spacing:.01em}
+nav.scrolled .brand{color:var(--slate)}
+nav .brand b{color:var(--verd)}
+nav .ncall{display:inline-flex;align-items:center;gap:8px;background:var(--verd);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+nav .ncall:hover{transform:translateY(-2px);background:var(--verd-dk)}
+nav .ncall svg{width:17px;height:17px}
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/9431615/pexels-photo-9431615.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#243b36,#0e8c72);background-size:cover;background-position:center;transform:scale(1.02);animation:ken 22s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.14)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,38,.5),rgba(20,32,38,.62));z-index:1}
+.hero-inner{position:relative;z-index:3;padding:120px 0 60px}
+.hero-inner .eyebrow{color:#8fe4cf}
+.hero h1{color:#fff;font-size:clamp(38px,6vw,68px);margin:14px 0 18px;max-width:16ch;text-shadow:0 2px 20px rgba(0,0,0,.25)}
+.hero p.lede{color:#eef2f0;font-size:clamp(17px,2vw,21px);max-width:52ch;margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--verd);color:#fff;padding:16px 28px;border-radius:12px;font-weight:600;font-size:17px;box-shadow:0 10px 26px rgba(14,140,114,.4);transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+.btn:hover{transform:translateY(-3px);background:var(--verd-dk)}
+.btn svg{width:20px;height:20px}
+.btn.ghost{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.55);box-shadow:none;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.2)}
+.hcta{display:flex;gap:14px;flex-wrap:wrap}
+/* proof strip */
+.proof{background:var(--slate);color:#fff;padding:0}
+.proof .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;padding-top:46px;padding-bottom:46px}
+.stat{flex:1;min-width:150px;text-align:center}
+.stat .num{font-family:'Zilla Slab';font-weight:700;font-size:46px;color:#fff;line-height:1}
+.stat .num .s{color:var(--verd)}
+.stat .lab{font-size:14px;color:#aebcc2;margin-top:8px;letter-spacing:.02em}
+.stars{color:#f2b134;font-size:20px;letter-spacing:2px}
+/* section head */
+.shead{max-width:60ch;margin-bottom:46px}
+.shead h2{font-size:clamp(28px,4vw,42px);margin:12px 0 14px}
+.shead p{color:var(--ink2)}
+/* services */
+.services{position:relative;overflow:hidden}
+.services .motif{position:absolute;inset:0;opacity:.07;z-index:0;background:
+  repeating-radial-gradient(circle at 50% -40%, var(--verd) 0 2px, transparent 2px 46px);
+  background-size:92px 46px;pointer-events:none}
+.services .wrap{position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(26,39,48,.12)}
+.card .ic{width:52px;height:52px;border-radius:13px;background:rgba(14,140,114,.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--verd-dk)}
+.card .ic svg{width:27px;height:27px}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{color:var(--ink2);font-size:15.5px}
+/* gallery */
+.gallery{background:var(--paper2)}
+.galgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ph{position:relative;height:260px;border-radius:16px;background-size:cover;background-position:center;overflow:hidden;box-shadow:0 10px 26px rgba(26,39,48,.1)}
+.ph::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:16px 16px 14px;color:#fff;font-size:14px;font-weight:500;background:linear-gradient(0deg,rgba(16,26,31,.82),transparent)}
+/* about / area */
+.about .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.about ul{list-style:none;margin-top:18px}
+.about li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;color:var(--ink2)}
+.about li svg{width:22px;height:22px;color:var(--verd);flex:none;margin-top:2px}
+.about-img{height:360px;border-radius:18px;background-image:url('https://images.pexels.com/photos/8853521/pexels-photo-8853521.jpeg?auto=compress&cs=tinysrgb&w=900');background-size:cover;background-position:center;box-shadow:0 20px 44px rgba(26,39,48,.18)}
+/* final cta */
+.final{background:linear-gradient(135deg,var(--verd-dk),var(--verd));color:#fff;text-align:center}
+.final h2{color:#fff;font-size:clamp(28px,4vw,44px);max-width:18ch;margin:0 auto 16px}
+.final p{color:#dcf3ec;max-width:48ch;margin:0 auto 30px}
+.final .btn{background:#fff;color:var(--verd-dk);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.final .btn:hover{background:#eafaf4}
+.final .addr{margin-top:26px;color:#cdeee4;font-size:15px}
+/* footer */
+footer{background:var(--slate);color:#9fb0b7;padding:40px 0;font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer b{color:#fff;font-family:'Zilla Slab';font-size:18px}
+footer a{color:#cfe9e1}
+/* sticky mobile call */
+.mcall{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--verd);color:#fff;text-align:center;padding:15px;font-weight:600;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){
+  section{padding:66px 0}
+  .about .wrap{grid-template-columns:1fr;gap:28px}
+  nav .ncall{display:none}
+  .mcall{display:block}
+  body{padding-bottom:54px}
+  .proof .wrap{gap:26px}
+  .stat{min-width:40%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<nav id="nav">
+  <span class="brand">SMR <b>HomePros</b></span>
+  <a class="ncall" href="tel:+14194698994" aria-label="Call SMR HomePros at 419 469 8994">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (419) 469-8994
+  </a>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A roofing crew installing new asphalt shingles on a Toledo home"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Roofing &middot; Toledo, Ohio</span>
+    <h1>Toledo roofs done right, the first time.</h1>
+    <p class="lede">Shingle repairs, full replacements, storm damage and leaks. Licensed local roofers who show up when they say they will and clean up when the work is done.</p>
+    <div class="hcta">
+      <a class="btn" href="tel:+14194698994">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a free roof estimate
+      </a>
+      <a class="btn ghost" href="#services">See what we do</a>
+    </div>
+  </div>
+</header>
+
+<section class="proof" style="padding:0">
+  <div class="wrap">
+    <div class="stat rv">
+      <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="num"><span data-count="4.8" data-dec="1">0.0</span></div>
+      <div class="lab">Average Google rating</div>
+    </div>
+    <div class="stat rv">
+      <div class="num"><span data-count="147">0</span></div>
+      <div class="lab">Homeowner reviews</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Toledo<span class="s">.</span></div>
+      <div class="lab">Locally owned and based</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Free</div>
+      <div class="lab">Written roof estimates</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">What we do</span>
+      <h2>One crew for every part of your roof</h2>
+      <p>From a single lifted shingle to a full tear-off and replacement, SMR HomePros handles the whole job so you are not chasing three different contractors.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Roof replacement</h3>
+        <p>Full tear-offs and new architectural shingle roofs built to shed Ohio weather for decades.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-1.7-1.7z"/></svg></div>
+        <h3>Repairs and leaks</h3>
+        <p>Missing shingles, flashing, valleys and stubborn leaks traced to the source and fixed fast.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a4 4 0 0 0 4 4h11a3 3 0 0 0 .5-6A5.5 5.5 0 0 0 7 8a4 4 0 0 0-4 4"/><path d="M13 19v3M9 20v2M17 20v2"/></svg></div>
+        <h3>Storm damage</h3>
+        <p>Wind and hail inspections with clear photos and straight answers for your insurance claim.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18l-2 5H5L3 7z"/><path d="M5 12v7h14v-7"/><path d="M9 19v-4h6v4"/></svg></div>
+        <h3>Gutters</h3>
+        <p>Gutter and downspout work so water leaves the roof and stays out of your foundation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Recent work</span>
+      <h2>Clean job sites, solid roofs</h2>
+    </div>
+    <div class="galgrid">
+      <div class="ph rv" role="img" aria-label="Roofers installing new roofing panels on a home" data-cap="Full roof builds" style="background-image:url('https://images.pexels.com/photos/5264825/pexels-photo-5264825.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#243b36,#0e8c72)"></div>
+      <div class="ph rv" role="img" aria-label="Hard hats and safety gear laid out on a roof job site" data-cap="Licensed, insured crews" style="background-image:url('https://images.pexels.com/photos/8853521/pexels-photo-8853521.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#243b36,#0e8c72)"></div>
+      <div class="ph rv" role="img" aria-label="Close-up of layered roof shingles showing clean workmanship" data-cap="Quality materials" style="background-image:url('https://images.pexels.com/photos/30194376/pexels-photo-30194376.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#243b36,#0e8c72)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Why SMR HomePros</span>
+      <h2 style="font-size:clamp(26px,4vw,38px);margin:12px 0 6px">A roofer Toledo homeowners actually recommend</h2>
+      <p style="color:var(--ink2)">We built our name on 147 reviews and a 4.8 rating from people in this area, one honest job at a time.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Free, written estimates with no pressure to sign on the spot.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Local crews who know Toledo roofs and Toledo weather.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Clear timelines and a site left clean at the end of the day.</li>
+      </ul>
+    </div>
+    <div class="about-img rv" role="img" aria-label="Safety equipment and hard hats on a metal roof during a job"></div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap">
+    <h2 class="rv">Ready for a roof you can stop thinking about?</h2>
+    <p class="rv">Call SMR HomePros and we will set up a free estimate at a time that works for you.</p>
+    <a class="btn rv" href="tel:+14194698994">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 469-8994
+    </a>
+    <div class="addr rv">5848 Dorr St, Toledo, OH 43615</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>SMR HomePros</b><br>5848 Dorr St, Toledo, OH 43615</div>
+    <div>Roofing &middot; Repairs &middot; Storm damage &middot; Gutters</div>
+    <div><a href="tel:+14194698994">(419) 469-8994</a></div>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+14194698994">Call (419) 469-8994</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('prog');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  var items=[].slice.call(document.querySelectorAll('.rv'));
+  items.forEach(function(el,i){el.style.transitionDelay=(Math.min(i%4,3)*0.07)+'s';io.observe(el);});
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1400;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>
