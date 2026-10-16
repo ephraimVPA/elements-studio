@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bennett Auto Service | Auto Repair in Toledo, OH</title>
+<meta name="description" content="Bennett Auto Service is a locally owned repair shop in Toledo, Ohio. Rated 4.6 stars by 61 drivers. Call for a straight quote on diagnostics, brakes and engine work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F0EC; --bg2:#E7E4DD; --ink:#1C2733; --ink2:#45535F; --steel:#13202E;
+  --blue:#12449C; --blue2:#1E6FD6; --line:#D7D2C6; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Sora',system-ui,sans-serif;line-height:1.08;color:var(--steel);font-weight:800;letter-spacing:-.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+section{padding:92px 0}
+.eyebrow{font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--blue2);transform:scaleX(0);transform-origin:left;z-index:120}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;transition:background .3s,box-shadow .3s,padding .3s}
+nav.scrolled{background:rgba(242,240,236,.95);box-shadow:0 6px 24px rgba(19,32,46,.12);padding:11px 22px;backdrop-filter:blur(8px)}
+nav .brand{font-family:'Sora';font-weight:800;font-size:21px;color:#fff;letter-spacing:-.01em}
+nav.scrolled .brand{color:var(--steel)}
+nav .brand b{color:var(--blue2)}
+nav .ncall{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:10px 18px;border-radius:8px;font-weight:600;font-size:15px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+nav .ncall:hover{transform:translateY(-2px);background:var(--blue2)}
+nav .ncall svg{width:17px;height:17px}
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/4116170/pexels-photo-4116170.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#13202e,#12449c);background-size:cover;background-position:center;transform:scale(1.02);animation:ken 22s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.14)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,20,30,.52),rgba(14,20,30,.64));z-index:1}
+.hero-inner{position:relative;z-index:3;padding:120px 0 60px}
+.hero-inner .eyebrow{color:#9ec2ff}
+.hero h1{color:#fff;font-size:clamp(38px,6vw,66px);margin:14px 0 18px;max-width:17ch;text-shadow:0 2px 20px rgba(0,0,0,.28)}
+.hero p.lede{color:#eef2f6;font-size:clamp(17px,2vw,21px);max-width:52ch;margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;padding:16px 28px;border-radius:10px;font-weight:600;font-size:17px;box-shadow:0 10px 26px rgba(18,68,156,.42);transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+.btn:hover{transform:translateY(-3px);background:var(--blue2)}
+.btn svg{width:20px;height:20px}
+.btn.ghost{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.55);box-shadow:none;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.2)}
+.hcta{display:flex;gap:14px;flex-wrap:wrap}
+.proof{background:var(--steel);color:#fff;padding:0}
+.proof .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;padding-top:46px;padding-bottom:46px}
+.stat{flex:1;min-width:150px;text-align:center}
+.stat .num{font-family:'Sora';font-weight:800;font-size:46px;color:#fff;line-height:1}
+.stat .num .s{color:var(--blue2)}
+.stat .lab{font-size:14px;color:#9fb0bd;margin-top:8px;letter-spacing:.02em}
+.stars{color:#f2b134;font-size:20px;letter-spacing:2px}
+.shead{max-width:60ch;margin-bottom:46px}
+.shead h2{font-size:clamp(28px,4vw,42px);margin:12px 0 14px}
+.shead p{color:var(--ink2)}
+.services{position:relative;overflow:hidden}
+.services .motif{position:absolute;inset:0;opacity:.06;z-index:0;background:repeating-linear-gradient(135deg,var(--blue) 0 2px,transparent 2px 26px);pointer-events:none}
+.services .wrap{position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(19,32,46,.13)}
+.card .ic{width:52px;height:52px;border-radius:12px;background:rgba(18,68,156,.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--blue)}
+.card .ic svg{width:27px;height:27px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--ink2);font-size:15.5px}
+.gallery{background:var(--bg2)}
+.galgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ph{position:relative;height:260px;border-radius:14px;background-size:cover;background-position:center;overflow:hidden;box-shadow:0 10px 26px rgba(19,32,46,.1)}
+.ph::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:16px 16px 14px;color:#fff;font-size:14px;font-weight:500;background:linear-gradient(0deg,rgba(12,18,26,.82),transparent)}
+.about .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.about ul{list-style:none;margin-top:18px}
+.about li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;color:var(--ink2)}
+.about li svg{width:22px;height:22px;color:var(--blue);flex:none;margin-top:2px}
+.about-img{height:360px;border-radius:16px;background-image:url('https://images.pexels.com/photos/7019371/pexels-photo-7019371.jpeg?auto=compress&cs=tinysrgb&w=900');background-size:cover;background-position:center;box-shadow:0 20px 44px rgba(19,32,46,.2)}
+.final{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;text-align:center}
+.final h2{color:#fff;font-size:clamp(28px,4vw,44px);max-width:18ch;margin:0 auto 16px}
+.final p{color:#dbe8ff;max-width:48ch;margin:0 auto 30px}
+.final .btn{background:#fff;color:var(--blue);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.final .btn:hover{background:#eef4ff}
+.final .addr{margin-top:26px;color:#cfe0ff;font-size:15px}
+footer{background:var(--steel);color:#9fb0bd;padding:40px 0;font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer b{color:#fff;font-family:'Sora';font-size:18px}
+footer a{color:#cfe0ff}
+.mcall{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--blue);color:#fff;text-align:center;padding:15px;font-weight:600;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){
+  section{padding:66px 0}
+  .about .wrap{grid-template-columns:1fr;gap:28px}
+  nav .ncall{display:none}
+  .mcall{display:block}
+  body{padding-bottom:54px}
+  .stat{min-width:40%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<nav id="nav">
+  <span class="brand">Bennett <b>Auto</b></span>
+  <a class="ncall" href="tel:+14194780073" aria-label="Call Bennett Auto Service at 419 478 0073">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (419) 478-0073
+  </a>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A mechanic working under the hood of a car in a Toledo repair shop"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Auto Repair &middot; Toledo, Ohio</span>
+    <h1>A car fixed right, not fixed twice.</h1>
+    <p class="lede">Bennett Auto Service is a locally owned Toledo shop for diagnostics, brakes, maintenance and bigger engine jobs. Honest quotes, work explained in plain terms, and your car back when we said.</p>
+    <div class="hcta">
+      <a class="btn" href="tel:+14194780073">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a straight quote
+      </a>
+      <a class="btn ghost" href="#services">See what we fix</a>
+    </div>
+  </div>
+</header>
+
+<section class="proof" style="padding:0">
+  <div class="wrap">
+    <div class="stat rv">
+      <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="num"><span data-count="4.6" data-dec="1">0.0</span></div>
+      <div class="lab">Average Google rating</div>
+    </div>
+    <div class="stat rv">
+      <div class="num"><span data-count="61">0</span></div>
+      <div class="lab">Driver reviews</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Toledo<span class="s">.</span></div>
+      <div class="lab">Locally owned shop</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Free</div>
+      <div class="lab">Quotes before we start</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">What we fix</span>
+      <h2>One shop for the whole car</h2>
+      <p>From a check-engine light to brakes, maintenance and engine work, Bennett Auto Service handles it so you are not bouncing between three places.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Check-engine lights and odd noises traced to the real cause before you spend a dollar on parts.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes and suspension</h3>
+        <p>Pads, rotors, struts and shocks so the car stops short and rides straight.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h3l3 4v8a2 2 0 0 1-2 2h-1"/><path d="M4 20V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12"/><path d="M4 13h10"/></svg></div>
+        <h3>Oil and maintenance</h3>
+        <p>Oil changes, fluids, filters and tune-ups that keep small problems from turning into big ones.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v6l-4 4v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8l-4-4V2"/><path d="M8 2h8"/></svg></div>
+        <h3>Engine and transmission</h3>
+        <p>Bigger jobs handled in-house, with the work and the cost explained before we touch it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">In the shop</span>
+      <h2>Real work, done in Toledo</h2>
+    </div>
+    <div class="galgrid">
+      <div class="ph rv" role="img" aria-label="A mechanic using diagnostic tools on an engine" data-cap="Honest diagnostics" style="background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#13202e,#12449c)"></div>
+      <div class="ph rv" role="img" aria-label="A car raised on a lift during a repair" data-cap="Brakes and suspension" style="background-image:url('https://images.pexels.com/photos/6720507/pexels-photo-6720507.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#13202e,#12449c)"></div>
+      <div class="ph rv" role="img" aria-label="A technician carrying out routine maintenance on a vehicle" data-cap="Maintenance and tune-ups" style="background-image:url('https://images.pexels.com/photos/8986132/pexels-photo-8986132.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#13202e,#12449c)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Why Bennett</span>
+      <h2 style="font-size:clamp(26px,4vw,38px);margin:12px 0 6px">A Toledo shop drivers come back to</h2>
+      <p style="color:var(--ink2)">We built a 4.6 rating across 61 reviews the slow way, one fair repair at a time.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A quote before the work starts, not a surprise at pickup.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>What is wrong and why, explained in plain terms.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Locally owned, so the person who fixes it stands behind it.</li>
+      </ul>
+    </div>
+    <div class="about-img rv" role="img" aria-label="A clean auto repair bay with tools organized on the wall"></div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap">
+    <h2 class="rv">Something not right with your car?</h2>
+    <p class="rv">Call Bennett Auto Service and we will tell you what it needs and what it costs before we start.</p>
+    <a class="btn rv" href="tel:+14194780073">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 478-0073
+    </a>
+    <div class="addr rv">459 Waggoner Blvd, Toledo, OH 43612</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Bennett Auto Service</b><br>459 Waggoner Blvd, Toledo, OH 43612</div>
+    <div>Diagnostics &middot; Brakes &middot; Maintenance &middot; Engine work</div>
+    <div><a href="tel:+14194780073">(419) 478-0073</a></div>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+14194780073">Call (419) 478-0073</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('prog');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el,i){el.style.transitionDelay=(Math.min(i%4,3)*0.07)+'s';io.observe(el);});
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1400;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>

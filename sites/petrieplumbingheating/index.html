@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petrie Plumbing & Heating | Plumber in Maumee, OH</title>
+<meta name="description" content="Petrie Plumbing & Heating serves Maumee, Ohio with drain, water heater, leak and heating repairs. Rated 3.9 stars by 12 customers. Call for fast local service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ice:#F3F7FA; --ice2:#E6EFF4; --ink:#0C2A3A; --ink2:#3E5868; --deep:#0A2230;
+  --hydro:#0E7BA6; --hydro2:#1397C9; --ember:#DB6A2C; --line:#D4E1E9; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--ice);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Outfit',system-ui,sans-serif;line-height:1.1;color:var(--ink);font-weight:700;letter-spacing:-.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+section{padding:92px 0}
+.eyebrow{font-weight:600;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--hydro)}
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--hydro2);transform:scaleX(0);transform-origin:left;z-index:120}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;transition:background .3s,box-shadow .3s,padding .3s}
+nav.scrolled{background:rgba(243,247,250,.95);box-shadow:0 6px 24px rgba(12,42,58,.12);padding:11px 22px;backdrop-filter:blur(8px)}
+nav .brand{font-family:'Outfit';font-weight:700;font-size:21px;color:#fff}
+nav.scrolled .brand{color:var(--ink)}
+nav .brand b{color:var(--hydro2)}
+nav .ncall{display:inline-flex;align-items:center;gap:8px;background:var(--hydro);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+nav .ncall:hover{transform:translateY(-2px);background:var(--hydro2)}
+nav .ncall svg{width:17px;height:17px}
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/7220892/pexels-photo-7220892.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#0a2230,#0e7ba6);background-size:cover;background-position:center;transform:scale(1.02);animation:ken 22s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.14)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,26,36,.5),rgba(8,26,36,.64));z-index:1}
+.hero-inner{position:relative;z-index:3;padding:120px 0 60px}
+.hero-inner .eyebrow{color:#8fd6ef}
+.hero h1{color:#fff;font-size:clamp(38px,6vw,64px);margin:14px 0 18px;max-width:17ch;text-shadow:0 2px 20px rgba(0,0,0,.26)}
+.hero p.lede{color:#eaf4f8;font-size:clamp(17px,2vw,21px);max-width:52ch;margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--hydro);color:#fff;padding:16px 28px;border-radius:12px;font-weight:600;font-size:17px;box-shadow:0 10px 26px rgba(14,123,166,.4);transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
+.btn:hover{transform:translateY(-3px);background:var(--hydro2)}
+.btn svg{width:20px;height:20px}
+.btn.ghost{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.55);box-shadow:none;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.2)}
+.hcta{display:flex;gap:14px;flex-wrap:wrap}
+.proof{background:var(--deep);color:#fff;padding:0}
+.proof .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;padding-top:46px;padding-bottom:46px}
+.stat{flex:1;min-width:150px;text-align:center}
+.stat .num{font-family:'Outfit';font-weight:700;font-size:46px;color:#fff;line-height:1}
+.stat .num .s{color:var(--hydro2)}
+.stat .lab{font-size:14px;color:#9fb8c4;margin-top:8px;letter-spacing:.02em}
+.stars{color:#f2b134;font-size:20px;letter-spacing:2px}
+.shead{max-width:60ch;margin-bottom:46px}
+.shead h2{font-size:clamp(28px,4vw,42px);margin:12px 0 14px}
+.shead p{color:var(--ink2)}
+.services{position:relative;overflow:hidden}
+.services .motif{position:absolute;inset:0;opacity:.07;z-index:0;background:repeating-radial-gradient(circle at 18% 25%,var(--hydro) 0 1.5px,transparent 1.5px 42px);pointer-events:none}
+.services .wrap{position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,42,58,.12)}
+.card .ic{width:52px;height:52px;border-radius:13px;background:rgba(14,123,166,.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--hydro)}
+.card .ic.warm{background:rgba(219,106,44,.12);color:var(--ember)}
+.card .ic svg{width:27px;height:27px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--ink2);font-size:15.5px}
+.gallery{background:var(--ice2)}
+.galgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ph{position:relative;height:260px;border-radius:16px;background-size:cover;background-position:center;overflow:hidden;box-shadow:0 10px 26px rgba(12,42,58,.1)}
+.ph::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:16px 16px 14px;color:#fff;font-size:14px;font-weight:500;background:linear-gradient(0deg,rgba(8,22,30,.82),transparent)}
+.about .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.about ul{list-style:none;margin-top:18px}
+.about li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;color:var(--ink2)}
+.about li svg{width:22px;height:22px;color:var(--hydro);flex:none;margin-top:2px}
+.about-img{height:360px;border-radius:18px;background-image:url('https://images.pexels.com/photos/8488035/pexels-photo-8488035.jpeg?auto=compress&cs=tinysrgb&w=900');background-size:cover;background-position:center;box-shadow:0 20px 44px rgba(12,42,58,.18)}
+.final{background:linear-gradient(135deg,var(--hydro),var(--hydro2));color:#fff;text-align:center}
+.final h2{color:#fff;font-size:clamp(28px,4vw,44px);max-width:18ch;margin:0 auto 16px}
+.final p{color:#daf0f7;max-width:48ch;margin:0 auto 30px}
+.final .btn{background:#fff;color:var(--hydro);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.final .btn:hover{background:#eafaff}
+.final .addr{margin-top:26px;color:#cdeef7;font-size:15px}
+footer{background:var(--deep);color:#9fb8c4;padding:40px 0;font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer b{color:#fff;font-family:'Outfit';font-size:18px}
+footer a{color:#cdeef7}
+.mcall{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--hydro);color:#fff;text-align:center;padding:15px;font-weight:600;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){
+  section{padding:66px 0}
+  .about .wrap{grid-template-columns:1fr;gap:28px}
+  nav .ncall{display:none}
+  .mcall{display:block}
+  body{padding-bottom:54px}
+  .stat{min-width:40%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<nav id="nav">
+  <span class="brand">Petrie <b>Plumbing</b></span>
+  <a class="ncall" href="tel:+14193825380" aria-label="Call Petrie Plumbing and Heating at 419 382 5380">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (419) 382-5380
+  </a>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A plumber fitting pipes under a sink during a repair"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Plumbing &amp; Heating &middot; Maumee, Ohio</span>
+    <h1>Maumee plumbing and heating, fixed fast.</h1>
+    <p class="lede">Petrie Plumbing &amp; Heating handles drains, water heaters, leaks and heating for homes around Maumee. You get a real person on the phone and a fix that holds.</p>
+    <div class="hcta">
+      <a class="btn" href="tel:+14193825380">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for service
+      </a>
+      <a class="btn ghost" href="#services">See what we do</a>
+    </div>
+  </div>
+</header>
+
+<section class="proof" style="padding:0">
+  <div class="wrap">
+    <div class="stat rv">
+      <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="num"><span data-count="3.9" data-dec="1">0.0</span></div>
+      <div class="lab">Average Google rating</div>
+    </div>
+    <div class="stat rv">
+      <div class="num"><span data-count="12">0</span></div>
+      <div class="lab">Customer reviews</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Maumee<span class="s">.</span></div>
+      <div class="lab">Local plumbing and heating</div>
+    </div>
+    <div class="stat rv">
+      <div class="num">Fast</div>
+      <div class="lab">When water will not wait</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">What we do</span>
+      <h2>Plumbing and heating under one roof</h2>
+      <p>From a slow drain to a cold furnace, Petrie Plumbing &amp; Heating covers the water and the heat so you call one number, not three.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v6a5 5 0 0 0 10 0V3"/><path d="M12 14v7"/><path d="M8 21h8"/></svg></div>
+        <h3>Drains and sewer</h3>
+        <p>Clogged sinks, tubs and main lines cleared, with the cause found so it does not come straight back.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic warm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 7h6M9 11h6"/><path d="M12 15v3"/></svg></div>
+        <h3>Water heaters</h3>
+        <p>Repairs and new installs so you get back to hot showers the same day where we can.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6 6 11a6 6 0 0 1-12 0c0-5 6-11 6-11z"/></svg></div>
+        <h3>Leaks and repairs</h3>
+        <p>Dripping fixtures, running toilets and hidden leaks traced and fixed before they run up the bill.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic warm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2c1 2 0 4-1 5s-1 3 0 4"/><path d="M15 2c1 2 0 4-1 5s-1 3 0 4"/><path d="M5 14h14v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/></svg></div>
+        <h3>Heating and furnace</h3>
+        <p>Furnace and heating repairs to keep the house warm when the Ohio cold shows up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">On the job</span>
+      <h2>Clean work around Maumee</h2>
+    </div>
+    <div class="galgrid">
+      <div class="ph rv" role="img" aria-label="A plumber tightening a pipe fitting with a wrench" data-cap="Pipe and fixture repairs" style="background-image:url('https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#0a2230,#0e7ba6)"></div>
+      <div class="ph rv" role="img" aria-label="A technician servicing plumbing valves under a sink" data-cap="Drains and water lines" style="background-image:url('https://images.pexels.com/photos/8486978/pexels-photo-8486978.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#0a2230,#0e7ba6)"></div>
+      <div class="ph rv" role="img" aria-label="Plumbing tools and copper fittings laid out on a work surface" data-cap="Water heaters and heating" style="background-image:url('https://images.pexels.com/photos/8581897/pexels-photo-8581897.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#0a2230,#0e7ba6)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Why Petrie</span>
+      <h2 style="font-size:clamp(26px,4vw,38px);margin:12px 0 6px">A Maumee plumber who picks up the phone</h2>
+      <p style="color:var(--ink2)">We serve Maumee and the towns around it, rated 3.9 across 12 reviews and working to earn the next one.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Plumbing and heating from one local crew.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A clear price before the work, not after.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Fast answers when water or heat will not wait.</li>
+      </ul>
+    </div>
+    <div class="about-img rv" role="img" aria-label="A plumber connecting new copper water lines on a wall"></div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap">
+    <h2 class="rv">Leak, clog or no hot water?</h2>
+    <p class="rv">Call Petrie Plumbing &amp; Heating and we will get the water and the heat working again.</p>
+    <a class="btn rv" href="tel:+14193825380">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 382-5380
+    </a>
+    <div class="addr rv">128 E Dudley St D, Maumee, OH 43537</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Petrie Plumbing &amp; Heating</b><br>128 E Dudley St D, Maumee, OH 43537</div>
+    <div>Drains &middot; Water heaters &middot; Leaks &middot; Heating</div>
+    <div><a href="tel:+14193825380">(419) 382-5380</a></div>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+14193825380">Call (419) 382-5380</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('prog');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el,i){el.style.transitionDelay=(Math.min(i%4,3)*0.07)+'s';io.observe(el);});
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1400;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>
