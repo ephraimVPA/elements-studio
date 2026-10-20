@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Needles Auto Services | Lambertville, MI Auto Repair</title>
+<meta name="description" content="Honest auto repair in Lambertville, Michigan. Diagnostics, brakes, engine work and maintenance. Call Needles Auto Services at (734) 847-8450.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F3EDE1;--paper:#FBF7EF;--line:#E4DAC8;
+  --green:#1F3A2E;--green2:#2C5242;--rust:#A33F2A;--rust-soft:#C0532F;
+  --ink:#242219;--muted:#6B6253;--white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Anton',Impact,sans-serif;font-weight:400;line-height:1;letter-spacing:.005em;text-transform:uppercase}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.sr-bar{position:fixed;top:0;left:0;height:3px;width:100%;z-index:60}
+.sr-bar>i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--rust),var(--rust-soft));transform:scaleX(0);transform-origin:left;will-change:transform}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .25s,box-shadow .25s,border-color .25s;border-bottom:1px solid transparent}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Anton',sans-serif;font-size:23px;letter-spacing:.02em;color:var(--white);text-transform:uppercase}
+nav.scrolled{background:var(--paper);box-shadow:0 6px 22px rgba(31,58,46,.12);border-color:var(--line)}
+nav.scrolled .brand{color:var(--green)}
+nav.scrolled .brand .mark{background:var(--green)}
+.mark{width:36px;height:36px;border-radius:8px;background:var(--rust);display:grid;place-items:center;flex:none}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--rust);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:9px;font-size:15px;transition:transform .2s cubic-bezier(.34,1.56,.64,1),background .2s}
+.nav-cta:hover{transform:translateY(-2px);background:var(--rust-soft)}
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.pexels.com/photos/6870313/pexels-photo-6870313.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(150deg,#16271E 0%,#1F3A2E 60%,#2C5242 100%);background-size:cover;background-position:center;animation:ken 27s ease-out infinite alternate;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(18,30,22,.84) 0%,rgba(18,30,22,.6) 46%,rgba(18,30,22,.4) 100%)}
+@keyframes ken{from{transform:scale(1.03)}to{transform:scale(1.14)}}
+.hero-in{position:relative;z-index:2;padding:120px 0 70px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F0C9A6;margin-bottom:20px}
+.eyebrow .dot{width:7px;height:7px;background:var(--rust-soft);border-radius:1px;transform:rotate(45deg)}
+.hero h1{font-size:clamp(42px,7.4vw,82px);max-width:15ch;margin-bottom:20px;color:#fff}
+.hero p.lead{font-family:'DM Sans',sans-serif;font-size:clamp(17px,2.2vw,21px);color:#E6E0D4;max-width:50ch;margin-bottom:32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;border-radius:10px;padding:16px 26px;font-size:16px;transition:transform .2s cubic-bezier(.34,1.56,.64,1),background .2s,border-color .2s,color .2s}
+.btn-primary{background:var(--rust);color:#fff}
+.btn-primary:hover{transform:translateY(-3px);background:var(--rust-soft)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:#fff;background:rgba(255,255,255,.08)}
+.chips{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px}
+.chip{display:inline-flex;align-items:center;gap:9px;font-size:14.5px;color:#E6E0D4;font-weight:500}
+.chip svg{color:#F0C9A6;flex:none}
+/* sections */
+section.pad{padding:94px 0}
+.head-sm{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:14px}
+.head-lg{font-size:clamp(30px,4.6vw,52px);max-width:18ch;margin-bottom:16px;color:var(--green)}
+.sub{color:var(--muted);max-width:60ch;font-size:18px}
+/* services */
+.grid{display:grid;gap:18px;margin-top:46px}
+.svc{grid-template-columns:repeat(2,1fr)}
+@media(min-width:860px){.svc{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:28px 24px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(31,58,46,.14);border-color:var(--rust)}
+.ic{width:48px;height:48px;border-radius:10px;background:rgba(163,63,42,.1);display:grid;place-items:center;margin-bottom:18px}
+.ic svg{color:var(--rust)}
+.card h3{font-size:21px;margin-bottom:9px;color:var(--green);letter-spacing:.01em}
+.card p{font-size:15px;color:var(--muted);line-height:1.55}
+/* why + motif */
+.why{position:relative;background:var(--green);color:#EDE7DA;overflow:hidden}
+.why .head-sm{color:#F0C9A6}
+.why .head-lg{color:#fff}
+.why .sub{color:#CFC9BB}
+.motif{position:absolute;right:-80px;top:50%;transform:translateY(-50%);z-index:0;opacity:.12;pointer-events:none;width:560px;height:560px}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.why-grid{grid-template-columns:1fr 1fr}}
+.pts{list-style:none;margin-top:26px;display:grid;gap:20px}
+.pt{display:flex;gap:16px;align-items:flex-start}
+.pt .pic{width:44px;height:44px;border-radius:10px;background:rgba(240,201,166,.16);display:grid;place-items:center;flex:none}
+.pt .pic svg{color:#F0C9A6}
+.pt h3{font-size:19px;margin-bottom:5px;color:#fff;letter-spacing:.01em}
+.pt p{font-size:15px;color:#CFC9BB;font-family:'DM Sans',sans-serif}
+/* proof */
+.proof{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:10px}
+@media(max-width:720px){.proof{grid-template-columns:1fr}}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:32px 26px;text-align:center}
+.stat .num{font-family:'Anton',sans-serif;font-size:58px;color:var(--rust);line-height:1;display:flex;justify-content:center;align-items:baseline;gap:5px}
+.stat .num .star{font-size:32px}
+.stat .lab{color:var(--muted);font-size:15px;margin-top:12px}
+/* gallery */
+.gal{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);margin-top:46px}
+@media(max-width:760px){.gal{grid-template-columns:1fr}}
+.gi{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+.gi .ph{height:230px;background-size:cover;background-position:center;transition:transform .5s ease}
+.gi:hover .ph{transform:scale(1.06)}
+.gi .cap{padding:14px 16px;font-size:14px;color:var(--muted)}
+.g1 .ph{background-image:url('https://images.pexels.com/photos/8478201/pexels-photo-8478201.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#1F3A2E,#2C5242)}
+.g2 .ph{background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2C5242,#1F3A2E)}
+.g3 .ph{background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#16271E,#2C5242)}
+/* contact */
+.contact{background:var(--paper);border-top:1px solid var(--line)}
+.cgrid{display:grid;gap:40px}
+@media(min-width:880px){.cgrid{grid-template-columns:1.1fr .9fr}}
+.callbox{background:var(--green);color:#EDE7DA;border-radius:16px;padding:36px}
+.callbox .k{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#F0C9A6}
+.callbox .tel{font-family:'Anton',sans-serif;font-size:42px;color:#fff;text-decoration:none;display:inline-block;margin:8px 0 18px;letter-spacing:.01em}
+.info{display:grid;gap:18px;margin-top:6px}
+.info .row{display:flex;gap:14px;align-items:flex-start}
+.info .row svg{color:var(--rust);flex:none;margin-top:3px}
+.info .k{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.info .v{color:var(--ink);font-size:16px}
+.info .v a{color:var(--rust);text-decoration:none;font-weight:600}
+/* footer */
+footer{background:var(--green);color:#CFC9BB;padding:40px 0;font-size:14.5px}
+.fbrand{font-family:'Anton',sans-serif;color:#fff;font-size:22px;margin-bottom:8px;letter-spacing:.02em}
+footer a{color:#F0C9A6;text-decoration:none}
+/* sticky mobile call */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;align-items:center;justify-content:center;gap:10px;background:var(--rust);color:#fff;text-decoration:none;font-weight:700;padding:15px;font-size:17px;box-shadow:0 -6px 20px rgba(0,0,0,.25)}
+@media(max-width:760px){.sticky-call{display:flex}body{padding-bottom:58px}}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}.reveal{opacity:1;transform:none;transition:none}.gi:hover .ph{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="sr-bar" aria-hidden="true"><i id="srb"></i></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Needles Auto Services home">
+      <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></span>
+      Needles Auto
+    </a>
+    <a class="nav-cta" href="tel:+17348478450"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>(734) 847-8450</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A technician working on a vehicle in an auto repair service bay"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow"><span class="dot"></span>Auto repair in Lambertville, Michigan</span>
+    <h1>Honest repair, done right the first time.</h1>
+    <p class="lead">Straight answers, fair pricing and real mechanics who tell you what your car needs and what it does not. Call Needles for a look you can trust.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+17348478450"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Call (734) 847-8450</a>
+      <a class="btn btn-ghost" href="#services">See what we fix</a>
+    </div>
+    <div class="chips">
+      <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Up-front estimates</span>
+      <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Consear Rd, Lambertville</span>
+      <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L5 16v3h3l4.3-4.3a4 4 0 0 1 5.4-5.4l-2.5 2.5-1.4-1.4 2.5-2.5Z"/></svg>Most makes and models</span>
+    </div>
+  </div>
+</header>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="head-sm">What we fix</div>
+      <h2 class="head-lg">From the warning light to the big repair.</h2>
+      <p class="sub">Bring it in and we will find the real problem, show you what we found, and quote it before we turn a wrench.</p>
+    </div>
+    <div class="grid svc">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h3l2-5 4 10 2-5h3"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Check-engine lights and odd noises traced to the actual cause, not a guess.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes &amp; suspension</h3>
+        <p>Pads, rotors, struts and steering, so the car stops and rides the way it should.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13V7a2 2 0 0 1 2-2h5l3 3h5a2 2 0 0 1 2 2v3"/><path d="M3 17h4l2 3h6l2-3h2"/></svg></div>
+        <h3>Engine &amp; general repair</h3>
+        <p>Belts, cooling, oil leaks and the repairs that keep an older car running.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div>
+        <h3>Tires &amp; maintenance</h3>
+        <p>Rotations, fluids and the routine work that heads off bigger bills later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why pad">
+  <svg class="motif" aria-hidden="true" viewBox="0 0 200 200">
+    <g fill="none" stroke="#F0C9A6" stroke-width="4">
+      <circle cx="100" cy="100" r="82"/>
+      <circle cx="100" cy="100" r="54"/>
+      <circle cx="100" cy="100" r="24"/>
+    </g>
+    <g stroke="#F0C9A6" stroke-width="10" stroke-linecap="round">
+      <line x1="100" y1="6" x2="100" y2="30"/><line x1="100" y1="170" x2="100" y2="194"/>
+      <line x1="6" y1="100" x2="30" y2="100"/><line x1="170" y1="100" x2="194" y2="100"/>
+      <line x1="34" y1="34" x2="51" y2="51"/><line x1="149" y1="149" x2="166" y2="166"/>
+      <line x1="166" y1="34" x2="149" y2="51"/><line x1="51" y1="149" x2="34" y2="166"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="reveal">
+        <div class="head-sm">Why drivers pick Needles</div>
+        <h2 class="head-lg">A shop that treats your car like it would its own.</h2>
+        <p class="sub">We would rather keep a customer for ten years than oversell one repair. That is how a small shop earns a street full of regulars.</p>
+      </div>
+      <ul class="pts reveal">
+        <li class="pt"><span class="pic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><div><h3>Fair, up-front pricing</h3><p>You get the number before the work starts, in plain terms.</p></div></li>
+        <li class="pt"><span class="pic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M10 15h4"/></svg></span><div><h3>Only the work you need</h3><p>We show you what we found and let you decide what to do.</p></div></li>
+        <li class="pt"><span class="pic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9 18l-5-5"/></svg></span><div><h3>Repairs that hold</h3><p>Done right the first time, so you are not back next week.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;margin-bottom:40px">
+      <div class="head-sm">The record</div>
+      <h2 class="head-lg" style="margin:0 auto">Rated by real Lambertville drivers on Google.</h2>
+    </div>
+    <div class="proof">
+      <div class="stat reveal"><div class="num"><span data-count="4.0" data-dec="1">0</span><span class="star">&#9733;</span></div><div class="lab">Google rating</div></div>
+      <div class="stat reveal"><div class="num"><span data-count="11">0</span></div><div class="lab">Google reviews</div></div>
+      <div class="stat reveal"><div class="num" style="font-size:44px">Local</div><div class="lab">Independent shop on Consear Rd</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="head-sm">In the bay</div>
+      <h2 class="head-lg">A look at the work.</h2>
+    </div>
+    <div class="gal">
+      <div class="gi g1 reveal"><div class="ph" role="img" aria-label="Close view of hands working on the internal parts of a car engine"></div><div class="cap">Engine and general repair</div></div>
+      <div class="gi g2 reveal"><div class="ph" role="img" aria-label="A car engine raised for service in a well-lit repair shop"></div><div class="cap">On the lift</div></div>
+      <div class="gi g3 reveal"><div class="ph" role="img" aria-label="A mechanic inspecting a car engine to confirm a repair"></div><div class="cap">Diagnostics and inspection</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact pad" id="contact">
+  <div class="wrap">
+    <div class="cgrid">
+      <div class="reveal">
+        <div class="head-sm">Stop in or call</div>
+        <h2 class="head-lg">Tell us what the car is doing. We will take it from there.</h2>
+        <p class="sub">Call during shop hours for an estimate or to set up a time to bring it in. No pressure, just a straight answer.</p>
+        <div class="info">
+          <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="k">Shop</div><div class="v">3099 Consear Rd, Lambertville, MI 48144</div></div></div>
+          <div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><div class="k">Hours</div><div class="v">Monday to Friday, daytime hours</div></div></div>
+        </div>
+      </div>
+      <div class="callbox reveal">
+        <div class="k">Call the shop</div>
+        <a class="tel" href="tel:+17348478450">(734) 847-8450</a>
+        <a class="btn btn-primary" href="tel:+17348478450" style="width:100%;justify-content:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Call now</a>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#CFC9BB;margin-top:16px">Brakes, a check-engine light or a car that will not start. Call and we will walk you through the next step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Needles Auto Services</div>
+    <div>3099 Consear Rd, Lambertville, MI 48144 &middot; <a href="tel:+17348478450">(734) 847-8450</a></div>
+    <div style="margin-top:10px;opacity:.8">Independent auto repair serving Lambertville and the Bedford Township area, Michigan.</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+17348478450"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Call (734) 847-8450</a>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var nav=document.getElementById('nav');var srb=document.getElementById('srb');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    if(y>24)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    srb.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var revs=[].slice.call(document.querySelectorAll('.reveal'));
+  if(reduce||!('IntersectionObserver'in window)){revs.forEach(function(e){e.classList.add('in')});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(en,i){if(en.isIntersecting){var el=en.target;setTimeout(function(){el.classList.add('in')},(i%6)*75);io.unobserve(el);}});},{threshold:.16});revs.forEach(function(e){io.observe(e)});}
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    if(reduce){el.textContent=target.toFixed(dec);return;}
+    var start=null,dur=1300;
+    function step(t){if(!start)start=t;var p=Math.min((t-start)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=(target*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);}
+    requestAnimationFrame(step);
+  }
+  var nums=[].slice.call(document.querySelectorAll('[data-count]'));
+  if(!('IntersectionObserver'in window)){nums.forEach(countUp);}
+  else{var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){countUp(en.target);io2.unobserve(en.target);}});},{threshold:.6});nums.forEach(function(e){io2.observe(e)});}
+})();
+</script>
+</body>
+</html>
