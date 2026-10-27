@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L K Automotive | Honest Auto Repair in Toledo, OH</title>
+<meta name="description" content="L K Automotive on York St in Toledo keeps your car running right. Diagnostics, repair and maintenance. Rated 5.0 from 29 Google reviews. Call (419) 691-6583.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1620; --ink2:#141E2B; --panel:#17222F;
+  --cyan:#22C7C2; --cyan2:#139E99; --paper:#EAF2F4; --muted:#9FB2BC; --line:#22333f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Saira Condensed','Inter',sans-serif;font-weight:700;letter-spacing:.01em;line-height:1.02;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+section{padding:92px 0;position:relative}
+.eyebrow{font-family:'Saira Condensed';font-weight:600;text-transform:uppercase;letter-spacing:.22em;color:var(--cyan);font-size:.82rem;margin-bottom:14px}
+/* scroll progress */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--cyan);transform:scaleX(0);transform-origin:left;z-index:120}
+/* nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(15,22,32,.82);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+nav.scrolled{border-bottom-color:var(--line);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Saira Condensed';font-weight:700;font-size:1.3rem;letter-spacing:.04em;text-transform:uppercase}
+.mark{width:34px;height:34px;border:2px solid var(--cyan);border-radius:8px;display:grid;place-items:center;color:var(--cyan);font-size:1rem}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--cyan);color:#07252a;font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:13px 22px;border-radius:9px;font-size:1.02rem;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;box-shadow:0 8px 22px rgba(34,199,194,.25)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(34,199,194,.38)}
+.btn.ghost{background:transparent;color:var(--paper);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.nav .btn{padding:10px 18px;font-size:.92rem}
+/* hero */
+.hero{min-height:88vh;display:flex;align-items:center;position:relative;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;background-image:url('https://images.pexels.com/photos/6870324/pexels-photo-6870324.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#0f1620,#17222f);background-size:cover;background-position:center;animation:ken 22s ease-in-out infinite alternate}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,16,24,.9) 0%,rgba(10,16,24,.74) 45%,rgba(10,16,24,.5) 100%)}
+.hero h1{font-size:clamp(2.6rem,7vw,5.1rem);max-width:17ch}
+.hero p.lede{font-size:1.18rem;color:var(--paper);max-width:46ch;margin:22px 0 12px}
+.tag{display:inline-flex;gap:9px;align-items:center;background:rgba(34,199,194,.12);border:1px solid rgba(34,199,194,.3);color:var(--cyan);padding:7px 14px;border-radius:999px;font-size:.84rem;font-weight:600;margin-bottom:26px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-meta{margin-top:34px;display:flex;gap:30px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
+.hero-meta b{color:var(--paper)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-46px;position:relative;z-index:5}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center}
+.stat .n{font-family:'Saira Condensed';font-weight:700;font-size:2.7rem;color:var(--cyan);line-height:1}
+.stat .l{color:var(--muted);font-size:.9rem;margin-top:6px;text-transform:uppercase;letter-spacing:.1em}
+/* services */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:transform .4s cubic-bezier(.34,1.56,.64,1),border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan)}
+.ico{width:48px;height:48px;border-radius:11px;background:rgba(34,199,194,.12);display:grid;place-items:center;color:var(--cyan);margin-bottom:18px}
+.card h3{font-size:1.35rem;margin-bottom:9px}
+.card p{color:var(--muted);font-size:.98rem}
+.sec-head{max-width:620px;margin-bottom:46px}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3.1rem)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:1.05rem}
+/* why / motif */
+.why{background:var(--ink2);position:relative;overflow:hidden}
+.motif{position:absolute;inset:0;z-index:0;opacity:.5;background-image:repeating-linear-gradient(135deg,rgba(34,199,194,.11) 0 1px,transparent 1px 26px),repeating-linear-gradient(45deg,rgba(34,199,194,.06) 0 1px,transparent 1px 26px)}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:54px;align-items:center}
+.pt{display:flex;gap:15px;margin-bottom:22px}
+.pt .d{flex:0 0 42px;height:42px;border-radius:10px;background:rgba(34,199,194,.12);color:var(--cyan);display:grid;place-items:center}
+.pt h3{font-size:1.22rem}
+.pt p{color:var(--muted);font-size:.97rem}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ph{height:300px;border-radius:14px;background-size:cover;background-position:center;position:relative;border:1px solid var(--line);overflow:hidden}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,16,24,.7));}
+.ph span{position:absolute;left:16px;bottom:14px;z-index:2;font-size:.9rem;color:#dff4f3;font-weight:500}
+/* location + cta */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.info li{list-style:none;display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;color:var(--muted)}
+.info li b{color:var(--paper);display:block;font-weight:600}
+.info .d{flex:0 0 40px;height:40px;border-radius:10px;background:rgba(34,199,194,.12);color:var(--cyan);display:grid;place-items:center}
+.cta-box{background:linear-gradient(135deg,var(--cyan),var(--cyan2));border-radius:18px;padding:52px 40px;text-align:center;color:#06231f}
+.cta-box h2{font-size:clamp(2rem,4vw,3rem);color:#06231f}
+.cta-box p{margin:14px auto 28px;max-width:44ch;color:#073a35;font-weight:500}
+.cta-box .btn{background:#06231f;color:var(--cyan);box-shadow:none}
+.cta-box .btn:hover{transform:translateY(-3px)}
+footer{padding:46px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+/* sticky mobile call */
+.sticky-call{display:none}
+/* reveal (JS-gated so content shows without JS) */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+}
+@media(max-width:860px){
+  .why-grid,.loc-grid{grid-template-columns:1fr}
+  .grid,.gal,.stats{grid-template-columns:1fr}
+  .stats{margin-top:28px}
+  .nav .btn.ghost{display:none}
+  .sticky-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--cyan);color:#06231f;justify-content:center;gap:9px;align-items:center;padding:15px;font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  body{padding-bottom:58px}
+  section{padding:66px 0}
+}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<nav id="nav"><div class="wrap nav">
+  <div class="brand"><span class="mark">LK</span> L K Automotive</div>
+  <div style="display:flex;gap:12px;align-items:center">
+    <a class="btn ghost" href="#services">Services</a>
+    <a class="btn" href="tel:+14196916583">Call (419) 691-6583</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A mechanic running engine diagnostics on a car in the L K Automotive service bay"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="tag"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Serving Toledo and East Side</span>
+    <h1>Honest auto repair that keeps you on the road</h1>
+    <p class="lede">We fix it right the first time and tell you straight what your car needs. Family service on York Street, no guesswork and no runaround.</p>
+    <div class="hero-cta">
+      <a class="btn" href="tel:+14196916583"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (419) 691-6583</a>
+      <a class="btn ghost" href="#services">See what we fix</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>5.0 stars</b> from 29 Google reviews</span>
+      <span><b>Open</b> Mon to Fri</span>
+      <span><b>Toledo, OH</b> 43605</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><div class="n"><span class="count" data-to="5" data-dec="1">0.0</span></div><div class="l">Google rating</div></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-to="29">0</span></div><div class="l">Verified reviews</div></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-to="15">0</span>+</div><div class="l">Years turning wrenches</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What we do</div>
+      <h2>Repairs done properly, priced up front</h2>
+      <p>From the check-engine light to brakes and routine service, we handle the jobs that keep daily drivers dependable.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Engine diagnostics</h3>
+        <p>We read the codes, find the real cause and show you the fix before any work starts.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes and tires</h3>
+        <p>Pads, rotors, rotations and new rubber so you stop short and ride smooth.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h13l4 5v5h-3M3 7v10h3M9 17h7"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></div>
+        <h3>Oil and maintenance</h3>
+        <p>Oil changes, fluids and tune-ups on a schedule that heads off the big repairs.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 18 3 20M19 18l2 2M12 3v3M7 9h10l1 7H6l1-7z"/><circle cx="9" cy="19" r="1.5"/><circle cx="15" cy="19" r="1.5"/></svg></div>
+        <h3>Suspension and steering</h3>
+        <p>Struts, shocks and alignments that take the shake out of a rough ride.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3>Batteries and electrical</h3>
+        <p>Starting, charging and wiring problems traced and fixed, not just swapped.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 7.5 16 12l-4-4 4.5-4.5a5 5 0 0 0-6.6 6.6l-6.3 6.3a2 2 0 1 0 2.8 2.8l6.3-6.3a5 5 0 0 0 6.6-6.6z"/></svg></div>
+        <h3>Check-engine and repair</h3>
+        <p>Whatever the dash is warning you about, we diagnose it and get you back out fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div>
+        <div class="eyebrow reveal">Why drivers trust us</div>
+        <h2 class="reveal" style="font-size:clamp(2rem,4.5vw,3.1rem);margin-bottom:28px">A shop that treats your car like our own</h2>
+        <div class="pt reveal"><div class="d"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><h3>Straight answers, every time</h3><p>You hear what the car needs now and what can wait, with the price before we start.</p></div></div>
+        <div class="pt reveal"><div class="d"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3z"/></svg></div><div><h3>Work that holds up</h3><p>Quality parts and careful repairs, backed by a 5.0 rating across 29 Google reviews.</p></div></div>
+        <div class="pt reveal"><div class="d"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></div><div><h3>Quick turnaround</h3><p>We respect your time and get most jobs done the same day you drop it off.</p></div></div>
+        <a class="btn reveal" href="tel:+14196916583" style="margin-top:8px">Call (419) 691-6583</a>
+      </div>
+      <div class="gal">
+        <div class="ph reveal" role="img" aria-label="Close-up of hands working on the internal parts of a car engine" style="height:auto;aspect-ratio:3/4;background-image:url('https://images.pexels.com/photos/8478201/pexels-photo-8478201.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#17222f,#0f1620)"><span>Precision engine work</span></div>
+        <div class="ph reveal" role="img" aria-label="A car engine lifted for service in a well lit auto repair bay" style="height:auto;aspect-ratio:3/4;margin-top:34px;background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#17222f,#0f1620)"><span>Service you can watch</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Inside the shop</div>
+      <h2>The bay where the work gets done</h2>
+    </div>
+    <div class="gal">
+      <div class="ph reveal" role="img" aria-label="A mechanic running engine diagnostics on a vehicle" style="background-image:url('https://images.pexels.com/photos/6870324/pexels-photo-6870324.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#17222f,#0f1620)"><span>Diagnostics first</span></div>
+      <div class="ph reveal" role="img" aria-label="Technicians working together in the auto repair workshop" style="background-image:url('https://images.pexels.com/photos/6870331/pexels-photo-6870331.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#17222f,#0f1620)"><span>A team that knows cars</span></div>
+      <div class="ph reveal" role="img" aria-label="A car engine lifted for service in a well lit repair bay" style="background-image:url('https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#17222f,#0f1620)"><span>Clean, organized bays</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" style="padding-top:70px">
+  <div class="wrap">
+    <div class="loc-grid">
+      <div>
+        <div class="eyebrow reveal">Find us</div>
+        <h2 class="reveal" style="font-size:clamp(2rem,4.5vw,3rem);margin-bottom:26px">Stop by or call ahead</h2>
+        <ul class="info">
+          <li class="reveal"><div class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span><b>2901 York St</b>Toledo, OH 43605</span></li>
+          <li class="reveal"><div class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span><b>(419) 691-6583</b>Call for an estimate</span></li>
+          <li class="reveal"><div class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></div><span><b>Monday to Friday</b>Call for weekend availability</span></li>
+        </ul>
+      </div>
+      <div class="cta-box reveal">
+        <h2>Car making a noise?</h2>
+        <p>Tell us what it is doing and we will get it looked at. One call starts it.</p>
+        <a class="btn" href="tel:+14196916583">Call (419) 691-6583</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong style="color:var(--paper)">L K Automotive</strong> &middot; 2901 York St, Toledo, OH 43605</div>
+    <div>Rated 5.0 from 29 Google reviews &middot; (419) 691-6583</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14196916583"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (419) 691-6583</a>
+
+<script>
+document.documentElement.classList.add('js');
+var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+function onScroll(){
+  var h=document.documentElement,sc=h.scrollTop||document.body.scrollTop;
+  var max=(h.scrollHeight-h.clientHeight)||1;
+  bar.style.transform='scaleX('+(sc/max)+')';
+  nav.classList.toggle('scrolled',sc>12);
+}
+document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+function countUp(el){
+  var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),t0=null,dur=1300;
+  function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3),v=to*e;
+    el.textContent=dec?v.toFixed(dec):Math.round(v).toString();if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
+}
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>

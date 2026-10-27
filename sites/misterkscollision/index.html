@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mister K's Collision | Auto Body &amp; Collision Repair in Swanton, OH</title>
+<meta name="description" content="Mister K's Collision in Swanton makes your car look like it never happened. Collision repair, auto body and refinishing. Rated 5.0 on Google. Call (419) 644-2120.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E9; --cream:#FCF9F3; --ink:#1C1A17; --slate:#2B3A47;
+  --orange:#D6451C; --orange2:#B2370F; --muted:#6A6258; --line:#E4DCCE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.012em;line-height:.98;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+section{padding:94px 0;position:relative}
+.eyebrow{font-family:'Work Sans';font-weight:700;text-transform:uppercase;letter-spacing:.24em;color:var(--orange);font-size:.8rem;margin-bottom:14px}
+#bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left;z-index:120}
+nav{position:sticky;top:0;z-index:100;background:rgba(246,241,233,.9);backdrop-filter:blur(9px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+nav.scrolled{border-bottom-color:var(--line);box-shadow:0 8px 26px rgba(43,58,71,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Anton';font-size:1.5rem;letter-spacing:.03em;text-transform:uppercase;color:var(--slate)}
+.mark{width:38px;height:38px;background:var(--orange);color:var(--cream);border-radius:7px;display:grid;place-items:center;font-family:'Anton';font-size:1.1rem;transform:rotate(-4deg)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:var(--cream);font-family:'Work Sans';font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:14px 24px;border-radius:7px;font-size:.98rem;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .25s;box-shadow:0 8px 20px rgba(214,69,28,.26)}
+.btn:hover{transform:translateY(-3px);background:var(--orange2);box-shadow:0 14px 30px rgba(214,69,28,.34)}
+.btn.ghost{background:transparent;color:var(--slate);border:2px solid var(--slate);box-shadow:none}
+.btn.ghost:hover{background:var(--slate);color:var(--cream)}
+.nav .btn{padding:11px 19px;font-size:.9rem}
+/* hero */
+.hero{min-height:90vh;display:flex;align-items:flex-end;position:relative;isolation:isolate;color:var(--cream)}
+.hero-bg{position:absolute;inset:0;z-index:-2;background-image:url('https://images.pexels.com/photos/35149611/pexels-photo-35149611.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(120deg,#2b3a47,#1c1a17);background-size:cover;background-position:center;animation:ken 24s ease-in-out infinite alternate}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.11)}}
+.hero-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(20,18,16,.92) 0%,rgba(20,18,16,.6) 45%,rgba(20,18,16,.32) 100%)}
+.hero .wrap{padding-bottom:70px}
+.hero h1{font-size:clamp(3rem,9vw,6.4rem);max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.lede{font-size:1.2rem;max-width:48ch;margin:20px 0 4px;color:#f0e9df}
+.tag{display:inline-flex;gap:9px;align-items:center;background:rgba(214,69,28,.9);color:var(--cream);padding:8px 16px;border-radius:5px;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:24px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-cta .btn.ghost{color:var(--cream);border-color:var(--cream)}
+.hero-cta .btn.ghost:hover{background:var(--cream);color:var(--ink)}
+/* strip */
+.strip{background:var(--slate);color:var(--cream)}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0}
+.strip section{padding:0}
+.st{padding:34px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.st:last-child{border-right:none}
+.st .n{font-family:'Anton';font-size:2.9rem;color:var(--orange);line-height:1}
+.st .l{font-size:.86rem;text-transform:uppercase;letter-spacing:.12em;margin-top:6px;color:#cdd6dd}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(2.2rem,5.5vw,3.8rem);color:var(--slate)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:1.06rem}
+/* services */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:32px 30px;display:flex;gap:20px;transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(43,58,71,.12)}
+.ico{flex:0 0 54px;height:54px;border-radius:10px;background:var(--orange);color:var(--cream);display:grid;place-items:center}
+.card h3{font-size:1.5rem;color:var(--slate);margin-bottom:7px}
+.card p{color:var(--muted);font-size:.98rem}
+/* process with motif */
+.proc{background:var(--slate);color:var(--cream);position:relative;overflow:hidden}
+.motif{position:absolute;inset:0;z-index:0;opacity:.6;background-image:repeating-linear-gradient(-45deg,rgba(214,69,28,.16) 0 16px,transparent 16px 40px)}
+.proc .wrap{position:relative;z-index:1}
+.proc .sec-head h2{color:var(--cream)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px 22px}
+.step .num{font-family:'Anton';font-size:2rem;color:var(--orange);line-height:1}
+.step h3{font-size:1.2rem;margin:10px 0 7px}
+.step p{color:#cdd6dd;font-size:.94rem}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ph{height:320px;border-radius:12px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid var(--line)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(20,18,16,.78))}
+.ph span{position:absolute;left:18px;bottom:15px;z-index:2;color:var(--cream);font-weight:600;font-size:.95rem}
+/* location + cta */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.info li{list-style:none;display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;color:var(--muted)}
+.info li b{color:var(--slate);display:block}
+.info .d{flex:0 0 42px;height:42px;border-radius:9px;background:var(--orange);color:var(--cream);display:grid;place-items:center}
+.cta-box{background:var(--ink);color:var(--cream);border-radius:16px;padding:54px 42px;text-align:center;position:relative;overflow:hidden}
+.cta-box .motif{opacity:.5}
+.cta-box h2{font-size:clamp(2.2rem,5vw,3.4rem);position:relative;z-index:1}
+.cta-box p{margin:14px auto 28px;max-width:46ch;color:#e6ddd2;position:relative;z-index:1}
+.cta-box .btn{position:relative;z-index:1}
+footer{padding:46px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.sticky-call{display:none}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+}
+@media(max-width:860px){
+  .loc-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .gal{grid-template-columns:1fr}
+  .strip .wrap{grid-template-columns:1fr}
+  .st{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav .btn.ghost{display:none}
+  .sticky-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--orange);color:var(--cream);justify-content:center;gap:9px;align-items:center;padding:15px;font-family:'Work Sans';font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  body{padding-bottom:58px}
+  section{padding:66px 0}
+}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<nav id="nav"><div class="wrap nav">
+  <div class="brand"><span class="mark">MK</span> Mister K's Collision</div>
+  <div style="display:flex;gap:12px;align-items:center">
+    <a class="btn ghost" href="#services">Services</a>
+    <a class="btn" href="tel:+14196442120">Call (419) 644-2120</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A technician polishing the surface of a car with a buffing machine at Mister K's Collision"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="tag">Collision &amp; Auto Body &middot; Swanton, OH</span>
+    <h1>We make it look like <em>it never happened</em></h1>
+    <p class="lede">Dent, scrape or full collision, we bring your car back to factory straight and factory clean. Honest estimates and insurance help from start to finish.</p>
+    <div class="hero-cta">
+      <a class="btn" href="tel:+14196442120"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (419) 644-2120</a>
+      <a class="btn ghost" href="#estimate">Get an estimate</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap">
+  <div class="st reveal"><div class="n"><span class="count" data-to="5" data-dec="1">0.0</span></div><div class="l">Google rating</div></div>
+  <div class="st reveal"><div class="n"><span class="count" data-to="10">0</span></div><div class="l">5-star reviews</div></div>
+  <div class="st reveal"><div class="n">OEM</div><div class="l">Factory-match finish</div></div>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What we fix</div>
+      <h2>Body work done the right way</h2>
+      <p>From a parking-lot ding to a major collision, every repair is measured, matched and finished so it disappears.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h13l4 5v5h-3M3 7v10h3M9 17h7"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></div>
+        <div><h3>Collision repair</h3><p>Frame and panel work brought back to factory spec after any size accident.</p></div>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21v-4L16 4l4 4L7 21H3z"/><path d="M14 6l4 4"/></svg></div>
+        <div><h3>Paint &amp; refinishing</h3><p>Color-matched paint in a controlled booth so the repair blends into the whole panel.</p></div>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 0-4 4v2H6l-2 6h16l-2-6h-2V6a4 4 0 0 0-4-4z"/><path d="M4 14v6h16v-6"/></svg></div>
+        <div><h3>Dent &amp; scratch removal</h3><p>Small damage handled fast, from door dings to bumper scuffs and scratches.</p></div>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><h3>Insurance claims</h3><p>We work with your insurer, document the damage and handle the paperwork for you.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proc">
+  <div class="motif" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">How it goes</div>
+      <h2>From wreck to road in four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>Estimate</h3><p>Bring it by or call and we give you a clear written estimate, no surprises.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Repair</h3><p>We straighten the structure and replace what needs replacing with the right parts.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Refinish</h3><p>Color is matched to your car and sprayed in the booth for a factory look.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>Deliver</h3><p>We detail it, check every panel and hand back a car that looks like new.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Our work</div>
+      <h2>Inside the body shop</h2>
+    </div>
+    <div class="gal">
+      <div class="ph reveal" role="img" aria-label="A technician welding on a car frame during structural repair" style="background-image:url('https://images.pexels.com/photos/12114680/pexels-photo-12114680.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2b3a47,#1c1a17)"><span>Structural repair</span></div>
+      <div class="ph reveal" role="img" aria-label="A painter applying a fresh coat of paint to a car panel in the spray booth" style="background-image:url('https://images.pexels.com/photos/37809559/pexels-photo-37809559.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2b3a47,#1c1a17)"><span>Booth refinishing</span></div>
+      <div class="ph reveal" role="img" aria-label="A worker buffing and polishing a car hood to a clean finish" style="background-image:url('https://images.pexels.com/photos/5233261/pexels-photo-5233261.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(160deg,#2b3a47,#1c1a17)"><span>Final polish</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="estimate" style="padding-top:40px">
+  <div class="wrap">
+    <div class="loc-grid">
+      <div>
+        <div class="eyebrow reveal">Get started</div>
+        <h2 class="reveal" style="font-size:clamp(2.2rem,5vw,3.4rem);color:var(--slate);margin-bottom:26px">Swing by for a free look</h2>
+        <ul class="info">
+          <li class="reveal"><div class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span><b>1615 US-20</b>Swanton, OH 43558</span></li>
+          <li class="reveal"><div class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span><b>(419) 644-2120</b>Call for a free estimate</span></li>
+          <li class="reveal"><div class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3z"/></svg></div><span><b>Insurance welcome</b>We handle the claim with you</span></li>
+        </ul>
+      </div>
+      <div class="cta-box reveal">
+        <div class="motif" aria-hidden="true"></div>
+        <h2>Been in a wreck?</h2>
+        <p>Send us a photo or bring it in. We will tell you what it takes to make it right.</p>
+        <a class="btn" href="tel:+14196442120">Call (419) 644-2120</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong style="color:var(--slate)">Mister K's Collision</strong> &middot; 1615 US-20, Swanton, OH 43558</div>
+    <div>Rated 5.0 on Google &middot; (419) 644-2120</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14196442120"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (419) 644-2120</a>
+
+<script>
+document.documentElement.classList.add('js');
+var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+function onScroll(){
+  var h=document.documentElement,sc=h.scrollTop||document.body.scrollTop;
+  var max=(h.scrollHeight-h.clientHeight)||1;
+  bar.style.transform='scaleX('+(sc/max)+')';
+  nav.classList.toggle('scrolled',sc>12);
+}
+document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+function countUp(el){
+  var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),t0=null,dur=1300;
+  function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3),v=to*e;
+    el.textContent=dec?v.toFixed(dec):Math.round(v).toString();if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
+}
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
