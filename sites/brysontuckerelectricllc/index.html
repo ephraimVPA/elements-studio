@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bryson/Tucker Electric, LLC - Licensed Electrician in Toledo, OH</title>
+<meta name="description" content="Bryson/Tucker Electric handles panels, wiring, and repairs for Toledo homes and businesses. Rated 5.0 across 6 Google reviews. Call (419) 314-4629.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#11161C; --panel:#171E26; --panel2:#1C242E; --amber:#F2A81D; --amber-d:#D4900C;
+  --paper:#F4F6F8; --muted:#93A0AD; --line:rgba(244,246,248,.10);
+  --ease:cubic-bezier(.16,1,.3,1); --spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+section{padding:92px 0;position:relative}
+.eyebrow{font-family:'Space Grotesk';font-weight:600;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:56ch}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;z-index:120}
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s var(--ease),box-shadow .3s var(--ease),padding .3s var(--ease);padding:20px 0}
+header.scrolled{background:rgba(17,22,28,.9);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:1.22rem}
+.logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(145deg,var(--amber),var(--amber-d));display:grid;place-items:center;color:#1A1203}
+.nav a.navlink{color:var(--muted);font-weight:500;font-size:.94rem;margin-left:26px;transition:color .2s}
+.nav a.navlink:hover{color:var(--paper)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--amber);color:#1A1203;font-family:'Space Grotesk';font-weight:700;font-size:.98rem;padding:13px 22px;border-radius:11px;transition:transform .35s var(--spring),box-shadow .3s var(--ease);box-shadow:0 10px 26px rgba(242,168,29,.24)}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 36px rgba(242,168,29,.38)}
+.btn.ghost{background:transparent;color:var(--paper);border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
+.nav .btn{margin-left:26px}
+.hero{min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2;background-image:url('https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#11161C,#1C242E);background-size:cover;background-position:center;animation:ken 26s ease-in-out infinite alternate;will-change:transform}
+.hero-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,rgba(14,18,23,.86) 0%,rgba(14,18,23,.62) 48%,rgba(14,18,23,.76) 100%)}
+@keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero .wrap{padding-top:90px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.4rem);font-weight:700;max-width:18ch;margin:18px 0}
+.hero .lead{font-size:1.18rem;max-width:52ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.trust{display:flex;flex-wrap:wrap;gap:30px;margin-top:40px;align-items:center}
+.stars{color:var(--amber);letter-spacing:3px;font-size:1.1rem}
+.trust .num{font-family:'Space Grotesk';font-weight:700;font-size:1.5rem}
+.trust small{display:block;color:var(--muted);font-size:.82rem;letter-spacing:.04em}
+.divider{width:1px;height:38px;background:var(--line)}
+.grid{display:grid;gap:18px}
+.svc{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .4s var(--spring),border-color .3s,background .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(242,168,29,.5);background:var(--panel2)}
+.ico{width:46px;height:46px;border-radius:12px;background:rgba(242,168,29,.12);display:grid;place-items:center;color:var(--amber);margin-bottom:16px}
+.card h3{font-size:1.18rem;font-weight:600;margin-bottom:7px}
+.card p{color:var(--muted);font-size:.96rem}
+.head{max-width:60ch;margin-bottom:46px}
+.head h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;margin:14px 0}
+.steps-sec{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.motif{position:absolute;inset:0;overflow:hidden;z-index:0;opacity:.16;pointer-events:none}
+.motif svg{position:absolute;top:50%;left:0;width:200%;height:240px;transform:translateY(-50%)}
+.steps-sec .wrap{position:relative;z-index:1}
+.steps{grid-template-columns:repeat(3,1fr)}
+.step{padding:6px 4px}
+.step .n{font-family:'Space Grotesk';font-weight:700;font-size:2.2rem;color:var(--amber);opacity:.55}
+.step h3{font-size:1.16rem;margin:8px 0 6px}
+.step p{color:var(--muted);font-size:.96rem}
+.gal{grid-template-columns:repeat(3,1fr)}
+.ph{height:260px;border-radius:16px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .5s var(--ease)}
+.ph:hover{transform:scale(1.02)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,18,23,.45),transparent 60%)}
+.loc{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.loc .card{padding:30px}
+.info-row{display:flex;gap:13px;align-items:flex-start;margin-bottom:18px}
+.info-row svg{color:var(--amber);flex:none;margin-top:2px}
+.info-row b{font-family:'Space Grotesk';display:block;font-size:.98rem}
+.info-row span{color:var(--muted);font-size:.94rem}
+.cta-final{background:linear-gradient(145deg,var(--amber),var(--amber-d));color:#1A1203;border-radius:22px;padding:56px 40px;text-align:center}
+.cta-final h2{font-size:clamp(1.8rem,4vw,2.6rem);color:#1A1203;margin-bottom:12px}
+.cta-final p{color:rgba(26,18,3,.78);max-width:46ch;margin:0 auto 26px;font-weight:500}
+.cta-final .btn{background:#1A1203;color:var(--amber);box-shadow:0 14px 30px rgba(0,0,0,.3)}
+.cta-final .btn:hover{box-shadow:0 20px 42px rgba(0,0,0,.42)}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+.sticky-call{display:none}
+@media(max-width:760px){
+  .svc,.steps,.gal,.loc{grid-template-columns:1fr}
+  .nav .navlink{display:none}
+  .nav .btn{display:none}
+  section{padding:66px 0}
+  .hero .wrap{padding-top:110px}
+  .sticky-call{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:110;justify-content:center}
+  .sticky-call .btn{width:100%;justify-content:center;padding:16px}
+  body{padding-bottom:78px}
+}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<header id="hd">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="logo" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+    </span>Bryson/Tucker Electric</a>
+    <nav>
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#how">How it works</a>
+      <a class="navlink" href="#visit">Visit</a>
+      <a class="btn" href="tel:+14193144629">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        (419) 314-4629</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A licensed electrician using a drill on an open indoor circuit breaker panel"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow reveal">Licensed Electrician - Toledo, OH</span>
+    <h1 class="reveal">Safe, code-right electrical work for Toledo homes and businesses.</h1>
+    <p class="lead reveal">Bryson/Tucker Electric handles the panel, the wiring, and the repair the right way, with a clear price before the work starts. No guesswork, no shortcuts.</p>
+    <div class="cta-row reveal">
+      <a class="btn" href="tel:+14193144629">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        Call (419) 314-4629</a>
+      <a class="btn ghost" href="#services">See our work</a>
+    </div>
+    <div class="trust reveal">
+      <div><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><span class="num" data-count="5.0">5.0</span> <small>Google rating</small></div>
+      <div class="divider"></div>
+      <div><span class="num" data-count="6">6</span> <small>Google reviews</small></div>
+      <div class="divider"></div>
+      <div><span class="num">Elmdale Rd</span><small>West Toledo</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Electrical work that gets explained and priced first.</h2>
+      <p class="lead">Residential and light commercial work across the Toledo area. If something is not safe, we tell you and we fix it the right way.</p>
+    </div>
+    <div class="grid svc">
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></div>
+        <h3>Panel upgrades</h3><p>Breaker boxes and service upgrades sized for the load your home actually uses.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h5l2-4 3 8 2-4h4"/></svg></div>
+        <h3>Wiring and rewires</h3><p>New circuits, old wiring brought up to code, and clean runs behind the wall.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="10" cy="9" r="1"/><circle cx="14" cy="9" r="1"/><path d="M12 13v4"/></svg></div>
+        <h3>Outlets and lighting</h3><p>Outlets, switches, fixtures and the extra circuits a busy room needs.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Troubleshooting</h3><p>Dead outlets, tripping breakers and flickering lights traced to the real cause.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M12 14v3"/></svg></div>
+        <h3>EV charger installs</h3><p>Home charging circuits installed and inspected so your car charges safely.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M12 3 4 6v6c0 5 3.4 7.8 8 9 4.6-1.2 8-4 8-9V6Z"/></svg></div>
+        <h3>Safety inspections</h3><p>A full look at panels, grounding and outlets before you buy or remodel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="steps-sec">
+  <div class="motif" aria-hidden="true">
+    <svg viewBox="0 0 1200 240" preserveAspectRatio="none"><g fill="none" stroke="#F2A81D" stroke-width="3"><polyline points="0,60 180,60 180,150 360,150 360,80 540,80 540,170 760,170 760,70 960,70 960,150 1200,150"/><polyline points="0,190 120,190 120,110 300,110 300,200 500,200 500,120 720,120 720,200 920,200 920,100 1200,100"/></g><g fill="#F2A81D"><circle cx="180" cy="60" r="6"/><circle cx="360" cy="150" r="6"/><circle cx="540" cy="80" r="6"/><circle cx="760" cy="170" r="6"/><circle cx="300" cy="110" r="6"/><circle cx="500" cy="200" r="6"/><circle cx="720" cy="120" r="6"/><circle cx="920" cy="200" r="6"/></g></svg>
+  </div>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps, and a price before anything gets wired.</h2>
+    </div>
+    <div class="grid steps">
+      <div class="step reveal"><div class="n">01</div><h3>Call and describe it</h3><p>Tell us what is going on. We set a time to come look, often the same week.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>We quote the work</h3><p>You get the plan and the price in writing before any breaker is touched.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Done to code, cleaned up</h3><p>The work is finished right, tested, and the space is left the way we found it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">On the job</span>
+      <h2>Real electrical work, done in Toledo.</h2>
+    </div>
+    <div class="grid gal">
+      <div class="ph reveal" role="img" aria-label="Electrician installing outlets and switches on a wall during a room build" style="background-image:url('https://images.pexels.com/photos/5691588/pexels-photo-5691588.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#171E26,#11161C)"></div>
+      <div class="ph reveal" role="img" aria-label="Electrician using a multimeter to test voltages in an open electrical panel" style="background-image:url('https://images.pexels.com/photos/34054464/pexels-photo-34054464.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#171E26,#11161C)"></div>
+      <div class="ph reveal" role="img" aria-label="Electrician running new wiring during a building renovation" style="background-image:url('https://images.pexels.com/photos/29871587/pexels-photo-29871587.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#171E26,#11161C)"></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap loc">
+    <div class="head reveal" style="margin:0">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Call for a quote on your electrical work.</h2>
+      <p class="lead">We are based on Elmdale Road in West Toledo and work across the area. Call and tell us what you need.</p>
+    </div>
+    <div class="card reveal">
+      <div class="info-row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Address</b><span>50 Elmdale Rd, Toledo, OH 43607</span></div></div>
+      <div class="info-row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg><div><b>Phone</b><span>(419) 314-4629</span></div></div>
+      <div class="info-row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Hours</b><span>Mon to Fri daytime. Call for evening and weekend availability.</span></div></div>
+      <a class="btn" href="tel:+14193144629" style="margin-top:6px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        Call (419) 314-4629</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-final reveal">
+      <h2>Get your electrical work handled the right way.</h2>
+      <p>Rated 5.0 across 6 Google reviews in Toledo. Call Bryson/Tucker Electric for a straight quote today.</p>
+      <a class="btn" href="tel:+14193144629">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        Call (419) 314-4629</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Bryson/Tucker Electric, LLC &#183; 50 Elmdale Rd, Toledo, OH 43607 &#183; (419) 314-4629</div></footer>
+
+<div class="sticky-call"><a class="btn" href="tel:+14193144629">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+  Call (419) 314-4629</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+var bar=document.getElementById('bar'),hd=document.getElementById('hd');
+function onScroll(){var h=document.documentElement,sc=h.scrollTop||document.body.scrollTop,max=h.scrollHeight-h.clientHeight;bar.style.transform='scaleX('+(max>0?sc/max:0)+')';hd.classList.toggle('scrolled',sc>40);}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in');},(el.dataset.d||0)*1);io.unobserve(el);}});},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.dataset.d=(i%6)*75;io.observe(el);});
+function countUp(el){var target=parseFloat(el.dataset.count),dec=(el.dataset.count.indexOf('.')>-1),t0=null,dur=1100;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3),v=target*e;el.textContent=dec?v.toFixed(1):Math.round(v);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+</script>
+</body>
+</html>
