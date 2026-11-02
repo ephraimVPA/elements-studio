@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B &amp; G Moving &amp; Storage | Movers in Toledo, OH</title>
+<meta name="description" content="B & G Moving & Storage, Inc. moves Toledo families and businesses with care. Local moves, long haul and secure storage. Call (419) 243-1331.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cobalt:#17407D; --cobalt-deep:#0f2d59; --kraft:#CFA66B; --kraft-deep:#b98f4f;
+  --cream:#F6F1E7; --paper:#FBF8F1; --ink:#1c2330; --muted:#54606f; --white:#fff;
+  --spring:cubic-bezier(.34,1.56,.64,1); --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;line-height:.98;letter-spacing:.01em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:52px;padding:0 1.7rem;border-radius:6px;font-family:'Barlow';font-weight:700;font-size:1.02rem;letter-spacing:.02em;cursor:pointer;border:2px solid transparent;transition:transform .35s var(--spring),box-shadow .35s var(--ease),background .25s}
+.btn-primary{background:var(--kraft);color:#2a1e08;box-shadow:0 10px 26px rgba(207,166,107,.4)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 34px rgba(207,166,107,.55)}
+.btn-ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.12)}
+.svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--kraft);transform:scaleX(0);transform-origin:left;z-index:120}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s;padding:1.1rem 0}
+nav.scrolled{background:rgba(251,248,241,.94);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(15,45,89,.12);padding:.6rem 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.55rem;font-family:'Anton';font-size:1.5rem;color:#fff;letter-spacing:.02em}
+nav.scrolled .brand{color:var(--cobalt)}
+.logo{width:34px;height:30px;border-radius:4px;background:var(--kraft);position:relative;flex:none;box-shadow:inset 0 -6px 0 rgba(0,0,0,.14)}
+.logo::before{content:"";position:absolute;left:50%;top:0;width:2px;height:100%;background:rgba(0,0,0,.18);transform:translateX(-50%)}
+.logo::after{content:"";position:absolute;top:7px;left:50%;width:12px;height:5px;border:2px solid rgba(0,0,0,.2);border-top:none;border-radius:0 0 6px 6px;transform:translateX(-50%)}
+.nav-links{display:flex;align-items:center;gap:1.8rem}
+.nav-links a{font-weight:600;font-size:.96rem;color:#fff;opacity:.92}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-call{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1.1rem;border-radius:6px;background:var(--cobalt);color:#fff !important;font-weight:700;opacity:1 !important}
+nav.scrolled .nav-call{color:#fff}
+@media(max-width:760px){.nav-links a:not(.nav-call){display:none}}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:7rem 0 4rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/5025663/pexels-photo-5025663.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#17407D,#0f2d59);background-size:cover;background-position:center;animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,45,89,.9) 0%,rgba(15,45,89,.68) 46%,rgba(15,45,89,.4) 100%);z-index:1}
+.hero-in{position:relative;z-index:2;color:#fff;max-width:740px}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:'Barlow';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem;color:var(--kraft);background:rgba(207,166,107,.14);border:1px solid rgba(207,166,107,.4);padding:.45rem .9rem;border-radius:4px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.7rem,7vw,5.3rem);margin-bottom:1.1rem}
+.hero h1 em{font-style:normal;color:var(--kraft)}
+.hero p.lede{font-family:'Barlow';font-size:1.2rem;color:rgba(255,255,255,.9);max-width:540px;margin-bottom:2rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem}
+.hero-rate{display:flex;align-items:center;gap:.7rem;margin-top:2.2rem}
+.hero-rate .svg{fill:var(--kraft);stroke:var(--kraft);width:22px;height:22px}
+.hero-rate b{font-family:'Anton';font-size:1.5rem;letter-spacing:.03em}
+.hero-rate span{color:rgba(255,255,255,.78);font-size:.95rem}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+.stats{background:var(--cobalt);color:#fff;padding:2.4rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat b{display:block;font-family:'Anton';font-size:2.4rem;color:var(--kraft);letter-spacing:.03em}
+.stat span{font-size:.9rem;color:rgba(255,255,255,.82)}
+@media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:1.8rem}}
+
+section.pad{padding:5.5rem 0}
+.sec-head{max-width:640px;margin-bottom:3rem}
+.sec-head .eyebrow{color:var(--kraft-deep);background:rgba(207,166,107,.14);border-color:rgba(207,166,107,.4)}
+.sec-head h2{font-size:clamp(2.1rem,5vw,3.3rem);color:var(--cobalt);margin-bottom:.9rem}
+.sec-head p{font-family:'Barlow';color:var(--muted);font-size:1.1rem;text-transform:none}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media(max-width:860px){.services{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.services{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid #e9e1d1;border-radius:10px;padding:1.9rem;transition:transform .4s var(--spring),box-shadow .4s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(15,45,89,.13);border-color:var(--kraft)}
+.card .ic{width:54px;height:54px;border-radius:10px;display:grid;place-items:center;background:var(--cream);color:var(--cobalt);margin-bottom:1.1rem}
+.card .ic .svg{width:26px;height:26px}
+.card h3{font-size:1.35rem;color:var(--cobalt);margin-bottom:.5rem;letter-spacing:.02em}
+.card p{font-family:'Barlow';color:var(--muted);font-size:.98rem}
+
+.why{position:relative;background:var(--cobalt-deep);color:#fff;overflow:hidden}
+.corrugate{position:absolute;inset:0;z-index:0;opacity:.1;background:repeating-linear-gradient(90deg,var(--kraft) 0 2px,transparent 2px 15px)}
+.why .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+@media(max-width:800px){.why .wrap{grid-template-columns:1fr}}
+.why h2{font-size:clamp(2rem,4.6vw,3rem);color:#fff;margin-bottom:1.2rem}
+.why ul{list-style:none;display:grid;gap:1rem;margin-top:1.4rem}
+.why li{display:flex;gap:.9rem;align-items:flex-start}
+.why li .svg{color:var(--kraft);margin-top:3px}
+.why li b{font-family:'Barlow';font-weight:700;display:block;margin-bottom:.1rem}
+.why li span{font-family:'Barlow';color:rgba(255,255,255,.8);font-size:.96rem}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:2rem}
+.why-card .big{font-family:'Anton';font-size:3.6rem;color:var(--kraft);letter-spacing:.03em}
+.why-card p{font-family:'Barlow';color:rgba(255,255,255,.82);margin-top:.4rem}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media(max-width:760px){.gallery{grid-template-columns:1fr}}
+.ph{height:300px;border-radius:12px;background-size:cover;background-position:center;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(15,45,89,.16);transition:transform .5s var(--ease)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,45,89,.5),transparent 55%)}
+.ph:hover{transform:scale(1.02)}
+
+.final{background:linear-gradient(135deg,var(--cobalt),var(--cobalt-deep));color:#fff;text-align:center;border-radius:16px;padding:3.6rem 2rem;margin:4rem auto;position:relative;overflow:hidden}
+.final .corrugate{opacity:.08}
+.final h2{position:relative;z-index:1;font-size:clamp(2rem,5vw,3rem);margin-bottom:.7rem}
+.final p{position:relative;z-index:1;font-family:'Barlow';font-size:1.1rem;margin-bottom:1.8rem;color:rgba(255,255,255,.88)}
+.final .btn-primary{position:relative;z-index:1}
+
+footer{background:var(--cobalt-deep);color:rgba(255,255,255,.74);padding:3rem 0 7rem;font-size:.95rem;font-family:'Barlow'}
+.foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem}
+footer .brand{color:#fff;margin-bottom:.8rem}
+footer a:hover{color:var(--kraft)}
+.foot-col b{color:#fff;font-family:'Barlow';font-weight:700;display:block;margin-bottom:.5rem}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--cobalt);padding:.7rem 1rem}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:50px;border-radius:8px;background:var(--kraft);color:#2a1e08;font-family:'Barlow';font-weight:700}
+@media(max-width:760px){.sticky-call{display:block}body{padding-bottom:72px}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="logo" aria-hidden="true"></span>B &amp; G Moving</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#work">Our work</a>
+      <a class="nav-call" href="tel:+14192431331"><svg class="svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 243-1331</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="B and G movers unloading cardboard moving boxes from a delivery van outside a home at sunset"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">Moving &amp; Storage &bull; Toledo, OH</span>
+    <h1>Toledo trusts us to move what <em>matters</em>.</h1>
+    <p class="lede">Local and long-distance moves plus secure storage, handled by a crew that treats your boxes like their own.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="tel:+14192431331"><svg class="svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Get a moving quote</a>
+      <a class="btn btn-ghost" href="#services">What we move</a>
+    </div>
+    <div class="hero-rate">
+      <svg class="svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15 9 22 9.3 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.3 9 9"/></svg>
+      <b data-count="4.2" data-dec="1">4.2</b><span>from <b data-count="6" style="font-family:'Anton';font-size:1.1rem;color:#fff">6</b> Google reviews</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b data-count="4.2" data-dec="1">4.2</b><span>Google rating</span></div>
+    <div class="stat reveal"><b>Local</b><span>&amp; long distance</span></div>
+    <div class="stat reveal"><b>Secure</b><span>Storage available</span></div>
+    <div class="stat reveal"><b>Free</b><span>In-home estimate</span></div>
+  </div>
+</div>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Moves done right, start to finish</h2>
+      <p>From a one-bedroom apartment to a full office, we pack, load, haul and store with a steady, careful crew.</p>
+    </div>
+    <div class="services">
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M3 9v6l9 5 9-5V9"/><path d="M12 14v6"/></svg></div><h3>Local moves</h3><p>Homes and apartments across Toledo and the surrounding area, loaded and set in place with care.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Long distance</h3><p>Out-of-town and cross-state moves scheduled around your dates and tracked the whole way.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v13H4z"/><path d="M4 7l2-4h12l2 4"/><path d="M10 12h4"/></svg></div><h3>Secure storage</h3><p>Short or long-term storage when your new place is not ready yet, kept clean and locked.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M3 7h18v4H3z"/><path d="M5 11v10h14V11"/><path d="M12 7v14"/></svg></div><h3>Packing service</h3><p>Boxes, padding and careful packing so fragile items make the trip without a scratch.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-6h6v6"/></svg></div><h3>Office &amp; business</h3><p>After-hours and weekend commercial moves that keep your downtime short.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M20.5 7.5 12 3 3.5 7.5 12 12l8.5-4.5z"/><path d="M12 12v9"/><path d="M12 12l-6-3.2"/></svg></div><h3>Loading help</h3><p>Rented your own truck? Our crew does the heavy lifting and stacks it tight.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why pad" id="why">
+  <div class="corrugate" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--kraft);background:rgba(207,166,107,.16);border:1px solid rgba(207,166,107,.4)">Why Toledo calls us</span>
+      <h2>A crew that shows up and takes care</h2>
+      <p style="font-family:'Barlow';color:rgba(255,255,255,.84);max-width:520px;text-transform:none">Moving day is stressful enough. We bring the pads, the muscle and the plan so you can just point us where things go.</p>
+      <ul>
+        <li><svg class="svg" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Careful with your things</b><span>Furniture wrapped, floors protected, nothing rushed.</span></div></li>
+        <li><svg class="svg" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Clear, upfront estimates</b><span>You know the plan and the price before we load the first box.</span></div></li>
+        <li><svg class="svg" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Storage when you need it</b><span>A secure spot for your things between homes, as long as you need.</span></div></li>
+      </ul>
+    </div>
+    <div class="why-card reveal">
+      <div class="big"><span data-count="4.2" data-dec="1">4.2</span> / 5</div>
+      <p>Rated by <b data-count="6">6</b> Toledo-area customers on Google.</p>
+      <a class="btn btn-primary" style="margin-top:1.5rem" href="tel:+14192431331"><svg class="svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 243-1331</a>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">On the job</span>
+      <h2>Moving day, handled</h2>
+      <p>A careful crew packing, carrying and loading across the Toledo area.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph reveal" role="img" aria-label="Two uniformed B and G movers carrying cardboard boxes into a bright new home" style="background-image:url('https://images.pexels.com/photos/7464687/pexels-photo-7464687.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#17407D,#0f2d59)"></div>
+      <div class="ph reveal" role="img" aria-label="A mover carefully packing a fragile item into a padded moving box" style="background-image:url('https://images.pexels.com/photos/7464690/pexels-photo-7464690.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#17407D,#0f2d59)"></div>
+      <div class="ph reveal" role="img" aria-label="Professional movers carrying stacked cardboard boxes through a bright room" style="background-image:url('https://images.pexels.com/photos/7464244/pexels-photo-7464244.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#17407D,#0f2d59)"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="final reveal">
+      <div class="corrugate" aria-hidden="true"></div>
+      <h2>Planning a move in Toledo?</h2>
+      <p>Call B &amp; G Moving &amp; Storage for a free estimate and get your date on the calendar.</p>
+      <a class="btn btn-primary" href="tel:+14192431331"><svg class="svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 243-1331</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-col">
+      <div class="brand" style="display:flex;align-items:center;gap:.55rem"><span class="logo" aria-hidden="true"></span>B &amp; G Moving &amp; Storage</div>
+      <p>Moving and storage for Toledo families and businesses.</p>
+    </div>
+    <div class="foot-col">
+      <b>Contact</b>
+      <p><a href="tel:+14192431331">(419) 243-1331</a></p>
+      <p>401 Hamilton St, Toledo, OH 43604</p>
+    </div>
+    <div class="foot-col">
+      <b>Hours</b>
+      <p>Mon&ndash;Sat scheduling</p>
+      <p>Free in-home estimates</p>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:2rem;font-size:.85rem;opacity:.6">&copy; <span id="yr"></span> B &amp; G Moving &amp; Storage, Inc. All rights reserved.</div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+14192431331"><svg class="svg" viewBox="0 0 24 24" style="stroke:#2a1e08"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 243-1331</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var nav=document.getElementById('nav'),bar=document.getElementById('progress');
+function onScroll(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  nav.classList.toggle('scrolled',y>40);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')},(Array.prototype.indexOf.call(el.parentNode.children,el)%4)*70);io.unobserve(el);}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+function animateCount(el){
+  var target=parseFloat(el.getAttribute('data-count'));var dec=parseInt(el.getAttribute('data-dec')||'0');var suf=el.getAttribute('data-suffix')||'';
+  var start=null,dur=1100;
+  function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var v=(target*(0.2+0.8*(1-Math.pow(1-p,3))));el.textContent=(dec?v.toFixed(dec):Math.round(v))+suf;if(p<1)requestAnimationFrame(step);else el.textContent=(dec?target.toFixed(dec):target)+suf;}
+  requestAnimationFrame(step);
+}
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
+</script>
+</body>
+</html>
