@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Larberg Landscape Services | Landscaping in Sylvania, OH</title>
+<meta name="description" content="Larberg Landscape Services designs and maintains healthy, good-looking yards across Sylvania, OH. Lawn care, planting, cleanups and more. Call (419) 843-5389.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --garden:#23402C; --garden-deep:#172C1E; --cream:#F6F3EA; --paper:#FBFAF4; --card:#ffffff;
+  --gold:#C19A4B; --gold-deep:#a37f34; --ink:#1d2a22; --muted:#55685b; --line:#e6e2d4; --white:#fff;
+  --spring:cubic-bezier(.34,1.56,.64,1); --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Spectral',Georgia,serif;line-height:1.12;letter-spacing:-.01em;font-weight:700}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:52px;padding:0 1.6rem;border-radius:999px;font-family:'Work Sans';font-weight:700;font-size:1.02rem;cursor:pointer;border:2px solid transparent;transition:transform .35s var(--spring),box-shadow .35s var(--ease),background .25s}
+.btn-primary{background:var(--gold);color:#2a2008;box-shadow:0 10px 26px rgba(193,154,75,.34)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 34px rgba(193,154,75,.48)}
+.btn-ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.12)}
+.svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+#progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:120}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s;padding:1.1rem 0}
+nav.scrolled{background:rgba(251,250,244,.93);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(35,64,44,.12);padding:.65rem 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:'Spectral';font-weight:700;font-size:1.26rem;color:var(--white)}
+nav.scrolled .brand{color:var(--garden)}
+.brand .leaf{width:30px;height:30px;display:grid;place-items:center;border-radius:50% 12px 50% 12px;background:linear-gradient(145deg,var(--garden),#3a6245)}
+.brand .leaf svg{width:17px;height:17px;stroke:#fff;stroke-width:2;fill:none}
+.nav-links{display:flex;align-items:center;gap:1.8rem}
+.nav-links a{font-weight:600;font-size:.96rem;color:var(--white);opacity:.9;transition:opacity .2s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a:hover{opacity:1}
+.nav-call{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1.1rem;border-radius:999px;background:var(--gold);color:#2a2008 !important;font-family:'Work Sans';font-weight:700;opacity:1 !important}
+@media(max-width:760px){.nav-links a:not(.nav-call){display:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:7rem 0 4rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/130154/pexels-photo-130154.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#23402C,#3a6245);background-size:cover;background-position:center;animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.03)}to{transform:scale(1.15)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(105deg,rgba(23,44,30,.9) 0%,rgba(23,44,30,.66) 48%,rgba(23,44,30,.4) 100%);z-index:1}
+.hero-in{position:relative;z-index:2;color:var(--white);max-width:720px}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:'Work Sans';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;color:var(--gold);background:rgba(193,154,75,.14);border:1px solid rgba(193,154,75,.4);padding:.45rem .9rem;border-radius:999px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.5rem);margin-bottom:1.1rem}
+.hero p.lede{font-size:1.2rem;color:rgba(255,255,255,.92);max-width:560px;margin-bottom:2rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.hero-rate{display:flex;align-items:center;gap:.7rem;margin-top:2.2rem;color:#fff}
+.stars{display:flex;gap:2px;color:var(--gold)}
+.stars .svg{width:19px;height:19px;fill:var(--gold);stroke:var(--gold)}
+.hero-rate b{font-family:'Spectral';font-weight:700}
+.hero-rate span{color:rgba(255,255,255,.78);font-size:.92rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.stats{background:var(--garden);color:#fff;padding:2.4rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat b{display:block;font-family:'Spectral';font-weight:700;font-size:2.2rem;color:var(--gold)}
+.stat span{font-size:.9rem;color:rgba(255,255,255,.82)}
+@media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:1.8rem}}
+section.pad{padding:5.5rem 0}
+.sec-head{max-width:640px;margin-bottom:3rem}
+.sec-head .eyebrow{color:var(--gold-deep);background:rgba(193,154,75,.1);border-color:rgba(193,154,75,.3)}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3rem);color:var(--garden);margin-bottom:.9rem}
+.sec-head p{color:var(--muted);font-size:1.1rem}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media(max-width:860px){.services{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.services{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.9rem;transition:transform .4s var(--spring),box-shadow .4s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(35,64,44,.12);border-color:rgba(193,154,75,.45)}
+.card .ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:var(--cream);color:var(--garden);margin-bottom:1.1rem}
+.card .ic .svg{width:26px;height:26px}
+.card h3{font-family:'Spectral';font-size:1.3rem;color:var(--garden);margin-bottom:.5rem}
+.card p{color:var(--muted);font-size:.98rem}
+.why{position:relative;background:var(--garden-deep);color:#fff;overflow:hidden}
+.hills{position:absolute;inset:0;z-index:0;opacity:.5;background:
+  radial-gradient(120% 70% at 20% 118%,rgba(193,154,75,.28) 0 40%,transparent 41%),
+  radial-gradient(120% 65% at 70% 125%,rgba(58,98,69,.9) 0 42%,transparent 43%),
+  radial-gradient(130% 60% at 110% 130%,rgba(193,154,75,.18) 0 44%,transparent 45%)}
+.why .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+@media(max-width:800px){.why .wrap{grid-template-columns:1fr}}
+.why h2{font-size:clamp(1.9rem,4vw,2.8rem);color:#fff;margin-bottom:1.2rem}
+.why ul{list-style:none;display:grid;gap:1rem;margin-top:1.4rem}
+.why li{display:flex;gap:.9rem;align-items:flex-start}
+.why li .svg{color:var(--gold);margin-top:3px}
+.why li b{font-family:'Spectral';display:block;margin-bottom:.1rem}
+.why li span{color:rgba(255,255,255,.8);font-size:.96rem}
+.why-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:2rem}
+.why-card .big{font-family:'Spectral';font-weight:700;font-size:3.6rem;color:var(--gold);line-height:1}
+.why-card p{color:rgba(255,255,255,.82);margin-top:.4rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media(max-width:760px){.gallery{grid-template-columns:1fr}}
+.ph{height:300px;border-radius:18px;background-size:cover;background-position:center;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(35,64,44,.16);transition:transform .5s var(--ease)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(23,44,30,.5),transparent 55%)}
+.ph:hover{transform:scale(1.02)}
+.final{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#2a2008;text-align:center;border-radius:26px;padding:3.6rem 2rem;margin:4rem auto}
+.final h2{font-size:clamp(1.9rem,4.6vw,2.9rem);color:#241a04;margin-bottom:.7rem}
+.final p{font-size:1.1rem;margin-bottom:1.8rem;color:#3a2d0c}
+.final .btn-primary{background:var(--garden);color:#fff;box-shadow:0 12px 28px rgba(23,44,30,.3)}
+.final .btn-primary:hover{box-shadow:0 18px 36px rgba(23,44,30,.42)}
+footer{background:var(--garden-deep);color:rgba(255,255,255,.75);padding:3rem 0 7rem;font-size:.95rem}
+.foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem}
+footer .brand{color:#fff;margin-bottom:.8rem}
+footer a:hover{color:var(--gold)}
+.foot-col b{color:#fff;font-family:'Spectral';display:block;margin-bottom:.5rem}
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--garden);padding:.7rem 1rem}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:50px;border-radius:12px;background:var(--gold);color:#2a2008;font-family:'Work Sans';font-weight:700}
+@media(max-width:760px){.sticky-call{display:block}body{padding-bottom:72px}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="leaf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5-6"/></svg></span>Larberg Landscape</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#work">Our work</a>
+      <a class="nav-call" href="tel:+14198435389"><svg class="svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 843-5389</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A landscaped garden pathway lined with lush plantings and flower beds"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">Landscaping &bull; Sylvania, OH</span>
+    <h1>Sylvania yards, cared for like our own.</h1>
+    <p class="lede">Thoughtful landscape design and steady, reliable upkeep that keep your lawn and gardens looking their best through every season.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="tel:+14198435389"><svg class="svg" viewBox="0 0 24 24" style="stroke:#2a2008"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call for a quote</a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+    <div class="hero-rate">
+      <div class="stars" aria-hidden="true">
+        <svg class="svg" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.3 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.3 9 9"/></svg>
+        <svg class="svg" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.3 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.3 9 9"/></svg>
+        <svg class="svg" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.3 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.3 9 9"/></svg>
+        <svg class="svg" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.3 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.3 9 9"/></svg>
+        <svg class="svg" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.3 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.3 9 9"/></svg>
+      </div>
+      <b data-count="5.0" data-dec="1">5.0</b><span>from <b data-count="4" style="color:#fff">4</b> Google reviews</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b data-count="5.0" data-dec="1">5.0</b><span>Google rating</span></div>
+    <div class="stat reveal"><b data-count="4">4</b><span>Google reviews</span></div>
+    <div class="stat reveal"><b>Local</b><span>Based in Sylvania</span></div>
+    <div class="stat reveal"><b>Free</b><span>Property quotes</span></div>
+  </div>
+</div>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Full-service landscape care</h2>
+      <p>From weekly mowing to a full planting plan, we keep your property healthy, tidy and looking cared for all year.</p>
+    </div>
+    <div class="services">
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M3 20h18M4 20c0-5 3-8 8-8s8 3 8 8M12 12V7M9 7h6"/></svg></div><h3>Lawn care &amp; mowing</h3><p>Regular mowing, edging and trimming on a schedule that keeps your grass even, green and healthy.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M12 22V9M12 9c0-4 3-6 6-6 0 4-3 6-6 6zM12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg></div><h3>Landscape design &amp; planting</h3><p>Beds, trees and shrubs chosen for your yard and planted to fill in and look right as they grow.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M3 18h18M5 18c1-4 3-6 7-6s6 2 7 6M8 12l2-4M14 12l-1-5"/></svg></div><h3>Mulch &amp; bed maintenance</h3><p>Fresh mulch, weeding and clean bed edges that make the whole property look sharp and finished.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M12 2v6M5 8l2 2M19 8l-2 2M4 16h16l-2 5H6z"/></svg></div><h3>Spring &amp; fall cleanup</h3><p>Leaf removal, bed prep and seasonal cleanups that get your yard ready for the months ahead.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><path d="M6 3v7a6 6 0 0 0 12 0V3M9 3v4M15 3v4M12 16v5"/></svg></div><h3>Shrub &amp; hedge trimming</h3><p>Shaping and pruning that keeps hedges neat and plants healthy without overgrowth crowding the yard.</p></div>
+      <div class="card reveal"><div class="ic"><svg class="svg" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2v3M12 15v7M4 10h3M17 10h3M6 5l2 2M18 5l-2 2"/></svg></div><h3>Seasonal color &amp; gardens</h3><p>Annuals and garden beds planned for color through the season so your entryway always looks welcoming.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why pad" id="why">
+  <div class="hills" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--gold);background:rgba(193,154,75,.16);border:1px solid rgba(193,154,75,.4)">Why neighbors call us</span>
+      <h2>Reliable crews who respect your property</h2>
+      <p style="color:rgba(255,255,255,.84);max-width:520px">We show up when we say we will, do careful work, and treat every yard in Sylvania like it is our own. No surprises, just a property that looks cared for.</p>
+      <ul>
+        <li><svg class="svg" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>We show up on schedule</b><span>Dependable service you can plan your week around.</span></div></li>
+        <li><svg class="svg" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Clear, upfront quotes</b><span>You know the price before any work begins.</span></div></li>
+        <li><svg class="svg" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Tidy, careful crews</b><span>We clean up fully and leave your property looking its best.</span></div></li>
+      </ul>
+    </div>
+    <div class="why-card reveal">
+      <div class="big"><span data-count="5.0" data-dec="1">5.0</span></div>
+      <p>A perfect Google rating across <b data-count="4">4</b> reviews from Sylvania-area property owners.</p>
+      <a class="btn btn-primary" style="margin-top:1.5rem" href="tel:+14198435389"><svg class="svg" viewBox="0 0 24 24" style="stroke:#2a2008"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 843-5389</a>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">On the job</span>
+      <h2>A look at the work</h2>
+      <p>Healthy lawns, fresh beds and finished outdoor spaces across the Sylvania area.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph reveal" role="img" aria-label="A freshly mowed residential lawn with clean, even cut lines" style="background-image:url('https://images.pexels.com/photos/4162016/pexels-photo-4162016.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#23402C,#3a6245)"></div>
+      <div class="ph reveal" role="img" aria-label="A finished backyard with a paver patio, seating and fresh landscaping" style="background-image:url('https://images.pexels.com/photos/16239802/pexels-photo-16239802.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#23402C,#3a6245)"></div>
+      <div class="ph reveal" role="img" aria-label="A landscaper mowing and maintaining a healthy green lawn" style="background-image:url('https://images.pexels.com/photos/3999647/pexels-photo-3999647.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#23402C,#3a6245)"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="final reveal">
+      <h2>Ready for a yard you are proud of?</h2>
+      <p>Call Larberg Landscape Services in Sylvania for a free property quote.</p>
+      <a class="btn btn-primary" href="tel:+14198435389"><svg class="svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 843-5389</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-col">
+      <div class="brand"><span class="leaf" aria-hidden="true" style="display:inline-grid;width:26px;height:26px;place-items:center;border-radius:50% 12px 50% 12px;background:linear-gradient(145deg,#3a6245,#23402C);vertical-align:middle;margin-right:.5rem"><svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#fff;stroke-width:2;fill:none"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></span>Larberg Landscape Services</div>
+      <p>Landscaping and lawn care for Sylvania and the greater Toledo area.</p>
+    </div>
+    <div class="foot-col">
+      <b>Contact</b>
+      <p><a href="tel:+14198435389">(419) 843-5389</a></p>
+      <p>9359 W Sylvania Ave, Sylvania, OH 43560</p>
+    </div>
+    <div class="foot-col">
+      <b>Hours</b>
+      <p>Mon to Sat service</p>
+      <p>Seasonal scheduling</p>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:2rem;font-size:.85rem;opacity:.6">&copy; <span id="yr"></span> Larberg Landscape Services. All rights reserved.</div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+14198435389"><svg class="svg" viewBox="0 0 24 24" style="stroke:#2a2008"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 843-5389</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var nav=document.getElementById('nav'),bar=document.getElementById('progress');
+function onScroll(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  nav.classList.toggle('scrolled',y>40);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')},(Array.prototype.indexOf.call(el.parentNode.children,el)%4)*70);io.unobserve(el);}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+function animateCount(el){
+  var target=parseFloat(el.getAttribute('data-count'));var dec=parseInt(el.getAttribute('data-dec')||'0');var suf=el.getAttribute('data-suffix')||'';
+  var start=null,dur=1100;
+  function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var v=(target*(0.2+0.8*(1-Math.pow(1-p,3))));el.textContent=(dec?v.toFixed(dec):Math.round(v))+suf;if(p<1)requestAnimationFrame(step);else el.textContent=(dec?target.toFixed(dec):target)+suf;}
+  requestAnimationFrame(step);
+}
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
+</script>
+</body>
+</html>
