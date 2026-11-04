@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Point Stop Painting | House Painters in Toledo, OH</title>
+<meta name="description" content="Point Stop is a Toledo house painting crew. Interior, exterior, cabinets and trim done clean and on time. Call (419) 726-0415 for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1C22; --ink2:#2A2D37; --paper:#F7F3EC; --paper2:#EFEAE0;
+  --accent:#DD5A33; --accent-d:#B6401F; --muted:#6C6A64; --line:#E2DBCE; --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque','Inter',sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;font-weight:700;font-size:1rem;padding:15px 26px;border-radius:999px;transition:transform .28s cubic-bezier(.34,1.56,.64,1),background .2s;will-change:transform}
+.btn:hover{transform:translateY(-3px) scale(1.03);background:var(--accent-d)}
+.btn svg{width:19px;height:19px}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{background:var(--white);border-color:var(--ink)}
+
+/* scroll progress */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:box-shadow .3s,background .3s,padding .3s;padding:18px 0}
+nav.scrolled{background:rgba(247,243,236,.92);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(26,28,34,.08);padding:11px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.26rem}
+.brand .dot{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center}
+.brand .dot svg{width:17px;height:17px;stroke:#fff}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a.lnk{font-weight:600;font-size:.95rem;color:var(--ink2)}
+.nav-links a.lnk:hover{color:var(--accent)}
+@media(max-width:860px){.nav-links a.lnk{display:none}}
+
+/* hero */
+header{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/6474135/pexels-photo-6474135.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#2A2D37,#1A1C22);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 22s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.08) translateY(0)}to{transform:scale(1.18) translateY(-14px)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,19,24,.86) 0%,rgba(18,19,24,.64) 45%,rgba(18,19,24,.30) 100%);z-index:1}
+.hero-in{position:relative;z-index:2;color:#fff;max-width:760px;padding:120px 0 90px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:7px 15px;border-radius:999px;font-size:.82rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:22px}
+.eyebrow span.pin{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+header h1{font-size:clamp(2.5rem,6.2vw,4.5rem);font-weight:800;color:#fff;margin-bottom:20px}
+header h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:clamp(1.05rem,2vw,1.3rem);color:rgba(255,255,255,.9);max-width:560px;margin-bottom:34px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-rate{display:flex;align-items:center;gap:12px;margin-top:34px;color:#fff}
+.stars{display:flex;gap:3px}
+.stars svg{width:19px;height:19px;fill:var(--accent);stroke:none}
+.hero-rate b{font-family:'Bricolage Grotesque';font-weight:700}
+
+/* generic section */
+section{padding:92px 0;position:relative}
+.sec-head{max-width:640px;margin-bottom:52px}
+.kicker{font-weight:700;color:var(--accent);font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.sec-head h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:700}
+.sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px}
+
+/* stats */
+.stats{background:var(--ink);color:#fff}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+@media(max-width:760px){.stat-grid{grid-template-columns:repeat(2,1fr);gap:30px}}
+.stat{text-align:center}
+.stat .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(2.1rem,5vw,3.1rem);color:var(--accent);line-height:1}
+.stat .l{margin-top:9px;color:rgba(255,255,255,.72);font-size:.92rem;font-weight:500}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px 26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(26,28,34,.1);border-color:transparent}
+.card .ic{width:52px;height:52px;border-radius:13px;background:var(--paper2);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:25px;height:25px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.2rem;font-weight:700;margin-bottom:9px}
+.card p{color:var(--muted);font-size:.97rem}
+
+/* gallery */
+.gallery{background:var(--paper2)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.gal-grid{grid-template-columns:1fr 1fr}.gal-grid .ph:first-child{grid-column:1/-1}}
+.ph{position:relative;border-radius:16px;overflow:hidden;min-height:300px;background-size:cover;background-position:center;box-shadow:0 10px 30px rgba(26,28,34,.12)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,19,24,.5),transparent 55%)}
+.ph .tag{position:absolute;left:16px;bottom:15px;z-index:2;color:#fff;font-weight:600;font-size:.95rem}
+.ph1{background-image:url('https://images.pexels.com/photos/5798983/pexels-photo-5798983.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2A2D37,#1A1C22)}
+.ph2{background-image:url('https://images.pexels.com/photos/6764282/pexels-photo-6764282.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2A2D37,#1A1C22)}
+.ph3{background-image:url('https://images.pexels.com/photos/37211575/pexels-photo-37211575.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#2A2D37,#1A1C22)}
+
+/* about + motif */
+.about{position:relative;overflow:hidden}
+.swatch{position:absolute;inset:0;z-index:0;opacity:.07;background:repeating-linear-gradient(90deg,var(--accent) 0 44px,transparent 44px 150px);pointer-events:none}
+.about .wrap{position:relative;z-index:1}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:34px}}
+.about h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:700;margin-bottom:18px}
+.about p{color:var(--ink2);font-size:1.05rem;margin-bottom:16px}
+.checks{list-style:none;margin-top:22px;display:grid;gap:13px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.checks svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto;margin-top:1px}
+.about-card{background:var(--ink);color:#fff;border-radius:22px;padding:38px 32px}
+.about-card .big{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.4rem;color:var(--accent);line-height:1}
+.about-card p{color:rgba(255,255,255,.8);margin:10px 0 22px}
+
+/* CTA */
+.cta{background:var(--accent);color:#fff;text-align:center}
+.cta h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;margin-bottom:16px;color:#fff}
+.cta p{color:rgba(255,255,255,.92);font-size:1.1rem;max-width:520px;margin:0 auto 30px}
+.cta .btn{background:#fff;color:var(--accent-d)}
+.cta .btn:hover{background:var(--ink);color:#fff}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.72);padding:54px 0 30px}
+.foot-grid{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start}
+.foot-brand{display:flex;align-items:center;gap:11px;color:#fff;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.2rem;margin-bottom:12px}
+.foot-brand .dot{width:28px;height:28px;border-radius:8px;background:var(--accent);display:grid;place-items:center}
+.foot-brand .dot svg{width:16px;height:16px;stroke:#fff}
+footer a.fl{color:rgba(255,255,255,.82);font-weight:600}
+footer a.fl:hover{color:var(--accent)}
+.foot-col h4{color:#fff;font-size:.95rem;margin-bottom:12px;font-family:'Inter'}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;font-size:.85rem}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--accent);color:#fff;display:none;align-items:center;justify-content:center;gap:10px;padding:15px;font-weight:700;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.sticky-call svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:2}
+@media(max-width:720px){.sticky-call{display:flex}body{padding-bottom:58px}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg{animation:none}*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 11l-7 7-4-4"/><path d="M4 4h10v6H4z"/></svg></span>
+      Point Stop
+    </a>
+    <div class="nav-links">
+      <a class="lnk" href="#services">Services</a>
+      <a class="lnk" href="#work">Our Work</a>
+      <a class="lnk" href="#about">Why Us</a>
+      <a class="btn" href="tel:+14197260415"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 726-0415</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-bg" role="img" aria-label="A Point Stop painter rolling fresh white paint across an interior wall during a Toledo home repaint"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow"><span class="pin"></span>House Painters, Toledo OH</span>
+    <h1>A clean paint job,<br>and a crew that <em>cleans up.</em></h1>
+    <p class="hero-sub">Point Stop paints Toledo homes inside and out. Straight lines, careful prep, and a jobsite we leave tidy at the end of every day.</p>
+    <div class="hero-cta">
+      <a class="btn" href="tel:+14197260415"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call for a free quote</a>
+      <a class="btn btn-ghost" href="#services" style="color:#fff;border-color:rgba(255,255,255,.4)">See what we do</a>
+    </div>
+    <div class="hero-rate">
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .6-5.3 4.7 1.6 6.9L12 17.8 5.7 20.7l1.6-6.9L2 9.1l7-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .6-5.3 4.7 1.6 6.9L12 17.8 5.7 20.7l1.6-6.9L2 9.1l7-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .6-5.3 4.7 1.6 6.9L12 17.8 5.7 20.7l1.6-6.9L2 9.1l7-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .6-5.3 4.7 1.6 6.9L12 17.8 5.7 20.7l1.6-6.9L2 9.1l7-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .6-5.3 4.7 1.6 6.9L12 17.8 5.7 20.7l1.6-6.9L2 9.1l7-.6z"/></svg></span>
+      <span><b class="cu" data-to="4.4" data-dec="1">0</b> rating from <b class="cu" data-to="36">0</b> Google reviews</span>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat reveal"><div class="n cu" data-to="4.4" data-dec="1">0</div><div class="l">Google star rating</div></div>
+      <div class="stat reveal"><div class="n cu" data-to="36">0</div><div class="l">Verified reviews</div></div>
+      <div class="stat reveal"><div class="n">Toledo</div><div class="l">Local crew, local calls</div></div>
+      <div class="stat reveal"><div class="n">Free</div><div class="l">Quotes, no pressure</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we paint</div>
+      <h2>One crew for the whole house</h2>
+      <p>Interior and exterior work for Toledo homeowners, done with proper prep so the finish lasts.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></div><h3>Interior painting</h3><p>Walls, ceilings and rooms, with surfaces masked and floors covered before the first coat.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7"/><path d="M4 10v10h16V10"/><path d="M9 20v-6h6v6"/></svg></div><h3>Exterior painting</h3><p>Siding, soffits and porches washed, scraped and primed so paint grips and holds up to Ohio weather.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 7v0"/><path d="M8 15v0"/></svg></div><h3>Cabinets and trim</h3><p>Kitchen cabinets, doors and trim finished smooth, the detail work that makes a room read new.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v4"/><path d="M8 7h8l1 5H7z"/><path d="M9 12v9"/><path d="M15 12v9"/></svg></div><h3>Drywall repair</h3><p>Cracks, dents and old patch jobs sanded flat and blended in before we paint, not painted over.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h7l2-9 4 18 2-9h3"/></svg></div><h3>Color help</h3><p>Not sure on a shade? We walk the rooms with you and test samples in your light before you commit.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Clean finish</h3><p>Tape pulled clean, lines cut sharp, and the space put back the way we found it when the job is done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Our work</div>
+      <h2>Rooms we have freshened up</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="ph ph1 reveal" role="img" aria-label="A Point Stop painter on a ladder cutting a clean edge along the top of a wall"><span class="tag">Interior repaints</span></div>
+      <div class="ph ph2 reveal" role="img" aria-label="Freshly painted house exterior with crisp white trim"><span class="tag">Exterior and trim</span></div>
+      <div class="ph ph3 reveal" role="img" aria-label="A loaded paint roller and tray ready for a smooth finish coat"><span class="tag">Prep and finish</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="swatch" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="kicker">Why Point Stop</div>
+        <h2>Toledo homeowners who want it done right, once</h2>
+        <p>We are a small local painting crew on N Summit Street. That means the person who gives you the quote is the same person on the job, and your call does not bounce around a call center.</p>
+        <p>Most of our work comes from neighbors telling neighbors, which is why we treat prep, protection and cleanup as part of the paint job, not an afterthought.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Furniture moved and covered, floors protected</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Honest quotes with the prep work spelled out</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Same crew start to finish, no subcontractor shuffle</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>We tidy up every evening, not just at the end</li>
+        </ul>
+      </div>
+      <div class="about-card reveal">
+        <div class="big cu" data-to="4.4" data-dec="1">0</div>
+        <p>out of 5 across <b class="cu" data-to="36" style="font-family:'Bricolage Grotesque'">0</b> Google reviews from Toledo homeowners.</p>
+        <a class="btn" href="tel:+14197260415"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Talk to the crew</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready for a fresh coat?</h2>
+    <p>Tell us the rooms or the house and we will come measure and give you a straight quote, free.</p>
+    <a class="btn" href="tel:+14197260415"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 726-0415</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 11l-7 7-4-4"/><path d="M4 4h10v6H4z"/></svg></span>Point Stop</div>
+        <p style="max-width:300px">House painting for Toledo and the surrounding neighborhoods, interior and exterior.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <p><a class="fl" href="tel:+14197260415">(419) 726-0415</a></p>
+        <p style="margin-top:8px">5417 N Summit St<br>Toledo, OH 43611</p>
+      </div>
+      <div class="foot-col">
+        <h4>Hours</h4>
+        <p>Mon to Sat, by appointment</p>
+        <p style="margin-top:8px"><a class="fl" href="tel:+14197260415">Call for a free quote</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; <span id="yr"></span> Point Stop Painting, Toledo OH. Site by Elements Studio.</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14197260415"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Point Stop: (419) 726-0415</a>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var nav=document.getElementById('nav');
+var bar=document.getElementById('bar');
+function onScroll(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  nav.classList.toggle('scrolled',y>40);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in')}, (e.target.dataset.d||0)*1);io.unobserve(e.target)}});
+},{threshold:.14});
+var rv=document.querySelectorAll('.reveal');rv.forEach(function(el,i){el.dataset.d=(i%3)*70;io.observe(el)});
+
+function countUp(el){
+  var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0',10),t0=null,dur=1400;
+  function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);var v=to*e;el.textContent=dec?v.toFixed(dec):Math.round(v);if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
+}
+var cuIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cuIO.unobserve(e.target)}})},{threshold:.5});
+document.querySelectorAll('.cu').forEach(function(el){cuIO.observe(el)});
+</script>
+</body>
+</html>
