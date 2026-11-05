@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jefferson Square Auto Care | Honest Repairs on Jefferson Ave, Toledo</title>
+<meta name="description" content="Jefferson Square Auto Care is a downtown Toledo repair shop on Jefferson Ave. Rated 5.0 on Google. Call for an honest diagnosis and quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --oxblood:#5E1322; --oxblood-deep:#431019; --charcoal:#1C1A1A;
+    --brass:#C9A24B; --brass-bright:#E2BE68; --cream:#F3ECE0; --cream-dim:#C9C0B2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',sans-serif;background:var(--charcoal);color:var(--cream);line-height:1.6;font-size:17px;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:'Staatliches',sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  .accent{color:var(--brass-bright)}
+
+  /* scroll progress */
+  #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--brass-bright);transform:scaleX(0);transform-origin:left;z-index:120}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease,padding .3s ease;padding:20px 0}
+  nav.scrolled{background:rgba(28,26,26,.92);box-shadow:0 8px 30px rgba(0,0,0,.45);padding:12px 0;backdrop-filter:blur(8px)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:40px;height:40px;border:2px solid var(--brass);border-radius:6px;display:grid;place-items:center;color:var(--brass-bright);font-family:'Staatliches';font-size:22px;background:rgba(201,162,75,.08)}
+  .brand b{font-family:'Staatliches';font-size:24px;letter-spacing:.03em;color:var(--cream)}
+  .nav-call{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--brass);color:var(--brass-bright);padding:10px 18px;border-radius:40px;font-weight:600;font-size:15px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
+  .nav-call:hover{background:var(--brass);color:var(--charcoal);transform:translateY(-2px)}
+  .nav-links{display:flex;gap:28px;font-size:15px;font-weight:500;color:var(--cream-dim)}
+  .nav-links a:hover{color:var(--brass-bright)}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* hero */
+  header{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/4116221/pexels-photo-4116221.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,var(--oxblood-deep),var(--charcoal));background-size:cover;background-position:center;z-index:0;animation:ken 24s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(105deg,rgba(28,26,26,.92) 0%,rgba(67,16,25,.74) 45%,rgba(28,26,26,.55) 100%);z-index:1}
+  header .wrap{position:relative;z-index:2;padding:120px 0 80px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-bright);font-weight:600;margin-bottom:22px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brass-bright)}
+  header h1{font-size:clamp(52px,9vw,104px);color:var(--cream);max-width:14ch;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+  header h1 span{color:var(--brass-bright)}
+  .sub{margin-top:24px;font-size:clamp(17px,2.3vw,21px);max-width:52ch;color:var(--cream-dim)}
+  .cta-row{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:11px;font-weight:600;border-radius:46px;padding:17px 30px;font-size:17px;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s}
+  .btn-primary{background:var(--brass);color:var(--charcoal);box-shadow:0 12px 34px rgba(201,162,75,.34)}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 44px rgba(201,162,75,.5)}
+  .btn-ghost{border:1.5px solid rgba(243,236,224,.4);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--brass-bright);transform:translateY(-3px)}
+  .rating-badge{display:flex;align-items:center;gap:14px;margin-top:44px;padding:16px 22px;background:rgba(28,26,26,.55);border:1px solid rgba(201,162,75,.3);border-radius:14px;width:fit-content;backdrop-filter:blur(4px)}
+  .stars{display:flex;gap:3px}
+  .rating-badge .big{font-family:'Staatliches';font-size:34px;color:var(--brass-bright);line-height:1}
+  .rating-badge small{display:block;color:var(--cream-dim);font-size:13.5px}
+
+  /* sections */
+  section{padding:104px 0;position:relative}
+  .sec-head{max-width:60ch;margin-bottom:56px}
+  .sec-head .kick{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:14px}
+  .sec-head h2{font-size:clamp(38px,5.4vw,62px);color:var(--cream)}
+  .sec-head p{margin-top:16px;color:var(--cream-dim);font-size:18px}
+
+  /* services with tread-plate motif */
+  #services{background:var(--oxblood-deep);position:relative}
+  #services:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(201,162,75,.06) 0 2px,transparent 2px 22px),repeating-linear-gradient(-45deg,rgba(201,162,75,.06) 0 2px,transparent 2px 22px);pointer-events:none}
+  .grid{display:grid;gap:22px;position:relative;z-index:1}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
+  .card{background:rgba(28,26,26,.72);border:1px solid rgba(201,162,75,.18);border-radius:16px;padding:32px 28px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .35s,background .35s}
+  .card:hover{transform:translateY(-8px);border-color:var(--brass);background:rgba(28,26,26,.95)}
+  .card .ico{width:52px;height:52px;border-radius:12px;background:rgba(201,162,75,.12);display:grid;place-items:center;color:var(--brass-bright);margin-bottom:20px}
+  .card h3{font-size:25px;color:var(--cream);margin-bottom:9px;letter-spacing:.03em}
+  .card p{color:var(--cream-dim);font-size:15.5px}
+
+  /* trust */
+  .trust-grid{grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:860px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+  .stat{text-align:center;padding:30px 16px;border:1px solid rgba(201,162,75,.16);border-radius:14px;background:rgba(94,19,34,.18)}
+  .stat .num{font-family:'Staatliches';font-size:clamp(42px,6vw,60px);color:var(--brass-bright);line-height:1}
+  .stat .lbl{color:var(--cream-dim);font-size:14px;margin-top:8px;letter-spacing:.02em}
+
+  /* gallery */
+  .gal-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:860px){.gal-grid{grid-template-columns:1fr}}
+  .ph{height:300px;border-radius:16px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid rgba(201,162,75,.2)}
+  .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,26,26,.6),transparent 55%);transition:opacity .4s;opacity:.8}
+  .ph:hover:after{opacity:.35}
+  .ph .tag{position:absolute;left:16px;bottom:14px;z-index:2;font-size:14px;font-weight:600;color:var(--cream);text-shadow:0 2px 10px rgba(0,0,0,.6)}
+  .g1{background-image:url('https://images.pexels.com/photos/4116173/pexels-photo-4116173.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--oxblood),var(--charcoal))}
+  .g2{background-image:url('https://images.pexels.com/photos/6870313/pexels-photo-6870313.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--oxblood),var(--charcoal))}
+  .g3{background-image:url('https://images.pexels.com/photos/4489758/pexels-photo-4489758.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--oxblood),var(--charcoal))}
+
+  /* visit / call */
+  #visit{background:linear-gradient(135deg,var(--oxblood),var(--oxblood-deep))}
+  .visit-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  @media(max-width:860px){.visit-wrap{grid-template-columns:1fr}}
+  .visit h2{font-size:clamp(40px,6vw,72px);color:var(--cream)}
+  .visit p{color:var(--cream-dim);margin-top:16px;font-size:18px;max-width:46ch}
+  .info-card{background:rgba(28,26,26,.72);border:1px solid rgba(201,162,75,.24);border-radius:18px;padding:34px}
+  .info-row{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid rgba(201,162,75,.14)}
+  .info-row:last-child{border-bottom:none}
+  .info-row .ic{color:var(--brass-bright);flex-shrink:0;margin-top:2px}
+  .info-row b{color:var(--cream);font-weight:600;display:block;font-size:16px}
+  .info-row span{color:var(--cream-dim);font-size:15px}
+  .info-card .btn-primary{width:100%;justify-content:center;margin-top:22px}
+
+  footer{background:var(--charcoal);padding:46px 0;border-top:1px solid rgba(201,162,75,.14)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;color:var(--cream-dim);font-size:14px}
+  footer .brand b{font-size:20px}
+
+  /* sticky mobile call */
+  .sticky-call{position:fixed;left:16px;right:16px;bottom:16px;z-index:110;display:none;justify-content:center;align-items:center;gap:10px;background:var(--brass);color:var(--charcoal);font-weight:700;padding:16px;border-radius:14px;box-shadow:0 12px 34px rgba(0,0,0,.4);font-size:17px}
+  @media(max-width:860px){.sticky-call{display:flex}header .wrap{padding-bottom:110px}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">J</div>
+      <b>Jefferson Square Auto Care</b>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#trust">Why Us</a>
+      <a href="#gallery">Shop</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="nav-call" href="tel:4193899221">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 389-9221
+    </a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero-bg" role="img" aria-label="A mechanic tightening a bolt on a car engine with a hand tool at Jefferson Square Auto Care"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> Downtown Toledo | Jefferson Ave</span>
+    <h1>Honest repairs, done right on <span>Jefferson Ave</span>.</h1>
+    <p class="sub">A neighborhood auto shop that tells you straight what your car needs and what it costs. No upsell, no runaround. Just solid work from people who live here.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:4193899221">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (419) 389-9221
+      </a>
+      <a class="btn btn-ghost" href="#services">See what we fix</a>
+    </div>
+    <div class="rating-badge">
+      <div class="stars accent" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <span class="big" data-count="5" data-dec="1">0.0</span>
+        <small>Rated on Google across <span data-count="4">0</span> reviews</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">What we do</div>
+      <h2>Repairs and maintenance for everyday drivers</h2>
+      <p>Bring in the problem or the warning light. We diagnose it, explain it in plain terms, and give you the price before any work starts.</p>
+    </div>
+    <div class="grid svc-grid">
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Diagnostics and Repair</h3>
+        <p>Check-engine lights, strange noises, and drivability problems traced to the real cause, not a guess.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Oil and Scheduled Service</h3>
+        <p>Oil changes, fluids, filters, and the mileage milestones that keep your car on the road longer.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes and Tires</h3>
+        <p>Pads, rotors, rotations, and alignments so stopping and steering stay sure in every season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Why drivers stay</div>
+      <h2>A shop you can actually talk to</h2>
+      <p>When you call, you reach the people turning the wrenches. That is the difference a local shop makes.</p>
+    </div>
+    <div class="grid trust-grid">
+      <div class="stat reveal"><div class="num" data-count="5" data-dec="1">0.0</div><div class="lbl">Google rating</div></div>
+      <div class="stat reveal"><div class="num" data-count="4">0</div><div class="lbl">Five-star reviews</div></div>
+      <div class="stat reveal"><div class="num">OH</div><div class="lbl">Toledo born and based</div></div>
+      <div class="stat reveal"><div class="num">1:1</div><div class="lbl">Talk to your mechanic</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Inside the bay</div>
+      <h2>Real work, real shop</h2>
+    </div>
+    <div class="grid gal-grid">
+      <div class="ph g1 reveal" role="img" aria-label="A car raised on a lift for brake and undercarriage service"><span class="tag">Brakes and undercarriage</span></div>
+      <div class="ph g2 reveal" role="img" aria-label="Detailed view of hands working on the internal parts of a car engine"><span class="tag">Engine work</span></div>
+      <div class="ph g3 reveal" role="img" aria-label="A mechanic working on a car engine with hand tools during a repair"><span class="tag">Hands-on repair</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit-wrap">
+    <div class="visit reveal">
+      <h2>Stop by or call ahead</h2>
+      <p>We are on Jefferson Ave in downtown Toledo. Call first and we will tell you the best time to bring it in and roughly what to expect.</p>
+    </div>
+    <div class="info-card reveal">
+      <div class="info-row">
+        <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div><b>1611 Jefferson Ave</b><span>Toledo, OH 43604</span></div>
+      </div>
+      <div class="info-row">
+        <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <div><b>(419) 389-9221</b><span>Call for a quote or to book a time</span></div>
+      </div>
+      <a class="btn btn-primary" href="tel:4193899221">Call now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><b>Jefferson Square Auto Care</b></div>
+    <div>1611 Jefferson Ave, Toledo, OH 43604 &middot; (419) 389-9221</div>
+    <div>Rated 5.0 on Google</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:4193899221">
+  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Jefferson Square Auto Care
+</a>
+
+<script>
+  var nav=document.getElementById('nav');
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    var t=document.documentElement.scrollTop||document.body.scrollTop;
+    var h=(document.documentElement.scrollHeight-document.documentElement.clientHeight)||1;
+    prog.style.transform='scaleX('+(t/h)+')';
+    if(t>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');
+        var cs=e.target.matches('[data-count]')?[e.target]:e.target.querySelectorAll('[data-count]');
+        cs.forEach(countUp);
+        io.unobserve(e.target);}
+    });
+  },{threshold:.2});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%3*0.07)+'s';io.observe(el);});
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1100;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    if(!el.closest('.reveal'))io.observe(el);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bjorn Built Automotive | Precise Car Repair in Sylvania, OH</title>
+<meta name="description" content="Bjorn Built Automotive in Sylvania, OH. Precise, no-surprises car repair with a 5.0 Google rating. Call to book your service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fjord:#1F2A33; --fjord-deep:#161E25; --panel:#243139;
+    --frost:#3FA7C4; --frost-bright:#5FC8E3; --snow:#EEF3F5; --snow-dim:#9FB2BC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--fjord);color:var(--snow);line-height:1.6;font-size:17px;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.04}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  .accent{color:var(--frost-bright)}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--frost-bright);transform:scaleX(0);transform-origin:left;z-index:120}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease,padding .3s ease;padding:20px 0}
+  nav.scrolled{background:rgba(22,30,37,.9);box-shadow:0 8px 30px rgba(0,0,0,.4);padding:12px 0;backdrop-filter:blur(8px)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:40px;height:40px;border-radius:9px;display:grid;place-items:center;background:var(--frost);color:var(--fjord-deep);font-family:'Space Grotesk';font-weight:700;font-size:20px}
+  .brand b{font-family:'Space Grotesk';font-size:21px;letter-spacing:-.01em;color:var(--snow);font-weight:700}
+  .nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--frost);color:var(--fjord-deep);padding:10px 18px;border-radius:9px;font-weight:600;font-size:15px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
+  .nav-call:hover{background:var(--frost-bright);transform:translateY(-2px)}
+  .nav-links{display:flex;gap:28px;font-size:15px;font-weight:500;color:var(--snow-dim)}
+  .nav-links a:hover{color:var(--frost-bright)}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  header{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,var(--fjord),var(--fjord-deep));background-size:cover;background-position:center;z-index:0;animation:ken 26s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1)}to{transform:scale(1.12)}}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(22,30,37,.92) 0%,rgba(31,42,51,.72) 50%,rgba(22,30,37,.5) 100%);z-index:1}
+  /* blueprint grid motif over hero edge */
+  .hero-grid{position:absolute;inset:0;z-index:1;background-image:repeating-linear-gradient(0deg,rgba(95,200,227,.07) 0 1px,transparent 1px 44px),repeating-linear-gradient(90deg,rgba(95,200,227,.07) 0 1px,transparent 1px 44px);pointer-events:none}
+  header .wrap{position:relative;z-index:2;padding:120px 0 80px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--frost-bright);font-weight:600;margin-bottom:22px;font-family:'Space Grotesk'}
+  .eyebrow .dot{width:7px;height:7px;border-radius:2px;background:var(--frost-bright)}
+  header h1{font-size:clamp(46px,8vw,92px);color:var(--snow);max-width:15ch}
+  header h1 span{color:var(--frost-bright)}
+  .sub{margin-top:24px;font-size:clamp(17px,2.3vw,20px);max-width:52ch;color:var(--snow-dim)}
+  .cta-row{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:11px;font-weight:600;border-radius:10px;padding:17px 28px;font-size:17px;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s}
+  .btn-primary{background:var(--frost);color:var(--fjord-deep);box-shadow:0 12px 34px rgba(63,167,196,.32)}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 44px rgba(63,167,196,.48)}
+  .btn-ghost{border:1.5px solid rgba(238,243,245,.28);color:var(--snow)}
+  .btn-ghost:hover{border-color:var(--frost-bright);transform:translateY(-3px)}
+  .rating-badge{display:flex;align-items:center;gap:14px;margin-top:44px;padding:16px 22px;background:rgba(36,49,57,.7);border:1px solid rgba(95,200,227,.26);border-radius:12px;width:fit-content;backdrop-filter:blur(4px)}
+  .stars{display:flex;gap:3px}
+  .rating-badge .big{font-family:'Space Grotesk';font-weight:700;font-size:30px;color:var(--frost-bright);line-height:1}
+  .rating-badge small{display:block;color:var(--snow-dim);font-size:13.5px}
+
+  section{padding:104px 0;position:relative}
+  .sec-head{max-width:60ch;margin-bottom:56px}
+  .sec-head .kick{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--frost);font-weight:600;margin-bottom:14px;font-family:'Space Grotesk'}
+  .sec-head h2{font-size:clamp(34px,5vw,56px);color:var(--snow)}
+  .sec-head p{margin-top:16px;color:var(--snow-dim);font-size:18px}
+
+  #services{background:var(--fjord-deep)}
+  .grid{display:grid;gap:20px;position:relative;z-index:1}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid rgba(95,200,227,.14);border-radius:14px;padding:32px 28px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .35s}
+  .card:hover{transform:translateY(-8px);border-color:var(--frost)}
+  .card .ico{width:52px;height:52px;border-radius:11px;background:rgba(63,167,196,.14);display:grid;place-items:center;color:var(--frost-bright);margin-bottom:20px}
+  .card h3{font-size:22px;color:var(--snow);margin-bottom:9px}
+  .card p{color:var(--snow-dim);font-size:15.5px}
+
+  /* how we work - numbered steps over blueprint grid */
+  #process{position:relative;background:var(--fjord)}
+  #process:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(95,200,227,.045) 0 1px,transparent 1px 40px),repeating-linear-gradient(90deg,rgba(95,200,227,.045) 0 1px,transparent 1px 40px);pointer-events:none}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.steps{grid-template-columns:1fr}}
+  .step{position:relative;padding:30px 26px;border:1px solid rgba(95,200,227,.16);border-radius:14px;background:rgba(36,49,57,.5)}
+  .step .no{font-family:'Space Grotesk';font-weight:700;font-size:40px;color:var(--frost);opacity:.5;line-height:1}
+  .step h3{font-size:20px;color:var(--snow);margin:12px 0 8px}
+  .step p{color:var(--snow-dim);font-size:15px}
+
+  .trust-grid{grid-template-columns:repeat(4,1fr);gap:18px}
+  @media(max-width:860px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+  .stat{text-align:center;padding:30px 16px;border:1px solid rgba(95,200,227,.14);border-radius:12px;background:var(--panel)}
+  .stat .num{font-family:'Space Grotesk';font-weight:700;font-size:clamp(38px,5.5vw,54px);color:var(--frost-bright);line-height:1}
+  .stat .lbl{color:var(--snow-dim);font-size:14px;margin-top:8px}
+
+  .gal-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:860px){.gal-grid{grid-template-columns:1fr}}
+  .ph{height:300px;border-radius:14px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid rgba(95,200,227,.2)}
+  .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(22,30,37,.62),transparent 55%);transition:opacity .4s;opacity:.85}
+  .ph:hover:after{opacity:.4}
+  .ph .tag{position:absolute;left:16px;bottom:14px;z-index:2;font-size:14px;font-weight:600;color:var(--snow);text-shadow:0 2px 10px rgba(0,0,0,.6)}
+  .g1{background-image:url('https://images.pexels.com/photos/4116170/pexels-photo-4116170.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--fjord),var(--fjord-deep))}
+  .g2{background-image:url('https://images.pexels.com/photos/8478261/pexels-photo-8478261.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--fjord),var(--fjord-deep))}
+  .g3{background-image:url('https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,var(--fjord),var(--fjord-deep))}
+
+  #visit{background:var(--fjord-deep)}
+  .visit-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  @media(max-width:860px){.visit-wrap{grid-template-columns:1fr}}
+  .visit h2{font-size:clamp(36px,5.5vw,64px);color:var(--snow)}
+  .visit p{color:var(--snow-dim);margin-top:16px;font-size:18px;max-width:46ch}
+  .info-card{background:var(--panel);border:1px solid rgba(95,200,227,.22);border-radius:16px;padding:34px}
+  .info-row{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid rgba(95,200,227,.12)}
+  .info-row:last-child{border-bottom:none}
+  .info-row .ic{color:var(--frost-bright);flex-shrink:0;margin-top:2px}
+  .info-row b{color:var(--snow);font-weight:600;display:block;font-size:16px}
+  .info-row span{color:var(--snow-dim);font-size:15px}
+  .info-card .btn-primary{width:100%;justify-content:center;margin-top:22px}
+
+  footer{background:var(--fjord);padding:46px 0;border-top:1px solid rgba(95,200,227,.12)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;color:var(--snow-dim);font-size:14px}
+  footer .brand b{font-size:19px}
+
+  .sticky-call{position:fixed;left:16px;right:16px;bottom:16px;z-index:110;display:none;justify-content:center;align-items:center;gap:10px;background:var(--frost);color:var(--fjord-deep);font-weight:700;padding:16px;border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.4);font-size:17px}
+  @media(max-width:860px){.sticky-call{display:flex}header .wrap{padding-bottom:110px}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">B</div>
+      <b>Bjorn Built Automotive</b>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">How We Work</a>
+      <a href="#gallery">Shop</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="nav-call" href="tel:4194611827">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 461-1827
+    </a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero-bg" role="img" aria-label="A Bjorn Built Automotive mechanic checking a car engine in the garage"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> Sylvania, Ohio</span>
+    <h1>Built right, fixed right, <span>every time</span>.</h1>
+    <p class="sub">Careful, precise repair work with no surprises on the bill. We tell you what your car needs, do it properly, and stand behind it.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:4194611827">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (419) 461-1827
+      </a>
+      <a class="btn btn-ghost" href="#services">What we handle</a>
+    </div>
+    <div class="rating-badge">
+      <div class="stars accent" aria-hidden="true">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <span class="big" data-count="5" data-dec="1">0.0</span>
+        <small>Rated on Google across <span data-count="4">0</span> reviews</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Services</div>
+      <h2>Repairs done with precision</h2>
+      <p>From routine maintenance to the repair another shop could not pin down, we work methodically and show you what we find.</p>
+    </div>
+    <div class="grid svc-grid">
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Engine and Diagnostics</h3>
+        <p>Precise fault tracing for check-engine lights, misfires, and performance issues, backed by proper testing.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h4"/></svg></div>
+        <h3>Routine Maintenance</h3>
+        <p>Oil, fluids, filters, and the scheduled milestones that prevent the big repairs down the road.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Brakes, Tires, Suspension</h3>
+        <p>Stopping and handling checked and corrected so the car feels planted and safe on the road.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">How we work</div>
+      <h2>No surprises, start to finish</h2>
+      <p>The same careful process on every job, so you always know where things stand.</p>
+    </div>
+    <div class="grid steps">
+      <div class="step reveal"><div class="no">01</div><h3>Inspect and diagnose</h3><p>We find the real cause and confirm it before quoting a thing.</p></div>
+      <div class="step reveal"><div class="no">02</div><h3>Quote before work</h3><p>You get a clear price and plan. Nothing proceeds until you say go.</p></div>
+      <div class="step reveal"><div class="no">03</div><h3>Build it right</h3><p>Quality parts, proper torque, and a final check before the keys come back.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">The record</div>
+      <h2>Work that earns the rating</h2>
+    </div>
+    <div class="grid trust-grid">
+      <div class="stat reveal"><div class="num" data-count="5" data-dec="1">0.0</div><div class="lbl">Google rating</div></div>
+      <div class="stat reveal"><div class="num" data-count="4">0</div><div class="lbl">Five-star reviews</div></div>
+      <div class="stat reveal"><div class="num">OH</div><div class="lbl">Serving Sylvania</div></div>
+      <div class="stat reveal"><div class="num">100%</div><div class="lbl">Price before work</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">In the shop</div>
+      <h2>Where the work happens</h2>
+    </div>
+    <div class="grid gal-grid">
+      <div class="ph g1 reveal" role="img" aria-label="A mechanic working under the hood of a car in the repair shop"><span class="tag">Under the hood</span></div>
+      <div class="ph g2 reveal" role="img" aria-label="A technician performing engine maintenance on a car in the service bay"><span class="tag">Engine service</span></div>
+      <div class="ph g3 reveal" role="img" aria-label="A vehicle raised on a shop lift for undercarriage and brake service"><span class="tag">On the lift</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit-wrap">
+    <div class="visit reveal">
+      <h2>Book your service</h2>
+      <p>We are on Calvin Ave in Sylvania. Give us a call and we will set a time and walk you through what your car likely needs.</p>
+    </div>
+    <div class="info-card reveal">
+      <div class="info-row">
+        <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div><b>5155 Calvin Ave</b><span>Sylvania, OH 43560</span></div>
+      </div>
+      <div class="info-row">
+        <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <div><b>(419) 461-1827</b><span>Call to book or ask a question</span></div>
+      </div>
+      <a class="btn btn-primary" href="tel:4194611827">Call now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><b>Bjorn Built Automotive</b></div>
+    <div>5155 Calvin Ave, Sylvania, OH 43560 &middot; (419) 461-1827</div>
+    <div>Rated 5.0 on Google</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:4194611827">
+  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Bjorn Built Automotive
+</a>
+
+<script>
+  var nav=document.getElementById('nav');
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    var t=document.documentElement.scrollTop||document.body.scrollTop;
+    var h=(document.documentElement.scrollHeight-document.documentElement.clientHeight)||1;
+    prog.style.transform='scaleX('+(t/h)+')';
+    if(t>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');
+        var cs=e.target.matches('[data-count]')?[e.target]:e.target.querySelectorAll('[data-count]');
+        cs.forEach(countUp);
+        io.unobserve(e.target);}
+    });
+  },{threshold:.2});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%3*0.07)+'s';io.observe(el);});
+
+  function countUp(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1100;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    if(!el.closest('.reveal'))io.observe(el);
+  });
+</script>
+</body>
+</html>
