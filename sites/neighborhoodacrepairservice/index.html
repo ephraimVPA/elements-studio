@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neighborhood AC Repair Service | AC &amp; Heating Repair in Toledo, OH</title>
+<meta name="description" content="Neighborhood AC Repair Service on 10th St in downtown Toledo. Fast, honest AC repair, cooling tune-ups, and furnace service. 5.0 stars on Google. Call (419) 724-8222.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F6FA; --paper:#FFFFFF; --soft:#EAF1F7;
+  --ink:#122634; --ink-2:#324a5b; --muted:#5f7484; --line:#E0E8EF;
+  --blue:#0E5C8C; --blue-d:#0A4870; --blue-l:#2E86BE; --blue-wash:#E7F1F8;
+  --amber:#F0A23C; --amber-d:#D9881F; --amber-wash:#FBEEDB;
+  --maxw:1150px;
+  --ease:cubic-bezier(.16,1,.3,1); --spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;width:100%}
+.eyebrow{font-family:'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:13px;font-weight:600;color:var(--blue)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;z-index:200}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:150;padding:18px 0;transition:background .3s,box-shadow .3s,padding .3s}
+.nav.scrolled{background:rgba(255,255,255,.95);box-shadow:0 8px 30px rgba(18,38,52,.1);padding:11px 0;backdrop-filter:blur(9px)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.01em;color:#fff}
+.nav.scrolled .brand{color:var(--ink)}
+.brand .mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(150deg,var(--blue-l),var(--blue));display:grid;place-items:center;color:#fff;box-shadow:0 6px 18px rgba(14,92,140,.34);flex:none}
+.brand .mark svg{width:22px;height:22px}
+.nav-cta{display:none;align-items:center;gap:9px;background:var(--amber);color:#3a2708;font-family:'Space Grotesk',sans-serif;font-weight:600;padding:11px 18px;border-radius:10px;font-size:15px;transition:transform .25s var(--spring),box-shadow .25s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(240,162,60,.45)}
+@media(min-width:720px){.nav .nav-cta{display:inline-flex}}
+
+/* hero */
+.hero{position:relative;min-height:96svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/7347538/pexels-photo-7347538.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#0E5C8C,#0A4870);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.08) translateY(0)}to{transform:scale(1.16) translateY(-14px)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(96deg,rgba(9,32,48,.9) 0%,rgba(9,32,48,.72) 46%,rgba(9,32,48,.42) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;padding:122px 0 88px;color:#fff}
+.hero h1{font-size:clamp(38px,7vw,74px);max-width:15ch;margin:18px 0 0;color:#fff}
+.hero h1 .hl{color:var(--amber)}
+.hero p.lede{margin-top:20px;max-width:50ch;font-size:19px;color:#dceaf4}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:600;padding:16px 26px;border-radius:12px;font-size:17px;transition:transform .25s var(--spring),box-shadow .25s,background .25s,color .25s}
+.btn svg{width:20px;height:20px}
+.btn-amber{background:var(--amber);color:#3a2708;box-shadow:0 12px 30px rgba(240,162,60,.34)}
+.btn-amber:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(240,162,60,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{transform:translateY(-3px);border-color:#fff;background:rgba(255,255,255,.1)}
+.hero-trust{display:flex;flex-wrap:wrap;gap:30px;margin-top:40px;align-items:center}
+.stars{color:var(--amber);letter-spacing:3px;font-size:20px}
+.trust-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;color:#fff;line-height:1}
+.trust-lbl{font-size:13px;color:#b9cddb;text-transform:uppercase;letter-spacing:.09em}
+
+section{position:relative}
+.pad{padding:94px 0}
+.sec-head{max-width:62ch}
+.sec-head h2{font-size:clamp(28px,4.4vw,46px);margin:12px 0 0;color:var(--ink)}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:18px}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:44px}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.svc-grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .3s var(--spring),box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:#c9dcea;box-shadow:0 20px 44px rgba(18,38,52,.1)}
+.ic{width:54px;height:54px;border-radius:13px;background:var(--blue-wash);display:grid;place-items:center;color:var(--blue);margin-bottom:18px}
+.ic.warm{background:var(--amber-wash);color:var(--amber-d)}
+.ic svg{width:27px;height:27px}
+.card h3{font-size:22px;color:var(--ink)}
+.card p{margin-top:9px;color:var(--muted);font-size:16px}
+
+/* why - airflow motif */
+.why{background:var(--soft);overflow:hidden}
+.airflow{position:absolute;inset:0;z-index:0;opacity:.55;
+  background-image:repeating-radial-gradient(circle at 82% 28%,
+    rgba(14,92,140,.00) 0px,rgba(14,92,140,.00) 34px,
+    rgba(14,92,140,.07) 34px,rgba(14,92,140,.07) 36px,
+    rgba(14,92,140,.00) 36px,rgba(14,92,140,.00) 70px)}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:1fr;gap:42px;align-items:center}
+@media(min-width:900px){.why-grid{grid-template-columns:1.05fr .95fr}}
+.why ul{list-style:none;margin-top:26px;display:grid;gap:16px}
+.why li{display:flex;gap:14px;align-items:flex-start}
+.why li .tick{flex:none;width:32px;height:32px;border-radius:9px;background:var(--blue-wash);color:var(--blue);display:grid;place-items:center}
+.why li .tick svg{width:18px;height:18px}
+.why li b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;display:block;margin-bottom:2px;color:var(--ink)}
+.why li span.t{color:var(--muted);font-size:15.5px}
+.statbox{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:34px;box-shadow:0 18px 44px rgba(18,38,52,.07)}
+.statrow{display:flex;justify-content:space-between;align-items:center;padding:19px 0;border-bottom:1px solid var(--line)}
+.statrow:last-child{border-bottom:0}
+.statrow .big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;color:var(--blue);line-height:1}
+.statrow .cap{text-align:right;color:var(--muted);font-size:13.5px;text-transform:uppercase;letter-spacing:.09em;max-width:17ch}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr;gap:16px;margin-top:44px}
+@media(min-width:720px){.gal{grid-template-columns:repeat(3,1fr)}}
+.ph{position:relative;height:300px;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 16px 40px rgba(18,38,52,.14);transition:transform .4s var(--ease)}
+.ph:hover{transform:translateY(-6px) scale(1.01)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(9,32,48,.72))}
+.ph .cap{position:absolute;left:16px;bottom:15px;z-index:2;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px}
+.ph1{background-image:url('https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#2E86BE,#0A4870)}
+.ph2{background-image:url('https://images.pexels.com/photos/6471912/pexels-photo-6471912.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#0E5C8C,#0A4870)}
+.ph3{background-image:url('https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#2E86BE,#0A4870)}
+
+/* location */
+.loc-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:42px}
+@media(min-width:820px){.loc-grid{grid-template-columns:1fr 1fr}}
+.info{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px}
+.info h3{font-size:20px;color:var(--blue)}
+.info .row{display:flex;gap:12px;align-items:flex-start;margin-top:16px;color:var(--ink-2);font-size:16px}
+.info .row svg{width:20px;height:20px;color:var(--blue);flex:none;margin-top:2px}
+.hours dl{margin-top:6px}
+.hours .h{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+.hours .h:last-child{border-bottom:0}
+.hours .h span:first-child{color:var(--muted)}
+.hours .h b{color:var(--amber-d);font-family:'Space Grotesk',sans-serif}
+
+/* final cta */
+.cta{position:relative;text-align:center;background:linear-gradient(150deg,var(--blue),var(--blue-d));overflow:hidden;color:#fff}
+.cta h2{font-size:clamp(30px,5vw,54px);max-width:18ch;margin:0 auto;color:#fff}
+.cta p{color:#cfe3f0;font-size:18px;margin:16px auto 0;max-width:46ch}
+.cta .hero-cta{justify-content:center}
+
+footer{background:#0C2130;padding:40px 0;color:#9fb6c6}
+.foot-in{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-size:14.5px}
+.foot-brand{font-family:'Space Grotesk',sans-serif;color:#fff;font-weight:700;font-size:19px}
+.foot-in a{color:#cfe3f0}
+
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:160;display:flex;gap:10px;padding:10px 14px;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(18,38,52,.08)}
+.sticky-call a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--amber);color:#3a2708;font-family:'Space Grotesk',sans-serif;font-weight:600;padding:14px;border-radius:11px;font-size:16px}
+.sticky-call svg{width:19px;height:19px}
+@media(min-width:720px){.sticky-call{display:none}}
+body{padding-bottom:66px}
+@media(min-width:720px){body{padding-bottom:0}}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  *{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v8H4z"/><path d="M7 15v3"/><path d="M17 15v3"/><path d="M8 11h2"/><path d="M14 11h2"/></svg></span>
+      Neighborhood AC
+    </div>
+    <a class="nav-cta" href="tel:+14197248222"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 724-8222</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="An HVAC technician repairing an outdoor air conditioning unit mounted on a building"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow" style="color:var(--amber)">AC &amp; Heating Repair · Toledo, OH</p>
+    <h1>Your neighborhood fix for <span class="hl">AC that quit</span>.</h1>
+    <p class="lede">When the house gets hot or the furnace won't kick on, you want a straight answer and a fast fix. That is what we do, right here in Toledo.</p>
+    <div class="hero-cta">
+      <a class="btn btn-amber" href="tel:+14197248222"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 724-8222</a>
+      <a class="btn btn-ghost" href="#services">See our services</a>
+    </div>
+    <div class="hero-trust">
+      <div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="trust-lbl">5.0 on Google</div>
+      </div>
+      <div>
+        <div class="trust-num"><span class="count" data-to="4">0</span></div>
+        <div class="trust-lbl">Google reviews</div>
+      </div>
+      <div>
+        <div class="trust-num">Local</div>
+        <div class="trust-lbl">Toledo based &amp; owned</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What we fix</p>
+      <h2>Cooling and heating, handled by one honest tech.</h2>
+      <p>No upsells you don't need. We find the real problem, tell you what it costs, and get your air moving again.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 12h18"/><path d="M5.6 5.6l12.8 12.8"/><path d="M18.4 5.6L5.6 18.4"/></svg></div>
+        <h3>AC Repair</h3>
+        <p>Not cooling, short cycling, iced up, or dead at the breaker? We diagnose the unit and fix it, not just recharge it.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic warm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s3 4 3 7a3 3 0 0 1-6 0c0-3 3-7 3-7z"/><path d="M8 14a4 4 0 0 0 8 0"/></svg></div>
+        <h3>Furnace &amp; Heating</h3>
+        <p>No heat, blowing cold, or a furnace that keeps locking out. We get it safe and running before the cold sets in.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Cooling Tune-Ups</h3>
+        <p>A spring check that keeps the system cold all summer. Clean coils, check charge, catch small issues early.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic warm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4l4 4v10H5V11l4-4z"/><path d="M12 15v3"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>Strange noises, high bills, or a thermostat that won't listen. We trace it to the cause and explain it plainly.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="12" rx="2"/><path d="M8 19h8"/><path d="M12 15v4"/></svg></div>
+        <h3>Thermostats</h3>
+        <p>Old dial on the wall or a smart stat that quit talking to the unit. Swapped, wired, and set up right.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic warm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h12l2 3h4v6h-3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+        <h3>Same-Day Calls</h3>
+        <p>When the heat is brutal or the house is freezing, we work to get out the same day. Call early and ask.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why pad">
+  <div class="airflow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="reveal">
+        <p class="eyebrow">Why neighbors call us</p>
+        <h2 class="disp" style="font-size:clamp(28px,4.4vw,46px);margin-top:12px;color:var(--ink)">The tech who shows up is the one you talk to.</h2>
+        <ul>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="t"><b>Straight pricing</b>You hear the cost before we start. No surprise line items when the work is done.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="t"><b>Fast when it counts</b>A dead AC in July is an emergency. We move quick and work to get you same-day when we can.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="t"><b>Repair first</b>We fix what can be fixed before we ever talk about replacing a unit. Your wallet comes first.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="t"><b>Right in the neighborhood</b>Based on 10th St in downtown Toledo. We are minutes away, not an hour out.</span></li>
+        </ul>
+      </div>
+      <div class="statbox reveal">
+        <div class="statrow"><div class="big"><span class="count" data-to="5" data-dec="1">0</span></div><div class="cap">Star Google rating</div></div>
+        <div class="statrow"><div class="big"><span class="count" data-to="4">0</span></div><div class="cap">Neighbors who reviewed us</div></div>
+        <div class="statrow"><div class="big">Same</div><div class="cap">Day service when you call early</div></div>
+        <div class="statrow"><div class="big">Toledo</div><div class="cap">Born, based, and local</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">On the job</p>
+      <h2>Real service calls, real repairs.</h2>
+      <p>A look at the kind of AC and heating work we handle across Toledo every week.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1" role="img" aria-label="A technician inspecting an outdoor HVAC condenser unit during a service call">
+        <span class="cap">Outdoor unit service</span>
+      </div>
+      <div class="ph ph2" role="img" aria-label="A technician using refrigerant manifold gauges to diagnose an air conditioning system">
+        <span class="cap">Diagnostics &amp; charge</span>
+      </div>
+      <div class="ph ph3" role="img" aria-label="A technician repairing an outdoor air conditioner with a service gauge attached">
+        <span class="cap">AC repair &amp; tune-ups</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="area" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Find us</p>
+      <h2>Serving downtown Toledo &amp; nearby.</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="info reveal">
+        <h3>Neighborhood AC Repair Service</h3>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>234 10th St, Toledo, OH 43604</span></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span><a href="tel:+14197248222">(419) 724-8222</a></span></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 7v5l3 2"/></svg><span>Downtown Toledo, the Old West End, East Toledo, and nearby streets.</span></div>
+      </div>
+      <div class="info hours reveal">
+        <h3>Hours</h3>
+        <dl>
+          <div class="h"><span>Monday &ndash; Friday</span><span>8:00a &ndash; 7:00p</span></div>
+          <div class="h"><span>Saturday</span><span>9:00a &ndash; 4:00p</span></div>
+          <div class="h"><span>Sunday</span><span>By phone</span></div>
+          <div class="h"><span>Heat wave &amp; no-heat calls</span><span><b>Call us</b></span></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta pad">
+  <div class="wrap">
+    <h2 class="reveal">Hot house or no heat? We will get it running.</h2>
+    <p class="reveal">Call Neighborhood AC Repair Service and talk to the tech who does the work. Fast, honest, and right down the street.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-amber" href="tel:+14197248222"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 724-8222</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="foot-brand">Neighborhood AC Repair Service</div>
+    <div>234 10th St, Toledo, OH 43604 · <a href="tel:+14197248222">(419) 724-8222</a></div>
+    <div>Site by Elements Studio</div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+14197248222"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 724-8222</a>
+</div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('progress');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4*70)+'ms';io.observe(el);});
+
+  function animCount(el){
+    var to=parseFloat(el.getAttribute('data-to')),dec=parseInt(el.getAttribute('data-dec')||'0',10),t0=null,dur=1300;
+    function step(ts){
+      if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3),v=to*e;
+      el.textContent=dec?v.toFixed(dec):Math.round(v);
+      if(p<1)requestAnimationFrame(step);else el.textContent=dec?to.toFixed(dec):to;
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>

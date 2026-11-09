@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ground Works Excavating L.L.C. | Excavating &amp; Grading in Oregon, OH</title>
+<meta name="description" content="Ground Works Excavating L.L.C. on N Cousino Rd in Oregon, OH. Owner-run excavating, grading, drainage, and site prep for the Toledo area. 5.0 stars on Google. Call (419) 410-4940 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --soil:#1B1710; --soil-2:#241E14; --panel:#2C2416; --panel-2:#352B19;
+  --cat:#F4B01E; --cat-d:#D4961A; --cat-soft:#F7C64F;
+  --paper:#F2ECDE; --muted:#AC9E86; --line:rgba(244,176,30,.16);
+  --maxw:1160px;
+  --ease:cubic-bezier(.16,1,.3,1); --spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,-apple-system,sans-serif;background:var(--soil);color:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Anton',Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:.01em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;width:100%}
+.eyebrow{font-family:'Barlow',sans-serif;text-transform:uppercase;letter-spacing:.26em;font-size:13px;font-weight:600;color:var(--cat)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--cat);transform:scaleX(0);transform-origin:left;z-index:200}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:150;padding:18px 0;transition:background .3s,box-shadow .3s,padding .3s}
+.nav.scrolled{background:rgba(20,17,11,.95);box-shadow:0 10px 34px rgba(0,0,0,.6);padding:11px 0;backdrop-filter:blur(9px)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Anton',sans-serif;font-size:23px;letter-spacing:.04em;text-transform:uppercase}
+.brand .mark{width:40px;height:40px;border-radius:9px;background:linear-gradient(150deg,var(--cat),var(--cat-d));display:grid;place-items:center;color:#1b1206;box-shadow:0 6px 18px rgba(244,176,30,.34)}
+.brand .mark svg{width:23px;height:23px}
+.nav-cta{display:none;align-items:center;gap:9px;background:var(--cat);color:#1b1206;font-family:'Barlow',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-weight:700;padding:11px 18px;border-radius:9px;font-size:15px;transition:transform .25s var(--spring),box-shadow .25s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(244,176,30,.4)}
+@media(min-width:720px){.nav .nav-cta{display:inline-flex}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/40799129/pexels-photo-40799129.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(160deg,#241E14,#1B1710);background-size:cover;background-position:center;transform:scale(1.08);animation:ken 24s ease-in-out infinite alternate;z-index:0}
+@keyframes ken{from{transform:scale(1.08) translateY(0)}to{transform:scale(1.17) translateY(-16px)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(94deg,rgba(18,15,9,.93) 0%,rgba(18,15,9,.8) 44%,rgba(18,15,9,.5) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;padding:124px 0 92px}
+.hero h1{font-size:clamp(40px,7.6vw,82px);max-width:16ch;margin:18px 0 0}
+.hero h1 .hl{color:var(--cat)}
+.hero p.lede{margin-top:20px;max-width:50ch;font-size:19px;color:#e4dccb}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-weight:700;padding:16px 26px;border-radius:11px;font-size:17px;transition:transform .25s var(--spring),box-shadow .25s,background .25s,color .25s}
+.btn svg{width:20px;height:20px}
+.btn-cat{background:var(--cat);color:#1b1206;box-shadow:0 12px 30px rgba(244,176,30,.3)}
+.btn-cat:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(244,176,30,.46)}
+.btn-ghost{border:1.5px solid rgba(242,236,222,.3);color:var(--paper)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--cat);color:var(--cat)}
+.hero-trust{display:flex;flex-wrap:wrap;gap:30px;margin-top:40px;align-items:center}
+.stars{color:var(--cat);letter-spacing:3px;font-size:20px}
+.trust-num{font-family:'Anton',sans-serif;font-size:32px;color:#fff;line-height:1}
+.trust-lbl{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+
+/* sections */
+section{position:relative}
+.pad{padding:98px 0}
+.sec-head{max-width:62ch}
+.sec-head h2{font-size:clamp(30px,4.6vw,50px);margin:12px 0 0}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:18px}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:46px}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.svc-grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px;transition:transform .3s var(--spring),box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:0 20px 46px rgba(0,0,0,.55)}
+.ic{width:54px;height:54px;border-radius:13px;background:var(--panel-2);display:grid;place-items:center;color:var(--cat);margin-bottom:18px}
+.ic svg{width:27px;height:27px}
+.card h3{font-size:23px;letter-spacing:.02em}
+.card p{margin-top:9px;color:var(--muted);font-size:16px}
+
+/* why - strata motif band */
+.why{background:var(--soil-2);overflow:hidden}
+.strata{position:absolute;inset:0;z-index:0;opacity:.6;
+  background-image:repeating-linear-gradient(0deg,
+    rgba(244,176,30,.00) 0px,rgba(244,176,30,.00) 30px,
+    rgba(244,176,30,.05) 30px,rgba(244,176,30,.05) 33px,
+    rgba(172,158,134,.05) 33px,rgba(172,158,134,.05) 64px,
+    rgba(244,176,30,.035) 64px,rgba(244,176,30,.035) 66px)}
+.why .wrap{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:1fr;gap:42px;align-items:center}
+@media(min-width:900px){.why-grid{grid-template-columns:1.05fr .95fr}}
+.why ul{list-style:none;margin-top:26px;display:grid;gap:16px}
+.why li{display:flex;gap:14px;align-items:flex-start}
+.why li .tick{flex:none;width:32px;height:32px;border-radius:9px;background:rgba(244,176,30,.14);color:var(--cat);display:grid;place-items:center}
+.why li .tick svg{width:18px;height:18px}
+.why li b{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:18px;display:block;margin-bottom:2px}
+.why li span{color:var(--muted);font-size:15.5px}
+.statbox{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:34px}
+.statrow{display:flex;justify-content:space-between;align-items:center;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.statrow:last-child{border-bottom:0}
+.statrow .big{font-family:'Anton',sans-serif;font-size:42px;color:var(--cat);line-height:1}
+.statrow .cap{text-align:right;color:var(--muted);font-size:13.5px;text-transform:uppercase;letter-spacing:.09em;max-width:17ch}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr;gap:16px;margin-top:46px}
+@media(min-width:720px){.gal{grid-template-columns:repeat(3,1fr)}}
+.ph{position:relative;height:310px;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 16px 40px rgba(0,0,0,.5);transition:transform .4s var(--ease)}
+.ph:hover{transform:translateY(-6px) scale(1.01)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(14,11,7,.78))}
+.ph .cap{position:absolute;left:16px;bottom:15px;z-index:2;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:17px}
+.ph1{background-image:url('https://images.pexels.com/photos/11824185/pexels-photo-11824185.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#2C2416,#1B1710)}
+.ph2{background-image:url('https://images.pexels.com/photos/32021897/pexels-photo-32021897.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#352B19,#1B1710)}
+.ph3{background-image:url('https://images.pexels.com/photos/9389186/pexels-photo-9389186.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(150deg,#2C2416,#1B1710)}
+
+/* location + cta */
+.loc-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:42px}
+@media(min-width:820px){.loc-grid{grid-template-columns:1fr 1fr}}
+.info{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:30px}
+.info h3{font-size:21px;color:var(--cat);letter-spacing:.02em}
+.info .row{display:flex;gap:12px;align-items:flex-start;margin-top:16px;color:#e4dccb;font-size:16px}
+.info .row svg{width:20px;height:20px;color:var(--cat);flex:none;margin-top:2px}
+.hours dl{margin-top:6px}
+.hours .h{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.09);font-size:15.5px}
+.hours .h:last-child{border-bottom:0}
+.hours .h span:first-child{color:var(--muted)}
+
+/* final cta */
+.cta{position:relative;text-align:center;background:linear-gradient(150deg,var(--panel),var(--soil-2));overflow:hidden}
+.cta h2{font-size:clamp(32px,5vw,58px);max-width:18ch;margin:0 auto}
+.cta p{color:var(--muted);font-size:18px;margin:16px auto 0;max-width:46ch}
+.cta .hero-cta{justify-content:center}
+
+/* footer */
+footer{background:#140F09;padding:40px 0;border-top:1px solid rgba(255,255,255,.06)}
+.foot-in{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;color:var(--muted);font-size:14.5px}
+.foot-brand{font-family:'Anton',sans-serif;color:var(--paper);font-size:19px;letter-spacing:.04em}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:160;display:flex;gap:10px;padding:10px 14px;background:rgba(20,17,11,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.sticky-call a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--cat);color:#1b1206;font-family:'Barlow',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:14px;border-radius:11px;font-size:16px}
+.sticky-call svg{width:19px;height:19px}
+@media(min-width:720px){.sticky-call{display:none}}
+body{padding-bottom:66px}
+@media(min-width:720px){body{padding-bottom:0}}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  *{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M4 20V10l5-2 2 3h5l2 4v5"/><circle cx="8" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg></span>
+      Ground Works
+    </div>
+    <a class="nav-cta" href="tel:+14194104940"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 410-4940</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A Ground Works excavator moving earth on a rural job site while the crew looks on"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Excavating &amp; Earthwork · Oregon, OH</p>
+    <h1>We move the earth so your <span class="hl">project starts right</span>.</h1>
+    <p class="lede">Owner-run excavating for the Toledo area. Grading, drainage, site prep, foundations, and demolition, dug clean and dug right the first time.</p>
+    <div class="hero-cta">
+      <a class="btn btn-cat" href="tel:+14194104940"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call for a free estimate</a>
+      <a class="btn btn-ghost" href="#services">See what we dig</a>
+    </div>
+    <div class="hero-trust">
+      <div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="trust-lbl">5.0 on Google</div>
+      </div>
+      <div>
+        <div class="trust-num"><span class="count" data-to="7">0</span></div>
+        <div class="trust-lbl">Google reviews</div>
+      </div>
+      <div>
+        <div class="trust-num">Local</div>
+        <div class="trust-lbl">Owner on every job</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What we do</p>
+      <h2>Dirt work, done by people who answer the phone.</h2>
+      <p>From the first cut to the final grade, Ground Works handles the heavy, messy part of your project so the rest goes smooth.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M3 18l6-9 4 5 3-4 5 8"/></svg></div>
+        <h3>Grading &amp; Leveling</h3>
+        <p>Rough and finish grading for driveways, pads, and yards so water runs where it should and nothing settles wrong.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14c2-3 4-3 6 0s4 3 6 0 4-3 4-3"/><path d="M4 19c2-3 4-3 6 0s4 3 6 0 4-3 4-3"/></svg></div>
+        <h3>Drainage &amp; French Drains</h3>
+        <p>Wet basement or a yard that holds water? We trench, pipe, and backfill to pull water away from the house for good.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 12h18"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Foundations &amp; Footers</h3>
+        <p>Digging for additions, garages, and new builds. Square, to depth, and ready for the concrete crew.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l-2 5 4 1-6 12 2-8-4-1z"/></svg></div>
+        <h3>Demolition &amp; Haul-Off</h3>
+        <p>Old slabs, sheds, and foundations taken down and carried off. We leave the site clean and ready for what comes next.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M5 20V9l7-4 7 4v11"/><path d="M9 20v-5h6v5"/></svg></div>
+        <h3>Site Prep &amp; Clearing</h3>
+        <p>Brush, stumps, and topsoil stripped and staged so your pole barn, pool, or addition starts on solid ground.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v6l9 4 9-4V7"/></svg></div>
+        <h3>Gravel &amp; Driveways</h3>
+        <p>New stone driveways and lots, shaped and compacted. Culverts set, approaches cut, ruts and potholes filled.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why pad">
+  <div class="strata" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="reveal">
+        <p class="eyebrow">Why Ground Works</p>
+        <h2 class="disp" style="font-size:clamp(30px,4.6vw,50px);margin-top:12px">A small crew that treats your dirt like it is their own.</h2>
+        <ul>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><b>Owner on the machine</b>You deal with the person running the excavator, not a call center. One point of contact start to finish.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><b>Free, honest estimates</b>We walk the site, tell you what it really takes, and give a clear price before anything gets dug.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><b>Clean, called-in digs</b>Utilities located, spoil managed, and the ground left graded and tidy when the machine pulls off.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><b>Oregon and Toledo local</b>Based on N Cousino Rd. We know the clay, the water table, and the permit offices around here.</span></li>
+        </ul>
+      </div>
+      <div class="statbox reveal">
+        <div class="statrow"><div class="big"><span class="count" data-to="5" data-dec="1">0</span></div><div class="cap">Star Google rating</div></div>
+        <div class="statrow"><div class="big"><span class="count" data-to="7">0</span></div><div class="cap">Neighbors who reviewed us</div></div>
+        <div class="statrow"><div class="big">1</div><div class="cap">Owner who stands behind every job</div></div>
+        <div class="statrow"><div class="big">Free</div><div class="cap">On-site estimates, no pressure</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">On the job</p>
+      <h2>Machines working, ground moving.</h2>
+      <p>A look at the kind of earthwork we handle across the Oregon and greater Toledo area.</p>
+    </div>
+    <div class="gal">
+      <div class="ph ph1" role="img" aria-label="Close-up of an excavator bucket digging into soil during a trenching job">
+        <span class="cap">Trenching &amp; digs</span>
+      </div>
+      <div class="ph ph2" role="img" aria-label="Excavator on a graded construction site with fresh piles of earth">
+        <span class="cap">Grading &amp; site prep</span>
+      </div>
+      <div class="ph ph3" role="img" aria-label="A backhoe loader cutting into soil at the edge of a property">
+        <span class="cap">Drainage &amp; foundations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="area" style="background:var(--soil-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Find us</p>
+      <h2>Serving Oregon, Toledo &amp; the east side.</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="info reveal">
+        <h3>Ground Works Excavating L.L.C.</h3>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1026 N Cousino Rd, Oregon, OH 43616</span></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span><a href="tel:+14194104940">(419) 410-4940</a></span></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 7v5l3 2"/></svg><span>Free estimates across Oregon, Toledo, Northwood, and Walbridge.</span></div>
+      </div>
+      <div class="info hours reveal">
+        <h3>Hours</h3>
+        <dl>
+          <div class="h"><span>Monday &ndash; Friday</span><span>7:00a &ndash; 6:00p</span></div>
+          <div class="h"><span>Saturday</span><span>By appointment</span></div>
+          <div class="h"><span>Sunday</span><span>Closed</span></div>
+          <div class="h"><span>Storm &amp; drainage calls</span><span>Ask about rush jobs</span></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta pad">
+  <div class="wrap">
+    <h2 class="reveal">Got a project that needs digging? Let us price it.</h2>
+    <p class="reveal">Call Ground Works for a free on-site estimate. We will tell you straight what it takes and when we can get the machine there.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-cat" href="tel:+14194104940"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(419) 410-4940</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="foot-brand">Ground Works Excavating L.L.C.</div>
+    <div>1026 N Cousino Rd, Oregon, OH 43616 · <a href="tel:+14194104940">(419) 410-4940</a></div>
+    <div>Site by Elements Studio</div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+14194104940"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (419) 410-4940</a>
+</div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),prog=document.getElementById('progress');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled',y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4*70)+'ms';io.observe(el);});
+
+  function animCount(el){
+    var to=parseFloat(el.getAttribute('data-to')),dec=parseInt(el.getAttribute('data-dec')||'0',10),t0=null,dur=1300;
+    function step(ts){
+      if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3),v=to*e;
+      el.textContent=dec?v.toFixed(dec):Math.round(v);
+      if(p<1)requestAnimationFrame(step);else el.textContent=dec?to.toFixed(dec):to;
+    }
+    requestAnimationFrame(step);
+  }
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target);}});
+  },{threshold:.6});
+  document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>
