@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fred Christen &amp; Sons Co | Roofing in Toledo, OH</title>
+<meta name="description" content="Fred Christen &amp; Sons Co is a family-run roofing company in Toledo, Ohio. Roof replacement, repairs, storm and leak work, and free inspections. Call (419) 243-4161.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#20303d; --navy2:#17242e; --cream:#f6f2ea; --paper:#fbf9f4;
+  --copper:#a9703a; --copper-d:#8a5a2d; --ink:#1b2730; --muted:#5d6b74; --line:#e4ddcf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Zilla Slab',Georgia,serif;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1120px,92%);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:1.02rem;padding:.95rem 1.6rem;border-radius:10px;border:2px solid transparent;cursor:pointer;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .3s}
+.btn-primary{background:var(--copper);color:#fff;box-shadow:0 10px 24px -10px rgba(169,112,58,.8)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02);background:var(--copper-d)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:#fff;background:rgba(255,255,255,.1)}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
+
+/* scroll progress */
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--copper);transform:scaleX(0);transform-origin:left;z-index:120}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s,box-shadow .35s,padding .35s;padding:1.1rem 0}
+header.scrolled{background:rgba(23,36,46,.96);box-shadow:0 8px 30px -12px rgba(0,0,0,.5);padding:.7rem 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-family:'Zilla Slab';font-weight:700;font-size:1.22rem}
+.brand .mark{width:34px;height:34px;flex:0 0 34px}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;color:#fff;font-weight:600;background:var(--copper);padding:.6rem 1.1rem;border-radius:9px;transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .3s}
+.nav-cta:hover{transform:translateY(-2px);background:var(--copper-d)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/33501308/pexels-photo-33501308.jpeg?auto=compress&cs=tinysrgb&w=1600'),linear-gradient(135deg,#20303d,#17242e);background-size:cover;background-position:center;transform:scale(1.04);animation:ken 22s ease-in-out infinite alternate}
+@keyframes ken{to{transform:scale(1.14)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,28,36,.86) 0%,rgba(18,28,36,.62) 48%,rgba(18,28,36,.42) 100%)}
+.hero-inner{position:relative;z-index:2;padding:7rem 0 3rem}
+.hero h1{font-size:clamp(2.5rem,6vw,4.3rem);font-weight:700;max-width:16ch}
+.hero p.lede{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:46ch;margin:1.3rem 0 2rem;color:rgba(255,255,255,.92)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.6rem;font-size:.95rem;color:rgba(255,255,255,.85)}
+.hero-meta b{color:#fff}
+
+/* stats */
+.stats{background:var(--navy2);color:#fff;padding:2.4rem 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;text-align:center}
+.stat .n{font-family:'Zilla Slab';font-size:2.3rem;font-weight:700;color:#fff}
+.stat .n .star{color:var(--copper)}
+.stat .l{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:.3rem}
+
+/* sections */
+section.pad{padding:5.5rem 0}
+.sec-head{max-width:60ch;margin-bottom:3rem}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;margin:.6rem 0}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem}
+.svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.9rem;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,border-color .4s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 22px 40px -24px rgba(32,48,61,.5);border-color:#d8cdb8}
+.svc .ic{width:52px;height:52px;border-radius:12px;background:rgba(169,112,58,.12);display:flex;align-items:center;justify-content:center;color:var(--copper);margin-bottom:1.1rem}
+.svc h3{font-size:1.28rem;font-weight:600;margin-bottom:.4rem}
+.svc p{color:var(--muted);font-size:.98rem}
+
+/* shingle motif band */
+.motif{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.motif .shingles{position:absolute;inset:0;opacity:.14;background:
+  repeating-linear-gradient(90deg,transparent 0 58px,rgba(169,112,58,.9) 58px 60px),
+  repeating-linear-gradient(0deg,transparent 0 26px,rgba(169,112,58,.6) 26px 28px);
+  background-position:0 0,30px 0;mask:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
+.motif .wrap{position:relative;z-index:2}
+.motif .lead{font-family:'Zilla Slab';font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;max-width:24ch}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.6rem}
+.step{border-top:3px solid var(--copper);padding-top:1.1rem}
+.step .num{font-family:'Zilla Slab';color:var(--copper);font-weight:700;font-size:1.1rem}
+.step h3{font-size:1.18rem;font-weight:600;margin:.3rem 0 .4rem}
+.step p{color:rgba(255,255,255,.75);font-size:.96rem}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.ph{position:relative;border-radius:14px;min-height:280px;background-size:cover;background-position:center;box-shadow:inset 0 -80px 70px -50px rgba(18,28,36,.8);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.ph:hover{transform:scale(1.02)}
+.g1{background-image:url('https://images.pexels.com/photos/33404248/pexels-photo-33404248.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#20303d,#17242e)}
+.g2{background-image:url('https://images.pexels.com/photos/37677394/pexels-photo-37677394.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#20303d,#17242e)}
+.g3{background-image:url('https://images.pexels.com/photos/39238328/pexels-photo-39238328.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#20303d,#17242e)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.about h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;margin-bottom:1rem}
+.about p{color:var(--muted);margin-bottom:1rem}
+.about-img{min-height:360px;border-radius:16px;background-image:url('https://images.pexels.com/photos/37677394/pexels-photo-37677394.jpeg?auto=compress&cs=tinysrgb&w=900'),linear-gradient(135deg,#20303d,#17242e);background-size:cover;background-position:center;box-shadow:0 30px 60px -30px rgba(32,48,61,.6)}
+.tick{display:flex;gap:.7rem;align-items:flex-start;margin:.7rem 0;color:var(--ink);font-weight:500}
+.tick svg{color:var(--copper);flex:0 0 22px;margin-top:3px}
+
+/* cta band */
+.cta{background:linear-gradient(130deg,var(--copper),var(--copper-d));color:#fff;text-align:center;padding:4.5rem 0}
+.cta h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:700;margin-bottom:.7rem}
+.cta p{font-size:1.1rem;color:rgba(255,255,255,.9);margin-bottom:1.8rem}
+.cta .btn-primary{background:#fff;color:var(--copper-d);box-shadow:0 12px 30px -12px rgba(0,0,0,.45)}
+.cta .btn-primary:hover{background:var(--cream)}
+
+/* footer */
+footer{background:var(--navy2);color:rgba(255,255,255,.8);padding:3rem 0 6rem}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem}
+.foot a{color:#fff}
+.foot .brand{margin-bottom:.8rem}
+.foot .muted{font-size:.9rem;line-height:1.8}
+
+/* sticky mobile call */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:110;display:none;background:var(--copper);color:#fff;text-align:center;font-weight:600;padding:.95rem;box-shadow:0 -6px 20px -8px rgba(0,0,0,.5)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1!important;transform:none!important}
+  .hero-bg{animation:none}
+  html{scroll-behavior:auto}
+}
+
+@media(max-width:860px){
+  .svc-grid{grid-template-columns:1fr}
+  .stats .grid{grid-template-columns:repeat(2,1fr);gap:1.8rem}
+  .steps{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .about-img{min-height:260px;order:-1}
+  .nav-cta{display:none}
+  .callbar{display:block}
+  footer{padding-bottom:5rem}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="#a9703a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg>
+      <span>Fred Christen &amp; Sons</span>
+    </div>
+    <a class="nav-cta" href="tel:+14192434161">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 243-4161
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="A roofing crew replacing the roof on a house in bright daylight"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow reveal">Family-run roofing &middot; Toledo, Ohio</p>
+    <h1 class="reveal">The Christen family has Toledo covered.</h1>
+    <p class="lede reveal">Three generations of straight talk and solid roofs. From a worn-out roof to a storm leak at 6am, we show up, do it right, and stand behind the work.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary" href="tel:+14192434161">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for a free estimate
+      </a>
+      <a class="btn btn-ghost" href="#work">See our work</a>
+    </div>
+    <div class="hero-meta reveal">
+      <span><b>4.1&#9733;</b> Google rating</span>
+      <span><b>15</b> reviews</span>
+      <span><b>714 George St</b>, Toledo</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat reveal"><div class="n"><span data-count="4.1" data-dec="1">0</span><span class="star">&#9733;</span></div><div class="l">Google rating</div></div>
+      <div class="stat reveal"><div class="n"><span data-count="15">0</span></div><div class="l">Google reviews</div></div>
+      <div class="stat reveal"><div class="n">3</div><div class="l">Generations</div></div>
+      <div class="stat reveal"><div class="n">Toledo</div><div class="l">Where we work</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What we do</p>
+      <h2>Roofing done the honest way</h2>
+      <p>No pressure and no guesswork. We look at your roof, tell you what it actually needs, and give you a straight price before any work starts.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg></div>
+        <h3>Roof replacement</h3>
+        <p>A full tear-off and new shingle roof, cleaned up like we were never there. Built to take Ohio winters and summer storms.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.7 6.3 3 3"/><path d="M9 11 2.8 17.2a2 2 0 0 0 2.8 2.8L12 14"/><path d="M14 6a3.5 3.5 0 0 1 5 5l-2 2-5-5z"/></svg></div>
+        <h3>Roof repair</h3>
+        <p>Missing shingles, flashing, soft spots. We fix the problem instead of selling you a roof you do not need yet.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg></div>
+        <h3>Storm &amp; leak repair</h3>
+        <p>Wind and hail happen. We tarp fast, find where the water is really getting in, and help you through the insurance claim.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11H3v10h6z"/><path d="M14 7h-4v14h4z"/><path d="M21 3h-4v18h4z"/><path d="M3 21h18"/></svg></div>
+        <h3>Free roof inspection</h3>
+        <p>Not sure how much life is left up there? We climb up, take a look, and tell you the truth. No charge, no sales act.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="motif pad">
+  <div class="shingles" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow reveal" style="color:#d9a36b">How it goes</p>
+    <p class="lead reveal">A roof is a big call. We keep it simple from the first look to the last nail.</p>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>We take a look</h3><p>You call, we come out and inspect the roof, and we show you what we find in plain words.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>You get a real price</h3><p>One written estimate, itemized, with your options laid out. No moving numbers.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>We do the work</h3><p>Our own crew, on time, cleaned up each day, and we walk the finished roof with you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Recent work</p>
+      <h2>Toledo roofs we have stood behind</h2>
+    </div>
+    <div class="gal">
+      <div class="ph g1 reveal" role="img" aria-label="A roofer using a nail gun to install new shingles"></div>
+      <div class="ph g2 reveal" role="img" aria-label="A freshly installed asphalt shingle roof on a home"></div>
+      <div class="ph g3 reveal" role="img" aria-label="A worker applying waterproof membrane to a roof section"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="background:var(--cream)" id="about">
+  <div class="wrap about">
+    <div class="reveal">
+      <p class="eyebrow">Our name is on it</p>
+      <h2>A Toledo roofing family, not a call center</h2>
+      <p>Fred Christen &amp; Sons has been working on Toledo roofs the way a family business should: you talk to the people who actually do the work, and the name on the truck is the name that answers the phone.</p>
+      <p>We are proud of a 4.1 star rating across 15 Google reviews, and prouder of the neighbors who call us back and send us next door.</p>
+      <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Family-run, local to Toledo</span></div>
+      <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Straight estimates, written down</span></div>
+      <div class="tick"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Our own crew on every job</span></div>
+    </div>
+    <div class="about-img reveal" role="img" aria-label="A freshly completed shingle roof on a Toledo home"></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="reveal">Need a roof looked at?</h2>
+    <p class="reveal">Call Fred Christen &amp; Sons and talk to a real roofer today.</p>
+    <a class="btn btn-primary reveal" href="tel:+14192434161">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (419) 243-4161
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand"><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="#a9703a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg><span>Fred Christen &amp; Sons Co</span></div>
+      <div class="muted">Roofing for Toledo and the surrounding area.</div>
+    </div>
+    <div class="muted">
+      714 George St<br>Toledo, OH 43608<br>
+      <a href="tel:+14192434161">(419) 243-4161</a>
+    </div>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+14192434161">Call (419) 243-4161 for a free estimate</a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var hd=document.getElementById('hd'), prog=document.getElementById('prog');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    hd.classList.toggle('scrolled', y>40);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target, sibs=[].slice.call(el.parentNode.children).filter(function(c){return c.classList.contains('reveal')});
+        var i=sibs.indexOf(el); el.style.transitionDelay=(i>0?Math.min(i*75,350):0)+'ms';
+        el.classList.add('in'); io.unobserve(el);
+        if(el.querySelector('[data-count]')||el.hasAttribute('data-count')) count(el);
+      }
+    });
+  },{threshold:.2});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  function count(scope){
+    scope.querySelectorAll('[data-count]').forEach(function(n){
+      if(n.dataset.done) return; n.dataset.done=1;
+      var target=parseFloat(n.getAttribute('data-count')), dec=parseInt(n.getAttribute('data-dec')||'0',10);
+      if(reduce){n.textContent=target.toFixed(dec);return;}
+      var start=null, dur=1100;
+      function step(t){
+        if(!start)start=t; var p=Math.min((t-start)/dur,1);
+        var e=1-Math.pow(1-p,3);
+        n.textContent=(target*e).toFixed(dec);
+        if(p<1)requestAnimationFrame(step); else n.textContent=target.toFixed(dec);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+})();
+</script>
+</body>
+</html>
